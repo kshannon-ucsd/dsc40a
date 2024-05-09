@@ -1,0 +1,41 @@
+# Welcome section
+quarter: Spring 2023
+building: HSS 1346
+timings: THURSDAY 9:30AM - 12:20PM
+discord_link: https://discord.gg/MXYQ88EZvs
+gradescope_link: https://www.gradescope.com/courses/515983
+gradescope_entry_code: E7PW5P
+cogsadvising: cogsadvising@ucsd.edu
+
+instructor:
+  name: Kyle Shannon
+  email: kshannon@ucsd.edu
+  type: Instructor
+  office_hours:
+    - day: Fri
+      time: 5PM - 6PM
+      location: Zoom
+      zoom_link: https://ucsd.zoom.us/j/4288626123?pwd=TWpyQW5nZkpUTWJvU0YzejQyY25Sdz09
+      zoom_pw: 725814
+
+teaching_assistants:
+  - name: Vineeth Chelur
+    email: vrchelur@ucsd.edu
+    type: TA
+    office_hours:
+      - day: Tue
+        time: 11:00AM - 12:00PM
+        location: HSS 1346
+        zoom_link:
+        zoom_pw:
+
+instructional_assistants: 
+
+discussion_sections:
+  - section: A01
+    day: Tue
+    time: 10:00AM - 10:50AM
+    location: HSS 1346
+    ta: Vineeth
+    ia: No IA
+    materials: https://github.com/vchelur97/cogs8-discussion

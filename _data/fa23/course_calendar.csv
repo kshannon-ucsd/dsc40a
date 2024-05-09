@@ -1,0 +1,35 @@
+date,title,label,link
+2023-09-28,Discord Meet & Greet (optional),DISC,
+2023-10-03,Intro Lecture,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+1+-+Welcome%2C+Intro+Python.pdf
+2023-10-03,Hands-on Python 1,DEMO,https://colab.research.google.com/drive/1GN81uFLCpbbpz6Li5fioxAHj-WhMb2d5?usp=sharing
+2023-10-05,Hands-on Python 1 Cont.,DISC,
+2023-10-10,Hands-on Python 2,CLSS,
+2023-10-10,Hands-on Python 2,DEMO,
+2023-10-12,Hands-on Python 2 Cont.,DISC,
+2023-10-17,Embedded Python + BBC Microbits,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+3+-+Embedded+Python%2C+BBC+Microbits.pdf
+2023-10-17,Embedded Python + BBC Microbits,DEMO,https://microbit.org/projects/make-it-code-it/
+2023-10-17,Reading 1,READ,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/readings/R2a.pdf
+2023-10-19,Embedded Python Cont. + Reading 1,DISC,
+2023-10-24,The Inch Worm + CTM,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+4+-+Computational+Theory+of+Mind.pdf
+2023-10-24,Reading 2,READ,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/readings/R2b.pdf
+2023-10-26,Inch Worm Project Cont.,DISC,
+2023-10-31,Embodied Cognition,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+5+-+Embodied+Cognition%2C+Robots.pdf
+2023-10-31,Reading 3a,READ,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/readings/R3a.pdf
+2023-10-31,Inch Worm Race,PROJ,
+2023-11-02,Embodied project open studio + reading 2,DISC,
+2023-11-07,Embodied/Embedded project open studio,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+6+-+Embodied+%2B+Embedded+Cognition.pdf
+2023-11-09,Embodied project open studio + reading 3,DISC,
+2023-11-14,Extended Cognition,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+7+-+Extended+Cognition.pdf
+2023-11-14,Embodied project demo due,PROJ,
+2023-11-14,Reading 3b,READ,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/readings/R3b.pdf
+2023-11-16,Extended project open studio,DISC,
+2023-11-21,Distributed project open studio,CLSS,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/lectures/week+8+-+Distributed+Cognition.pdf
+2023-11-21,Extended project demo due,PROJ,
+2023-11-21,Reading 4a,READ,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/readings/R4a.pdf
+2023-11-23,Thanksgiving Holiday,CNCL,
+2023-11-28,Distributed project open studio,CLSS,
+2023-11-28,Reading 4b,READ,https://s3.us-west-2.amazonaws.com/ucsd.cogs8/readings/R4b.pdf
+2023-11-30,Distributed project open studio + Reading 5 & 6,DISC,
+2023-12-05,Distributed project open studio, DISC,
+2023-12-07,Final Project Demo Day,PROJ,
+2023-12-14,Final Essay Reports Due,PROJ,
