@@ -1,0 +1,14 @@
+- name: Kyle Shannon
+  email: kshannon@ucsd.edu
+  role: Instructor
+  pronouns: he/him
+  website: https://rampure.org/
+  photo: assets/staff/kyle.png
+  description: BS/MAS, Neuroscience/Data Science, UCSD (Data Soothsayer)
+  hometown: San Diego, Cali
+  askabout: Coffee, Likely to be found on a tennis court 🎾
+  food: TBE
+  
+- name: Vineeth Chelur
+  email: vrchelur@ucsd.edu
+  role: TA

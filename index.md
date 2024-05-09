@@ -1,131 +1,152 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: Course Calendar
-layout: default
+title: 🏠 Home
+layout: home
 nav_exclude: false
 nav_order: 1
 ---
 
-{% assign variables = site.data[site.data_folder].variables %}
-{% assign course_calendar = site.data[site.data_folder].course_calendar %}
+{% assign course_vars = site.data[site.data_folder].course %}
+{% assign staff_vars = site.data[site.data_folder].staff %}
+{% assign calendar = site.data[site.data_folder].calendar %}
 <!-- Fall quarter starts in Week 0 while the other quarters start in Week 1 -->
 {% assign offset_week = 1 %}
 {% if site.data_folder contains "fa" %}
     {% assign offset_week = 0 %}
 {% endif %}
 
-{: .text-grey-dk-200 .lh-0 .pt-4 }
+# {{ site.tagline }}
 
-# Hands on Computing
+{: .mb-2 }
+{{ site.description }} <span title="https://jarv.is/" class="wave">👋</span>
+{: .fs-6 .fw-300 }
 
-{: .text-grey-dk-300 .fw-300 .lh-0 }
 
-## COGS 8 - UC San Diego - Prof. Kyle Shannon
-
-{{ variables.quarter }}
-{: .md-badge-purple }
-
-{{ variables.building }}
-{: .md-badge-purple }
-
-{{ variables.timings }}
-{: .md-badge-purple }
-
-## Welcome <span title="https://jarv.is/" class="wave">👋</span>
-
-We are all very excited that you decided to join us in this introduction to computing, robotics, data, and cognitive science. All relevant info, e.g. due dates, assignment links, etc. are found on this website.
-We look forward to teaching and working with all of you and hope to meet you during office hours. Check out the getting started section so you can hit the ground running when class starts!
-
-{: .fs-3 }
-
-{: .note .fs-2 }
-Join the class Discord: **{{ variables.discord_link }}**
-
-## Discussion Section Times
-
-<table style="table-layout: fixed; text-align: center; width: 100%;">
-    <thead>
-        <tr class="header">
-            <th style="width: 10%;"></th>
-            <th style="width: 10%;"> Day </th>
-            <th style="width: 25%;"> Time </th>
-            <th style="width: 15%;"> Location </th>
-            <th style="width: 25%;"> Staff </th>
-            <th style="width: 15%;"> Materials </th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for ds in variables.discussion_sections %}
-        <tr>
-            <td> {{ ds.section }} </td>
-            <td> {{ ds.day }} </td>
-            <td> {{ ds.time }} </td>
-            <td> {{ ds.location }} </td>
-            <td> {{ ds.ta }} </td>
-            <td> <a href="{{ ds.materials }}"> View </a> </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-## Course Calendar
-
-{% assign first_date = course_calendar[0].date | date: '%s' %}
-{% assign first_day = course_calendar[0].date | date: '%w' %}
-{% assign prev_week_no = offset_week %}
-<table style="table-layout: fixed; text-align: left; width: 100%;">
-    <colspan>
-        <col style="width: 20%;">
-        <col style="width: 20%; border: none">
-        <col style="width: 60%; border: none">
-    </colspan>
-    <thead>
-        <tr class="header">
-            <th colspan="3" style="padding-left:8%; font-size-adjust:0.75"> Week {{ offset_week }} </th>
-        </tr>
-    </thead>
-    <tbody>
-{% for row in course_calendar %}
-    {% assign week_no = row.date | date: '%s' | minus: first_date | divided_by: 60 | divided_by: 60 | divided_by: 24 | plus: first_day | minus: 1 | divided_by: 7 | plus: offset_week %}
-    <!-- Week number is calculated as follows. Take the current row date as epoch and subtract the first date from course calendar.
-    Convert it to number of days (How many days ahead is the current row date from first date) and add the day number of the first day of the week.
-    Sunday is considered as 0, Monday as 1 and so on (strftime), but to start our week from Monday, we subtract 1 and then divide by 7 to get week no
-    Offset week is used since fall quarter starts in Week 0 while other quarters start in Week 1 -->
-    {% if week_no != prev_week_no %}
-    </tbody>
-</table>
-<table style="table-layout: fixed; text-align: left; width: 100%;">
-    <colspan>
-        <col style="width: 20%;">
-        <col style="width: 20%; border: none">
-        <col style="width: 60%; border: none">
-    </colspan>
-    <thead>
-        <tr class="header">
-            <th colspan="3" style="padding-left:8%; font-size-adjust:0.75"> Week {{ week_no }} </th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="staffer">
+  {% if staff_vars[0].photo %}
+  <img class="staffer-image" src="{{ staff_vars[0].photo | relative_url }}" alt="">
+  {% endif %}
+  <div>
+    <h3 class="staffer-name">
+      {% if staff_vars[0].website %}
+      <a href="{{ staff_vars[0].website }}">{{ staff_vars[0].name }}</a>
+      {% else %}
+      {{ staff_vars[0].name }}
+      {% endif %}
+      {% if staff_vars[0].pronouns %}
+      <div class="staffer-pronouns"><b>{{ staff_vars[0].pronouns }}</b></div>
+      {% endif %}
+    </h3>
+    <p>
+    {% if staff_vars[0].email %}
+    <a href="mailto:{{ staff_vars[0].email }}">{{ staff_vars[0].email }}</a>
     {% endif %}
-    {% assign prev_week_no = week_no %}
-        <tr>
-            <td style="text-align: center"> {{ row.date | date: "%a, %b %d" }} </td>
-            <td style="text-align: center">
-              {% if row.label == "CLSS" %} <span class="md-cal-badge md-cal-badge-blue"> {{ row.label }} </span>
-              {% elsif row.label == "READ" %} <span class="md-cal-badge md-cal-badge-purple"> {{ row.label }} </span>
-              {% elsif row.label == "CNCL" %} <span class="md-cal-badge md-cal-badge-red"> {{ row.label }} </span>
-              {% elsif row.label == "ACTV" %} <span class="md-cal-badge md-cal-badge-green"> {{ row.label }} </span>
-              {% elsif row.label == "PROJ" %} <span class="md-cal-badge md-cal-badge-gray"> {{ row.label }} </span>
-              {% elsif row.label == "QUIZ" %} <span class="md-cal-badge md-cal-badge-green"> {{ row.label }} </span>
-              {% elsif row.label == "DISC" %} <span class="md-cal-badge md-cal-badge-yellow"> {{ row.label }} </span>
-              {% else %}
-                {% if row.label %} <span class="md-cal-badge md-cal-badge-black"> {{ row.label }} </span>
+    {% if staff_vars[0].type %}
+    • {{ staff_vars[0].type }}
+    {% endif %}
+    {% if staff_vars[0].lecture %}
+    <p><b>Lecture(s)</b>: {{ staff_vars[0].lecture }}</p>
+    {% endif %}
+    </p>
+  </div>
+</div>
+
+{{ course_vars.quarter }}
+{: .md-badge-purple }
+
+{{ course_vars.building }}
+{: .md-badge-purple }
+
+{{ course_vars.timings }}
+{: .md-badge-purple }
+
+{{ "{: ." + course_vars.announcement.color + " }" }}
+**{{ course_vars.announcement.text }}**
+
+{% for week in calendar %}
+    <div class="module">
+    <h3 class="module-header" id="{{ week.title | slugify }}">{{ week.title }}</h3>
+    <dl class="module-days">
+        {% for day in week %}
+        <dt class="module-day main">{{ day.date | date: '%a %b %e' }}</dt>
+        {% for event in day.events %}
+            {% if event.markdown_content %}
+            <dd class="module-event{% if forloop.first %} main{% endif %}">
+                {{ event.markdown_content | markdownify }}
+            </dd>
+            {% else %}
+            <dd class="module-event{% if forloop.first %} main{% endif %}">
+                <p>
+                <strong class="label label-{{ event.type }}">
+                    {{ event.name }}
+                </strong>
+                {% if event.url %}
+                    <a href="{{ event.url }}">{{ event.title }}</a>
+                {% else %}
+                    {{ event.title }}
                 {% endif %}
-              {% endif %}
-            </td>
-            <td style="padding-left: 4%"> {% if row.link %} <a href="{{ row.link }}"> {{ row.title }} </a> {% else %} {{ row.title }} {% endif %} </td>
-        </tr>
+                {%- if event.type == "lecture" -%}
+                    {%- if event.blank -%}
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <small><a href="{{ event.blank }}"><button type="button" class="btn btn-info">🌗 blank</button></a></small>
+                    {%- endif -%}
+                    {%- if event.filled -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.filled }}"><button type="button" class="btn btn-info">📝 filled</button></a></small>
+                    {%- endif -%}
+                    {%- if event.code -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.code }}"><button type="button" class="btn btn-info">💻 code</button></a></small>
+                    {%- endif -%}
+                    {%- if event.animations -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.animations }}"><button type="button" class="btn btn-info">🧮 animations</button></a></small>
+                    {%- endif -%}
+                    {%- if event.podcast -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.podcast }}"><button type="button" class="btn btn-info">🎥 podcast</button></a></small>
+                    {%- endif -%}
+                    {%- if event.faqs -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.faqs }}"><button type="button" class="btn btn-info">🙋 FAQs</button></a></small>
+                    {%- endif -%}
+                {%- endif -%}
+                {%- if event.type == "hw" or event.type == "disc" -%}
+                    {%- if event.problems -%}
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <small><a href="{{ event.problems }}"><button type="button" class="btn btn-info">📄 problems</button></a></small>
+                    {%- endif -%}
+                    {%- if event.template -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.template }}"><button type="button" class="btn btn-info">🍃 template</button></a></small>
+                    {%- endif -%}
+                    {%- if event.walkthrough -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.walkthrough }}"><button type="button" class="btn btn-info">🎥 walkthrough</button></a></small>
+                    {%- endif -%}
+                    {%- if event.solutions -%}
+                    <small>&nbsp;&nbsp;<a href="{{ event.solutions }}"><button type="button" class="btn btn-info">📝 solutions</button></a></small>
+                    {%- endif -%}
+                {%- endif -%}
+                </p>
+                <p>
+                <!-- 
+                {%- if event.filled and event.podcast -%}
+                    <span> | </span>
+                {%- endif -%} -->
+                <!-- {%- if event.podcast and event.reading -%}
+                    <span> | </span>
+                {%- endif -%} -->
+                <!-- {%- if event.reading -%}
+                    {{ event.reading | markdownify | remove: '<p>' | remove: '</p>' }}
+                {%- endif -%} -->
+                </p>
+                <!-- {{ event | first | markdownify }} {{ event | last | markdownify }} -->
+            </dd>
+            {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </dl>
+    {% assign content_strip = content | strip %}
+    {% if content_strip != "" %}
+    <div class="module-body">
+        <small>{{ content }}</small>
+    </div>
+    </div>
 {% endfor %}
-    </tbody>
-</table>
