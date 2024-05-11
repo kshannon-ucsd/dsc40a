@@ -6,6 +6,7 @@ Class Website for UCSD's Theoretical Foundations of Data Science I
 
 ## Up and Running
 ### Dev Environment initial set up
+#### If building from scratch
 1. Install chruby and ruby-install with Homebrew (install ruby 3.1.2)
 2. cd to project dir and chruby for ruby-3.1.2 #this should be default from the `.ruby-version` file going forward.
 3. `bundle init` to create gemfile
@@ -14,6 +15,12 @@ Class Website for UCSD's Theoretical Foundations of Data Science I
 6. Create jekyll scaffold: `bundle exec jekyll new --force --skip-bundle .` `bundle install`
 7. `bundle add webrick`
 8. Give it a test run by following the local dev build instructions below!
+
+#### Using devcontainer
+1. Install the Remote - Containers extension in VSCode
+2. Open the project in VSCode
+3. Click on the green icon in the bottom left corner of the window and select "Reopen in Container"
+4. This will build the container and open the project in a containerized environment with all the necessary dependencies installed.
 
 ### Building for Local
 All dev builds will be built into a `dev-docs/` dir. This dir is included in `.gitignore` and is only used for development builds. Any specific dev config should bd included in the `_config_dev.yml` file. Your absolute path to `dev-docs` will be different.
