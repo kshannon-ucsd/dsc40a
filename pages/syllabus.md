@@ -19,21 +19,21 @@ description: Course structure and policies.
 
 ## About 🧐
 
-The world is increasingly recognizing the value of data in solving complex and open-ended problems such as these. Instead of explicitly telling the computer exactly how to differentiate between the letters of the alphabet, we instead give the computer many examples of each letter and let it learn the differences automatically. Similarly, by identifying patterns in data, we can learn which factors combine to make an avocado ready-to-eat or a person likely to be a successful data scientist. The explosive growth of data science is largely due to the fact that this approach of learning from data often works remarkably well.
+The world is increasingly recognizing the value of data when solving complex and open-ended problems. In the past we might have explicitly told the computer exactly how to differentiate between the letters of the alphabet, but today we instead give the computer many examples of each letter and let it learn the differences automatically. It is a fascinating time to be working with data! The next obvious question then is... "But how do we learn from data?" 
 
-But how do we learn from data? This is the central question of DSC 40A. We will see that virtually every rigorous learning method involves two steps: 1) turning the abstract problem of learning into a concrete math problem; and 2) solving that math problem. This quarter, we will see how to apply this fundamental approach in a variety of contexts. After this class, you will understand the basic theoretical principles underlying almost every machine learning and data science method — from simple linear regression to deep neural networks. You'll also be better prepared to tackle the math you'll see in your upper-division courses, like vector calculus, linear algebra, and probability.
+ This is the central question of DSC 40A. We will see that virtually every rigorous learning method involves two steps: i. turning the abstract problem of learning into a concrete math problem; and ii. solving that math problem. This quarter, we will see how to apply this fundamental approach in a variety of contexts. After this class, you will understand the basic theoretical principles underlying almost every machine learning and data science method — from simple linear regression to deep neural networks. You'll also be better prepared to tackle the math you'll see in your upper-division courses, like vector calculus, linear algebra, and probability. 
 
 ---
 
 ## Communication 💬
 
-This quarter, we'll be using [Ed](https://edstem.org/us/courses/57667/discussion/4667406) as our course message board. You should be added to Ed automatically; if not, join using [this link](https://edstem.org/us/join/tFGYBG). Please join right away as we'll be making all course announcements through Ed.
+This quarter, we'll be using [Ed](https://edstem.org/) as our course message board. You should be added to Ed automatically; if not, a link will be provided in class. Please join right away as we'll be making all course announcements through Ed.
 
-If you have a question about anything to do with the course — if you're stuck on a problem, didn't understand something from lecture, want clarification on course logistics, or just have a general question about data science — you can make a post on Ed. We only ask that if your question includes some or all of an answer (even if you're not sure it's right), please make your post private so that others cannot see it. You can also post anonymously if you would prefer.
+If you have a question about anything to do with the course — if you're stuck on a problem, didn't understand something from lecture, want clarification on course logistics, or just have a general question about data science — please make a post on Ed. If your question is about an active HW problem, please make your post private so that others cannot see it and include your thoughts, parts of an answer (even if you are unsure if it is correct) or what steps you have tried. 
 
-Course staff will regularly check Ed and try to answer any questions that you have. You're also encouraged to answer questions asked by other students. Explaining something is a great way to solidify your understanding of it!
+Course staff will regularly check Ed to answer questions. You're also encouraged to answer questions asked by other students. Explaining something is a great way to solidify your understanding of it!
 
-Please don't email staff members (and don't message them on social media), just make a private or public Ed post instead!
+Please don't email staff members (and don't message them on social media), just make a private or public Ed post instead! I will not answer emails regarding course material/logistics etc. 
 
 ---
 
@@ -42,26 +42,28 @@ Please don't email staff members (and don't message them on social media), just 
 We will be using several websites this quarter. Here's what they're all used for:
 
 - [Course Website](https://dsc40a.com): Where all content will be posted.
-- [Ed](https://edstem.org/us/courses/57667/discussion/4667406): Discussion forum for announcements and communication.
-- [Gradescope](https://www.gradescope.com/courses/759109/): Platform for submitting assignments and viewing grades. You should be automatically added to Gradescope within 24 hours of enrolling.
-- [Datahub](https://datahub.ucsd.edu): UCSD's data science and machine learning platform, for coding in Jupyter notebooks.
+- [Ed](https://edstem.org/us/): Discussion forum for announcements and communication.
+- [Gradescope](https://www.gradescope.com): Platform for submitting assignments and viewing grades. You should be automatically added to Gradescope.
+- [Google Collab](https://colab.research.google.com/): Google's shareable live jupyter notebook web application for any coding demos or projects.
 
-**Note that we will not be using Canvas at all.**
+**Note that we WILL NOT be using Canvas at all. I only have canvas as a way to auto enroll you in gradescope and to submit your grades to UCSD**
 
 ---
 
 ## Course Structure 🍎
 
-This course will include in-person lectures, groupwork sessions in discussion section, and weekly homework assignments.
+This course will include pre-recorded lectures, live demos, live worked problems, groupwork sessions in discussion section, plenty of office hours, and weekly homework assignments.
 
 ### Lecture
 
-There are two lecture sections:
+#### Pre Recorded Lectures
 
-- A: TuTh 12:30-1:50PM in [Center Hall](https://maps.app.goo.gl/epiFTsQqRRPYn3ZX7) 212.
-- B: TuTh 2-3:20PM in [Center Hall](https://maps.app.goo.gl/epiFTsQqRRPYn3ZX7) 212.
+Lecture is meant to introduce you to the main concepts of the course.
 
-Lecture is meant to introduce you to the main concepts of the course. Attendance is highly encouraged and positively correlated with success in the course, though it will not be required. Attending lecture gives you the opportunity to ask questions, answer ungraded concept-check polls, and participate in discussion.
+
+#### Lecture Class Time
+
+ Attendance is highly encouraged and positively correlated with success in the course, though it will not be required. Attending lecture gives you the opportunity to ask questions, answer ungraded concept-check polls, and participate in discussion.
 
 Lectures will be podcasted recordings will be available at [podcast.ucsd.edu](https://podcast.ucsd.edu/) within a few hours, and also posted on the course homepage.
 
