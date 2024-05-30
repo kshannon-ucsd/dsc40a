@@ -11,7 +11,7 @@ Lectures and discussions in <span style="color:#536ca6"><b>blue</b></span> are a
 - On Tuesdays and Thursdays, both the 12:30-1:50PM (A) and 2-3:20PM (B) lecture sections meet in Center Hall 212.
 - On Mondays, the 4-4:50PM (A) discussion meets in Center Hall 214, while the 5-5:50PM (B) discussion meets in Center Hall 109.
 
-All office hours are held in person. 
+Most office hours are held in person. 
 - Office hours in <span style="color:#40a587"><b>green</b></span> are held in [Halıcıoğlu Data Science Institute](https://www.google.com/maps/place/Hal%C4%B1c%C4%B1o%C4%9Flu+Data+Science+Institute/@32.8805676,-117.2363991,17z/data=!3m2!4b1!5s0x80dc06c1dfc237df:0x2baefc1d5cbb43f3!4m6!3m5!1s0x80dc06c1fb192bcb:0x94d4894527b99b21!8m2!3d32.8805631!4d-117.2338242!16s%2Fg%2F11f4_xtk0f?entry=ttu) 155.
 - Office hours in <span style="color:#8c66d9"><b>purple</b></span> are held somewhere other than HDSI 155. **Starting Week 5, some afternoon office hours are held in [Halıcıoğlu Data Science Institute](https://www.google.com/maps/place/Hal%C4%B1c%C4%B1o%C4%9Flu+Data+Science+Institute/@32.8805676,-117.2363991,17z/data=!3m2!4b1!5s0x80dc06c1dfc237df:0x2baefc1d5cbb43f3!4m6!3m5!1s0x80dc06c1fb192bcb:0x94d4894527b99b21!8m2!3d32.8805631!4d-117.2338242!16s%2Fg%2F11f4_xtk0f?entry=ttu) 355.**
 
