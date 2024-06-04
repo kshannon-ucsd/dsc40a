@@ -1,6 +1,7 @@
 - name: Kyle Shannon
   email: kshannon@ucsd.edu
   role: Instructor
+  pronouns: he/him
   website: https://www.kmshannon.com/about/
   photo: assets/staff/kyle.png
   description: BS/MAS, Neuroscience/Data Science, UCSD (Data Soothsayer)
@@ -19,7 +20,7 @@
   askabout: TBD
   food: TBE
 
-  - name: TBD
+- name: TBD
   email: TBD
   role: Tutor
   pronouns: TBD
@@ -30,7 +31,7 @@
   askabout: TBD
   food: TBE
 
-  - name: TBD
+- name: TBD
   email: TBD
   role: Tutor
   pronouns: TBD
@@ -41,7 +42,7 @@
   askabout: TBD
   food: TBE
 
-  - name: TBD
+- name: TBD
   email: TBD
   role: Tutor
   pronouns: TBD

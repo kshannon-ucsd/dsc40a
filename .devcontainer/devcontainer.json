@@ -1,15 +1,22 @@
 {
     "name": "${localWorkspaceFolderBasename}",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "..",
-        "args": {
-            "DEV_USERNAME": "vscode",
-            "DEV_UID": "1000",
-            "DEV_GID": "1000",
-            "COMPOSE_PROJECT_NAME": "dsc40a"
+    "image": "ruby:3.1.2",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": "true",
+            "username": "vscode",
+            "installOhMyZsh": "false",
+            "installOhMyZshConfig": "false"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "ppa": "true"
         }
     },
+    "remoteUser": "vscode",
+    "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install 18 && npm install -g yarn && gem install bundler jekyll",
     "customizations": {
         "vscode": {
             "extensions": [
