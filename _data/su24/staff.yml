@@ -1,7 +1,6 @@
 - name: Kyle Shannon
   email: kshannon@ucsd.edu
   role: Instructor
-  pronouns: he/him
   website: https://www.kmshannon.com/about/
   photo: assets/staff/kyle.png
   description: BS/MAS, Neuroscience/Data Science, UCSD (Data Soothsayer)
@@ -9,46 +8,38 @@
   askabout: Coffee, Likely to be found on a tennis court 🎾
   food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai
 
-- name: TBD
-  email: TBD
+- name: Owen Miller
+  email: omiller@ucsd.edu
   role: Tutor
-  pronouns: TBD
-  website: TBD
-  photo: TBD
-  description: TBD
-  hometown: TBD
-  askabout: TBD
-  food: TBE
+  photo:
+  description:
+  hometown:
+  askabout:
+  food:
 
-- name: TBD
-  email: TBD
+- name: Jiesen (Last Name Unknown like Madonna)
+  email: jiz147@ucsd.edu
   role: Tutor
-  pronouns: TBD
-  website: TBD
-  photo: TBD
-  description: TBD
-  hometown: TBD
-  askabout: TBD
-  food: TBE
+  photo:
+  description:
+  hometown:
+  askabout:
+  food:
 
-- name: TBD
-  email: TBD
+- name: Ahmed Mostafa
+  email: ahmostafa
   role: Tutor
-  pronouns: TBD
-  website: TBD
-  photo: TBD
-  description: TBD
-  hometown: TBD
-  askabout: TBD
-  food: TBE
+  photo: 
+  description: 
+  hometown: 
+  askabout: 
+  food:
 
-- name: TBD
-  email: TBD
+- name: Zoe Ludena
+  email: zludena@ucsd.ude
   role: Tutor
-  pronouns: TBD
-  website: TBD
-  photo: TBD
-  description: TBD
-  hometown: TBD
-  askabout: TBD
-  food: TBE
+  photo:
+  description:
+  hometown:
+  askabout:
+  food: Zoe's Oven

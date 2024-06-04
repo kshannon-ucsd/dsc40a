@@ -2,7 +2,7 @@
   @extend .card;
 
   .week-days {
-    grid-template-columns: minmax(100px, 1fr) 4fr;
+    grid-template-columns: minmax(100px, 1fr) 3fr;
 
     @include mq(lg) {
       grid-template-columns: minmax(150px, 1fr) 7fr;
@@ -97,6 +97,8 @@
   }
 
 }
+
+::after { content: "" !important }
 
 .text-grey-dk-100, .label-lecture {
     color: #5c5962 !important;
