@@ -13,7 +13,7 @@
     <dd class="week-event{% if forloop.first %} main{% endif %}">
       <p>
         <strong class="label label-{{ event.type }}">
-          {{ event.name }}
+          {{ event.label }}
         </strong>
         {% if event.url %}
         <a href="{{ event.url }}">{{ event.title }}</a>
@@ -39,8 +39,8 @@
         <small>&nbsp;&nbsp;<a href="{{ event.animations }}">
               animations</a></small>
         {%- endif -%}
-        {%- if event.podcast -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.podcast }}">
+        {%- if event.recording -%}
+        <small>&nbsp;&nbsp;<a href="{{ event.recording }}">
               recording</a></small>
         {%- endif -%}
         {%- if event.faqs -%}
@@ -48,7 +48,7 @@
               FAQs</a></small>
         {%- endif -%}
         {%- endif -%}
-        {%- if event.type == "hw" or event.type == "disc" -%}
+        {%- if event.type == "hw" or event.type == "disc" or event.type == "lab" -%}
         {%- if event.problems -%}
         <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

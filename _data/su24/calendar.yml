@@ -6,108 +6,360 @@
     - date: "2024-07-02"
       in_class: true
       events:
-        - name: SUR
+        - label: SUR
           type: survey
           title: <b>Welcome Survey</b>
           url: https://docs.google.com/forms/d/e/1FAIpQLSftyR__u1hEA39AufRcOZVf5Xu49wDJFokH212XJGhum88wqA/viewform
-        - name: LEC 1
+        - label: LEC 1
           type: lecture
           title: Introduction to Modeling (LIVE)
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_01.pdf
           reading:
-        - name: HOPS 1
-          type: disc
+        - label: HOPS
+          type: hops
           title: Hands-On Problem Solving 1
-          problems: resources/hops/hops1.pdf
-          solutions: 
-        - name: HW 0
+          problems: #TODO
+          solutions: #TODO
+        - label: MISC
+          type: disc
+          title: Assign study groups
+        - label: GRPW
+          type: disc
+          title: <b>Group Work 1 Released</b>
+        - label: HW
           type: hw
           title: Homework 0 (not due!)
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
           template: https://www.overleaf.com/read/drzdbmwxgtmz#ea4761
           walkthrough: https://www.youtube.com/playlist?list=PLDNbnocpJUhYtg3s2__3pbh1kNKYxXaFM
-        - name: MISC
-          type: disc
-          title: Assign study groups
 
     - date: "2024-07-02"
       events:
-        - name: LEC 2
+        - label: LEC 2
           type: lecture
           title: Empirical Risk Minimization
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02_annotated.pdf
-          podcast: https://youtu.be/IGu3hTTZYN4
-        - name: LEC 3
+          recording: https://youtu.be/IGu3hTTZYN4
+        - label: LEC 3
           type: lecture
           title: Comparing Loss Functions
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03_annotated.pdf
-          podcast: https://youtu.be/fSjEGEemjX4
-        - name: LEC 4
+          recording: https://youtu.be/fSjEGEemjX4
+        - label: LEC 4
           type: lecture
           title: Simple Linear Regression
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04_annotated.pdf
-          podcast: https://youtu.be/szNzjOhVwm4
-          faqs: TBD
-        - name: HW 1
+          recording: https://youtu.be/szNzjOhVwm4
+        - label: HW
           type: hw
-          title: <b>Homework 1</b>
+          title: <b>Homework 1 Released</b>
           problems: resources/homeworks/hw01.pdf
           template: https://www.overleaf.com/read/jkbqbvktnckv#c53ba2
 
     - date: "2024-07-03"
+      in_class: true
       events:
-        - name: GRPW
+        - label: GRPW
           type: disc
-          title: Group Work 1
+          title: Discussion 1
 
     - date: "2024-07-04"
       events:
-        - name: NOCLS
+        - label: NOCLS
           type: disc
           title: 🇺🇸🦅📜🔔 Happy 4th of July!
 
 - week: 2
   title: "Week 2 - Linear Algebra & Linear Regression<br>"
   days:
-    - date: "2024-04-08"
+    - date: "2024-07-07"
       events:
-        - name: LEC 5
+        - label: LEC 5
           type: lecture
           title: Simple Linear Regression, Continued
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05_annotated.pdf
-          podcast: https://youtu.be/C1pEDBo-YSc
-          faqs: TBD
-        - name: Demo
+          recording: https://youtu.be/C1pEDBo-YSc
+        - label: LEC 6
+          type: lecture
+          title: Dot Products and Projections
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 7
+          type: lecture
+          title: Orthogonal Projections
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 8
+          type: lecture
+          title: Regression and Linear Algebra
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: HW
+          type: hw
+          title: <b>Homework 2 Released</b>
+          problems: #TODO
+          template: #TODO
+
+    - date: "2024-07-09"
+      in_class: true
+      events:
+        - label: DEMO
           type: demo
           title: Demo 1
-          # blank: resources/lectures/lec01/lec01-blank.pdf
-          # filled: resources/lectures/lec01/lec01-filled.pdf
-          # podcast: https://podcast.ucsd.edu/watch/sp24/dsc40a_b00/1
-          # reading:
-        - name: DISC 1
-          type: disc
-          title: Groupwork 1
-          problems: resources/groupworks/gw01.pdf
-    - date: "2024-04-09"
-      events:
-        - name: Lec
-          type: lecture
+          code: #TODO
         
-    - date: "2024-04-11"
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 2
+          problems: #TODO
+          solutions: #TODO
+
+        - label: GRPW
+          type: disc
+          title: <b>Group Work 2 Released</b>
+
+    - date: "2024-07-10"
+      in_class: true
       events:
-        - name: Lec 5
-          type: lecture
+        - label: DISC
+          type: disc
+          title: Discussion 2
+          problems: #TODO
+
+    - date: "2024-07-11"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 2
+          code: #TODO
+
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 3
+          problems: #TODO
+          solutions: #TODO
+
 
 - week: 3
   title: "Week 3 - Multiple Linear Regression, Feature Engineering, & Gradient Descent<br>"
+  days:
+    - date: "2024-07-14"
+      events:
+        - label: LEC 9
+          type: lecture
+          title: Multiple Linear Regression
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 10
+          type: lecture
+          title: Feature Engineering, Gradient Descent
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 11
+          type: lecture
+          title: Gradient Descent, Continued
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released</b>
+          problems: #TODO
+          template: #TODO
+    
+    - date: "2024-07-16"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 3
+          code: #TODO
+
+        - label: REVW
+          type: lecture
+          title: Midterm Review
+        
+        - label: GRPW
+          type: disc
+          title: <b>Group Work 3 Released</b>
+    
+    - date: "2024-07-17"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Discussion 3
+          problems: #TODO
+    
+    - date: "2024-07-18"
+      in_class: true
+      events:
+        - label: EXAM
+          type: exam
+          title: Midterm Exam
+          problems: #TODO
+
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 4
+          problems: #TODO
+          solutions: #TODO
+        
 
 - week: 4
   title: "Week 4 - Probability, Combinatorics, & Independence<br>"
+  days:
+    - date: "2024-07-21"
+      events:
+        - label: LEC 12
+          type: lecture
+          title: Foundations of Probability
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 13
+          type: lecture
+          title: Combinatorics
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 14
+          type: lecture
+          title: More Combinatorics Examples
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 15
+          type: lecture
+          title: Bayes' Theorem and Independence
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: HW
+          type: hw
+          title: <b>Homework 4 Released</b>
+          problems: #TODO
+          template: #TODO
+
+    - date: "2024-07-23"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 4
+          code: #TODO
+        
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 5
+          problems: #TODO
+          solutions: #TODO
+
+        - label: GRPW
+          type: disc
+          title: <b>Group Work 4 Released</b>
+
+    - date: "2024-07-24"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Discussion 4
+          problems: #TODO
+
+    - date: "2024-07-25"
+      in_class: true
+      events:
+        - label: REVW
+          type: lecture
+          title: Midterm Solutions
+
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 6
+          problems: #TODO
+          solutions: #TODO
 
 - week: 5
   title: "Week 5 - Conditional Independence and Naïve Bayes<br>"
+  days:
+    - date: "2024-07-28"
+      events:
+        - label: LEC 16
+          type: lecture
+          title: Independence and Conditional Independence
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 17
+          type: lecture
+          title: Naïve Bayes
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: LEC 18
+          type: lecture
+          title: More Naïve Bayes, Review
+          blank: #TODO
+          filled: #TODO
+          recording: #TODO
+        - label: HW
+          type: hw
+          title: <b>Homework 5 Released</b>
+          problems: #TODO
+          template: #TODO
+
+    - date: "2024-07-30"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 5
+          code: #TODO
+        
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 7
+          problems: #TODO
+          solutions: #TODO
+
+        - label: GRPW
+          type: disc
+          title: <b>Group Work 5 Released</b>
+
+    - date: "2024-07-31"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Discussion 5
+          problems: #TODO
+
+    - date: "2024-08-01"
+      in_class: true
+      events:
+        - label: LEC 19
+          type: lecture
+          title: Conclusion
+        
+        - label: REVW
+          type: lecture
+          title: Final Review
+
+    - date: "2024-08-03"
+      in_class: true
+      events:
+        - label: EXAM
+          type: exam
+          title: Final Exam 
         
