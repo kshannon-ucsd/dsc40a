@@ -18,8 +18,6 @@ nav_order: 1
 {{ site.description }} <span title="https://jarv.is/" class="wave">👋</span>
 {: .fs-6 .fw-300 }
 
-{% include staffer.html staff=staff nobio='true' %}
-
 {{ course_vars.quarter }}
 {: .md-badge-purple }
 
@@ -29,7 +27,10 @@ nav_order: 1
 {{ course_vars.timings }}
 {: .md-badge-purple }
 
-**{{ course_vars.announcement.text }}**
+{% include staffer.html staff=staff nobio='true' %}
+
+
+<!-- **{{ course_vars.announcement.text }}** -->
 
 {% for week in calendar %}
   {% include week.html week=week %}

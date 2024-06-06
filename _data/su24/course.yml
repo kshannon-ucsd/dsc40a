@@ -16,7 +16,7 @@ office_hours:
 
 announcement:
   color: green
-  text: Test
+  text: Hit the ground running ASAP. This will be a very tight summer session with the content we will need to cover! :)
 
 discussion_sections:
   - section: A01
@@ -25,3 +25,9 @@ discussion_sections:
     location: WLH 2114
     ta: N/A
     tutor: TBD
+ 
+final_exam:
+  - section: A00
+    day: Sat
+    time: 3:00PM - 5:59PM
+    location: TBD

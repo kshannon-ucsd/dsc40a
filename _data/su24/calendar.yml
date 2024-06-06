@@ -1,5 +1,7 @@
 - week: 1
-  title: "Week 1 - Modeling and Loss Functions<br><small>📘 Read <a href='resources/notes/notes_chapter_1.pdf#page=1'>Note 1, Pages 1-12</a>.</small>"
+  title: "Week 1 - Modeling, Loss Functions, & Simple Linear Regression<br>
+  <small>📘 Read <a href='resources/notes/notes_chapter_1.pdf#page=1'>Note 1, Pages 1-12</a>.</small><br>
+  <small>📘 Read <a href='resources/notes/spread.pdf'>the spread notes</a> and <a href='resources/notes/notes_chapter_2.pdf#page=1'>Note 2, Pages 1-7</a>.</small>"
   days:
     - date: "2024-07-02"
       in_class: true
@@ -11,8 +13,7 @@
         - name: LEC 1
           type: lecture
           title: Introduction to Modeling (LIVE)
-          blank: resources/lectures/lec01/lec01-blank.pdf
-          filled: resources/lectures/lec01/lec01-filled.pdf
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_01.pdf
           reading:
         - name: HOPS 1
           type: disc
@@ -22,7 +23,7 @@
         - name: HW 0
           type: hw
           title: Homework 0 (not due!)
-          problems: resources/homeworks/hw-example.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
           template: https://www.overleaf.com/read/drzdbmwxgtmz#ea4761
           walkthrough: https://www.youtube.com/playlist?list=PLDNbnocpJUhYtg3s2__3pbh1kNKYxXaFM
         - name: MISC
@@ -34,24 +35,22 @@
         - name: LEC 2
           type: lecture
           title: Empirical Risk Minimization
-          blank: resources/lectures/lec02/lec02-blank.pdf
-          filled: resources/lectures/lec02/lec02-filled.pdf
-          podcast: https://podcast.ucsd.edu/watch/sp24/dsc40a_b00/2
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02_annotated.pdf
+          podcast: TBD
         - name: LEC 3
           type: lecture
           title: Comparing Loss Functions
-          blank: resources/lectures/lec03/lec03-blank.pdf
-          filled: resources/lectures/lec03/lec03-filled.pdf
-          podcast: https://podcast.ucsd.edu/watch/sp24/dsc40a_b00/3
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03_annotated.pdf
+          podcast: TBD
         - name: LEC 4
           type: lecture
           title: Simple Linear Regression
-          # url: resources/lectures/lec03/lec03.html
-          blank: resources/lectures/lec04/lec04-blank.pdf
-          filled: resources/lectures/lec04/lec04-filled.pdf
-          code: http://datahub.ucsd.edu/user-redirect/git-sync?repo=https://github.com/dsc-courses/dsc40a-2024-sp&subPath=lectures/lec04/lec04-code.ipynb
-          podcast: https://podcast.ucsd.edu/watch/sp24/dsc40a_b00/4
-          faqs: faqs#week-2-loss-functions-center-and-spread-and-simple-linear-regression
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04_annotated.pdf
+          podcast: TBD
+          faqs: TBD
         - name: HW 1
           type: hw
           title: <b>Homework 1</b>
@@ -70,9 +69,8 @@
           type: disc
           title: 🇺🇸🦅📜🔔 Happy 4th of July!
 
-
 - week: 2
-  title: "Week 2 - Simple Linear Regression<br><small>📘 Read <a href='resources/notes/spread.pdf'>the spread notes</a> and <a href='resources/notes/notes_chapter_2.pdf#page=1'>Note 2, Pages 1-7</a>.</small>"
+  title: "Week 2 - Linear Algebra & Linear Regression<br>"
   days:
     - date: "2024-04-08"
       events:
@@ -96,4 +94,13 @@
       events:
         - name: Lec 5
           type: lecture
+
+- week: 3
+  title: "Week 3 - Multiple Linear Regression, Feature Engineering, & Gradient Descent<br>"
+
+- week: 4
+  title: "Week 4 - Probability, Combinatorics, & Independence<br>"
+
+- week: 5
+  title: "Week 5 - Conditional Independence and Naïve Bayes<br>"
         

@@ -1,9 +1,9 @@
-- name: Kyle Shannon
+- name: Kyle Shannon (Data Soothsayer)
   email: kshannon@ucsd.edu
   role: Instructor
   website: https://www.kmshannon.com/about/
-  photo: assets/staff/kyle.png
-  description: BS/MAS, Neuroscience/Data Science, UCSD (Data Soothsayer)
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/kshannon_2.jpg
+  description: Neuroscience → Data Science @ UCSD x2
   hometown: San Diego, Cali
   askabout: Coffee, Likely to be found on a tennis court 🎾
   food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai
