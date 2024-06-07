@@ -313,11 +313,6 @@
           blank: #TODO
           filled: #TODO
           recording: #TODO
-        - label: HW
-          type: hw
-          title: <b>Homework 5 Released</b>
-          problems: #TODO
-          template: #TODO
 
     - date: "2024-07-30"
       in_class: true
