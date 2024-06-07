@@ -1,7 +1,8 @@
 - week: 1
   title: "Week 1 - Modeling, Loss Functions, & Simple Linear Regression<br>
-  <small>📘 Read <a href='resources/notes/notes_chapter_1.pdf#page=1'>Note 1, Pages 1-12</a>.</small><br>
-  <small>📘 Read <a href='resources/notes/spread.pdf'>the spread notes</a> and <a href='resources/notes/notes_chapter_2.pdf#page=1'>Note 2, Pages 1-7</a>.</small>"
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a>.</small><br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.</small><br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.</small>"
   days:
     - date: "2024-07-02"
       in_class: true
@@ -26,6 +27,8 @@
         - label: GRPW
           type: disc
           title: <b>Group Work 1 Released</b>
+          problems: #TODO
+          solutions: #TODO
         - label: HW
           type: hw
           title: Homework 0 (not due!)
@@ -73,7 +76,8 @@
           title: 🇺🇸🦅📜🔔 Happy 4th of July!
 
 - week: 2
-  title: "Week 2 - Linear Algebra & Linear Regression<br>"
+  title: "Week 2 - Linear Algebra & Linear Regression<br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 7-19</a>.</small><br>"
   days:
     - date: "2024-07-07"
       events:
@@ -86,14 +90,14 @@
         - label: LEC 6
           type: lecture
           title: Dot Products and Projections
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
           recording: #TODO
         - label: LEC 7
           type: lecture
           title: Orthogonal Projections
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07_annotated.pdf
           recording: #TODO
         - label: LEC 8
           type: lecture
@@ -124,6 +128,8 @@
         - label: GRPW
           type: disc
           title: <b>Group Work 2 Released</b>
+          problems: #TODO
+          solutions: #TODO
 
     - date: "2024-07-10"
       in_class: true
@@ -149,7 +155,9 @@
 
 
 - week: 3
-  title: "Week 3 - Multiple Linear Regression, Feature Engineering, & Gradient Descent<br>"
+  title: "Week 3 - Multiple Linear Regression, Feature Engineering, & Gradient Descent<br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 16-17</a>.</small><br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_convexity.pdf'>Notes on Convexity</a>.</small><br>"
   days:
     - date: "2024-07-14"
       events:
@@ -192,6 +200,8 @@
         - label: GRPW
           type: disc
           title: <b>Group Work 3 Released</b>
+          problems: #TODO
+          solutions: #TODO
     
     - date: "2024-07-17"
       in_class: true
@@ -217,7 +227,15 @@
         
 
 - week: 4
-  title: "Week 4 - Probability, Combinatorics, & Independence<br>"
+  title: "Week 4 - Probability, Combinatorics, & Independence<br>
+    <small>📘 Read Janine's probability roadmap (in order):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_questions.pdf'>Roadmap with Questions</a>
+      &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_answers.pdf'>Roadmap with Answers</a>
+      &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_summary.pdf'>Summary</a>
+    </small>
+    <br>
+    <small>📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Chapters 1 and 2 of this online Probability Textbook</a>.</small><br>"
   days:
     - date: "2024-07-21"
       events:
@@ -265,17 +283,12 @@
           problems: #TODO
           solutions: #TODO
 
-        - label: GRPW
-          type: disc
-          title: <b>Group Work 4 Released</b>
-
     - date: "2024-07-24"
       in_class: true
       events:
         - label: DISC
           type: disc
-          title: Discussion 4
-          problems: #TODO
+          title: Discussion 4 (Midterm Solutions)
 
     - date: "2024-07-25"
       in_class: true
@@ -291,7 +304,8 @@
           solutions: #TODO
 
 - week: 5
-  title: "Week 5 - Conditional Independence and Naïve Bayes<br>"
+  title: "Week 5 - Conditional Independence and Naïve Bayes<br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_conditional_independence.pdf'>Notes on Conditional Independence</a>.</small><br>"
   days:
     - date: "2024-07-28"
       events:
@@ -330,7 +344,9 @@
 
         - label: GRPW
           type: disc
-          title: <b>Group Work 5 Released</b>
+          title: <b>Group Work 4 Released</b>
+          problems: #TODO
+          solutions: #TODO
 
     - date: "2024-07-31"
       in_class: true
