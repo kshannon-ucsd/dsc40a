@@ -293,9 +293,6 @@
     - date: "2024-07-25"
       in_class: true
       events:
-        - label: REVW
-          type: lecture
-          title: Midterm Solutions
 
         - label: HOPS
           type: hops
