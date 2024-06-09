@@ -102,8 +102,8 @@
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08_annotated.pdf
           recording: #TODO
         - label: HW
           type: hw
@@ -164,8 +164,8 @@
         - label: LEC 9
           type: lecture
           title: Multiple Linear Regression
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
           recording: #TODO
         - label: LEC 10
           type: lecture
