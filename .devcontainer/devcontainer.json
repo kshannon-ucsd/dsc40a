@@ -16,7 +16,7 @@
         }
     },
     "remoteUser": "vscode",
-    "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install 18 && npm install -g yarn && pip install --upgrade pip && pip install -r requirements.txt",
+    "onCreateCommand": "bash .devcontainer/onCreate.sh",
     "customizations": {
         "vscode": {
             "extensions": [
