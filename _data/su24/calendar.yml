@@ -10,7 +10,7 @@
         - label: SUR
           type: survey
           title: <b>Welcome Survey</b>
-          url: https://docs.google.com/forms/d/e/1FAIpQLSftyR__u1hEA39AufRcOZVf5Xu49wDJFokH212XJGhum88wqA/viewform
+          url: https://forms.gle/GDusrmWTCdoQLDwc7
         - label: LEC 1
           type: lecture
           title: Introduction to Modeling (LIVE)
@@ -59,8 +59,8 @@
         - label: HW
           type: hw
           title: <b>Homework 1 Released</b>
-          problems: resources/homeworks/hw01.pdf
-          template: https://www.overleaf.com/read/jkbqbvktnckv#c53ba2
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_ghtry.pdf
+          answers:
 
     - date: "2024-07-03"
       in_class: true

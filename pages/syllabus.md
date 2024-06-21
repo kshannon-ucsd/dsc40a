@@ -45,13 +45,13 @@ We will be using several websites this quarter. Here's what they're all used for
 - [Gradescope](https://www.gradescope.com): Platform for submitting assignments and viewing grades. You should be automatically added to Gradescope.
 - [Google Colab](https://colab.research.google.com/): Google's shareable live Jupyter notebook web application for any coding demos or projects.
 
-**Note that we WILL NOT be using Canvas at all. I only have Canvas as a way to auto-enroll you in Gradescope and to submit your grades to UCSD.**
+**Note that we WILL NOT be using Canvas at all. I only have Canvas as a way to auto-enroll you in Gradescope and to submit your grades to UCSD's lovely egrades system.**
 
 ---
 
 ## Course Structure 🍎
 
-This course will include pre-recorded lectures, live demos, live worked problems, group work sessions in discussion sections, plenty of office hours, and weekly homework assignments.
+This course will include pre-recorded lectures, live demos, live worked problems, group work *(discussion)* sessions sections, plenty of office hours, and weekly homework assignments. Oh Joy!
 
 ### Lecture
 
@@ -63,11 +63,11 @@ Lectures are pre-recorded. Podcasting is not perfect, and with pre-recorded lect
 
 We have found that students like to have as many example problems worked out for them in this class. So, I have turned the scheduled lecture time into an interactive problem-solving session. We will work on practice problems, that are more difficult than exam problems, step-by-step together. We will also work through several code demos to provide context and examples of the theory.
 
-**Lecture is not required, but highly recommended**
+**Lecture is not required, but highly recommended and incentivized with extra credit opportunities**
 
 ### Discussion
 
-Discussion sections will be primarily used to facilitate problem-solving in small groups with peers. There are two discussion sections on Monday evenings:
+Discussion sections will be primarily used to facilitate problem-solving in small groups with peers.
 
 We will provide a worksheet of problems, which you will complete in a group of two to four students. The group work should help reinforce concepts from the lecture and further prepare you for homework.
 
@@ -81,9 +81,7 @@ Only one member of each group should submit the worksheet, and they should indic
 
 This class will have weekly homework assignments.
 
-Homework should be written or typed up and turned in by each student individually. If you want to type up your answers, we will provide a LaTeX template through Overleaf; click the 🍃 emoji next to each homework on the homepage to access the template. Follow [these instructions](https://www.overleaf.com/learn/how-to/Copying_a_project#Making_a_copy_of_a_project) to make a copy of the template, and then add your solutions.
-
-**Using the template is optional unless otherwise stated.** The purpose of this is to ensure that all students are exposed to LaTeX at some point since it'll be useful in later DSC courses as well as the capstone project where it will be required.
+Homework should be written or typed (using LaTeX) up and turned in by each student individually. If you want to type up your answers, we recommend using markdown with LaTeX or overleaf.com
 
 You may talk to other students in the class about the problems and discuss solution strategies, but you should not share any written communication. You can tell someone how to do a homework problem, but you cannot show them how to do it. One way to tell if you are respecting this boundary is to ask yourself whether your collaboration could take place over the phone. Additionally, the content of your verbal communication should involve the problem-solving strategy and approach, and you should not directly compare answers with classmates.
 
@@ -96,7 +94,7 @@ As a result of this collaboration policy, students may have similar approaches t
 
 For each problem you submit, you should cite your sources by including a list of names of other students with whom you discussed the problem. Instructors do not need to be cited.
 
-We also encourage you to come to instructor and staff office hours for help on homework questions. The homework assignments for this class are quite challenging and most students are not able to successfully complete the homework from attending lecture alone. Make sure to use the resources provided on the [Resources](../resources) tab of the course website, actively participate in group work sessions, and plan to attend office hours at least once a week.
+We also encourage you to come to instructor and staff office hours for help on homework questions. The homework assignments for this class are quite challenging and most students are not able to successfully complete the homework from attending lecture alone. Make sure to use the resources provided on the Resources tab of the course website, actively participate in group work sessions, and plan to attend office hours at least once a week.
 
 You may post homework-related questions on Ed, though your questions (and answers) should be about approaches, not answers. If your question includes some or all of an answer (even if you're not sure it's right), you must make your post private so that others cannot see it. **We are not able to tell you whether your answer is correct.**
 
@@ -110,7 +108,7 @@ To get help on assignments and concepts, course staff will be hosting several of
 
 There will be one Midterm Exam and one Final Exam, both held in person.
 
-The Midterm Exam will be worth 20% of your overall course grade and will only cover content from Lectures 1-9. The Final Exam will be worth 30% of your overall course grade and will be cumulative.
+The Midterm Exam will be worth 20% of your overall course grade. The Final Exam will be worth 30% of your overall course grade and will be cumulative.
 
 To prepare for exams, you should plan to spend a considerable amount of time working through past exam problems. We're building a bank of old exam problems, with detailed explanations, at [practice.dsc40a.com](https://practice.dsc40a.com).
 
@@ -128,16 +126,16 @@ The Final Exam will consist of two parts: a "Midterm" section and a "post-Midter
 
 Here's how we will compute your grade.
 
-| Component     | Weight | Notes                        |
-|---------------|--------|------------------------------|
-| Homework      | 40%    | drop lowest                  |
-| Group work    | 10%    | drop lowest                  |
-| Midterm Exam  | 20%    |                              |
-| Final Exam    | 30%    | see redemption policy above  |
+| Component     | Weight | Notes                             |
+|---------------|--------|-----------------------------------|
+| Homework      | 40%    | replace lowest with highest grade |
+| Group work    | 10%    | replace lowest with highest grade |
+| Midterm Exam  | 20%    |                                   |
+| Final Exam    | 30%    | see redemption policy above       |
 
 ### Late Policy, Slip Days, and Drops
 
-Each student has **four slip days** to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most one slip day on any single homework assignment. **Slip days can only be used for homework assignments.**
+Each student has **four slip days** (**two in the summer sessions**) to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most one slip day on any single homework assignment. **Slip days can only be used for homework assignments.**
 
 Slip days are applied automatically at the end of the quarter, and you don't need to ask in order to use one. It's your responsibility to keep track of how many you have left. If you run out of slip days and submit a homework late, it may still be graded so that you'll see what questions you missed, but the grade will be changed to a zero at the end of the quarter. If you use more than four slip days, we will count the first four late assignments, and any late assignments after that will get zero scores.
 
@@ -145,15 +143,13 @@ Slip days are designed to be a transparent and predictable source of leniency in
 
 **If you have something going on in your life that is impeding your ability to do your classwork on time, please reach out to us as soon as possible so we can work something out.**
 
-In addition to providing you with slip days, we will drop your lowest homework and lowest group work. This gives you some additional flexibility for unforeseen circumstances.
-
 Students on the waitlist or who join the class late are expected to keep up with the work and submit assignments by the deadlines.
 
 The stated policies will be strictly enforced out of fairness for all students.
 
 ### Regrade Requests 
 
-You can ask for a regrade on any assignment if you believe that the grader made a mistake. Remember that clarity is a part of your score — if you had the right idea but were unable to clearly communicate it, you may still not deserve full credit. We ask that you please submit your regrade requests within one week (3 days in summer sessions) of the assignment grade being released; you can submit regrade requests directly on Gradescope.
+You can ask for a regrade on any assignment if you believe that the grader made a mistake. Remember that clarity is a part of your score — if you had the right idea but were unable to clearly communicate it, you may still not deserve full credit. We ask that you please submit your **regrade requests within one week (48 hours in summer sessions) of the assignment grade being released**; you can submit regrade requests directly on Gradescope.
 
 
 ### Incomplete Grades
