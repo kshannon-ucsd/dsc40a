@@ -27,8 +27,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   DSC 40A, Summer Session 1 2024 at UC San Diego
 title: DSC 40A
 tagline: Theoretical Foundations of Data Science I
+
+# when hosted via kshannon-ucsd.github.io
 url: https://kshannon-ucsd.github.io
 baseurl: /dsc40a
+
+# when hosted via dsc40a.com
+url: https://dsc40a.com
+baseurl: ""
+
 
 ###### Build settings
 # remote_theme:
