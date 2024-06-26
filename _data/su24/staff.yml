@@ -3,7 +3,7 @@
   role: Instructor
   website: https://www.kmshannon.com/about/
   photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/kshannon_2.jpg
-  description: Neuroscience → Data Science @ UCSD x2
+  description: Neuroscience → Data Science @ UCSD x2 (recursive pain)
   hometown: San Diego, Cali
   askabout: Coffee, Likely to be found on a tennis court 🎾
   food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai
@@ -34,12 +34,3 @@
   hometown: 
   askabout: 
   food:
-
-- name: Zoe Ludena
-  email: zludena@ucsd.edu
-  role: Tutor
-  photo:
-  description:
-  hometown:
-  askabout:
-  food: Zoe's Oven
