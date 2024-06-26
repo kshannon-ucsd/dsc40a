@@ -93,19 +93,19 @@
           title: Dot Products and Projections
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/JZKZmPRl7tg
         - label: LEC 7
           type: lecture
           title: Orthogonal Projections
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/Q0bJtqN9W3M
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/_4MzHzJquAA
         - label: HW
           type: hw
           title: <b>Homework 2 Released</b>

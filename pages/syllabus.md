@@ -126,12 +126,12 @@ The Final Exam will consist of two parts: a "Midterm" section and a "post-Midter
 
 Here's how we will compute your grade.
 
-| Component     | Weight | Notes                             |
-|---------------|--------|-----------------------------------|
-| Homework      | 40%    | replace lowest with highest grade |
-| Group work    | 10%    | replace lowest with highest grade |
-| Midterm Exam  | 20%    |                                   |
-| Final Exam    | 30%    | see redemption policy above       |
+| Component     | Weight | Notes                                                    |
+|---------------|--------|----------------------------------------------------------|
+| Homework      | 40%    | replace lowest (iff you attempted it) with highest grade |
+| Group work    | 10%    | replace lowest (iff you attempted it) with highest grade |
+| Midterm Exam  | 20%    |                                                          |
+| Final Exam    | 30%    | see redemption policy above                              |
 
 ### Late Policy, Slip Days, and Drops
 
