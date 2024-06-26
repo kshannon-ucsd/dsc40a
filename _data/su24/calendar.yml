@@ -24,11 +24,6 @@
         - label: MISC
           type: disc
           title: Assign study groups
-        - label: GRPW
-          type: disc
-          title: <b>Group Work 1 Released</b>
-          problems: #TODO
-          solutions: #TODO
         - label: HW
           type: hw
           title: Homework 0 (not due!)
@@ -65,9 +60,9 @@
     - date: "2024-07-03"
       in_class: true
       events:
-        - label: GRPW
+        - label: DISC
           type: disc
-          title: Discussion 1
+          title: Groupwork 1 (Discussion Section)
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_weyaf.pdf
 
     - date: "2024-07-04"
@@ -119,16 +114,9 @@
           type: demo
           title: Demo 1
           code: #TODO
-        
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 2
-          problems: #TODO
-          solutions: #TODO
-
-        - label: GRPW
-          type: disc
-          title: <b>Group Work 2 Released</b>
           problems: #TODO
           solutions: #TODO
 
@@ -137,7 +125,7 @@
       events:
         - label: DISC
           type: disc
-          title: Discussion 2
+          title: Groupwork 2 (Discussion Section)
           problems: #TODO
 
     - date: "2024-07-11"
@@ -197,19 +185,13 @@
         - label: REVW
           type: lecture
           title: Midterm Review
-        
-        - label: GRPW
-          type: disc
-          title: <b>Group Work 3 Released</b>
-          problems: #TODO
-          solutions: #TODO
     
     - date: "2024-07-17"
       in_class: true
       events:
         - label: DISC
           type: disc
-          title: Discussion 3
+          title: Groupwork 3 (Discussion Section)
           problems: #TODO
     
     - date: "2024-07-18"
@@ -289,7 +271,7 @@
       events:
         - label: DISC
           type: disc
-          title: Discussion 4 (Midterm Solutions)
+          title: Discussion (Midterm Solutions)
 
     - date: "2024-07-25"
       in_class: true
@@ -340,18 +322,12 @@
           problems: #TODO
           solutions: #TODO
 
-        - label: GRPW
-          type: disc
-          title: <b>Group Work 4 Released</b>
-          problems: #TODO
-          solutions: #TODO
-
     - date: "2024-07-31"
       in_class: true
       events:
         - label: DISC
           type: disc
-          title: Discussion 5
+          title: Groupwork 4 (Discussion Section)
           problems: #TODO
 
     - date: "2024-08-01"
