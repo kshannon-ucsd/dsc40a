@@ -16,11 +16,6 @@
           title: Introduction to Modeling (LIVE)
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_01.pdf
           reading:
-        - label: HOPS
-          type: hops
-          title: Hands-On Problem Solving 1
-          problems: #TODO
-          solutions: #TODO
         - label: MISC
           type: disc
           title: Assign study groups
@@ -55,7 +50,7 @@
           type: hw
           title: <b>Homework 1 Released</b>
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_ghtry.pdf
-          answers: #ADD-AFTER-RELEASE
+          answers: #ADD-AFTER-GRADES
 
     - date: "2024-07-03"
       in_class: true
@@ -116,9 +111,7 @@
           code: #TODO
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 2
-          problems: #TODO
-          solutions: #TODO
+          title: Hands-On Problem Solving 1
 
     - date: "2024-07-10"
       in_class: true
@@ -138,9 +131,7 @@
 
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 3
-          problems: #TODO
-          solutions: #TODO
+          title: Hands-On Problem Solving 2
 
 
 - week: 3
@@ -155,7 +146,7 @@
           title: Multiple Linear Regression
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/5bNAEE2Oa8Q
         - label: LEC 10
           type: lecture
           title: Feature Engineering, Gradient Descent
@@ -204,9 +195,7 @@
 
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 4
-          problems: #TODO
-          solutions: #TODO
+          title: Hands-On Problem Solving 3
         
 
 - week: 4
@@ -262,9 +251,7 @@
         
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 5
-          problems: #TODO
-          solutions: #TODO
+          title: Hands-On Problem Solving 4
 
     - date: "2024-07-24"
       in_class: true
@@ -279,9 +266,7 @@
 
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 6
-          problems: #TODO
-          solutions: #TODO
+          title: Hands-On Problem Solving 5
 
 - week: 5
   title: "Week 5 - Conditional Independence and Naïve Bayes<br>
@@ -318,9 +303,7 @@
         
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 7
-          problems: #TODO
-          solutions: #TODO
+          title: Hands-On Problem Solving 6
 
     - date: "2024-07-31"
       in_class: true
