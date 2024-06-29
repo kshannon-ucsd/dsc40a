@@ -152,13 +152,13 @@
           title: Feature Engineering, Gradient Descent
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/tiBz50dtGMU
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/hHuLz3obCTc
         - label: HW
           type: hw
           title: <b>Homework 3 Released</b>
@@ -216,7 +216,7 @@
           title: Foundations of Probability
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/IC9bB4QQsq0
         - label: LEC 13
           type: lecture
           title: Combinatorics
