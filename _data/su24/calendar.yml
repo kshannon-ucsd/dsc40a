@@ -121,14 +121,6 @@
           title: Groupwork 2 (Discussion Section)
           problems: #TODO
 
-    - date: "2024-07-11"
-      in_class: true
-      events:
-        - label: DEMO
-          type: demo
-          title: Demo 2
-          code: #TODO
-
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 2
@@ -170,7 +162,7 @@
       events:
         - label: DEMO
           type: demo
-          title: Demo 3
+          title: Demo 2
           code: #TODO
 
         - label: REVW
@@ -246,7 +238,7 @@
       events:
         - label: DEMO
           type: demo
-          title: Demo 4
+          title: Demo 3
           code: #TODO
         
         - label: HOPS
@@ -298,7 +290,7 @@
       events:
         - label: DEMO
           type: demo
-          title: Demo 5
+          title: Demo 4
           code: #TODO
         
         - label: HOPS
