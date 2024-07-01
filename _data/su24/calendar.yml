@@ -7,6 +7,10 @@
     - date: "2024-07-02"
       in_class: true
       events:
+        - label: MISC
+          type: survey
+          title: Sign Up for EdStem (class discussion board)
+          url: https://edstem.org/us/join/EU8se2
         - label: SUR
           type: survey
           title: <b>Welcome Survey</b>
