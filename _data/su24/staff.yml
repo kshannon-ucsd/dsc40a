@@ -6,31 +6,31 @@
   description: Neuroscience → Data Science @ UCSD x2 (recursive pain)
   hometown: San Diego, Cali
   askabout: Coffee, Likely to be found on a tennis court 🎾
-  food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai
+  food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai, Callie
 
 - name: Owen Miller
   email: omiller@ucsd.edu
   role: Tutor
-  photo:
-  description:
-  hometown:
-  askabout:
-  food:
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/owen.png
+  description: 4th year data science + Cognitive Science (Machine Learning and Neural Computation)
+  hometown: Kaifeng -> Zhengzhou -> Los Angeles -> Syracuse -> San Diego
+  askabout: Collecting records, playing guitar & bass; most likely to find me at Folk Arts Rare Records and Pitbull Audio (not sponsored) 
+  food: Taco El Gordo, Fire Spot BBQ, Dim Sum places
 
 - name: Jiesen (just Jiesen, like Madonna)
   email: jiz147@ucsd.edu
   role: Tutor
-  photo:
-  description:
-  hometown:
-  askabout:
-  food:
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/Jiesen.jpg
+  description: 3rd year data science + probability & stats major
+  hometown: Moss Beach -> Salt Lake City -> Barcelona -> San Diego
+  askabout: Cooking, books
+  food: Piacere Mio, Flavors of East Africa, Lanzhou Noodlelicious
 
 - name: Ahmed Mostafa
   email: ahmostafa@ucsd.edu
   role: Tutor
-  photo: 
-  description: 
-  hometown: 
-  askabout: 
-  food:
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/ahmed.png
+  description: 3rd year data science major & math minor
+  hometown: Cairo, Egypt
+  askabout: Ping Pong 🏓, Soccer ⚽, and Fishing 🎣 
+  food: Board & Brew, Aladdin, House of Mandi
