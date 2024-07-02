@@ -11,7 +11,7 @@
 - name: Owen Miller
   email: omiller@ucsd.edu
   role: Tutor
-  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/Jiesen.jpg
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/owen.png
   description: 3rd year data science + probability & stats major
   hometown: Moss Beach -> Salt Lake City -> Barcelona -> San Diego
   askabout: Cooking, books
@@ -20,7 +20,7 @@
 - name: Jiesen (just Jiesen, like Madonna)
   email: jiz147@ucsd.edu
   role: Tutor
-  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/owen.png
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/Jiesen.jpg
   description: 4th year data science + Cognitive Science (Machine Learning and Neural Computation)
   hometown: Kaifeng -> Zhengzhou -> Los Angeles -> Syracuse -> San Diego
   askabout: Collecting records, playing guitar & bass; most likely to find me at Folk Arts Rare Records and Pitbull Audio (not sponsored) 
