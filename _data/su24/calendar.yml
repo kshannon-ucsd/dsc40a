@@ -72,7 +72,12 @@
 
 - week: 2
   title: "Week 2 - Linear Algebra & Linear Regression<br>
-    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 7-19</a>.</small><br>"
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 7-19</a>.
+      🍿 Watch <a href='https://drive.google.com/file/d/12FBqMv4KBqIRqZf46Bi_sQ1ARsfYpOEi/view?usp=drive_link'>Owen's Matrix X Review Pt.1</a>.
+      🍿 Watch <a href='https://drive.google.com/file/d/10U72cAnVuVuLYZAmKwrKyczy89Lt4xCE/view?usp=drive_link'>Owen's Matrix X Review Pt.2</a>.
+    
+    </small><br>"
   days:
     - date: "2024-07-07"
       events:
