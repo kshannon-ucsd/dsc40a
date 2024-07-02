@@ -27,8 +27,9 @@
           type: hw
           title: Homework 0 (not due!)
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
-          template: https://www.overleaf.com/read/drzdbmwxgtmz#ea4761
-          walkthrough: https://www.youtube.com/playlist?list=PLDNbnocpJUhYtg3s2__3pbh1kNKYxXaFM
+          template: https://www.overleaf.com/read/kpqfqhkdxcnn#317117
+          # walk through from previous class, maybe add solutions
+          # walkthrough: https://www.youtube.com/playlist?list=PLDNbnocpJUhYtg3s2__3pbh1kNKYxXaFM
 
     - date: "2024-07-02"
       events:
