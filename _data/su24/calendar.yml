@@ -2,7 +2,8 @@
   title: "Week 1 - Modeling, Loss Functions, & Simple Linear Regression<br>
     <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a>.</small><br>
     <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.</small><br>
-    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.</small>"
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
+    <small>🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>.</small>"
   days:
     - date: "2024-07-02"
       in_class: true
@@ -65,6 +66,7 @@
           type: disc
           title: Groupwork 1 (Discussion Section)
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_weyaf.pdf
+          # solutions: ADD-AFTER-GRADES
 
     - date: "2024-07-04"
       events:
