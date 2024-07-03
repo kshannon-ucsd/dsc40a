@@ -5,7 +5,7 @@
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.<br>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
       🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>.<br>
-    </small><br>"
+    </small>"
   days:
     - date: "2024-07-02"
       in_class: true
@@ -82,7 +82,7 @@
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 7-19</a>.<br>
       🍿 Watch <a href='https://drive.google.com/file/d/12FBqMv4KBqIRqZf46Bi_sQ1ARsfYpOEi/view?usp=drive_link'>Owen's Matrix Multiplication Review Pt.1</a>.<br>
       🍿 Watch <a href='https://drive.google.com/file/d/10U72cAnVuVuLYZAmKwrKyczy89Lt4xCE/view?usp=drive_link'>Owen's Matrix Multiplication Review Pt.2</a>.<br>
-    </small><br>"
+    </small>"
   days:
     - date: "2024-07-07"
       events:
@@ -135,6 +135,9 @@
           title: Groupwork 2 (Discussion Section)
           problems: #TODO
 
+    - date: "2024-07-10"
+      in_class: true
+      events:
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 2
