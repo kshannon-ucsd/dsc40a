@@ -60,7 +60,7 @@
           title: <b>Homework 1 Released</b>
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_ghtry.pdf
           template: https://www.overleaf.com/read/dxgccwhqsjch#6e552f
-          answers: #ADD-AFTER-GRADES
+          # answers: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_solutions_iewdg.pdf
 
     - date: "2024-07-03"
       in_class: true
@@ -69,7 +69,7 @@
           type: disc
           title: Groupwork 1 (Discussion Section)
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_weyaf.pdf
-          # solutions: ADD-AFTER-GRADES
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
 
     - date: "2024-07-04"
       events:
@@ -114,8 +114,11 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released</b>
-          problems: #TODO
-          solutions:  #ADD-AFTER-RELEASE
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
+          # code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_yudqti.ipynb
+          # template: https://www.overleaf.com/read/hprwqpwctmzx#9cddca
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_solutions_kjhrr.pdf
+          # code-solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_solution_gbnerl.ipynb
 
     - date: "2024-07-09"
       in_class: true
@@ -134,7 +137,8 @@
         - label: DISC
           type: disc
           title: Groupwork 2 (Discussion Section)
-          problems: #TODO
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_wieuyf.pdf
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
     - date: "2024-07-10"
       in_class: true
@@ -172,8 +176,9 @@
         - label: HW
           type: hw
           title: <b>Homework 3 Released</b>
-          problems: #TODO
-          solutions:  #ADD-AFTER-RELEASE
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_p239fu.pdf
+          # template: https://www.overleaf.com/read/mfvpkpqbpfbt#799646
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_solutions_43puhf.pdf
     
     - date: "2024-07-16"
       in_class: true
@@ -193,7 +198,8 @@
         - label: DISC
           type: disc
           title: Groupwork 3 (Discussion Section)
-          problems: #TODO
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_solutions_8o7hfdw.pdf
     
     - date: "2024-07-18"
       in_class: true
