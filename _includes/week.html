@@ -59,6 +59,10 @@
         <small>&nbsp;&nbsp;<a href="{{ event.template }}">
               template</a></small>
         {%- endif -%}
+        {%- if event.code -%}
+        <small>&nbsp;&nbsp;<a href="{{ event.code }}">
+              code</a></small>
+        {%- endif -%}
         {%- if event.walkthrough -%}
         <small>&nbsp;&nbsp;<a href="{{ event.walkthrough }}">
               walkthrough</a></small>
