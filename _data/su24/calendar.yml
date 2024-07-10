@@ -137,7 +137,7 @@
         - label: DISC
           type: disc
           title: Groupwork 2 (Discussion Section)
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_wieuyf.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_wieuyf.pdf
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
     - date: "2024-07-10"
