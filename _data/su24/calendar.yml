@@ -126,7 +126,7 @@
         - label: DEMO
           type: demo
           title: Demo 1
-          code: #TODO
+          code: https://colab.research.google.com/drive/1vmcLB11kEzkblCgoGPjdeBVP2FRh1ecO?usp=sharing
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 1
