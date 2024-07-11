@@ -60,7 +60,7 @@
           title: <b>Homework 1 Released</b>
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_ghtry.pdf
           template: https://www.overleaf.com/read/dxgccwhqsjch#6e552f
-          # answers: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_solutions_iewdg.pdf
+          answers: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_solutions_iewdg.pdf
 
     - date: "2024-07-03"
       in_class: true
