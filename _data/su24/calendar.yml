@@ -138,7 +138,7 @@
           type: disc
           title: Groupwork 2 (Discussion Section)
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_wieuyf.pdf
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
     - date: "2024-07-10"
       in_class: true
@@ -176,8 +176,8 @@
         - label: HW
           type: hw
           title: <b>Homework 3 Released</b>
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_p239fu.pdf
-          # template: https://www.overleaf.com/read/mfvpkpqbpfbt#799646
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_p239fu.pdf
+          template: https://www.overleaf.com/read/mfvpkpqbpfbt#799646
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_solutions_43puhf.pdf
     
     - date: "2024-07-16"
