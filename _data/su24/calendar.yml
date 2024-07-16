@@ -117,8 +117,8 @@
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
           code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_yudqti.ipynb
           template: https://www.overleaf.com/read/hprwqpwctmzx#9cddca
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_solutions_kjhrr.pdf
-          # code-solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_solution_gbnerl.ipynb
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_solutions_kjhrr.pdf
+          code-solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_solution_gbnerl.ipynb
 
     - date: "2024-07-09"
       in_class: true
@@ -198,7 +198,7 @@
         - label: DISC
           type: disc
           title: Groupwork 3 (Discussion Section)
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_solutions_8o7hfdw.pdf
     
     - date: "2024-07-18"
