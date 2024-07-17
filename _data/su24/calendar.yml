@@ -198,8 +198,8 @@
         - label: DISC
           type: disc
           title: Groupwork 3 (Discussion Section)
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_solutions_8o7hfdw.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_solutions_8o7hfdw.pdf
     
     - date: "2024-07-18"
       in_class: true
