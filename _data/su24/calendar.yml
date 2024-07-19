@@ -207,11 +207,6 @@
         - label: EXAM
           type: exam
           title: Midterm Exam
-          problems: #TODO
-
-        - label: HOPS
-          type: hops
-          title: Hands-On Problem Solving 3
         
 
 - week: 4
@@ -262,29 +257,27 @@
     - date: "2024-07-23"
       in_class: true
       events:
-        - label: DEMO
-          type: demo
-          title: Demo 3
-          code: #TODO
-        
-        - label: HOPS
-          type: hops
-          title: Hands-On Problem Solving 4
+        - label: EXAM
+          type: disc
+          title: Discuss Midterm Solutions
 
     - date: "2024-07-24"
       in_class: true
       events:
-        - label: DISC
-          type: disc
-          title: Discussion (Midterm Solutions)
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 3
 
     - date: "2024-07-25"
       in_class: true
       events:
-
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 5
+          title: Hands-On Problem Solving 4
+        - label: DEMO
+          type: demo
+          title: Demo 3
+          code: #TODO
 
 - week: 5
   title: "Week 5 - Conditional Independence and Naïve Bayes<br>
@@ -321,7 +314,7 @@
         
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 6
+          title: Hands-On Problem Solving 5
 
     - date: "2024-07-31"
       in_class: true
