@@ -218,8 +218,8 @@
       &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_summary.pdf'>Summary</a>
     </small>
     <br>
-    <small>📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Chapters 1 and 2 of this online Probability Textbook</a>.</small>"
-    <small>🍿 Watch <a href='https://www.youtube.com/playlist?list=PLDNbnocpJUhaMR08k5YBu3AXsZxTcUWsy'>befor lecture 14, Suraj's combinatoric problems</a>.</small><br>""
+    <small>📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Chapters 1 and 2 of this online Probability Textbook</a>.</small>
+    <small>🍿 Watch <a href='https://www.youtube.com/playlist?list=PLDNbnocpJUhaMR08k5YBu3AXsZxTcUWsy'>befor lecture 14, Suraj's combinatoric problems</a>.</small><br>"
   days:
     - date: "2024-07-21"
       events:
@@ -250,7 +250,7 @@
         - label: HW
           type: hw
           title: <b>Homework 4 Released</b>
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_8ohbuh.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_8ohbuh.pdf
           # template: https://www.overleaf.com/read/wthjyzsyzxjn#49a361
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_solutions_u67f67.pdf
 
