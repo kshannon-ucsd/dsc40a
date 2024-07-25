@@ -178,7 +178,7 @@
           title: <b>Homework 3 Released</b>
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_p239fu.pdf
           template: https://www.overleaf.com/read/mfvpkpqbpfbt#799646
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_solutions_43puhf.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw3_dsc40a_su24_solutions_43puhf.pdf
     
     - date: "2024-07-16"
       in_class: true
@@ -186,7 +186,7 @@
         - label: DEMO
           type: demo
           title: Demo 2
-          code: #TODO
+          code: https://colab.research.google.com/drive/1LlaDTOGtuamTy3bswZtgAcdz-Mm3gguI?usp=sharing
 
         - label: REVW
           type: lecture
@@ -278,7 +278,7 @@
         - label: DEMO
           type: demo
           title: Demo 3
-          code: #TODO
+          code: https://colab.research.google.com/drive/1jIhlWNmBwXjb5_Hr9PqjPBGCg0bSRyGG?usp=sharing
 
 - week: 5
   title: "Week 5 - Conditional Independence and Naïve Bayes<br>
