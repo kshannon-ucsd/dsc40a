@@ -289,20 +289,20 @@
         - label: LEC 16
           type: lecture
           title: Independence and Conditional Independence
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
           recording: #TODO
         - label: LEC 17
           type: lecture
           title: Naïve Bayes
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
           recording: #TODO
         - label: LEC 18
           type: lecture
           title: More Naïve Bayes, Review
-          blank: #TODO
-          filled: #TODO
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
           recording: #TODO
 
     - date: "2024-07-30"
