@@ -291,13 +291,13 @@
           title: Independence and Conditional Independence
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/yLzXxFM1sII
         - label: LEC 17
           type: lecture
           title: Naïve Bayes
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/mh7ye1P5h0Y
         - label: LEC 18
           type: lecture
           title: More Naïve Bayes, Review
