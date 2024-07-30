@@ -303,7 +303,7 @@
           title: More Naïve Bayes, Review
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
-          recording: #TODO
+          recording: https://youtu.be/k881dKkl2vk
 
     - date: "2024-07-30"
       in_class: true
@@ -323,7 +323,7 @@
         - label: DISC
           type: disc
           title: Groupwork 4 (Discussion Section)
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_8973oc.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_8973oc.pdf
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_solutions_93478g.pdf
 
     - date: "2024-08-01"
