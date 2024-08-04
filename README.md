@@ -31,9 +31,13 @@ All dev builds will be built into a `dev-docs/` dir. This dir is included in `.g
 1. A merge or direct push to main branch will automatically trigger the jekyll workflow which will build and deploy the main branch to production.
 2. Check status in github actions for build results.
 3. Navigate to https://kshannon-ucsd.github.io/dsc40a/
+4. 4. if building with HDSI's domain dsc40a.com add the `CNAME` file with the url entry `dsc40a.com` into the root
 
 ### /data/ directory
 This dir is excluded from the jekyll build chain (excluded in the config.yaml file).
+Set this up correctly fopr the next iteration:
+`Change this to choose where to pick data from`
+`data_folder: su24` becomes e.g. wi25
 
 This folder includes data that changes from quarter to quarter, e.g. course calender. I don't want to recreate these data, so I dump them here to use for later. Eventually I would like to create variables to pull this data, but for now this is a fine solution.
 
