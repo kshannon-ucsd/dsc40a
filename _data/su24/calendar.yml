@@ -13,11 +13,11 @@
         - label: MISC
           type: survey
           title: Sign Up for EdStem (class discussion board)
-          url: https://edstem.org/us/join/EU8se2
+          # url: https://edstem.org/us/join/EU8se2
         - label: SUR
           type: survey
           title: <b>Welcome Survey</b>
-          url: https://forms.gle/GDusrmWTCdoQLDwc7
+          # url: https://forms.gle/GDusrmWTCdoQLDwc7
         - label: LEC 1
           type: lecture
           title: Introduction to Modeling (LIVE)
@@ -58,9 +58,9 @@
         - label: HW
           type: hw
           title: <b>Homework 1 Released</b>
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_ghtry.pdf
-          template: https://www.overleaf.com/read/dxgccwhqsjch#6e552f
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_solutions_iewdg.pdf
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_ghtry.pdf
+          # template: https://www.overleaf.com/read/dxgccwhqsjch#6e552f
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw1_dsc40a_su24_solutions_iewdg.pdf
 
     - date: "2024-07-03"
       in_class: true
@@ -68,8 +68,8 @@
         - label: DISC
           type: disc
           title: Groupwork 1 (Discussion Section)
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_weyaf.pdf
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_weyaf.pdf
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
 
     - date: "2024-07-04"
       events:
@@ -114,11 +114,11 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released</b>
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
-          code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_yudqti.ipynb
-          template: https://www.overleaf.com/read/hprwqpwctmzx#9cddca
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_solutions_kjhrr.pdf
-          code-solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_solution_gbnerl.ipynb
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
+          # code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_yudqti.ipynb
+          # template: https://www.overleaf.com/read/hprwqpwctmzx#9cddca
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_solutions_kjhrr.pdf
+          # code-solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2a_dsc40a_code_solution_gbnerl.ipynb
 
     - date: "2024-07-09"
       in_class: true
@@ -126,7 +126,7 @@
         - label: DEMO
           type: demo
           title: Demo 1
-          code: https://colab.research.google.com/drive/1vmcLB11kEzkblCgoGPjdeBVP2FRh1ecO?usp=sharing
+          # code: https://colab.research.google.com/drive/1vmcLB11kEzkblCgoGPjdeBVP2FRh1ecO?usp=sharing
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 1
@@ -137,8 +137,8 @@
         - label: DISC
           type: disc
           title: Groupwork 2 (Discussion Section)
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_wieuyf.pdf
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_wieuyf.pdf
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
     - date: "2024-07-10"
       in_class: true
@@ -186,7 +186,7 @@
         - label: DEMO
           type: demo
           title: Demo 2
-          code: https://colab.research.google.com/drive/1LlaDTOGtuamTy3bswZtgAcdz-Mm3gguI?usp=sharing
+          # code: https://colab.research.google.com/drive/1LlaDTOGtuamTy3bswZtgAcdz-Mm3gguI?usp=sharing
 
         - label: REVW
           type: lecture
@@ -198,8 +198,8 @@
         - label: DISC
           type: disc
           title: Groupwork 3 (Discussion Section)
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_solutions_8o7hfdw.pdf
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_837rfof.pdf
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw3_dsc40a_su24_solutions_8o7hfdw.pdf
     
     - date: "2024-07-18"
       in_class: true
@@ -251,9 +251,9 @@
         - label: HW
           type: hw
           title: <b>Homework 4 Released</b>
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_8ohbuh.pdf
-          template: https://www.overleaf.com/read/wthjyzsyzxjn#49a361
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_solutions_u67f67.pdf
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_8ohbuh.pdf
+          # template: https://www.overleaf.com/read/wthjyzsyzxjn#49a361
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw4_dsc40a_su24_solutions_u67f67.pdf
 
     - date: "2024-07-23"
       in_class: true
@@ -278,7 +278,7 @@
         - label: DEMO
           type: demo
           title: Demo 3
-          code: https://colab.research.google.com/drive/1jIhlWNmBwXjb5_Hr9PqjPBGCg0bSRyGG?usp=sharing
+          # code: https://colab.research.google.com/drive/1jIhlWNmBwXjb5_Hr9PqjPBGCg0bSRyGG?usp=sharing
 
 - week: 5
   title: "Week 5 - Conditional Independence and Naïve Bayes<br>
@@ -311,7 +311,7 @@
         - label: DEMO
           type: demo
           title: Demo 4
-          code: https://colab.research.google.com/drive/1dAa1WTn7V50qcLETVctPvj8ZLBVmmDNT?usp=sharing
+          # code: https://colab.research.google.com/drive/1dAa1WTn7V50qcLETVctPvj8ZLBVmmDNT?usp=sharing
         
         - label: HOPS
           type: hops
@@ -323,8 +323,8 @@
         - label: DISC
           type: disc
           title: Groupwork 4 (Discussion Section)
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_8973oc.pdf
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_solutions_93478g.pdf
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_8973oc.pdf
+          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw4_dsc40a_su24_solutions_93478g.pdf
 
     - date: "2024-08-01"
       in_class: true
