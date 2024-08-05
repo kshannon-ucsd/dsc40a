@@ -210,7 +210,8 @@
         
 
 - week: 4
-  title: "Week 4 - Probability, Combinatorics, & Independence<br>
+  title: "Week 4 - Probability, Combinatorics, & Independence
+    <br>
     <small>📘 Read Janine's probability roadmap (in order):<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_questions.pdf'>Roadmap with Questions</a>
@@ -220,7 +221,12 @@
     <br>
     <small>📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Chapters 1 and 2 of this online Probability Textbook</a>.</small>
     <br>
-    <small>🍿 Watch <a href='https://www.youtube.com/playlist?list=PLDNbnocpJUhaMR08k5YBu3AXsZxTcUWsy'>befor lecture 14, Suraj's combinatoric problems</a>.</small><br>"
+    <small>🍿 Watch <a href='https://www.youtube.com/playlist?list=PLDNbnocpJUhaMR08k5YBu3AXsZxTcUWsy'>befor lecture 14, Suraj's combinatoric problems</a>.</small>
+    <br>
+    <small>💪 Build intuition for <a href='https://seeing-theory.brown.edu/'>probability</a>.</small>
+    <br>
+    <small>💪 Build intuition for <a href='https://setosa.io/conditional/'>conditional probability</a>.</small>
+    <br>"
   days:
     - date: "2024-07-21"
       events:
