@@ -1,0 +1,410 @@
+- week: 1
+  title: "Week 1 - Modeling, Loss Functions, & Simple Linear Regression<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a>.<br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.<br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
+      🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>.<br>
+    </small>"
+  days:
+    - date: "2025-01-07"
+      in_class: true
+      events:
+        - label: MISC
+          type: survey
+          title: Sign Up for EdStem (class discussion board)
+        - label: SUR
+          type: survey
+          title: <b>Welcome Survey</b>
+        - label: LEC 1
+          type: lecture
+          title: Introduction to Modeling (LIVE)
+        - label: MISC
+          type: disc
+          title: Assign study groups
+        - label: HW
+          type: hw
+          title: Homework 0 (not due!)
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
+          template: https://www.overleaf.com/read/kpqfqhkdxcnn#317117
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
+
+    - date: "2025-01-08"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 1 (Discussion Section)
+
+    - date: "2025-01-09"
+      in_class: true
+      events:
+        - label: LEC 2
+          type: lecture
+          title: Empirical Risk Minimization
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02_annotated.pdf
+          recording: https://youtu.be/IGu3hTTZYN4
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 1
+        - label: HW
+          type: hw
+          title: <b>Homework 1 Released</b>
+
+- week: 2
+  title: "Week 2 - Loss Functions & Simple Linear Regression"
+  days:
+    - date: "2025-01-14"
+      in_class: true
+      events:
+        - label: LEC 3
+          type: lecture
+          title: Comparing Loss Functions
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03_annotated.pdf
+          recording: https://youtu.be/fSjEGEemjX4
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 2
+
+    - date: "2025-01-15"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 2 (Discussion Section)
+
+    - date: "2025-01-16"
+      in_class: true
+      events:
+        - label: LEC 4
+          type: lecture
+          title: Simple Linear Regression
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04_annotated.pdf
+          recording: https://youtu.be/szNzjOhVwm4
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 3
+
+- week: 3
+  title: "Week 3 - Linear Algebra & Regression<br>
+    <small>
+      🍿 Watch <a href='https://drive.google.com/file/d/12FBqMv4KBqIRqZf46Bi_sQ1ARsfYpOEi/view?usp=drive_link'>Owen's Matrix Multiplication Review Pt.1</a>.<br>
+      🍿 Watch <a href='https://drive.google.com/file/d/10U72cAnVuVuLYZAmKwrKyczy89Lt4xCE/view?usp=drive_link'>Owen's Matrix Multiplication Review Pt.2</a>.<br>
+    </small>"
+  days:
+    - date: "2025-01-21"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 1
+        - label: HW
+          type: hw
+          title: <b>Homework 2 Released</b>
+
+    - date: "2025-01-22"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 3 (Discussion Section)
+
+    - date: "2025-01-23"
+      in_class: true
+      events:
+        - label: LEC 5
+          type: lecture
+          title: Simple Linear Regression, Continued
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05_annotated.pdf
+          recording: https://youtu.be/C1pEDBo-YSc
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 4
+
+
+- week: 4
+  title: "Week 4 - Linear Algebra & Regression"
+  days:
+    - date: "2025-01-28"
+      in_class: true
+      events:
+        - label: LEC 6
+          type: lecture
+          title: Dot Products and Projections
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
+          recording: https://youtu.be/JZKZmPRl7tg
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 5
+
+    - date: "2025-01-29"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 4 (Discussion Section)
+
+    - date: "2025-01-30"
+      in_class: true
+      events:
+        - label: LEC 7
+          type: lecture
+          title: Orthogonal Projections
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07_annotated.pdf
+          recording: https://youtu.be/Q0bJtqN9W3M
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 6
+
+- week: 5
+  title: "Week 5 - Linear Algebra & Regression"
+  days:
+    - date: "2025-02-04"
+      in_class: true
+      events:
+        - label: LEC 8
+          type: lecture
+          title: Regression and Linear Algebra
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08_annotated.pdf
+          recording: https://youtu.be/_4MzHzJquAA
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 7
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released</b>
+
+    - date: "2025-02-05"
+      in_class: true
+      events:
+        - label: REVW
+          type: lecture
+          title: Midterm Review
+
+    - date: "2025-02-06"
+      in_class: true
+      events:
+        - label: EXAM
+          type: exam
+          title: Midterm Exam
+
+- week: 6
+  title: "Week 6 - Multiple Linear Regression & Feature Engineering"
+  days:
+    - date: "2025-02-11"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 2
+
+    - date: "2025-02-12"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 5 (Discussion Section)
+
+    - date: "2025-02-13"
+      in_class: true
+      events:
+        - label: LEC 9
+          type: lecture
+          title: Multiple Linear Regression
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
+          recording: https://youtu.be/5bNAEE2Oa8Q
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 8
+
+- week: 7
+  title: "Week 7 - Gradient Descent<br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 16-17</a>.</small><br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_convexity.pdf'>Notes on Convexity</a>.</small><br>"
+  days:
+    - date: "2025-02-18"
+      in_class: true
+      events:
+        - label: LEC 10
+          type: lecture
+          title: Feature Engineering, Gradient Descent
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10_annotated.pdf
+          recording: https://youtu.be/Gm1DQ3vWwY4
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 9
+        - label: HW
+          type: hw
+          title: <b>Homework 4 Released</b>
+
+    - date: "2025-02-19"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 6 (Discussion Section)
+
+    - date: "2025-02-20"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 3
+
+- week: 8
+  title: "Week 8 - Probability & Combinatorics<br>
+    <small>📘 Read Janine's probability roadmap (in order):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_questions.pdf'>Roadmap with Questions</a>
+      &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_answers.pdf'>Roadmap with Answers</a>
+      &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_summary.pdf'>Summary</a>
+    </small>
+    <br>
+    <small>📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Chapters 1 and 2 of this online Probability Textbook</a>.</small>
+    <br>
+    <small>🍿 Watch <a href='https://www.youtube.com/playlist?list=PLDNbnocpJUhaMR08k5YBu3AXsZxTcUWsy'>Suraj's combinatoric problems</a>.</small>
+    <br>"
+  days:
+    - date: "2025-02-25"
+      in_class: true
+      events:
+        - label: LEC 11
+          type: lecture
+          title: Gradient Descent, Continued
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11_annotated.pdf
+          recording: https://youtu.be/fY_NW0hnvkA
+        - label: LEC 12
+          type: lecture
+          title: Foundations of Probability
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
+          recording: https://youtu.be/g9TTmIVY7sE
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 10
+
+    - date: "2025-02-26"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 7 (Discussion Section)
+
+    - date: "2025-02-27"
+      in_class: true
+      events:
+        - label: LEC 13
+          type: lecture
+          title: Combinatorics
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13_annotated.pdf
+          recording: https://youtu.be/HC0HEO3k7MU
+        - label: LEC 14
+          type: lecture
+          title: More Combinatorics Examples
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_14.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_14_annotated.pdf
+          recording: https://youtu.be/zj4RUJFb7zw
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 11
+
+- week: 9
+  title: "Week 9 - Probability & Independence<br>
+    <small>💪 Build intuition for <a href='https://seeing-theory.brown.edu/'>probability</a>.</small>
+    <br>
+    <small>💪 Build intuition for <a href='https://setosa.io/conditional/'>conditional probability</a>.</small>
+    <br>"
+  days:
+    - date: "2025-03-04"
+      in_class: true
+      events:
+        - label: LEC 15
+          type: lecture
+          title: Bayes' Theorem and Independence
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
+          recording: https://youtu.be/rTKUm3SmZyY
+        - label: LEC 16
+          type: lecture
+          title: Independence and Conditional Independence
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
+          recording: https://youtu.be/yLzXxFM1sII
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 12
+
+    - date: "2025-03-05"
+      in_class: true
+      events:
+        - label: DISC
+          type: disc
+          title: Groupwork 8 (Discussion Section)
+
+    - date: "2025-03-06"
+      in_class: true
+      events:
+        - label: DEMO
+          type: demo
+          title: Demo 4
+
+- week: 10
+  title: "Week 10 - Naïve Bayes & Course Conclusion<br>
+    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_conditional_independence.pdf'>Notes on Conditional Independence</a>.</small><br>"
+  days:
+    - date: "2025-03-11"
+      in_class: true
+      events:
+        - label: LEC 17
+          type: lecture
+          title: Naïve Bayes
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
+          recording: https://youtu.be/mh7ye1P5h0Y
+        - label: LEC 18
+          type: lecture
+          title: More Naïve Bayes, Review
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
+          recording: https://youtu.be/k881dKkl2vk
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 13
+
+    - date: "2025-03-12"
+      in_class: true
+      events:
+        - label: REVW
+          type: lecture
+          title: Final Review
+
+    - date: "2025-03-13"
+      in_class: true
+      events:
+        - label: LEC 19
+          type: lecture
+          title: Conclusion (LIVE)
+        - label: REVW
+          type: lecture
+          title: Final Review
+
+- week: 11
+  title: "Week 11 - Final Exam Week"
+  days:
+    - date: "2025-03-18"
+      in_class: true
+      events:
+        - label: EXAM
+          type: exam
+          title: Final Exam
