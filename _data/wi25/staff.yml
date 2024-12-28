@@ -8,6 +8,24 @@
   askabout: Coffee, Likely to be found on a tennis court 🎾
   food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai, Callie
 
+- name: Vignesh (Viggy) Palaniapan - TA
+  email: vpalaniappan@ucsd.edu
+  role: TA
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/viggy.png
+  description: Aerospace Eng. (Imperial College London), Data Science (UCSD)
+  hometown: London, UK 
+  askabout: Many sports (Tennis, Badminton, Frisbee currently), Foreign lang. Netflix
+  food: Thai (Lanna Thai), Mexican (La Puerta), Ice Cream (SaltnStraw)
+
+- name: Abdullah Ashfaq - TA
+  email: aashfaq@ucsd.edu
+  role: TA 
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/abdullah.png
+  description: Most Excellent TA & Grad Student!
+  hometown: --Redacted--
+  askabout: Tesla & Data Engineering
+  food: --Redacted--
+
 - name: Owen Miller
   email: omiller@ucsd.edu
   role: Tutor
