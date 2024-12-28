@@ -349,15 +349,15 @@
     - date: "2025-03-06"
       in_class: true
       events:
-        - label: DEMO
-          type: demo
-          title: Demo 4
         - label: LEC 16
           type: lecture
           title: Independence and Conditional Independence
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
           recording: https://youtu.be/yLzXxFM1sII
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 13
 
 - week: 10
   title: "Week 10 - Naïve Bayes & Course Conclusion<br>
@@ -372,9 +372,9 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
           recording: https://youtu.be/mh7ye1P5h0Y
-        - label: HOPS
-          type: hops
-          title: Hands-On Problem Solving 13
+        - label: DEMO
+          type: demo
+          title: Demo 4
 
     - date: "2025-03-12"
       in_class: true
