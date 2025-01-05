@@ -15,7 +15,7 @@
           title: Sign Up for EdStem (class discussion board)
         - label: SUR
           type: survey
-          title: <b>Welcome Survey</b>
+          title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'> <b>Welcome Survey</b> </a>
         - label: LEC 1
           type: lecture
           title: Introduction to Modeling (LIVE)

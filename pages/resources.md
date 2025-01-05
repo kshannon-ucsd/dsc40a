@@ -16,9 +16,9 @@ nav_order: 4
 
 ---
 
-## Lecture Videos
+## Past Lecture Videos (by Janine Tiefenbruck)
 
-In the table below, you can find lecture videos created by Janine Tiefenbruck, who created this course and taught it many times. The lecture videos linked below will generally be pretty similar in content coverage to our lectures, but there are indeed differences in notation and order. You are responsible for everything covered in our lectures, even if something doesn’t appear in the videos below. When in doubt, refer to the main lecture slides posted and ask on Ed.
+In the table below, you can find lecture videos created by Janine Tiefenbruck, who created this course and taught it many times. The lecture videos linked below will generally be pretty similar in content coverage to our lectures, but there are indeed differences in notation and order. You are responsible for everything covered in OUR lectures, even if something doesn’t appear in the videos below. When in doubt, refer to the main lecture slides & videos posted in Home and ask questions on Ed.
 
 | **Video** | **Topics** |
 | --- | --- |
