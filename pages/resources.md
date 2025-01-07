@@ -52,14 +52,6 @@ In the table below, you can find lecture videos created by Janine Tiefenbruck, w
 
 ---
 
-## Course Notes
-The notes for this class were written by Janine Tiefenbruck and Justin Eldridge. These notes cover the material from the first half of the course, but as of Spring 2024, the order of coverage may be different.
-- [Chapter 1: Learning via Optimization](../resources/notes/notes_chapter_1.pdf)
-- [Supplement on Spread](../resources/notes/spread.pdf)
-- [Chapter 2: Least Squares Regression](../resources/notes/notes_chapter_2.pdf)
-
----
-
 ## Tutor-Created Supplemental Resources
 
 These resources were created by tutors as part of their Final Project for DSC 95, the first-time tutor training course.

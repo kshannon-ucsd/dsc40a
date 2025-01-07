@@ -85,7 +85,7 @@
 - name: Eric Song
   email: e7song@ucsd.edu
   role: Tutor
-  photo:
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/eric.jpeg
   description: 4th Year Cognitive Science (Machine Learning and Neural Computation)
   hometown: Pleasanton, California
   askabout: Tetris, Books, Walking
@@ -103,7 +103,7 @@
 - name: Bobby Zhu
   email: b2zhu@ucsd.edu
   role: Tutor
-  photo:
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/bobby.jpeg
   description: 4th year Data Science major, BusEcon minor
   hometown: Beijing & Anhui, China
   askabout: Badminton 🏸, Baking 🍮, Board Games 🎲
@@ -121,7 +121,7 @@
 - name: Pallavi Prabhu
   email: pprabhu@ucsd.edu 
   role: Tutor
-  photo:
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/pallavi.jpeg
   description: 4th year Data Science Major; Cognitive Science & General Biology minors
   hometown: Cypress, CA
   askabout: Painting 🎨, Crafting 🧵, Cooking 🍳
