@@ -34,7 +34,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 1 (Discussion Section)
+          title: No Section
 
     - date: "2025-01-09"
       in_class: true
@@ -73,7 +73,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 1 Review (Discussion Section)
+          title: Groupwork 1 (Discussion Section)
 
     - date: "2025-01-16"
       in_class: true
