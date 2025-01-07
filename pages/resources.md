@@ -16,9 +16,9 @@ nav_order: 4
 
 ---
 
-## Lecture Videos
+## Past Lecture Videos (by Janine Tiefenbruck)
 
-In the table below, you can find lecture videos created by Janine Tiefenbruck, who created this course and taught it many times. The lecture videos linked below will generally be pretty similar in content coverage to our lectures, but there are indeed differences in notation and order. You are responsible for everything covered in our lectures, even if something doesn’t appear in the videos below. When in doubt, refer to the main lecture slides posted and ask on Ed.
+In the table below, you can find lecture videos created by Janine Tiefenbruck, who created this course and taught it many times. The lecture videos linked below will generally be pretty similar in content coverage to our lectures, but there are indeed differences in notation and order. You are responsible for everything covered in OUR lectures, even if something doesn’t appear in the videos below. When in doubt, refer to the main lecture slides & videos posted in Home and ask questions on Ed.
 
 | **Video** | **Topics** |
 | --- | --- |
@@ -49,14 +49,6 @@ In the table below, you can find lecture videos created by Janine Tiefenbruck, w
 |[Video 25](https://youtu.be/AUiX4gWWsuE)| independence, conditional independence |
 |[Video 26](https://youtu.be/WLQMoA4ZAus)| naive Bayes |
 |[Video 27](https://youtu.be/4tGtziW901Y)| text classification, spam filter, naive Bayes | 
-
----
-
-## Course Notes
-The notes for this class were written by Janine Tiefenbruck and Justin Eldridge. These notes cover the material from the first half of the course, but as of Spring 2024, the order of coverage may be different.
-- [Chapter 1: Learning via Optimization](../resources/notes/notes_chapter_1.pdf)
-- [Supplement on Spread](../resources/notes/spread.pdf)
-- [Chapter 2: Least Squares Regression](../resources/notes/notes_chapter_2.pdf)
 
 ---
 

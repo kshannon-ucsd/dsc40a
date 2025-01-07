@@ -53,7 +53,7 @@
   askabout: Ping Pong 🏓, Soccer ⚽, and Fishing 🎣 
   food: Board & Brew, Aladdin, House of Mandi
 
-- name: Guoxuan (jason) Xu
+- name: Guoxuan (Jason) Xu
   email: g7xu@ucsd.edu
   role: Tutor
   website: https://g7xu.github.io/
@@ -72,3 +72,57 @@
   hometown: San Diego, California
   askabout: Baking, Roller Skating, and Final Fantasy 14 
   food: Katana Sushi, Tony's Jacal, and Ding Tea
+
+- name: Ansh Bhatnagar
+  email: abhatnagar@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/ansh.jpeg
+  description: 2nd year Data Science major; Math, CogSci, & Supply Chain MGT minors
+  hometown: Fremont, California
+  askabout: Basketball (Warriors) 🏀, Football (Seahawks) 🏈, & Plants 🪴 
+  food: Ramen Nagi, Taco Bell, 55 Thai, Madras Cafe
+
+- name: Eric Song
+  email: e7song@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/eric.jpeg
+  description: 4th Year Cognitive Science (Machine Learning and Neural Computation)
+  hometown: Pleasanton, California
+  askabout: Tetris, Books, Walking
+  food: Pho Hanoi, Boba Bliss, and 85C
+
+- name: Varun Pabreja
+  email: vpabreja@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/varun.jpeg
+  description: 3rd year Data Science major; CogSci, & BusEcon minors
+  hometown: Dubai, UAE
+  askabout: Poker ♠, Bojack Horseman 🐴, Cricket 🏏
+  food: The Taco Stand, Bobboi Gelato, Charminar
+
+- name: Bobby Zhu
+  email: b2zhu@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/bobby.jpeg
+  description: 4th year Data Science major, BusEcon minor
+  hometown: Beijing & Anhui, China
+  askabout: Badminton 🏸, Baking 🍮, Board Games 🎲
+  food: Yummy House, Noble Chef, Handoo, 3Catea
+
+- name: Utkarsh Lohia
+  email: ulohia@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/utkarsh.jpeg
+  description: 3rd year, Data Science major
+  hometown: Kolkata, India
+  askabout: Formula 1, Chess, Coffee
+  food: Charminar, Regents Pizza, District 6
+
+- name: Pallavi Prabhu
+  email: pprabhu@ucsd.edu 
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/pallavi.jpeg
+  description: 4th year Data Science Major; Cognitive Science & General Biology minors
+  hometown: Cypress, CA
+  askabout: Painting 🎨, Crafting 🧵, Cooking 🍳
+  food: SomiSomi, The Taco Stand, 85°C Bakery Cafe
