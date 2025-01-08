@@ -12,7 +12,7 @@
       events:
         - label: MISC
           type: survey
-          title: Sign Up for EdStem (class discussion board)
+          title: Sign Up for EdStem (class discussion board) <a href='https://edstem.org/us/join/2ymWyJ'>SIGN UP LINK</a>
         - label: SUR
           type: survey
           title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'> <b>Welcome Survey</b> </a>
