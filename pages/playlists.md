@@ -13,7 +13,7 @@ Welcome to our theorem-thumping playlist—perfect for tackling 40a material and
 
 A curated playlist from the musical mind of Jiesen! Welcome to DSC40a.
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2e8vBCeKPKLn4PcFIwbVKl?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5MbbcYHuIOb1a8wEOn1vj9?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## Study Session Jams
 
