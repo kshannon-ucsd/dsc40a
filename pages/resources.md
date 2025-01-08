@@ -64,6 +64,9 @@ These resources were created by tutors as part of their Final Project for DSC 95
 - Javier Ponce's [probability guide](https://docs.google.com/presentation/d/1INFkQA6H06NEicGpzEMornQWaAwYb1zUVRPOF9nGSDw/edit?usp=sharing).
 - Charlie Sun's [example midterm notes sheet](https://drive.google.com/file/d/1XRW26AeMzdvOu-LNks-4sso6e1xXcH4b/view?usp=sharing).
 - Candus Shi's [slides](https://docs.google.com/presentation/d/1_SvEkGPlfel_NfSg4w-M5HvEa8UdO24l9FW4VokmuaQ/edit?usp=sharing) and [video on the importance of math as a data scientist](https://drive.google.com/file/d/1dMej66xoUzj5g10XvOn4i4fq5Ri1-HQ3/view?usp=sharing)
+- Varun Pabreja’s [video on solving combinatorics problems](https://www.youtube.com/watch?v=8PndRAcRC1Q), including a fun application.
+- Utkarsh Lohia’s [video on the Naïve Bayes classifier](https://www.youtube.com/watch?v=3yCu_l2uBAw).
+
 
 ---
 
