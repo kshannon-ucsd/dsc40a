@@ -3,7 +3,6 @@
     <small>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a>.<br>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.<br>
-      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
       🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>.<br>
     </small>"
   days:
@@ -55,7 +54,7 @@
           title: <b>Homework 1 Released</b>
 
 - week: 2
-  title: "Week 2 - Loss Functions & Simple Linear Regression
+  title: "Week 2 - Loss Functions & Simple Linear Regression<br>
     <small>    
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
     </small>"
