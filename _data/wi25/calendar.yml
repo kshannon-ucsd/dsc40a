@@ -56,6 +56,9 @@
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression"
+  <small>    
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
+    </small>"
   days:
     - date: "2025-01-14"
       in_class: true
