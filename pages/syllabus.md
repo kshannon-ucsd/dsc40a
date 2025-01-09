@@ -51,7 +51,7 @@ We will be using several websites this quarter. Here's what they're all used for
 
 ## Course Structure 🍎
 
-This course will include pre-recorded lectures, live demos, live worked problems, group work *(discussion)* sessions sections, plenty of office hours, and weekly homework assignments. Oh Joy!
+This course will include pre-recorded lectures, live demos, live worked problems, group work *(discussion)* sessions sections, plenty of office hours, and bi-weekly homework assignments. Oh Joy!
 
 ### Lecture
 
@@ -79,7 +79,7 @@ Only one member of each group should submit the worksheet, and they should indic
 
 ### Homework
 
-This class will have weekly homework assignments.
+This class will have bi-weekly homework assignments (weekly during summer sessions).
 
 Homework should be written or typed (using LaTeX) up and turned in by each student individually. If you want to type up your answers, we recommend using markdown with LaTeX or overleaf.com
 
