@@ -77,6 +77,8 @@ If you have specific people in your section that you want to work with, you may 
 
 Only one member of each group should submit the worksheet, and they should indicate the names of all group members on Gradescope. Worksheets won’t be graded on correctness, but rather on good-faith effort. Even if you don’t solve any of the problems, you should include some explanation of what you thought about and discussed, so that you can get credit for spending time on the assignment. **In order to receive credit, you must work in a group of two to four students for at least 50 minutes. You may not do the group work alone.**
 
+**Groupworks will always be due the day that you work on them in discussion, unless otherwise specified.** For example, if Groupwork 1 was worked-on during Discussion on Jan 15, it is due by 11:59 pm on Gradescope the same day.
+
 ### Homework
 
 This class will have bi-weekly homework assignments (weekly during summer sessions).
@@ -97,6 +99,8 @@ For each problem you submit, you should cite your sources by including a list of
 We also encourage you to come to instructor and staff office hours for help on homework questions. The homework assignments for this class are quite challenging and most students are not able to successfully complete the homework from attending lecture alone. Make sure to use the resources provided on the Resources tab of the course website, actively participate in group work sessions, and plan to attend office hours at least once a week.
 
 You may post homework-related questions on Ed, though your questions (and answers) should be about approaches, not answers. If your question includes some or all of an answer (even if you're not sure it's right), you must make your post private so that others cannot see it. **We are not able to tell you whether your answer is correct.**
+
+**Tentative Homework deadlines are on the website, but are subject to change based on class performance. When in doubt, reference the due date on Gradescope!**
 
 ### Office Hours
 
