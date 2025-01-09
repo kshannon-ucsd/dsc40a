@@ -10,7 +10,7 @@
       events:
         - label: MISC
           type: survey
-          title: Sign Up for EdStem (class discussion board) <a href='https://edstem.org/us/join/2ymWyJ'>SIGN UP LINK</a>
+          title: <a href='https://edstem.org/us/join/2ymWyJ'>Sign Up for EdStem (class discussion board)</a>
         - label: SUR
           type: survey
           title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'> <b>Welcome Survey</b> </a>
@@ -24,7 +24,7 @@
           title: Assign study groups
         - label: HW
           type: hw
-          title: Homework 0 (not due!)
+          title: <b>Homework 0 (not due!)</b>
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
           template: https://www.overleaf.com/read/kpqfqhkdxcnn#317117
           solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
@@ -50,7 +50,7 @@
           title: Hands-On Problem Solving 1
         - label: HW
           type: hw
-          title: <b>Homework 1 Released</b>
+          title: <b>Homework 1 Released (due Jan 19, 11:59 pm)</b>
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
@@ -107,7 +107,7 @@
           title: Demo 1
         - label: HW
           type: hw
-          title: <b>Homework 2 Released</b>
+          title: <b>Homework 2 Released (due Feb 2, 11:59 pm)</b>
         - label: LEC 5
           type: lecture
           title: Simple Linear Regression, Continued
@@ -183,7 +183,7 @@
           title: Hands-On Problem Solving 7
         - label: HW
           type: hw
-          title: <b>Homework 3 Released</b>
+          title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
         - label: LEC 9
           type: lecture
           title: Multiple Linear Regression
@@ -260,7 +260,7 @@
           recording: https://youtu.be/g9TTmIVY7sE
         - label: HW
           type: hw
-          title: <b>Homework 4 Released</b>
+          title: <b>Homework 4 Released (due Mar 7, 11:59 pm)</b>
 
     - date: "2025-02-19"
       in_class: true
