@@ -51,8 +51,8 @@
         - label: HW
           type: hw
           title: <b>Homework 1 Released</b>
-          problems: 
-          template: 
+          problems: https://drive.google.com/file/d/1SQt9YmYixAif46hVS9pqm4jRMQDECuR3/view?usp=sharing
+          template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
           submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
 
 - week: 2
