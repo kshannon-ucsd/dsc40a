@@ -28,7 +28,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # from ubuntu-latest, 22 supports 2 years from 1/10/2025
     steps:
       - name: Checkout
         uses: actions/checkout@v3
