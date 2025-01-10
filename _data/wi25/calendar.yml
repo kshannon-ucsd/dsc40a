@@ -48,7 +48,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 1
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc100/hops/hops_1.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc100/hops/hops_1.pdf
+          # demo: todo
         - label: HW
           type: hw
           title: <b>Homework 1 Released (due Jan 19, 11:59 pm)</b>
