@@ -53,6 +53,9 @@
         - label: HW
           type: hw
           title: <b>Homework 1 Released (due Jan 19, 11:59 pm)</b>
+          problems: https://drive.google.com/file/d/1SQt9YmYixAif46hVS9pqm4jRMQDECuR3/view?usp=sharing
+          template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
+          submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
@@ -110,6 +113,9 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released (due Feb 2, 11:59 pm)</b>
+          problems: 
+          template: 
+          submission: 
         - label: LEC 5
           type: lecture
           title: Simple Linear Regression, Continued
@@ -186,6 +192,9 @@
         - label: HW
           type: hw
           title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
+          problems: 
+          template: 
+          submission: 
         - label: LEC 9
           type: lecture
           title: Multiple Linear Regression
@@ -263,6 +272,9 @@
         - label: HW
           type: hw
           title: <b>Homework 4 Released (due Mar 7, 11:59 pm)</b>
+          problems: 
+          template: 
+          submission: 
 
     - date: "2025-02-19"
       in_class: true
