@@ -50,6 +50,7 @@
           title: Hands-On Problem Solving 1
           solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_1_solutions.pdf
           code: todo
+          problems: todo
         - label: HW
           type: hw
           title: <b>Homework 1 Released (due Jan 19, 11:59 pm)</b>
@@ -76,6 +77,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 2
+          solutions: todo
+          code: todo
+          problems: todo
 
     - date: "2025-01-15"
       in_class: true
@@ -96,6 +100,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 3
+          solutions: todo
+          code: todo
+          problems: todo
 
 - week: 3
   title: "Week 3 - Linear Algebra & Regression<br>
@@ -136,6 +143,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 4
+          solutions: todo
+          code: todo
+          problems: todo
         - label: LEC 6
           type: lecture
           title: Dot Products and Projections
@@ -153,6 +163,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 5
+          solutions: todo
+          code: todo
+          problems: todo
         - label: LEC 7
           type: lecture
           title: Orthogonal Projections
@@ -173,6 +186,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 6
+          solutions: todo
+          code: todo
+          problems: todo
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
@@ -189,6 +205,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 7
+          solutions: todo
+          code: todo
+          problems: todo
         - label: HW
           type: hw
           title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
@@ -245,6 +264,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 8
+          solutions: todo
+          code: todo
+          problems: todo
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
@@ -263,6 +285,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 9
+          solutions: todo
+          code: todo
+          problems: todo
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
@@ -310,6 +335,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 10
+          solutions: todo
+          code: todo
+          problems: todo
         - label: LEC 13
           type: lecture
           title: Combinatorics
@@ -336,6 +364,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 11
+          solutions: todo
+          code: todo
+          problems: todo
 
 - week: 9
   title: "Week 9 - Probability & Independence<br>
@@ -355,6 +386,9 @@
           recording: https://youtu.be/rTKUm3SmZyY
         - label: HOPS
           type: hops
+          solutions: todo
+          code: todo
+          problems: todo
           title: Hands-On Problem Solving 12
 
     - date: "2025-03-05"
@@ -376,6 +410,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 13
+          solutions: todo
+          code: todo
+          problems: todo
 
 - week: 10
   title: "Week 10 - Naïve Bayes & Course Conclusion<br>
