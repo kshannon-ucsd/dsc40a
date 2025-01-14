@@ -48,7 +48,7 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 1
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc100/hops/hops_1.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_1_solutions.pdf
           code: todo
         - label: HW
           type: hw
