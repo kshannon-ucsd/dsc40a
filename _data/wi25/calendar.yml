@@ -49,7 +49,7 @@
           type: hops
           title: Hands-On Problem Solving 1
           solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_1_solutions.pdf
-          code: todo
+          code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/hops_1_demo.ipynb
         - label: HW
           type: hw
           title: <b>Homework 1 Released (due Jan 19, 11:59 pm)</b>
@@ -77,6 +77,7 @@
           type: hops
           title: Hands-On Problem Solving 2
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_problems.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_solutuions.pdf
 
     - date: "2025-01-15"
       in_class: true
