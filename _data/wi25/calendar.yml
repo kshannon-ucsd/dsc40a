@@ -98,6 +98,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 3
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_problems.ipynb
+          solutions:
+          data: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_loan_data.csv
 
 - week: 3
   title: "Week 3 - Linear Algebra & Regression<br>
