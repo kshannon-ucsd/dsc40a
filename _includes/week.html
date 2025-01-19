@@ -1,90 +1,54 @@
 <div class="week">
-  <h3 class="week-header" id="{{ week.title | slugify }}">{{ week.title }}</h3>
-  {% if week.days %}
-  <dl class="week-days">
-    {% for day in week.days %}
-    <dt class="week-day main">{% if day.in_class %}🧑‍🏫{% else %}🏠{% endif %}&nbsp; {{ day.date | date: '%a %b %e' }}</dt>
-    {% for event in day.events %}
-    {% if event.markdown_content %}
-    <dd class="week-event{% if forloop.first %} main{% endif %}">
-      {{ event.markdown_content | markdownify }}
-    </dd>
-    {% else %}
-    <dd class="week-event{% if forloop.first %} main{% endif %}">
-      <p>
-        <strong class="label label-{{ event.type }}">
-          {{ event.label }}
-        </strong>
-        {% if event.url %}
-        <a href="{{ event.url }}">{{ event.title }}</a>
-        {% else %}
-        {{ event.title }}
-        {% endif %}
-        {%- if event.type == "lecture" -%}
-        {%- if event.blank -%}
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <small><a href="{{ event.blank }}">
-              blank</a></small>
-        {%- endif -%}
-        {%- if event.filled -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.filled }}">
-              filled</a></small>
-        {%- endif -%}
-        {%- if event.code -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.code }}">
-              code</a></small>
-        {%- endif -%}
-        {%- if event.animations -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.animations }}">
-              animations</a></small>
-        {%- endif -%}
-        {%- if event.recording -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.recording }}">
-              recording</a></small>
-        {%- endif -%}
-        {%- if event.faqs -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.faqs }}">
-              FAQs</a></small>
-        {%- endif -%}
-        {%- endif -%}
-        {%- if event.type == "hw" or event.type == "hops" or event.type == "disc" or event.type == "lab" or event.type == "demo" -%}
-        {%- if event.problems -%}
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <small><a href="{{ event.problems }}">
-              problems</a></small>
-        {%- endif -%}
-        {%- if event.template -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.template }}">
-              template</a></small>
-        {%- endif -%}
-        {%- if event.code -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.code }}">
-              code</a></small>
-        {%- endif -%}
-        {%- if event.walkthrough -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.walkthrough }}">
-              walkthrough</a></small>
-        {%- endif -%}
-        {%- if event.solutions -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.solutions }}">
-              solutions</a></small>
-        {%- endif -%}
-        {%- if event.data -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.data }}">
-              data</a></small>
-        {%- endif -%}
-        {%- if event.submission -%}
-        <small>&nbsp;&nbsp;<a href="{{ event.submission }}">
-              submission</a></small>
-        {%- endif -%}
-        {%- endif -%}
-      </p>
-    </dd>
-    {% endif %}
-    {% endfor %}
-    {% endfor %}
-  </dl>
-  {% endif %}
-</div>
+      <h3 class="week-header" id="{{ week.title | slugify }}">{{ week.title }}</h3>
+
+      {% if week.days %}
+      <dl class="week-days">
+        {% for day in week.days %}
+        <dt class="week-day main">
+          {% if day.in_class %}🧑‍🏫{% else %}🏠{% endif %}&nbsp; {{ day.date | date: '%a %b %e' }}
+        </dt>
+
+        {% for event in day.events %}
+        <dd class="week-event{% if forloop.first %} main{% endif %}">
+          {% if event.markdown_content %}
+          {{ event.markdown_content | markdownify }}
+          {% else %}
+          <p>
+            <strong class="label label-{{ event.type }}">
+              {{ event.label }}
+            </strong>
+            {% if event.url %}
+            <a href="{{ event.url }}">{{ event.title }}</a>
+            {% else %}
+            {{ event.title }}
+            {% endif %}
+
+            {% case event.type %}
+            {% when "lecture" %}
+            <small>
+              {% if event.blank %} <br><span style="margin-left: 10ch;"><a href="{{ event.blank }}">blank</a></span>{% endif %}
+              {% if event.filled %}<span style="margin-left: 0.5ch;"><a href="{{ event.filled }}">filled</a></span>{% endif %}
+              {% if event.code %}<span style="margin-left: 0.5ch;"><a href="{{ event.code }}">code</a></span>{% endif %}
+              {% if event.animations %}<span style="margin-left: 0.5ch;"><a href="{{ event.animations }}">animations</a></span>{% endif %}
+              {% if event.recording %}<span style="margin-left: 0.5ch;"><a href="{{ event.recording }}">recording</a></span>{% endif %}
+              {% if event.faqs %}<span style="margin-left: 0.5ch;"><a href="{{ event.faqs }}">FAQs</a></span>{% endif %}
+            </small>
+
+            {% when "hw" or "hops" or "disc" or "lab" or "demo" %}
+            <small>
+              {% if event.problems %}<br><span style="margin-left: 10ch;"><a href="{{ event.problems }}">problems</a></span>{% endif %}
+              {% if event.template %}<span style="margin-left: 0.5ch;"><a href="{{ event.template }}">template</a></span>{% endif %}
+              {% if event.code %}<span style="margin-left: 0.5ch;"><a href="{{ event.code }}">code</a></span>{% endif %}
+              {% if event.walkthrough %}<span style="margin-left: 0.5ch;"></span><a href="{{ event.walkthrough }}">walkthrough</a></span>{% endif %}
+              {% if event.solutions %}<span style="margin-left: 0.5ch;"><a href="{{ event.solutions }}">solutions</a></span>{% endif %}
+              {% if event.submission %}<span style="margin-left: 0.5ch;"><a href="{{ event.submission }}">submission</a></span>{% endif %}
+            </small>
+            {% endcase %}
+          </p>
+          {% endif %}
+        </dd>
+        {% endfor %}
+        {% endfor %}
+      </dl>
+      {% endif %}
+    </div>
