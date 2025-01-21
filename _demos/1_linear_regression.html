@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Linear Regression with Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .controls {
+            margin-top: 20px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            margin-right: 10px;
+            font-weight: 500;
+        }
+        .plot-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .plot-wrapper {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .value-display {
+            display: inline-block;
+            min-width: 40px;
+            text-align: right;
+        }
+        button {
+            background: hsl(250, 41%, 35%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <a href="/pages/demos.html" style="text-decoration: none; margin-bottom: 20px; display: inline-block;">
+        <button style="margin-bottom: 20px;">← Back to Demos</button>
+    </a>
+    <h1>Interactive Linear Regression</h1>
+    
+    <!-- Manual Control Plots -->
+    <h2>Manual Parameter Control</h2>
+    <div class="plot-container">
+        <div class="plot-wrapper">
+            <div id="regression-plot"></div>
+        </div>
+        <div class="plot-wrapper">
+            <div id="loss-plot"></div>
+        </div>
+    </div>
+
+    <div class="controls" style="margin-bottom: 2rem;">
+        <label for="loss-function">Loss Function:</label>
+        <select id="loss-function">
+            <option value="mse" selected>Mean Squared Error (MSE)</option>
+            <option value="rmse">Root Mean Squared Error (RMSE)</option>
+            <option value="mae">Mean Absolute Error (MAE)</option>
+        </select>
+        <br>
+        <label for="slope">Slope (m):</label>
+        <input type="range" id="slope" min="-5" max="5" step="0.1" value="1">
+        <span id="slope-value" class="value-display">1.0</span>
+        <br>
+        <label for="intercept">Intercept (b):</label>
+        <input type="range" id="intercept" min="-5" max="5" step="0.1" value="0">
+        <span id="intercept-value" class="value-display">0.0</span>
+    </div>
+
+    <!-- Gradient Descent Simulation -->
+    <h2>Gradient Descent Simulation</h2>
+    <div class="plot-container">
+        <div class="plot-wrapper">
+            <div id="simulation-plot"></div>
+        </div>
+        <div class="plot-wrapper">
+            <div id="simulation-loss-plot"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <label for="learning-rate">Learning Rate:</label>
+        <input type="range" id="learning-rate" min="-5" max="0" step="0.1" value="-2">
+        <span id="learning-rate-value" class="value-display">0.01</span>
+        <br>
+        <button id="start-simulation">Start Simulation</button>
+        <button id="stop-simulation">Stop Simulation</button>
+        <button id="reset-simulation">Reset Simulation</button>
+        <span id="iteration-display" style="margin-left: 20px;"></span>
+        <span id="loss-display" style="margin-left: 20px;"></span>
+    </div>
+
+    <script>
+        // Wait for Plotly to be fully loaded
+        window.addEventListener('load', function() {
+            // Common data for manual control
+            const xData = Array.from({ length: 30 }, (_, i) => i - 15);
+            const yDataTrue = xData.map(x => 2 * x + 1 + (Math.random() * 4 - 2));
+
+            // Simulation data (more points)
+            const xSimData = Array.from({ length: 100 }, () => Math.random() * 20 - 10);
+            const trueSlope = 2;
+            const trueIntercept = -1;
+            const ySimData = xSimData.map(x => trueSlope * x + trueIntercept + (Math.random() * 3 - 1.5));
+
+            // Initial parameters
+            let slope = 1;
+            let intercept = 0;
+            let currentCamera = null;
+            let lossFunction = "mse";
+            let isSimulationRunning = false;
+
+            // Loss functions
+            const lossFunctions = {
+                mse: (yTrue, yPred) => yTrue.reduce((sum, y, i) => sum + Math.pow(y - yPred[i], 2), 0) / yTrue.length,
+                rmse: (yTrue, yPred) => Math.sqrt(yTrue.reduce((sum, y, i) => sum + Math.pow(y - yPred[i], 2), 0) / yTrue.length),
+                mae: (yTrue, yPred) => yTrue.reduce((sum, y, i) => sum + Math.abs(y - yPred[i]), 0) / yTrue.length
+            };
+
+            // Gradient functions for MSE loss
+            function computeGradients(x, yTrue, slope, intercept) {
+                const m = x.length;
+                let dSlope = 0;
+                let dIntercept = 0;
+                
+                for(let i = 0; i < m; i++) {
+                    const pred = slope * x[i] + intercept;
+                    const error = pred - yTrue[i];
+                    dSlope += error * x[i];
+                    dIntercept += error;
+                }
+                
+                return {
+                    dSlope: (2/m) * dSlope,
+                    dIntercept: (2/m) * dIntercept
+                };
+            }
+
+            // Manual control plots
+            function updateRegressionPlot() {
+                const yPred = xData.map(x => slope * x + intercept);
+
+                const data = [
+                    {
+                        x: xData,
+                        y: yDataTrue,
+                        mode: "markers",
+                        type: "scatter",
+                        name: "Data Points",
+                        marker: { color: '#1f77b4', size: 8, opacity: 0.7 }
+                    },
+                    {
+                        x: xData,
+                        y: yPred,
+                        mode: "lines",
+                        type: "scatter",
+                        name: "Regression Line",
+                        line: { color: "red", width: 2 }
+                    }
+                ];
+
+                const layout = {
+                    title: "Linear Regression",
+                    xaxis: { title: "X" },
+                    yaxis: { title: "Y" },
+                    hovermode: 'closest'
+                };
+
+                Plotly.react("regression-plot", data, layout);
+            }
+
+            function updateLossPlot() {
+                const yPred = xData.map(x => slope * x + intercept);
+                const currentLoss = lossFunctions[lossFunction](yDataTrue, yPred);
+
+                const slopeRange = Array.from({ length: 40 }, (_, i) => -5 + i * 0.25);
+                const interceptRange = Array.from({ length: 40 }, (_, i) => -5 + i * 0.25);
+
+                const zValues = interceptRange.map(b => 
+                    slopeRange.map(m => 
+                        lossFunctions[lossFunction](
+                            yDataTrue,
+                            xData.map(x => m * x + b)
+                        )
+                    )
+                );
+
+                const data = [
+                    {
+                        x: slopeRange,
+                        y: interceptRange,
+                        z: zValues,
+                        type: "surface",
+                        colorscale: "Viridis",
+                        showscale: true
+                    },
+                    {
+                        x: [slope],
+                        y: [intercept],
+                        z: [currentLoss],
+                        mode: "markers",
+                        type: 'scatter3d',
+                        marker: { size: 8, color: "red" },
+                        name: "Current Parameters"
+                    }
+                ];
+
+                const layout = {
+                    title: `Loss Surface (${lossFunction.toUpperCase()})`,
+                    scene: {
+                        xaxis: { title: "Slope (m)" },
+                        yaxis: { title: "Intercept (b)" },
+                        zaxis: { title: "Loss" },
+                        camera: currentCamera || {
+                            eye: { x: 1.5, y: 1.5, z: 1.5 }
+                        }
+                    },
+                    margin: { l: 0, r: 0, b: 0, t: 30 }
+                };
+
+                Plotly.react("loss-plot", data, layout);
+
+                const plot = document.getElementById("loss-plot");
+                plot.on('plotly_relayout', function(eventData) {
+                    if (eventData['scene.camera']) {
+                        currentCamera = eventData['scene.camera'];
+                    }
+                });
+            }
+
+            // Simulation plots
+            let simSlope = -5.0;  // Start with a high slope
+            let simIntercept = 3.5; // Start with a high intercept
+            let learningRate = 0.02;
+            let iteration = 0;
+            
+            function updateSimulationPlot() {
+                const yPred = xSimData.map(x => simSlope * x + simIntercept);
+
+                const data = [
+                    {
+                        x: xSimData,
+                        y: ySimData,
+                        mode: "markers",
+                        type: "scatter",
+                        name: "Training Data",
+                        marker: { color: '#1f77b4', size: 6, opacity: 0.5 }
+                    },
+                    {
+                        x: [Math.min(...xSimData), Math.max(...xSimData)],
+                        y: [
+                            simSlope * Math.min(...xSimData) + simIntercept,
+                            simSlope * Math.max(...xSimData) + simIntercept
+                        ],
+                        mode: "lines",
+                        type: "scatter",
+                        name: "Current Model",
+                        line: { color: "red", width: 2 }
+                    }
+                ];
+
+                const layout = {
+                    title: "Gradient Descent Progress",
+                    xaxis: { title: "X" },
+                    yaxis: { title: "Y" }
+                };
+
+                Plotly.react("simulation-plot", data, layout);
+            }
+
+            function updateSimulationLossPlot() {
+                const yPred = xSimData.map(x => simSlope * x + simIntercept);
+                const currentLoss = lossFunctions.mse(ySimData, yPred);
+
+                // Create a denser grid for smoother visualization
+                const slopeRange = Array.from({ length: 50 }, (_, i) => -5 + i * 0.2);
+                const interceptRange = Array.from({ length: 50 }, (_, i) => -5 + i * 0.2);
+
+                const zValues = interceptRange.map(b => 
+                    slopeRange.map(m => {
+                        const loss = lossFunctions.mse(
+                            ySimData,
+                            xSimData.map(x => m * x + b)
+                        );
+                        // Apply log scaling to better visualize the parabolic nature
+                        return Math.log(loss + 1);
+                    })
+                );
+
+                const data = [
+                    {
+                        x: slopeRange,
+                        y: interceptRange,
+                        z: zValues,
+                        type: "surface",
+                        colorscale: "Viridis",
+                        showscale: true,
+                        name: "Log-scaled Loss Surface"
+                    },
+                    {
+                        x: [simSlope],
+                        y: [simIntercept],
+                        z: [Math.log(lossFunctions.mse(ySimData, xSimData.map(x => simSlope * x + simIntercept)) + 1)],
+                        mode: "markers",
+                        type: 'scatter3d',
+                        marker: { size: 8, color: "red" },
+                        name: "Current Parameters"
+                    }
+                ];
+
+                const layout = {
+                    title: "Loss Surface During Training",
+                    scene: {
+                        xaxis: { title: "Slope (m)" },
+                        yaxis: { title: "Intercept (b)" },
+                        zaxis: { title: "MSE Loss" }
+                    },
+                    margin: { l: 0, r: 0, b: 0, t: 30 }
+                };
+
+                Plotly.react("simulation-loss-plot", data, layout);
+            }
+
+            function resetSimulation() {
+                simSlope = -5.0;
+                simIntercept = 3.5;
+                iteration = 0;
+                document.getElementById('iteration-display').textContent = `Iteration: ${iteration}`;
+                document.getElementById('loss-display').textContent = '';
+                updateSimulationPlot();
+                updateSimulationLossPlot();
+                document.getElementById('start-simulation').disabled = false;
+                document.getElementById('reset-simulation').disabled = false;
+            }
+
+            async function runSimulation() {
+                if (isSimulationRunning) return;
+                
+                isSimulationRunning = true;
+                document.getElementById('start-simulation').disabled = true;
+                document.getElementById('reset-simulation').disabled = true;
+                
+                simSlope = 0;
+                simIntercept = 0;
+                iteration = 0;
+                
+                while (iteration < 500 && isSimulationRunning) {
+                    const gradients = computeGradients(xSimData, ySimData, simSlope, simIntercept);
+                    
+                    simSlope -= learningRate * gradients.dSlope;
+                    simIntercept -= learningRate * gradients.dIntercept;
+                    
+                    updateSimulationPlot();
+                    updateSimulationLossPlot();
+                    const currentLoss = lossFunctions.mse(ySimData, xSimData.map(x => simSlope * x + simIntercept));
+                    document.getElementById('iteration-display').textContent = `Iteration: ${iteration}`;
+                    document.getElementById('loss-display').textContent = `Loss: ${currentLoss.toFixed(4)}`;
+                    
+                    iteration++;
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+                
+                isSimulationRunning = false;
+                document.getElementById('start-simulation').disabled = false;
+            }
+
+            // Event listeners
+            document.getElementById("slope").addEventListener("input", function(event) {
+                slope = parseFloat(event.target.value);
+                document.getElementById("slope-value").textContent = slope.toFixed(1);
+                updateRegressionPlot();
+                updateLossPlot();
+            });
+
+            document.getElementById("intercept").addEventListener("input", function(event) {
+                intercept = parseFloat(event.target.value);
+                document.getElementById("intercept-value").textContent = intercept.toFixed(1);
+                updateRegressionPlot();
+                updateLossPlot();
+            });
+
+            document.getElementById("loss-function").addEventListener("change", function(event) {
+                lossFunction = event.target.value;
+                updateRegressionPlot();
+                updateLossPlot();
+            });
+
+            document.getElementById("start-simulation").addEventListener("click", runSimulation);
+            document.getElementById("stop-simulation").addEventListener("click", () => {
+                isSimulationRunning = false;
+                document.getElementById('start-simulation').disabled = false;
+                document.getElementById('reset-simulation').disabled = false;
+            });
+            document.getElementById("reset-simulation").addEventListener("click", resetSimulation);
+
+            // Learning rate slider
+            document.getElementById("learning-rate").addEventListener("input", function(event) {
+                // Convert from log scale to actual learning rate
+                learningRate = Math.pow(10, parseFloat(event.target.value));
+                document.getElementById("learning-rate-value").textContent = learningRate.toExponential(2);
+            });
+
+            // Initialize all plots
+            updateRegressionPlot();
+            updateLossPlot();
+            updateSimulationPlot();
+            updateSimulationLossPlot();
+        });
+    </script>
+</body>
+</html>
