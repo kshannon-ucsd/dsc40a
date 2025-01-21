@@ -106,3 +106,9 @@ callouts:
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
+
+
+collections:
+  demos:
+    output: true
+    permalink: /demos/:path
