@@ -88,6 +88,7 @@
         - label: DISC
           type: disc
           title: Groupwork 1 (Discussion Section)
+          solution: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
 
     - date: "2025-01-16"
       in_class: true
@@ -121,8 +122,8 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released (due Feb 2, 11:59 pm)</b>
-          problems: 
-          template: 
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
+          template: https://www.overleaf.com/read/zbhgqqpcbfdh#0699bb
           submission: 
         - label: LEC 5
           type: lecture
