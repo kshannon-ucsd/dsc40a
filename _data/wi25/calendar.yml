@@ -104,7 +104,7 @@
           type: hops
           title: Hands-On Problem Solving 3
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_problems.ipynb
-          solutions:
+          solutions: https://drive.google.com/file/d/1Aryf4FjP6Xpas_J6cEM67Y0bRIjIj88r/view?usp=sharing
           data: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_loan_data.csv
 
 - week: 3
