@@ -88,7 +88,8 @@
         - label: DISC
           type: disc
           title: Groupwork 1 (Discussion Section)
-          solution: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
+          problems: https://drive.google.com/file/d/1V0TnzLEUuPUmSC1zpVpD-jGT0dPzSVRl/view?usp=sharing
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
 
     - date: "2025-01-16"
       in_class: true
