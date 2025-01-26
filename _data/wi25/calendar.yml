@@ -139,6 +139,8 @@
         - label: DISC
           type: disc
           title: Groupwork 2 (Discussion Section)
+          problems: https://drive.google.com/file/d/1YxFBiHGFGXrmlD3GJsBxdjPd2HpkBEef/view
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
     - date: "2025-01-23"
       in_class: true
