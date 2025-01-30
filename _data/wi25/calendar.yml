@@ -58,6 +58,7 @@
           problems: https://drive.google.com/file/d/1SQt9YmYixAif46hVS9pqm4jRMQDECuR3/view?usp=sharing
           template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
           submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
+          solutions: https://drive.google.com/file/d/18wSg_HKPf9KeYA_wfTi2ElCdThW4nSlx/view?usp=sharing
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
@@ -79,8 +80,7 @@
           type: hops
           title: Hands-On Problem Solving 2
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_problems.pdf
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_solutions.pdf
-          code: todo
+          solutions: https://drive.google.com/file/d/1ox0Q8F4euvIuxcIvwy2LMg_ObOsQVXEr/view?usp=sharing
 
     - date: "2025-01-15"
       in_class: true
@@ -165,8 +165,7 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 4
-          solutions: todo
-          code: todo
+          solutions: https://drive.google.com/file/d/1mW8mpBI1241N6-YGUEin83LSWEUdUuLk/view?usp=sharing
           problems: https://drive.google.com/file/d/1CZ0q7mrcXTAFt884erBQr2y9AbSJpKoJ/view?usp=sharing
         - label: LEC 7
           type: lecture
