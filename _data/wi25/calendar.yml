@@ -186,10 +186,10 @@
       events:
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 6
+          title: Hands-On Problem Solving 5
           solutions: todo
-          code: todo
-          problems: todo
+          code: https://drive.google.com/file/d/1Ie9kZ22FNYuMv21_h2BfOE3vhymvvHar/view?usp=sharing
+          problems: https://drive.google.com/file/d/1CUM2n3QMJONBEp9oZJ5o4LDVZDPQbxul/view?usp=sharing
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
