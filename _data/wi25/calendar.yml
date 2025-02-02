@@ -236,6 +236,7 @@
         - label: EXAM
           type: exam
           title: Midterm Exam
+          guide: https://drive.google.com/file/d/11bIXzMjmUiVmSRxMivpcWXebURMf3ISS/view?usp=sharing
 
 - week: 6
   title: "Week 6 - Multiple Linear Regression & Feature Engineering"
