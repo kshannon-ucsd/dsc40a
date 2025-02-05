@@ -206,10 +206,10 @@
       events:
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 7
+          title: Hands-On Problem Solving 6
           solutions: todo
           code: todo
-          problems: todo
+          problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
         - label: HW
           type: hw
           title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
