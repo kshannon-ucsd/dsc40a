@@ -215,9 +215,9 @@
         - label: HW
           type: hw
           title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
-          problems: 
+          problems: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
           template: 
-          submission: 
+          submission: https://www.gradescope.com/courses/934714/assignments/5504779/ 
         - label: LEC 9
           type: lecture
           title: Multiple Linear Regression
