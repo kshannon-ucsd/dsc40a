@@ -7,9 +7,6 @@ nav_order: 3
 
 # 📆 Calendar
 
-Lectures and discussions are all held in Warren Lecture Hall (WLH) 2114 
-- Check the calendar for the most updated locations and times of OHs. We will also make announcements, but this calendar is the source of truth.
-
 Most office hours are held in person in the Halıcıoğlu Data Science Institute. Office hours held remotely will have zoom links added to the OH location on this calendar.
 
 
