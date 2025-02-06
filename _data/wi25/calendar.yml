@@ -181,7 +181,6 @@
           type: disc
           title: Groupwork 2 Review (Discussion Section)
           problems: https://drive.google.com/file/d/1yV_82thIFn0SJIUhaUPmD28ut7dqgmLQ/view?usp=sharing
-          guide: https://drive.google.com/file/d/1RTOVYi0exkUmVfSJhG_z4_ilUXVEnV3r/view?usp=sharing
 
     - date: "2025-01-30"
       in_class: true
@@ -216,7 +215,7 @@
           type: hw
           title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
-          template: 
+          template: https://www.overleaf.com/project/679ffca3792163b6637bbb34
           submission: https://www.gradescope.com/courses/934714/assignments/5504779/ 
         - label: LEC 9
           type: lecture
