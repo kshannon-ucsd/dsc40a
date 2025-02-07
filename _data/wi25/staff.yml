@@ -47,6 +47,7 @@
 - name: Ahmed Mostafa (Hand of the King 👑)
   email: ahmostafa@ucsd.edu
   role: Tutor
+  website: https://ahmostafa147.github.io/portfolio/
   photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/ahmed.png
   description: 3rd year data science major & math minor
   hometown: Cairo, Egypt
@@ -63,7 +64,7 @@
   askabout: Cooking 🍳, LEGO, Working Out 🏋️, Work 🤔 
   food: Ajisen Ramen 🍜, Mongolian Hot Pot 🍲, Pho La Jolla 🍜
 
-- name: Zoe Ludena
+- name: Zoe Ludena (Whip)
   email: zludena@ucsd.edu
   role: Tutor
   website: https://zoeludena.github.io/
