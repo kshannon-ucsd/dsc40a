@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Himmelblau Interactive (GD + Adam)</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .controls {
+      margin-top: 20px;
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .plot-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .plot-wrapper {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    button {
+      background: hsl(250, 41%, 35%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    label {
+      display: inline-block;
+      margin: 0.5rem 0 0.25rem;
+      font-weight: 500;
+    }
+    .slider-span {
+      margin-left: 8px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>Himmelblau's Function: Interactive Gradient Descent</h1>
+  <p>
+    Himmelblau’s function has multiple local minima—see how different <strong>start points</strong>,
+    <strong>learning rates</strong>, or <strong>Adam</strong> can lead you to different minima
+    (or get "stuck" near a saddle).
+  </p>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+      <!-- Start X -->
+      <div>
+        <label for="startx-slider">Start X:</label><br>
+        <input type="range" id="startx-slider" min="-5" max="5" step="0.1" value="3">
+        <span id="startx-value" class="slider-span">3.00</span>
+      </div>
+      <!-- Start Y -->
+      <div>
+        <label for="starty-slider">Start Y:</label><br>
+        <input type="range" id="starty-slider" min="-5" max="5" step="0.1" value="2">
+        <span id="starty-value" class="slider-span">2.00</span>
+      </div>
+      <!-- Learning Rate -->
+      <div>
+        <label for="lr-slider">Learning Rate:</label><br>
+        <input type="range" id="lr-slider" min="-5" max="-1.5" step="0.1" value="-1.5">
+        <span id="lr-value" class="slider-span">3.2e-2</span>
+      </div>
+      <!-- Adam Toggle -->
+      <div style="margin-top: 1.8rem;">
+        <input type="checkbox" id="adam-check" />
+        <label for="adam-check">Use Adam</label>
+      </div>
+    </div>
+
+    <!-- Buttons + Status -->
+    <div style="margin-top: 1rem;">
+      <button id="start-btn">Start</button>
+      <button id="stop-btn">Stop</button>
+      <button id="reset-btn">Reset</button>
+      <span id="epoch-display" style="margin-left: 20px;">Epoch: 0</span>
+      <span id="loss-display" style="margin-left: 20px;">Loss: --</span>
+    </div>
+  </div>
+
+  <!-- Plots -->
+  <div class="plot-container">
+    <!-- 3D Surface -->
+    <div class="plot-wrapper">
+      <h2>3D Surface</h2>
+      <div id="surface-plot" style="width:100%; height:400px;"></div>
+    </div>
+    <!-- 2D Contour -->
+    <div class="plot-wrapper">
+      <h2>2D Contour</h2>
+      <div id="contour-plot" style="width:100%; height:400px;"></div>
+    </div>
+  </div>
+  <!-- Loss Over Time -->
+  <div class="plot-wrapper">
+    <h2>Loss vs. Epoch</h2>
+    <div id="loss-plot" style="width:100%; height:400px;"></div>
+  </div>
+
+  <script>
+    // 1) Himmelblau's Function & Gradient
+    function himmelblau(x, y) {
+      // f(x,y) = (x^2 + y - 11)^2 + (x + y^2 - 7)^2
+      return Math.pow(x*x + y - 11, 2) + Math.pow(x + y*y - 7, 2);
+    }
+    function gradHimmelblau(x, y) {
+      // partial derivatives:
+      // df/dx = 2*(x^2 + y -11)*(2x) + 2*(x + y^2 - 7)*1
+      // df/dy = 2*(x^2 + y -11)*1   + 2*(x + y^2 - 7)*(2y)
+      const dfdx = 2*(x*x + y - 11)*(2*x) + 2*(x + y*y - 7);
+      const dfdy = 2*(x*x + y - 11)       + 2*(x + y*y - 7)*(2*y);
+      return [dfdx, dfdy];
+    }
+
+    // 2) Generate a grid for [-5,5] to visualize
+    function generateSurfaceGrid() {
+      const steps = 60;
+      const xMin = -5, xMax = 5;
+      const yMin = -5, yMax = 5;
+
+      const xs = [];
+      const ys = [];
+      for (let i = 0; i < steps; i++) {
+        xs.push(xMin + i*(xMax - xMin)/(steps-1));
+        ys.push(yMin + i*(yMax - yMin)/(steps-1));
+      }
+
+      const Z = [];
+      for (let j=0; j<ys.length; j++) {
+        const row = [];
+        for (let i=0; i<xs.length; i++) {
+          row.push( himmelblau(xs[i], ys[j]) );
+        }
+        Z.push(row);
+      }
+      return { x: xs, y: ys, z: Z };
+    }
+
+    // 3) Minimal Adam
+    class AdamOptimizer {
+      constructor(lr=0.01, beta1=0.9, beta2=0.999, epsilon=1e-8) {
+        this.lr = lr;
+        this.beta1 = beta1;
+        this.beta2 = beta2;
+        this.epsilon = epsilon;
+        this.m_x = 0;  // first moment x
+        this.m_y = 0;  // first moment y
+        this.v_x = 0;  // second moment x
+        this.v_y = 0;  // second moment y
+      }
+      step(x, y, grad) {
+        // grad = [dfdx, dfdy]
+        this.m_x = this.beta1 * this.m_x + (1 - this.beta1) * grad[0];
+        this.m_y = this.beta1 * this.m_y + (1 - this.beta1) * grad[1];
+        this.v_x = this.beta2 * this.v_x + (1 - this.beta2)*(grad[0]*grad[0]);
+        this.v_y = this.beta2 * this.v_y + (1 - this.beta2)*(grad[1]*grad[1]);
+
+        // update
+        const x_new = x - this.lr*( this.m_x / (Math.sqrt(this.v_x) + this.epsilon) );
+        const y_new = y - this.lr*( this.m_y / (Math.sqrt(this.v_y) + this.epsilon) );
+        return [x_new, y_new];
+      }
+    }
+
+    // 4) Global state
+    const surfaceData = generateSurfaceGrid();
+
+    let pathX = [];
+    let pathY = [];
+    let pathLoss = [];
+    let xParam = 3.0, yParam = 2.0;  // set at reset
+    let epoch = 0;
+    let isRunning = false;
+    let intervalHandle = null;
+    let adam = null;
+
+    // Helpers
+    function getLearningRate() {
+      return parseFloat(document.getElementById("lr-value").textContent);
+    }
+
+    // 5) Initialize Plots
+    function initPlots() {
+      // 3D surface
+      Plotly.newPlot("surface-plot", [
+        {
+          x: surfaceData.x,
+          y: surfaceData.y,
+          z: surfaceData.z,
+          type: "surface",
+          colorscale: "Viridis"
+        }
+      ], {
+        scene: {
+          xaxis: { title: "x" },
+          yaxis: { title: "y" },
+          zaxis: { title: "f(x,y)" }
+        },
+        margin: {l:0, r:0, b:0, t:0}
+      });
+
+      // 2D contour
+      Plotly.newPlot("contour-plot", [
+        {
+          x: surfaceData.x,
+          y: surfaceData.y,
+          z: surfaceData.z,
+          type: "contour",
+          colorscale: "RdBu",
+          contours: { showlines: false }
+        }
+      ], {
+        xaxis: {title: "x"},
+        yaxis: {title: "y"}
+      });
+
+      // Loss vs epoch
+      Plotly.newPlot("loss-plot", [
+        {
+          x: [0],
+          y: [himmelblau(xParam, yParam)],
+          mode: "lines+markers",
+          name: "Loss"
+        }
+      ], {
+        xaxis: { title: "Epoch" },
+        yaxis: { title: "Loss" }
+      });
+    }
+
+    // 6) One iteration
+    function doStep() {
+      const grad = gradHimmelblau(xParam, yParam);
+
+      if (adam) {
+        [xParam, yParam] = adam.step(xParam, yParam, grad);
+      } else {
+        const lr = getLearningRate();
+        xParam = xParam - lr * grad[0];
+        yParam = yParam - lr * grad[1];
+      }
+
+      epoch++;
+      const lossVal = himmelblau(xParam, yParam);
+      pathX.push(xParam);
+      pathY.push(yParam);
+      pathLoss.push(lossVal);
+
+      // update plots
+      updatePlots();
+
+      // UI
+      document.getElementById("epoch-display").textContent = `Epoch: ${epoch}`;
+      document.getElementById("loss-display").textContent = `Loss: ${lossVal.toFixed(4)}`;
+    }
+
+    // 7) Update Plotly
+    function updatePlots() {
+      // 3D with path line
+      const surfaceTrace = {
+        x: surfaceData.x,
+        y: surfaceData.y,
+        z: surfaceData.z,
+        type: "surface",
+        colorscale: "Viridis"
+      };
+      const pathZ = pathX.map((xx, i) => himmelblau(xx, pathY[i]));
+      const pathLine3D = {
+        x: pathX,
+        y: pathY,
+        z: pathZ,
+        mode: "lines",
+        type: "scatter3d",
+        line: { color: "red", width: 4 },
+        name: "Path"
+      };
+      const current3D = {
+        x: [xParam],
+        y: [yParam],
+        z: [himmelblau(xParam, yParam)],
+        mode: "markers",
+        type: "scatter3d",
+        marker: { color: "red", size: 6, symbol: "x" },
+        name: "Current"
+      };
+      Plotly.react("surface-plot", [surfaceTrace, pathLine3D, current3D]);
+
+      // 2D
+      const contourTrace = {
+        x: surfaceData.x,
+        y: surfaceData.y,
+        z: surfaceData.z,
+        type: "contour",
+        colorscale: "RdBu",
+        contours: { showlines: false }
+      };
+      const pathLine2D = {
+        x: pathX,
+        y: pathY,
+        mode: "lines",
+        line: { color: "red", width: 2 },
+        name: "Path"
+      };
+      const current2D = {
+        x: [xParam],
+        y: [yParam],
+        mode: "markers",
+        marker: { color: "red", size: 8, symbol: "x" },
+        name: "Current"
+      };
+      Plotly.react("contour-plot", [contourTrace, pathLine2D, current2D]);
+
+      // Loss
+      const lossTrace = {
+        x: Array.from(pathLoss.keys()),
+        y: pathLoss,
+        mode: "lines+markers",
+        name: "Loss"
+      };
+      Plotly.react("loss-plot", [lossTrace], {
+        xaxis: { title: "Epoch" },
+        yaxis: { title: "Loss" }
+      });
+    }
+
+    // 8) Animation
+    function startSimulation() {
+      if (isRunning) return;
+      isRunning = true;
+      intervalHandle = setInterval(doStep, 1000); // 1 second per step
+    }
+    function stopSimulation() {
+      isRunning = false;
+      if (intervalHandle) clearInterval(intervalHandle);
+    }
+    function resetSimulation() {
+      stopSimulation();
+      epoch = 0;
+
+      // read user-chosen start coords
+      xParam = parseFloat(document.getElementById("startx-value").textContent);
+      yParam = parseFloat(document.getElementById("starty-value").textContent);
+
+      pathX = [xParam];
+      pathY = [yParam];
+      const initLoss = himmelblau(xParam, yParam);
+      pathLoss = [initLoss];
+
+      // check Adam
+      if (document.getElementById("adam-check").checked) {
+        const lr = getLearningRate();
+        adam = new AdamOptimizer(lr);
+      } else {
+        adam = null;
+      }
+
+      document.getElementById("epoch-display").textContent = "Epoch: 0";
+      document.getElementById("loss-display").textContent = `Loss: ${initLoss.toFixed(4)}`;
+      updatePlots();
+    }
+
+    // 9) DOM ready
+    window.addEventListener("DOMContentLoaded", () => {
+      initPlots();
+      resetSimulation();
+
+      // Start X slider
+      const sxSlider = document.getElementById("startx-slider");
+      sxSlider.addEventListener("input", () => {
+        const val = parseFloat(sxSlider.value);
+        document.getElementById("startx-value").textContent = val.toFixed(2);
+      });
+      sxSlider.dispatchEvent(new Event("input"));
+
+      // Start Y slider
+      const sySlider = document.getElementById("starty-slider");
+      sySlider.addEventListener("input", () => {
+        const val = parseFloat(sySlider.value);
+        document.getElementById("starty-value").textContent = val.toFixed(2);
+      });
+      sySlider.dispatchEvent(new Event("input"));
+
+      // Learning rate slider
+      const lrSlider = document.getElementById("lr-slider");
+      lrSlider.addEventListener("input", () => {
+        // from e.g. -1.5 => 10^-1.5
+        const val = parseFloat(lrSlider.value);
+        const actualLR = Math.pow(10, val);
+        document.getElementById("lr-value").textContent = actualLR.toExponential(1);
+      });
+      lrSlider.dispatchEvent(new Event("input"));
+
+      // Buttons
+      document.getElementById("start-btn").addEventListener("click", startSimulation);
+      document.getElementById("stop-btn").addEventListener("click", stopSimulation);
+      document.getElementById("reset-btn").addEventListener("click", resetSimulation);
+    });
+  </script>
+</body>
+</html>

@@ -13,6 +13,10 @@ This is a simple demo showing how loss and the function you are trying to learn 
 
 Recently rebuilt in javascript... but I first built this in python within a jupyter notebook. You can download my notebook [here](https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/demo_01.ipynb) to dive deeepr.
 
+## 2. Loss Surfaces
+This iasdasder. [Check it out!]({{ site.baseurl }}/demos/2_loss_surfaces)
+
+
 <!-- https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/demo_02.ipynb -->
 <!-- https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/demo_03.ipynb -->
 <!-- https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/demo_04.ipynb -->
