@@ -64,6 +64,9 @@ layout: none
   </style>
 </head>
 <body>
+  <a href="/pages/demos.html" style="text-decoration: none; margin-bottom: 20px; display: inline-block;">
+    <button style="margin-bottom: 20px;">← Back to Demos</button>
+  </a>
   <h1>Himmelblau's Function: Interactive Gradient Descent</h1>
   <p>
     Himmelblau’s function has multiple local minima—see how different <strong>start points</strong>,
