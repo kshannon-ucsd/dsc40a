@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+---
+layout: none
+---
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Himmelblau Interactive (GD + Adam)</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -64,7 +68,8 @@
   <p>
     Himmelblau’s function has multiple local minima—see how different <strong>start points</strong>,
     <strong>learning rates</strong>, or <strong>Adam</strong> can lead you to different minima
-    (or get "stuck" near a saddle).
+    (or get "stuck" near a saddle). If you have trouble with Himmelblau's, I have created a more complex 
+    loss surface with multiple local minuma where you can see how these algorithms traverse comples loss surfaces. 
   </p>
 
   <!-- Controls -->
@@ -85,16 +90,21 @@
       <!-- Learning Rate -->
       <div>
         <label for="lr-slider">Learning Rate:</label><br>
-        <input type="range" id="lr-slider" min="-5" max="-1.5" step="0.1" value="-1.5">
+        <input type="range" id="lr-slider" min="-5" max="1.0" step="0.25" value="-1.5">
         <span id="lr-value" class="slider-span">3.2e-2</span>
       </div>
       <!-- Adam Toggle -->
-      <div style="margin-top: 1.8rem;">
+      <div style="margin-top: 1.5rem;">
         <input type="checkbox" id="adam-check" />
         <label for="adam-check">Use Adam</label>
       </div>
     </div>
-
+    <!-- Function Selection Radio Buttons -->
+    <div style="margin-top: 1rem;">
+      <label>Select Function:</label>
+      <label style="margin-right: 1.0rem;"><input type="radio" name="func-select" value="himmelblau" checked> Himmelblau</label>
+      <label><input type="radio" name="func-select" value="sixhump"> Six-Hump Camel</label>
+    </div>
     <!-- Buttons + Status -->
     <div style="margin-top: 1rem;">
       <button id="start-btn">Start</button>
@@ -124,6 +134,91 @@
     <div id="loss-plot" style="width:100%; height:400px;"></div>
   </div>
 
+
+<div class="plot-container" markdown="1">
+  <div class="plot-wrapper">
+    <h3>Adam vs. Plain Gradient Descent</h3>
+    
+    In <b>plain gradient descent</b>, each update subtracts the gradient scaled by a 
+    single learning rate \(\alpha\):
+
+    $$
+    \theta_{t+1} \;=\; \theta_t \;-\; \alpha \,\nabla_\theta J(\theta_t).
+    $$
+
+<p>
+  <b>What does Momentum add?</b><br><br>
+  In plain gradient descent, we update parameters \(\theta_t\) by subtracting 
+  \(\alpha \nabla_{\theta} J(\theta_t)\) each time. With Momentum, we introduce 
+  a “velocity” \(v_t\) that accumulates past gradients:
+
+  $$
+  v_t \;=\; \mu \,v_{t-1} \;+\; \alpha \,\nabla_{\theta}J(\theta_t), 
+  \quad
+  \theta_{t+1} \;=\; \theta_t \;-\; v_t.
+  $$
+
+  <ul>
+    <li><strong>\(v_t\)</strong> is the current velocity (a rolling average of gradients).</li>
+    <li><strong>\(v_{t-1}\)</strong> is the velocity from the previous step.</li>
+    <li><strong>\(\mu\)</strong> (often around 0.9) is the momentum factor, controlling how much 
+        of the past velocity we retain.</li>
+    <li><strong>\(\alpha\)</strong> is still the learning rate, but it’s now multiplied into 
+        the velocity rather than directly into \(\nabla_{\theta} J(\theta_t)\).</li>
+  </ul>
+
+  This way, if gradients keep pointing in the same direction, 
+  \(v_t\) grows, speeding us along. If they fluctuate, \(v_t\) smooths out the noise 
+  by averaging recent steps instead of reacting only to the current gradient.
+</p>
+
+<p>
+  <b>What about RMSProp?</b>: 
+</p>
+
+<p>
+  It adapts the learning rate by tracking how big or small gradients typically are for 
+  each parameter. If gradients are large, RMSProp shrinks the step size; if they are small, 
+  it enlarges the step. In simpler terms:
+
+  $$
+  \text{Adaptive Step Size} \;\approx\; \frac{1}{\sqrt{\text{rolling average of }(\nabla_{\theta} J(\theta))^2}}.
+  $$
+
+  That means parameters with consistently big gradients slow down, 
+  while those with small gradients speed up.
+</p>
+
+
+<p>
+
+    <b>Adam (Adaptive Moment Estimation)</b> extends this by tracking two moving averages 
+    of the gradients:
+    1. A “first moment” (numerator) which acts like momentum—an exponential average of 
+       gradients that can help smooth out noise.
+    2. A “second moment” comes  from RMSProp (denominator) that tracks the average of squared gradients, 
+       adjusting the effective learning rate so steep directions get smaller updates.
+
+    The update roughly looks like:
+    $$
+    \theta_{t+1}
+    \;\approx\;
+    \theta_t
+    \;-\;
+    \frac{\alpha \,\text{(avg gradient)}}{\sqrt{\text{(avg of gradient}^2)} + \epsilon}
+    $$
+
+    Here, \(\epsilon\) is a small constant (often around \(10^{-8}\)) to avoid dividing by 
+    zero and ensure stable updates. By combining momentum (the numerator) with an adaptive 
+    step size (the denominator).. essentially merging momentum and RMSProp, Adam automatically tunes step sizes for each 
+    parameter dimension. In practice, this often converges faster and is more tolerant 
+    of tricky or noisy gradients.
+    </p>
+  </div>
+</div>
+
+
+
   <script>
     // 1) Himmelblau's Function & Gradient
     function himmelblau(x, y) {
@@ -131,15 +226,46 @@
       return Math.pow(x*x + y - 11, 2) + Math.pow(x + y*y - 7, 2);
     }
     function gradHimmelblau(x, y) {
-      // partial derivatives:
-      // df/dx = 2*(x^2 + y -11)*(2x) + 2*(x + y^2 - 7)*1
-      // df/dy = 2*(x^2 + y -11)*1   + 2*(x + y^2 - 7)*(2y)
+      // partial derivs...
       const dfdx = 2*(x*x + y - 11)*(2*x) + 2*(x + y*y - 7);
       const dfdy = 2*(x*x + y - 11)       + 2*(x + y*y - 7)*(2*y);
       return [dfdx, dfdy];
     }
 
-    // 2) Generate a grid for [-5,5] to visualize
+    function sixHumpCamelModified(x, y) {
+      return 0.1 * (x * x + y * y)
+             + 0.55 * Math.sin(x) * Math.sin(y)
+             + 0.2 * Math.cos(x - 5.0 * y);
+    }
+    function gradSixHumpCamelModified(x, y) {
+      // For f(x,y) = 0.1*(x²+y²) + 0.55*sin(x)*sin(y) + 0.2*cos(x-5y):
+      // ∂/∂x: 0.2*x + 0.55*cos(x)*sin(y) - 0.2*sin(x-5y)
+      // ∂/∂y: 0.2*y + 0.55*sin(x)*cos(y) + 1.0*sin(x-5y)    (since d/dy cos(x-5y) = 5*sin(x-5y))
+      const dfdx = 0.2 * x + 0.55 * Math.cos(x) * Math.sin(y) - 0.2 * Math.sin(x - 5.0 * y);
+      const dfdy = 0.2 * y + 0.55 * Math.sin(x) * Math.cos(y) + 1.0 * Math.sin(x - 5.0 * y);
+      return [dfdx, dfdy];
+    }
+
+    // Global function selector and wrappers
+    let currentFunction = "himmelblau"; // default function
+
+    function f(x, y) {
+      if (currentFunction === "himmelblau") {
+        return himmelblau(x, y);
+      } else if (currentFunction === "sixhump") {
+        return sixHumpCamelModified(x, y);
+      }
+    }
+
+    function gradf(x, y) {
+      if (currentFunction === "himmelblau") {
+        return gradHimmelblau(x, y);
+      } else if (currentFunction === "sixhump") {
+        return gradSixHumpCamelModified(x, y);
+      }
+    }
+
+    // 2) Generate a grid for [-5,5] to visualize using the selected function
     function generateSurfaceGrid() {
       const steps = 60;
       const xMin = -5, xMax = 5;
@@ -156,14 +282,14 @@
       for (let j=0; j<ys.length; j++) {
         const row = [];
         for (let i=0; i<xs.length; i++) {
-          row.push( himmelblau(xs[i], ys[j]) );
+          row.push( f(xs[i], ys[j]) );
         }
         Z.push(row);
       }
       return { x: xs, y: ys, z: Z };
     }
 
-    // 3) Minimal Adam
+    // 3) Minimal Adam with bias correction
     class AdamOptimizer {
       constructor(lr=0.01, beta1=0.9, beta2=0.999, epsilon=1e-8) {
         this.lr = lr;
@@ -174,23 +300,29 @@
         this.m_y = 0;  // first moment y
         this.v_x = 0;  // second moment x
         this.v_y = 0;  // second moment y
+        this.t = 0;    // time step
       }
       step(x, y, grad) {
         // grad = [dfdx, dfdy]
+        this.t += 1;
         this.m_x = this.beta1 * this.m_x + (1 - this.beta1) * grad[0];
         this.m_y = this.beta1 * this.m_y + (1 - this.beta1) * grad[1];
-        this.v_x = this.beta2 * this.v_x + (1 - this.beta2)*(grad[0]*grad[0]);
-        this.v_y = this.beta2 * this.v_y + (1 - this.beta2)*(grad[1]*grad[1]);
+        this.v_x = this.beta2 * this.v_x + (1 - this.beta2) * (grad[0]*grad[0]);
+        this.v_y = this.beta2 * this.v_y + (1 - this.beta2) * (grad[1]*grad[1]);
 
-        // update
-        const x_new = x - this.lr*( this.m_x / (Math.sqrt(this.v_x) + this.epsilon) );
-        const y_new = y - this.lr*( this.m_y / (Math.sqrt(this.v_y) + this.epsilon) );
+        const m_hat_x = this.m_x / (1 - Math.pow(this.beta1, this.t));
+        const m_hat_y = this.m_y / (1 - Math.pow(this.beta1, this.t));
+        const v_hat_x = this.v_x / (1 - Math.pow(this.beta2, this.t));
+        const v_hat_y = this.v_y / (1 - Math.pow(this.beta2, this.t));
+
+        const x_new = x - this.lr * ( m_hat_x / (Math.sqrt(v_hat_x) + this.epsilon) );
+        const y_new = y - this.lr * ( m_hat_y / (Math.sqrt(v_hat_y) + this.epsilon) );
         return [x_new, y_new];
       }
     }
 
     // 4) Global state
-    const surfaceData = generateSurfaceGrid();
+    let surfaceData = generateSurfaceGrid();
 
     let pathX = [];
     let pathY = [];
@@ -245,7 +377,7 @@
       Plotly.newPlot("loss-plot", [
         {
           x: [0],
-          y: [himmelblau(xParam, yParam)],
+          y: [f(xParam, yParam)],
           mode: "lines+markers",
           name: "Loss"
         }
@@ -257,7 +389,7 @@
 
     // 6) One iteration
     function doStep() {
-      const grad = gradHimmelblau(xParam, yParam);
+      const grad = gradf(xParam, yParam);
 
       if (adam) {
         [xParam, yParam] = adam.step(xParam, yParam, grad);
@@ -268,7 +400,7 @@
       }
 
       epoch++;
-      const lossVal = himmelblau(xParam, yParam);
+      const lossVal = f(xParam, yParam);
       pathX.push(xParam);
       pathY.push(yParam);
       pathLoss.push(lossVal);
@@ -291,7 +423,7 @@
         type: "surface",
         colorscale: "Viridis"
       };
-      const pathZ = pathX.map((xx, i) => himmelblau(xx, pathY[i]));
+      const pathZ = pathX.map((xx, i) => f(xx, pathY[i]));
       const pathLine3D = {
         x: pathX,
         y: pathY,
@@ -304,7 +436,7 @@
       const current3D = {
         x: [xParam],
         y: [yParam],
-        z: [himmelblau(xParam, yParam)],
+        z: [f(xParam, yParam)],
         mode: "markers",
         type: "scatter3d",
         marker: { color: "red", size: 6, symbol: "x" },
@@ -370,7 +502,7 @@
 
       pathX = [xParam];
       pathY = [yParam];
-      const initLoss = himmelblau(xParam, yParam);
+      const initLoss = f(xParam, yParam);
       pathLoss = [initLoss];
 
       // check Adam
@@ -416,6 +548,15 @@
         document.getElementById("lr-value").textContent = actualLR.toExponential(1);
       });
       lrSlider.dispatchEvent(new Event("input"));
+
+      // Function selection radio buttons
+      document.querySelectorAll('input[name="func-select"]').forEach((elem) => {
+        elem.addEventListener("change", (e) => {
+          currentFunction = e.target.value;
+          surfaceData = generateSurfaceGrid();
+          resetSimulation();
+        });
+      });
 
       // Buttons
       document.getElementById("start-btn").addEventListener("click", startSimulation);

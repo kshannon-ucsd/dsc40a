@@ -45,6 +45,18 @@ plugins:
 
 search_enabled: true
 
+
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  # optional
+  input: GFM
+  syntax_highlighter: rouge
+
+
+
+
 # exclude: ["./data", "../vendor/*"]
 
 # Exclude from processing.
