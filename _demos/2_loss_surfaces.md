@@ -146,76 +146,89 @@ layout: none
     single learning rate \(\alpha\):
 
     $$
-    \theta_{t+1} \;=\; \theta_t \;-\; \alpha \,\nabla_\theta J(\theta_t).
+    \theta_{t+1} \;=\; \theta_t \;-\; \alpha \,\nabla_\theta J(\theta_t)
     $$
 
-<p>
-  <b>What does Momentum add?</b><br><br>
-  In plain gradient descent, we update parameters \(\theta_t\) by subtracting 
-  \(\alpha \nabla_{\theta} J(\theta_t)\) each time. With Momentum, we introduce 
-  a “velocity” \(v_t\) that accumulates past gradients:
+    <p>
+      <ul>
+        <li><strong>\(\theta_t\)</strong>: The parameter vector (e.g., the weights of your model) at iteration \(t\).</li>
+        <li><strong>\(\alpha\)</strong>: The learning rate or step size.</li>
+        <li><strong>\(\nabla_\theta J(\theta_t)\)</strong>: The gradient of the loss function with respect to the parameters at iteration \(t\). This gradient indicates the direction in which \(J\) increases most rapidly.</li>
+        <li><strong>\(J(\theta_t)\)</strong>: The loss (or cost) function evaluated at \(\theta_t\).</li>
+      </ul>
+    </p>
 
-  $$
-  v_t \;=\; \mu \,v_{t-1} \;+\; \alpha \,\nabla_{\theta}J(\theta_t), 
-  \quad
-  \theta_{t+1} \;=\; \theta_t \;-\; v_t.
-  $$
+    <p>
+      <b>What does Momentum add?</b><br><br>
+      Unlike in plain gradient descent, with Momentum, we introduce 
+      a “velocity” \(v_t\) that accumulates past gradients:
 
-  <ul>
-    <li><strong>\(v_t\)</strong> is the current velocity (a rolling average of gradients).</li>
-    <li><strong>\(v_{t-1}\)</strong> is the velocity from the previous step.</li>
-    <li><strong>\(\mu\)</strong> (often around 0.9) is the momentum factor, controlling how much 
-        of the past velocity we retain.</li>
-    <li><strong>\(\alpha\)</strong> is still the learning rate, but it’s now multiplied into 
-        the velocity rather than directly into \(\nabla_{\theta} J(\theta_t)\).</li>
-  </ul>
+      $$
+      v_t \;=\; \mu \,v_{t-1} \;+\; \alpha \,\nabla_{\theta}J(\theta_t), 
+      \quad
+      \theta_{t+1} \;=\; \theta_t \;-\; v_t
+      $$
 
-  This way, if gradients keep pointing in the same direction, 
-  \(v_t\) grows, speeding us along. If they fluctuate, \(v_t\) smooths out the noise 
-  by averaging recent steps instead of reacting only to the current gradient.
-</p>
+      <ul>
+        <li><strong>\(v_t\)</strong> is the current velocity (a rolling average of gradients).</li>
+        <li><strong>\(v_{t-1}\)</strong> is the velocity from the previous step.</li>
+        <li><strong>\(\mu\)</strong> (often around 0.9) is the momentum factor, controlling how much 
+            of the past velocity we retain.</li>
+        <li><strong>\(\alpha\)</strong> is now multiplied into the velocity rather than directly into \(\nabla_{\theta} J(\theta_t)\).</li>
+      </ul>
 
-<p>
-  <b>What about RMSProp?</b>: 
-</p>
+      This way, if gradients keep pointing in the same direction, 
+      \(v_t\) grows, speeding us along. If they fluctuate, \(v_t\) smooths out the noise 
+      by averaging recent steps instead of reacting only to the current gradient.
+    </p>
 
-<p>
-  It adapts the learning rate by tracking how big or small gradients typically are for 
-  each parameter. If gradients are large, RMSProp shrinks the step size; if they are small, 
-  it enlarges the step. In simpler terms:
+    <p>
+      <b>What about RMSProp?</b>
+    </p>
 
-  $$
-  \text{Adaptive Step Size} \;\approx\; \frac{1}{\sqrt{\text{rolling average of }(\nabla_{\theta} J(\theta))^2}}.
-  $$
+    <p>
+      It adapts the learning rate by tracking how big or small gradients typically are for 
+      each parameter. If gradients are large, RMSProp shrinks the step size; if they are small, 
+      it enlarges the step. In simpler terms:
 
-  That means parameters with consistently big gradients slow down, 
-  while those with small gradients speed up.
-</p>
+      $$
+      \text{Adaptive Step Size} \;\approx\; \frac{1}{\sqrt{\text{rolling average of }(\nabla_{\theta} J(\theta))^2}}
+      $$
+      
+      <p>
+        <ul>
+          <li><strong>\(\nabla_\theta J(\theta_t)\)</strong>: As above, this is the gradient of the loss function at the current parameters.</li>
+          <li><strong>Rolling Average of Squared Gradients</strong>: A moving average that tracks the squared values of the gradients. This average is used to adapt the learning rate for each parameter dynamically.</li>
+        </ul>
+      </p>
+
+      That means parameters with consistently big gradients slow down, 
+      while those with small gradients speed up.
+    </p>
 
 
-<p>
+    <p>
+      <b>Adam (Adaptive Moment Estimation)</b> extends this by tracking two moving averages 
+      of the gradients:
+      1. A “first moment” (numerator) which acts like momentum—an exponential average of 
+         gradients that can help smooth out noise.
+      2. A “second moment” comes  from RMSProp (denominator) that tracks the average of squared gradients, 
+         adjusting the effective learning rate so steep directions get smaller updates.
 
-    <b>Adam (Adaptive Moment Estimation)</b> extends this by tracking two moving averages 
-    of the gradients:
-    1. A “first moment” (numerator) which acts like momentum—an exponential average of 
-       gradients that can help smooth out noise.
-    2. A “second moment” comes  from RMSProp (denominator) that tracks the average of squared gradients, 
-       adjusting the effective learning rate so steep directions get smaller updates.
+      The update roughly looks like:
+      $$
+      \theta_{t+1}
+      \;\approx\;
+      \theta_t
+      \;-\;
+      \frac{\alpha \,\text{(avg gradient)}}{\sqrt{\text{(avg of gradient}^2)} + \epsilon}
+      $$
 
-    The update roughly looks like:
-    $$
-    \theta_{t+1}
-    \;\approx\;
-    \theta_t
-    \;-\;
-    \frac{\alpha \,\text{(avg gradient)}}{\sqrt{\text{(avg of gradient}^2)} + \epsilon}
-    $$
-
-    Here, \(\epsilon\) is a small constant (often around \(10^{-8}\)) to avoid dividing by 
-    zero and ensure stable updates. By combining momentum (the numerator) with an adaptive 
-    step size (the denominator).. essentially merging momentum and RMSProp, Adam automatically tunes step sizes for each 
-    parameter dimension. In practice, this often converges faster and is more tolerant 
-    of tricky or noisy gradients.
+      The numerator tells you which direction to move, the denominator tells you how much, and the learning rate sets the pace.
+      Finally, \(\epsilon\) is a small constant (often around \(10^{-8}\)) to avoid dividing by 
+      zero and ensure stable updates. Adam automatically tunes step sizes for each 
+      parameter dimension. In practice (high dimmensional spaces), this often converges faster and is more tolerant 
+      of tricky or noisy gradients.
     </p>
   </div>
 </div>
@@ -236,7 +249,7 @@ layout: none
     }
 
     function sixHumpCamelModified(x, y) {
-      return 0.1 * (x * x + y * y)
+      return 0.5+ 0.1 * (x * x + y * y) //0.5 to ensure no non negative loss
              + 0.55 * Math.sin(x) * Math.sin(y)
              + 0.2 * Math.cos(x - 5.0 * y);
     }
