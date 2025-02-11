@@ -67,12 +67,13 @@ layout: none
   <a href="/pages/demos.html" style="text-decoration: none; margin-bottom: 20px; display: inline-block;">
     <button style="margin-bottom: 20px;">← Back to Demos</button>
   </a>
-  <h1>Himmelblau's Function: Interactive Gradient Descent</h1>
+  <h1>Interactive Gradient Descent</h1>
   <p>
     Himmelblau’s function has multiple local minima—see how different <strong>start points</strong>,
-    <strong>learning rates</strong>, or <strong>Adam</strong> can lead you to different minima
-    (or get "stuck" near a saddle). If you have trouble with Himmelblau's, I have created a more complex 
-    loss surface with multiple local minuma where you can see how these algorithms traverse comples loss surfaces. 
+    <strong>learning rates</strong>, or <strong>Adam</strong> can lead you to different local or global minima
+    (or get "semi-stuck" near a saddle). If you have trouble with Himmelblau's (because it is very simple and has only 4 global minima, 
+    with no local, but a nice saddle point), I have created a more complex (n-hump camel)
+    loss surface with multiple local minima where you can see how these gradient descent traverses a more complex loss surfaces. 
   </p>
 
   <!-- Controls -->
@@ -106,7 +107,7 @@ layout: none
     <div style="margin-top: 1rem;">
       <label>Select Function:</label>
       <label style="margin-right: 1.0rem;"><input type="radio" name="func-select" value="himmelblau" checked> Himmelblau</label>
-      <label><input type="radio" name="func-select" value="sixhump"> Six-Hump Camel</label>
+      <label><input type="radio" name="func-select" value="sixhump"> Modified N-Hump Camel</label>
     </div>
     <!-- Buttons + Status -->
     <div style="margin-top: 1rem;">
@@ -237,6 +238,8 @@ layout: none
 
   <script>
     // 1) Himmelblau's Function & Gradient
+    // https://www.sfu.ca/~ssurjano/index.html for the math and r code
+    // https://www.sfu.ca/~ssurjano/optimization.html
     function himmelblau(x, y) {
       // f(x,y) = (x^2 + y - 11)^2 + (x + y^2 - 7)^2
       return Math.pow(x*x + y - 11, 2) + Math.pow(x + y*y - 7, 2);
@@ -249,7 +252,7 @@ layout: none
     }
 
     function sixHumpCamelModified(x, y) {
-      return 0.5+ 0.1 * (x * x + y * y) //0.5 to ensure no non negative loss
+      return 0.5 + 0.1 * (x * x + y * y) //0.5 to ensure no non negative loss
              + 0.55 * Math.sin(x) * Math.sin(y)
              + 0.2 * Math.cos(x - 5.0 * y);
     }
