@@ -125,6 +125,7 @@
           title: <b>Homework 2 Released (due Feb 2, 11:59 pm)</b>
           problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
           template: https://www.overleaf.com/read/zbhgqqpcbfdh#0699bb
+          solutions: https://www.overleaf.com/read/qdhcnmkcstxj#d30706
           submission: 
         - label: LEC 5
           type: lecture
@@ -213,7 +214,7 @@
           problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
         - label: HW
           type: hw
-          title: <b>Homework 3 Released (due Feb 16, 11:59 pm)</b>
+          title: <b>Homework 3 Released (due Feb 26, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
           template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
           submission: https://www.gradescope.com/courses/934714/assignments/5504779/ 
