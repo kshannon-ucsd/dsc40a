@@ -267,7 +267,7 @@
       events:
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 8
+          title: Hands-On Problem Solving 7
           solutions: todo
           code: todo
           problems: todo
@@ -288,7 +288,7 @@
       events:
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 9
+          title: Hands-On Problem Solving 8
           solutions: todo
           code: todo
           problems: todo
@@ -338,7 +338,7 @@
       events:
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 10
+          title: Hands-On Problem Solving 9
           solutions: todo
           code: todo
           problems: todo
@@ -367,7 +367,7 @@
           recording: https://youtu.be/zj4RUJFb7zw
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 11
+          title: Hands-On Problem Solving 10
           solutions: todo
           code: todo
           problems: todo
@@ -393,7 +393,7 @@
           solutions: todo
           code: todo
           problems: todo
-          title: Hands-On Problem Solving 12
+          title: Hands-On Problem Solving 11
 
     - date: "2025-03-05"
       in_class: true
@@ -413,7 +413,7 @@
           recording: https://youtu.be/yLzXxFM1sII
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 13
+          title: Hands-On Problem Solving 12
           solutions: todo
           code: todo
           problems: todo
