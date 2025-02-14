@@ -271,7 +271,7 @@
           title: Hands-On Problem Solving 7
           solutions: todo
           code: todo
-          problems: todo
+          problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
@@ -291,7 +291,7 @@
           type: hops
           title: Hands-On Problem Solving 8
           solutions: todo
-          problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
+          problems: 
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
