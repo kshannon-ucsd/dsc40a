@@ -24,7 +24,6 @@ Recently rebuilt in javascript... but I first built this in python within a jupy
 
 ## 2. [Loss Surface Navigation]({{ site.baseurl }}/demos/2_loss_surfaces)
 This demo shows how gradient descent moves through various loss surfaces in 3d and 2d contour maps. It also let's you compare adam to plain gradient descent!
-
 ## 3. [Interaction Terms - WIP]({{ site.baseurl }}#)
 This demo shows how gradient descent moves through various loss surfaces in 3d and 2d contour maps. It also let's you compare adam to plain gradient descent!
 
