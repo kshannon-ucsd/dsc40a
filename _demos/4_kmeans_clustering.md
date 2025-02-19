@@ -625,7 +625,7 @@ layout: none
         <strong>Convergence Check</strong>: If SSE hasn't significantly decreased or max iterations reached, stop. Otherwise, go back to step 1.
       </li>
     </ol>
-    <h2>III. Mathematical Foundations</h2>
+    <h2>Mathematical Foundations</h2>
     <h3>A. Dataset Representation</h3>
     <p>
       Let \(\,X = \{x_1, x_2, ..., x_n\}\) be our dataset, where each \(\,x_i\,\) is a \(\,d\)-dimensional vector.
