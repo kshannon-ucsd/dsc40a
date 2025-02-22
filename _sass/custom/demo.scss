@@ -10,6 +10,7 @@ $text-gray-500: #6b7280;
 
 .demo {
   display: flex;
+  flex-direction: row-reverse;
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 4px;
@@ -31,7 +32,8 @@ $text-gray-500: #6b7280;
     min-height: 80px;
     max-width: 250px;
     max-height: 250px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
     border-radius: 4px;
     object-fit: cover;
   }
