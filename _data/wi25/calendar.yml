@@ -269,8 +269,7 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 7
-          solutions: todo
-          code: todo
+          solutions: https://drive.google.com/file/d/1qIQbjjbxslBaeZrtb835_PU7dUrGd7IE/view?usp=sharing
           problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
         - label: LEC 11
           type: lecture
@@ -293,7 +292,7 @@
           problems: https://drive.google.com/file/d/1rk7PNzk7_z7mkhXN71WCYuaffiaqLImg/view?usp=sharing
           code: https://drive.google.com/file/d/1bzSZAuz6XhZzLJp49bVvYAsHF2l0xzuB/view?usp=sharing
           data: https://drive.google.com/file/d/1S8GWAOvhK5JFR2L8CGcFSl1W8gH4vA15/view?usp=sharing
-          solutions: todo
+          solutions: https://drive.google.com/file/d/1xGDLDx3HOtlmFYfLBp4LTWB1Tb_YSWx8/view?usp=drive_link
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
@@ -305,7 +304,7 @@
           title: <b>Homework 4 Released (due Mar 7, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
           code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing 
-          template: 
+          template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
           submission: 
 
     - date: "2025-02-19"
