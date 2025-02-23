@@ -1,0 +1,22 @@
+- title: 1. Linear Regression
+  url: https://dsc40a.com/demos/1_linear_regression
+  photo: /assets/images/demos/simple-loss.jpg
+  description: This is a simple demo showing how loss and the function you are trying to learn with linear regression work together. Recently rebuilt in JavaScript, but I first built this in Python within a jupyter notebook. You can download my notebook below to dive deeper!
+  links:
+    - url: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/demo_01.ipynb
+      text: Python Notebook
+
+- title: 2. Loss Surface Navigation
+  url: https://dsc40a.com/demos/2_loss_surfaces
+  photo: /assets/images/demos/loss-surface.png
+  description: This demo shows how gradient descent moves through various loss surfaces in 3d and 2d contour maps. It also let's you compare adam to plain gradient descent!
+
+- title: 3. Interaction Terms (WIP)
+  url: https://dsc40a.com/demos/
+  photo: /assets/images/demos/construction.png
+  description: This demo shows how gradient descent moves through various loss surfaces in 3d and 2d contour maps. It also let's you compare adam to plain gradient descent!
+
+- title: 4. K-Means Clustering
+  url: https://dsc40a.com/demos/4_kmeans_clustering
+  photo: /assets/images/demos/kmeans.png
+  description: Check out how Kmeans Clustering works!

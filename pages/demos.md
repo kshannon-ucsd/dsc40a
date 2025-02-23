@@ -7,10 +7,18 @@ nav_order: 4
 
 # 💃 Demos
 
+{% assign demo_vars = site.data[site.data_folder].demos %}
+
+{% for demo in demo_vars %}
+<div class="demos-section">
+  {% include demo-display.html demo=demo %}
+</div>
+{% endfor %}
+
+
+<!-- 
 ## 1. [Linear Regression]({{ site.baseurl }}/demos/1_linear_regression)
 This is a simple demo showing how loss and the function you are trying to learn with linear regression work together.
-
-
 Recently rebuilt in javascript... but I first built this in python within a jupyter notebook. You can download my notebook [here](https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/demo_01.ipynb) to dive deeepr.
 
 ## 2. [Loss Surface Navigation]({{ site.baseurl }}/demos/2_loss_surfaces)

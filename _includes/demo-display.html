@@ -1,0 +1,21 @@
+<div class="demo">
+  {% if include.demo.photo %}
+  <img class="demo-image" src="{{ include.demo.photo | relative_url }}" alt="{{ include.demo.title }}">
+  {% endif %}
+  <div class="demo-content">
+    <h3 class="demo-title">
+      <a href="{{ include.demo.url }}">{{ include.demo.title }}</a>
+    </h3>
+    <p class="demo-description">{{ include.demo.description | markdownify }}</p>
+    {% if include.demo.links %}
+    <div class="demo-links">
+      <h4>Supplementary Links:</h4>
+      <ul>
+        {% for link in include.demo.links %}
+        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</div>
