@@ -4,7 +4,7 @@
   {% endif %}
   <div class="demo-content">
     <h3 class="demo-title">
-      <a href="{{ include.demo.url }}">{{ include.demo.title }}</a>
+      <a href="{{ include.demo.url | relative_url }}">{{ include.demo.title }}</a>
     </h3>
     <p class="demo-description">{{ include.demo.description | markdownify }}</p>
     {% if include.demo.links %}
