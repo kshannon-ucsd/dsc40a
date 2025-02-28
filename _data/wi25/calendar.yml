@@ -262,6 +262,7 @@
         - label: DISC
           type: disc
           title: Groupwork 3 (Discussion Section)
+          problems: https://drive.google.com/file/d/1O8CrdZaeiRfOKZZkulQFMHSfNWlwU0T2/view?usp=sharing
 
     - date: "2025-02-13"
       in_class: true
@@ -357,6 +358,8 @@
         - label: DISC
           type: disc
           title: Groupwork 4 (Discussion Section)
+          problems: https://drive.google.com/file/d/1VvOrwcYd0dK22MzYn-RzGiqRy-FQ0EIq/view?usp=sharing
+          slides: https://docs.google.com/presentation/d/1goa-TOn4EtLerb1BUQr57-D5Ucyeenh8aOJcj3kipRE/edit?usp=sharing
 
     - date: "2025-02-27"
       in_class: true
