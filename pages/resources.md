@@ -2,6 +2,8 @@
 layout: page
 title: 📚 Resources
 description: Useful links and resources.
+has_children: true
+permalink: /resources/
 nav_order: 5
 ---
 
