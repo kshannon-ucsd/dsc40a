@@ -139,7 +139,7 @@ permalink: /resources/grokking-bayes
   <p>Many people intuitively choose "communications major" because the description seems to match stereotypical traits we associate with students in communications programs. This is using what psychologists call the <strong>representativeness heuristic</strong> - judging probability by how well something matches our mental prototype.</p>
 
   <div class="question">
-    <p><strong>Question 2:</strong> What critical information are we missing when we make this judgment based on the description alone?</p>
+    <p><strong>Question 2:</strong> What critical information are we missing when we make this judgment if we were to disregard his description?</p>
   </div>
 
   <details>
@@ -293,7 +293,7 @@ permalink: /resources/grokking-bayes
 
   <details>
     <summary>Click for answer</summary>
-    <p>Because STEM majors greatly outnumber communications majors in the total population. Even though only 30% of STEM majors match the description compared to 70% of communications majors, the absolute number is still larger: 51 STEM majors vs. 21 communications majors.</p>
+    <p>Because STEM majors greatly outnumber communications majors in the total population. In this case, even though only 30% of STEM majors match the description compared to 70% of communications majors, the absolute number is still larger: 51 STEM majors vs. 21 communications majors.</p>
   </details>
 
   <h2>Calculating with Bayes' Theorem</h2>
@@ -514,5 +514,7 @@ permalink: /resources/grokking-bayes
       });
     });
   </script>
+  <h5>Acknowledgment:</h5>
+<div>Images are inspired by 3Blue 1Brown</div>
 </body>
 </html>
