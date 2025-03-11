@@ -72,6 +72,14 @@ These resources were created by tutors as part of their Final Project for DSC 95
 
 ---
 
+## Loss Functions and Regression
+
+- Other lectures on [Loss Functions](http://ds100.org/su20/lecture/lec11) and [Simple Linear Regression](http://ds100.org/su20/lecture/lec12/).
+    - These are from a different course for a different audience, and use different notation and terminology. However, the high-level ideas are similar to those in the first few weeks of our course.
+- [Gradient Descent visualizer](https://uclaacm.github.io/gradient-descent-visualiser/#playground).
+
+---
+
 ## Probability
 
 Unlike the first half of the course, where we had course notes written specifically for this class, we don't have DSC 40A-specific notes for the second half of the class, because there are many high-quality resources available online that cover the same material. Below, you'll find links to some of these resources.
@@ -90,12 +98,6 @@ Unlike the first half of the course, where we had course notes written specifica
 
 - [Khan Academy: Counting, Permutations, and Combinations](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations#combinatorics-probability): Khan Academy has a good unit called Counting, Permutations, and Combinations that should be pretty helpful for the combinatorics we are learning in this class. A useful aspect of it is the practice questions that combine permutations and combinations. Most students find that the hardest part of these counting problems is knowing when to use permutations and when to use combinations. These practice questions have them mixed together, so you really get practice learning which is the right technique to apply to which situation.
 
-### Probability Roadmap
-Janine Tiefenbruck wrote a "Probability Roadmap" that aims to guide students through the process of solving probability problems. It comes in three versions:
-- [Examples](../resources/probability/Probability_Roadmap_With_Examples.pdf): This document consists of strategies followed by example problems that employ those strategies. If you're looking to gain additional practice, start here.
-- [Solutions](../resources/probability/Probability_Roadmap_With_Solutions.pdf): This document contains solutions and explanations for all of the example problems in the first document. After you've attempted the problems on your own, read through this full document. Even if you've solved all the questions, you're likely to learn how to do some problems in new ways.
-- [Summary](../resources/probability/Probability_Roadmap_Summary.pdf): This document is a concise summary and contains only the strategies themselves.
-
 ### Visualizations
 
 - [Conditional probability: A Visual explanation by Victor Powell for Setosa](https://setosa.io/conditional/)
@@ -105,31 +107,7 @@ Janine Tiefenbruck wrote a "Probability Roadmap" that aims to guide students thr
 
 ## Past Exams
 
-Past exam problems can be found at [practice.dsc40a.com](https://practice.dsc40a.com).
-
-<!-- Below, you'll find some exams (and in some cases, their solutions) from previous offerings of the course. You must be logged into your @ucsd.edu Google account to access these. -->
-
-<!-- Some things to keep in mind:
-- Certain offerings of the course had one midterm and others had two. Usually, Midterm 1 covered empirical risk minimization, and Midterm 2 covered probability. 
-- Topic coverage and ordering has changed over time, so the content in our exams won't necessarily exactly match the content of these past exams.
-- Some of these exams were given as closed-book exams and others allowed the use of resources. 
- -->
-
-<!-- | Quarter | Instructor(s) | Midterm/Midterm 1 | Midterm 2 | Final |
-| --- | --- | --- |
-| Fall 2021 | Suraj Rampure | [Blank](https://drive.google.com/file/d/1izK0af67J0ub0keAVkO-T7piaG_PIIGF/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1LjOZmJ2EiO8odPti5lPO4WzxrZ3znGb2/view?usp=sharing) | -- | [Blank](https://drive.google.com/file/d/1CeQe1_X9nBG7Lxut9nffJfICL9-FkF0o/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1HQhEv6gzKlURDYLpN8bF07_n46e5IUVk/view?usp=sharing) |
-| Spring 2021 | Janine Tiefenbruck | [Blank](https://drive.google.com/file/d/159JnzNtjw0okeucxBXmunU9u_H2ka2sa/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1XZyNNI5bHM0QjkmdVm5XhqcGpKliaRgO/view?usp=sharing), [**Videos 🎬**](https://www.youtube.com/playlist?list=PLDNbnocpJUhbNgdRB1D82Vn-BWWw7Fj6O) | -- | Part 1: [Blank](https://drive.google.com/file/d/1-J48ZsXeipJ_MQppCUWj0djafmMVC1nz/view?usp=sharing), [Solutions](https://drive.google.com/file/d/18-JfCPXTVMBqOpbEqtgFTh45erm97cV5/view?usp=sharing) |
-| Winter 2021 | Gal Mishne | [Blank](https://drive.google.com/file/d/13MMQfqO11QiXjfEkFh3Ftua2U205GyVG/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1EymkLTxyTTA7LzeWArWIwlYi5Frt1Brm/view?usp=sharing) | [Blank](https://drive.google.com/file/d/1sXDFx1chSvEo-2IujX04entAtWRdEssz/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1ZumQumC0XS-nFbjyhx3Ol1WFITFnJgMT/view?usp=sharing) | Part 1: [Solutions](https://drive.google.com/file/d/1ptFdOOMKJ0dJxtX8Fg5otHdeyMuQhT3f/view?usp=sharing) <br> Part 2: [Solutions](https://drive.google.com/file/d/1VBqzXtnWGhSwMBU-ydXtfZZdde2wDzNt/view?usp=sharing) |
-| Fall 2020 | Janine Tiefenbruck, Yian Ma | [Blank](https://drive.google.com/file/d/1n_yvPUyGfp9p6406FXrTD52xc_Tctykv/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1sOFCym0FrMF7ZCf_Q6Gz3icF8iIdlkPt/view?usp=sharing) | -- | Part 1: [Blank](https://drive.google.com/file/d/1xx0ovIBlmlNM2Jls6CIcyxsIYcwBNdic/view?usp=sharing), [Solutions](https://drive.google.com/file/d/1jbIO2xz0MMSTs1VUlu07yiNJYrMRU8Np/view?usp=sharing) |
-| Spring 2020 | Janine Tiefenbruck | [Blank](https://drive.google.com/file/d/1rORHtb7uw9hsYec-2LWwKMh3ikEaxVVf/view?usp=sharing), [**Videos 🎬**](https://www.youtube.com/playlist?list=PLDNbnocpJUhZPkdrIW984vwcTAdEX0Lam) | -- | Part 1: [Blank](https://drive.google.com/file/d/1LPnysH4z6aadrJPqwSXtk_APs1jaXMr3/view?usp=sharing) |
-| Winter 2020 | Justin Eldridge | [Solutions](https://drive.google.com/file/d/1-eQjRyfl-v8IkLuvJYnYTdtw0T72I87C/view?usp=sharing) | [Solutions](https://drive.google.com/file/d/1cIq2W52LJVrNbC4hnL1oeU4JtyOpwCIW/view?usp=sharing) | [Solutions](https://drive.google.com/file/d/17_ITSLkzNdJhWezBqJsORhiaViIWW6aV/view?usp=sharing) | -->
+Some past exam problems can be found at [practice.dsc40a.com](https://practice.dsc40a.com).
 
 ---
-
-## Other Resources
-
-- Other lectures on [Loss Functions](http://ds100.org/su20/lecture/lec11) and [Simple Linear Regression](http://ds100.org/su20/lecture/lec12/).
-    - These are from a different course for a different audience, and use different notation and terminology. However, the high-level ideas are similar to those in the first few weeks of our course.
-- [Gradient Descent visualizer](https://uclaacm.github.io/gradient-descent-visualiser/#playground).
-
 If you find another helpful resource, let us know and we can link it here! 
