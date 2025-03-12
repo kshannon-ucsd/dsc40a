@@ -597,90 +597,124 @@
       return data;
     }
 
+    // Flag to control the fitting process
+    let isFittingCancelled = false;
+    
     // Fit linear regression with different loss functions
-    function fitLinearRegression(data, lossType, delta, iterations = 200, learningRate = 0.03) {
+    function fitLinearRegression(data, lossType, delta, iterations = 30, learningRate = 0.1) {
       let slope = 0;
       let intercept = 20; // Start with reasonable baseline for basketball
       const n = data.length;
       const convergenceHistory = [];
       
-      // UI feedback - show progress
-      let progressUpdateInterval = 10;
-      let finalUpdate = false;
-
-      // Instead of running all iterations at once, we'll do it in batches
+      // Reset the cancellation flag
+      isFittingCancelled = false;
+      
+      // UI feedback element
+      const fitBtn = document.getElementById('fit-btn');
+      let stepCounter = document.createElement('span');
+      stepCounter.id = 'step-counter';
+      stepCounter.style.marginLeft = '10px';
+      stepCounter.textContent = 'Step: 0/' + iterations;
+      fitBtn.parentNode.insertBefore(stepCounter, fitBtn.nextSibling);
+      
+      // Run one step at a time with visible delay
       let currentIteration = 0;
       
-      function runBatch() {
-        if (currentIteration >= iterations) {
-          // Done, final update
-          updateFitPlot(slope, intercept);
-          return {
-            slope,
-            intercept,
-            convergenceHistory
-          };
-        }
-        
-        // Run a small batch of iterations (25 max)
-        const batchSize = 25;
-        const endIteration = Math.min(currentIteration + batchSize, iterations);
-        
-        for (let iter = currentIteration; iter < endIteration; iter++) {
-          let slopeGrad = 0;
-          let interceptGrad = 0;
-          let totalLoss = 0;
-
-          // Calculate gradients and loss
-          for (let i = 0; i < n; i++) {
-            const { x, y } = data[i];
-            // Simplified model: intercept + slope * (game / 10)
-            const pred = intercept + slope * ((x - 1) / 10);
-            const error = y - pred;
-
-            let grad;
-            if (lossType === 'l2') {
-              grad = l2Gradient(error);
-              totalLoss += l2Loss(error);
-            } else if (lossType === 'l1') {
-              grad = l1Gradient(error);
-              totalLoss += l1Loss(error);
-            } else { // huber
-              grad = huberGradient(error, delta);
-              totalLoss += huberLoss(error, delta);
+      // Create a promise-based delay function
+      const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+      
+      async function runVisibleSteps() {
+        try {
+          // Keep stepping until we reach the desired number of iterations
+          while (currentIteration < iterations && !isFittingCancelled) {
+            // Calculate a single gradient descent step
+            let slopeGrad = 0;
+            let interceptGrad = 0;
+            let totalLoss = 0;
+  
+            // Calculate gradients and loss
+            for (let i = 0; i < n; i++) {
+              const { x, y } = data[i];
+              // Simplified model: intercept + slope * (game / 10)
+              const pred = intercept + slope * ((x - 1) / 10);
+              const error = y - pred;
+  
+              let grad;
+              if (lossType === 'l2') {
+                grad = l2Gradient(error);
+                totalLoss += l2Loss(error);
+              } else if (lossType === 'l1') {
+                grad = l1Gradient(error);
+                totalLoss += l1Loss(error);
+              } else { // huber
+                grad = huberGradient(error, delta);
+                totalLoss += huberLoss(error, delta);
+              }
+  
+              slopeGrad += grad * ((x - 1) / 10);
+              interceptGrad += grad;
             }
-
-            slopeGrad += grad * ((x - 1) / 10);
-            interceptGrad += grad;
-          }
-
-          // Update parameters
-          slope += learningRate * slopeGrad / n;
-          intercept += learningRate * interceptGrad / n;
-          
-          // Only update UI occasionally to avoid performance issues
-          if (iter % progressUpdateInterval === 0 || iter === iterations - 1) {
-            // Store loss for convergence plot
+  
+            // Update parameters
+            slope += learningRate * slopeGrad / n;
+            intercept += learningRate * interceptGrad / n;
+            
+            // Store history
             convergenceHistory.push({
-              iteration: iter,
+              iteration: currentIteration,
               loss: totalLoss / n,
               slope: slope,
               bias: intercept
             });
+            
+            // Update iteration count
+            currentIteration++;
+            stepCounter.textContent = `Step: ${currentIteration}/${iterations}`;
+            
+            // Update visualization after each step
+            updateFitPlot(slope, intercept);
+            
+            // Check if cancelled before waiting
+            if (isFittingCancelled) break;
+            
+            // Wait 1 second before next step
+            await wait(1000);
           }
           
-          currentIteration++;
+          // Final update if not cancelled
+          if (!isFittingCancelled) {
+            updateFitPlot(slope, intercept);
+          }
+        }
+        catch (error) {
+          console.error("Fitting process error:", error);
+        }
+        finally {
+          // Clean up regardless of how the loop ended
+          cleanupFitting();
         }
         
-        // Update UI after batch
-        updateFitPlot(slope, intercept);
-        
-        // Continue with next batch
-        setTimeout(runBatch, 0);
+        return {
+          slope,
+          intercept,
+          convergenceHistory
+        };
       }
       
-      // Start the first batch
-      runBatch();
+      // Helper function to clean up after fitting
+      function cleanupFitting() {
+        // Update button
+        fitBtn.disabled = false;
+        fitBtn.textContent = "Calculate Player Projection";
+        
+        // Remove step counter if it exists
+        const counter = document.getElementById('step-counter');
+        if (counter) counter.remove();
+      }
+      
+      // Start the visible stepping process
+      const resultPromise = runVisibleSteps();
       
       // Return initial values - they'll be updated as the algorithm progresses
       return {
@@ -905,7 +939,7 @@
         
         // Use setTimeout to allow the UI to update before starting calculation
         setTimeout(() => {
-          model = fitLinearRegression(window.dataPoints, currentLossType, delta);
+          model = fitLinearRegression(window.dataPoints, window.currentLossType, delta);
           
           // Re-enable the button when done
           setTimeout(() => {
@@ -916,6 +950,9 @@
       });
 
       document.getElementById('reset-btn').addEventListener('click', () => {
+        // Cancel any ongoing fitting process
+        isFittingCancelled = true;
+        
         window.dataPoints = JSON.parse(JSON.stringify(initialData));
         model = {
           slope: 0,
