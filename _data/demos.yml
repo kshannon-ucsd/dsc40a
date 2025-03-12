@@ -30,3 +30,8 @@
   url: demos/6_regularization_demo
   photo: /assets/images/demos/overfitting-model.png
   description: This interactive demo visualizes how regularization techniques control model complexity in polynomial regression. By adjusting polynomial degree, regularization strength (λ), and noise levels, users can observe firsthand how Ridge (L2) and Lasso (L1) regularization prevent overfitting by constraining coefficient magnitudes. The visualization reveals the bias-variance tradeoff through side-by-side comparisons of model fit, coefficient distributions, and learning curves, demonstrating how proper regularization leads to smoother models that generalize better despite sacrificing training accuracy.
+
+- title: Huber Loss
+  url: demos/7_huber_loss
+  photo: /assets/images/demos/huber.png
+  description: Demo on huber loss!

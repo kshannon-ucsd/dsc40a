@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NBA Basketball Analytics: Huber Loss Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #006BB6, #1D428A);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .controls {
+      margin-top: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .plot-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .plot-wrapper {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .full-width {
+      flex: 0 0 100%;
+    }
+
+    .horizontal-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    button {
+      background: hsl(250, 41%, 35%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    label {
+      display: inline-block;
+      margin: 0.5rem 0 0.25rem;
+      font-weight: 500;
+    }
+
+    .slider-container {
+      margin: 10px 0;
+    }
+
+    .slider-span {
+      margin-left: 8px;
+      font-weight: 600;
+    }
+
+    .stats-panel {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    .metric-box {
+      padding: 10px;
+      margin: 5px 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .model-summary {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .explanation-box {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    .comparison-table th {
+      background: #f8f9fa;
+      font-weight: 500;
+    }
+
+    .scenario-box {
+      background: #f0f7ff;
+      border-left: 4px solid #006BB6;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+      .horizontal-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+  <h1>🏀 NBA Analytics: Robust Performance Prediction</h1>
+  <p>Using Huber Loss to handle performance outliers in basketball player data</p>
+</div>
+
+<a href="/pages/demos.html" style="text-decoration: none; margin-bottom: 20px; display: inline-block;">
+  <button style="margin-bottom: 20px;">← Back to Demos</button>
+</a>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+      <div class="slider-container">
+        <label for="delta-slider">Hot Hand Threshold (δ):</label><br>
+        <input type="range" id="delta-slider" min="0.1" max="5" value="1.0" step="0.1">
+        <span id="delta-value" class="slider-span">1.0</span>
+      </div>
+
+      <div class="slider-container">
+        <label for="outlier-slider">Career Night Impact:</label><br>
+        <input type="range" id="outlier-slider" min="0" max="15" value="5" step="0.5">
+        <span id="outlier-value" class="slider-span">5.0</span>
+      </div>
+
+      <div class="slider-container">
+        <label for="noise-slider">Game-to-Game Variance:</label><br>
+        <input type="range" id="noise-slider" min="0.1" max="8" value="0.5" step="0.1">
+        <span id="noise-value" class="slider-span">0.5</span>
+      </div>
+    </div>
+
+    <!-- Loss Function Selection -->
+    <div style="margin-top: 1rem;">
+      <label>Scouting Method:</label>
+      <label style="margin-right: 1.5rem;">
+        <input type="radio" name="loss-type" value="huber" checked> Advanced Analytics (Huber)
+      </label>
+      <label style="margin-right: 1.5rem;">
+        <input type="radio" name="loss-type" value="l2"> Eye Test (MSE)
+      </label>
+      <label>
+        <input type="radio" name="loss-type" value="l1"> Box Score (MAE)
+      </label>
+    </div>
+
+    <button id="generate-btn" style="margin-top: 1rem;">Generate 82-Game Season</button>
+    <button id="fit-btn" style="margin-top: 1rem;">Calculate Player Projection</button>
+    <button id="reset-btn" style="margin-top: 1rem;">Reset</button>
+  </div>
+
+  <!-- Plots -->
+  <div class="plot-container">
+    <!-- Main Fit Plot -->
+    <div class="plot-wrapper">
+      <h2>🏀 Points Per Game Across Season</h2>
+      <div id="fit-plot" style="width:100%; height:500px;"></div>
+    </div>
+    <!-- Loss Function Shape -->
+    <div class="plot-wrapper">
+      <h2>📊 Scouting Method Comparison</h2>
+      <div id="loss-plot" style="width:100%; height:500px;"></div>
+    </div>
+  </div>
+
+  <!-- NEW: Horizontal container for Loss Functions -->
+  <div class="full-width">
+    <h2>🏆 Scouting Methods Comparison</h2>
+    <div class="horizontal-container">
+      <!-- Advanced Analytics Card -->
+      <div class="card">
+        <h3>Advanced Analytics (Huber)</h3>
+        <div style="font-size: 0.8em;">
+          $$
+          L_\delta(y, f(x)) =
+          \begin{cases}
+          \frac{1}{2}(y - f(x))^2 & \text{for } |y - f(x)| \leq \delta \\
+          \delta \, |y - f(x)| - \frac{1}{2}\delta^2 & \text{otherwise}
+          \end{cases}
+          $$
+        </div>
+        <p>
+          <strong>What it is:</strong> A robust statistical approach that balances consistency and outlier performance.
+        </p>
+        <ul>
+          <li>Treats normal game variance differently than explosive performances</li>
+          <li>Adjustable threshold for what constitutes a "hot hand" vs. normal variance</li>
+          <li>Limited impact from career nights while still acknowledging their importance</li>
+        </ul>
+        <p>
+          <strong>Best for:</strong> Comprehensive player evaluation where both consistency and ceiling matter.
+        </p>
+      </div>
+
+      <!-- Eye Test Card -->
+      <div class="card">
+        <h3>Eye Test (MSE)</h3>
+        <div style="font-size: 0.8em;">
+          $$
+          \text{MSE} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
+          $$
+        </div>
+        <p>
+          <strong>What it is:</strong> A traditional approach that squares errors, giving heavier weight to outlier
+          performances.
+        </p>
+        <ul>
+          <li>Heavily influenced by explosive scoring nights</li>
+          <li>Overreacts to both positive and negative outliers</li>
+          <li>Can lead to chasing players based on highlight reels</li>
+        </ul>
+        <p>
+          <strong>Best for:</strong> Identifying players with star potential and high ceilings.
+        </p>
+      </div>
+
+      <!-- Box Score Card -->
+      <div class="card">
+        <h3>Box Score (MAE)</h3>
+        <div style="font-size: 0.8em;">
+          $$
+          \text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|
+          $$
+        </div>
+        <p>
+          <strong>What it is:</strong> A basic approach that treats all deviations equally, focusing on average
+          performance.
+        </p>
+        <ul>
+          <li>Values consistency above all else</li>
+          <li>Treats all scoring deviations linearly</li>
+          <li>Might undervalue players with game-changing potential</li>
+        </ul>
+        <p>
+          <strong>Best for:</strong> Evaluating role players where consistency matters more than explosiveness.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explanation Section (Modified) -->
+  <div class="plot-container">
+    <div class="plot-wrapper full-width">
+      <h2>🏆 NBA Analytics: Why Huber Loss Matters</h2>
+
+      <div class="scenario-box">
+        <h3>The Problem: 50-Point Games vs. Consistent Production</h3>
+        <p>
+          NBA players have explosive scoring nights and cold stretches. When analyzing player data:
+        </p>
+        <ul>
+          <li><strong>The "Eye Test" (MSE)</strong> can be overly influenced by 50-point explosions</li>
+          <li><strong>"Box Score Only" methods (MAE)</strong> might miss a player's superstar potential</li>
+          <li><strong>Advanced Analytics (Huber)</strong> provides the perfect balance for accurate player projections
+          </li>
+        </ul>
+      </div>
+
+      <!-- Modified: Expanded NBA Analytics Applications -->
+      <div class="explanation-box" style="width: 100%">
+        <h3>🏀 NBA Analytics Applications</h3>
+
+        <p>
+          <strong>Real-world NBA Use Cases</strong>
+        </p>
+        <ul>
+          <li><strong>Draft Evaluation:</strong> Project college stats to NBA level while accounting for volatility</li>
+          <li><strong>Player Development:</strong> Track young player progress without overreacting to 40-point games
+          </li>
+          <li><strong>Fantasy Basketball:</strong> Make weekly projections that balance floor and ceiling</li>
+          <li><strong>Max Contract Decisions:</strong> Determine if a player's production justifies a supermax deal</li>
+          <li><strong>Trade Analysis:</strong> Evaluate fair value when trading for players with inconsistent
+            statistical outputs</li>
+          <li><strong>Load Management Planning:</strong> Analyze performance drops in back-to-backs and schedule
+            accordingly</li>
+          <li><strong>Playoff Rotations:</strong> Identify which role players maintain their performance level in
+            high-pressure situations</li>
+        </ul>
+
+        <p>
+          <strong>Position-Specific Applications</strong>
+        </p>
+        <ul>
+          <li><strong>Guards:</strong> Balance explosive scoring nights against turnover-prone games</li>
+          <li><strong>Wings:</strong> Evaluate two-way impact beyond just scoring numbers</li>
+          <li><strong>Centers:</strong> Account for matchup-dependent production without overreacting</li>
+          <li><strong>Sixth Man:</strong> Properly value consistent bench production vs. occasional starter-level games
+          </li>
+        </ul>
+
+        <p>
+          <strong>Comparison of NBA Scouting Methods</strong>
+        </p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Strengths</th>
+              <th>Weaknesses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Eye Test (MSE)</strong></td>
+              <td>
+                <ul>
+                  <li>Identifies star potential ceiling</li>
+                  <li>Values players who can take over games</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Overrates players based on highlight reels</li>
+                  <li>Can lead to "empty stats" evaluations</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Box Score (MAE)</strong></td>
+              <td>
+                <ul>
+                  <li>Values consistent contributors</li>
+                  <li>Prefers efficient role players</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Misses intangibles and game impact</li>
+                  <li>Undervalues clutch performers</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Advanced Analytics (Huber)</strong></td>
+              <td>
+                <ul>
+                  <li>Balances consistency and star potential</li>
+                  <li>Adjustable tolerance for hot streaks</li>
+                  <li>Accounts for matchups and context</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Different tuning needed for guards vs. centers</li>
+                  <li>Requires significant computational resources</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- NEW: Try it card in its own horizontal container -->
+      <div class="card" style="margin-top: 20px; width: 100%;">
+        <h3>🏀 Try it for yourself!</h3>
+        <p>
+          <strong>Experiment with the demo above to see how different scouting methods handle player
+            performance:</strong>
+        </p>
+        <ol>
+          <li>Increase the <strong>"Career Night Impact"</strong> to simulate a 50-point explosion. Notice how the Eye
+            Test (MSE) overreacts while Box Score (MAE) undervalues it.</li>
+          <li>Adjust the <strong>"Hot Hand Threshold (δ)"</strong> to see how Advanced Analytics (Huber) can be tuned
+            for different player roles.</li>
+          <li>Increase <strong>"Game-to-Game Variance"</strong> to simulate an inconsistent player and observe how each
+            method evaluates them.</li>
+        </ol>
+        <p>
+          The ideal Hot Hand Threshold varies by player role:
+        </p>
+        <ul>
+          <li><strong>Small δ (≈ 0.1):</strong> Centers and defensive specialists where consistency is paramount</li>
+          <li><strong>Medium δ (≈ 1.0):</strong> Complementary starters and sixth men with defined roles</li>
+          <li><strong>Large δ (≈ 5.0):</strong> Primary scorers and All-Stars who can explode for 40+ points</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Content -->
+  <div class="plot-container">
+    <div class="plot-wrapper full-width">
+      <h2>🏆 Basketball Scouting Applications</h2>
+
+      <div class="horizontal-container">
+        <div class="explanation-box" style="flex: 1;">
+          <h3>🏀 Position-Specific Analysis</h3>
+          <p>
+            Advanced Analytics is especially valuable in basketball scouting where:
+          </p>
+          <ul>
+            <li><strong>Scoring Volatility:</strong> Guards can go from 30 points to 8 points between games</li>
+            <li><strong>Small Sample Size:</strong> Playoff performance (15-25 games) can skew evaluations</li>
+            <li><strong>Matchup Factors:</strong> Individual defensive matchups create outlier performances</li>
+            <li><strong>Rookie Evaluation:</strong> Young players may have extreme variance while developing</li>
+          </ul>
+          <p><strong>Example:</strong> A guard scores 50 points when the opponent's best defender is injured, but
+            averages 18 PPG otherwise. Advanced Analytics prevents overvaluing this outlier while acknowledging scoring
+            ability.</p>
+        </div>
+
+        <div class="explanation-box" style="flex: 1;">
+          <h3>🏀 NBA Front Office Implementation</h3>
+          <p>
+            When implementing Advanced Analytics in NBA front offices:
+          </p>
+          <ol>
+            <li>
+              <strong>Role-Based Evaluation:</strong> Different tolerance levels for stars vs. role players
+            </li>
+            <li>
+              <strong>Recent Performance:</strong> Weight the last 20 games more heavily than early season
+            </li>
+            <li>
+              <strong>Contextual Factors:</strong> Adjust for pace, opponent defensive rating, and lineup configurations
+            </li>
+            <li>
+              <strong>Development Curve:</strong> Rookies and sophomores need different evaluation metrics than veterans
+            </li>
+          </ol>
+          <p>
+            Modern NBA front offices use these advanced statistical approaches to make better draft picks, trades, and
+            free agent signings. By balancing the eye test with robust analytics, teams can identify undervalued players
+            and avoid overpaying for statistical anomalies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Utility Functions
+    function normalRandom() {
+      let u = 0,
+        v = 0;
+      while (u === 0) u = Math.random();
+      while (v === 0) v = Math.random();
+      return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    }
+
+    // Calculate different loss functions
+    function l2Loss(error) {
+      return 0.5 * error * error;
+    }
+
+    function l1Loss(error) {
+      return Math.abs(error);
+    }
+
+    function huberLoss(error, delta) {
+      if (Math.abs(error) <= delta) {
+        return 0.5 * error * error;
+      } else {
+        return delta * (Math.abs(error) - 0.5 * delta);
+      }
+    }
+
+    // Calculate gradients
+    function l2Gradient(error) {
+      return error;
+    }
+
+    function l1Gradient(error) {
+      return Math.sign(error);
+    }
+
+    function huberGradient(error, delta) {
+      if (Math.abs(error) <= delta) {
+        return error;
+      } else {
+        return delta * Math.sign(error);
+      }
+    }
+
+    // Generate synthetic NBA player performance data with outliers
+    function generateData(n = 82, slope = 0.5, intercept = 20, noise = 0.5, outlierStrength = 5) {
+      const data = [];
+
+      // Generate regular points (NBA season is 82 games)
+      for (let i = 0; i < n; i++) {
+        const x = i + 1; // Game number 1-82
+
+        // Base performance - slight improvement over season with noise
+        let y = intercept + (slope * i / 10) + noise * normalRandom();
+
+        // Points can't be negative
+        y = Math.max(y, 0);
+
+        // Add some outliers (10% of points) - career nights and cold games
+        if (Math.random() < 0.1) {
+          y += (Math.random() > 0.5 ? 1 : -1) * outlierStrength;
+        }
+
+        // Define if it's an outlier based on deviation from expected
+        const isOutlier = Math.abs(y - (intercept + (slope * i / 10))) > 3 * noise;
+
+        // Assign back-to-backs (about 20% of games)
+        const isBackToBack = Math.random() < 0.2;
+
+        // If back-to-back, add slight negative effect
+        if (isBackToBack && !isOutlier) {
+          y -= noise;
+        }
+
+        data.push({
+          x: x, // Game number
+          y: y, // Points
+          isOutlier: isOutlier,
+          gameType: isBackToBack ? "Back-to-Back" : "Regular Rest"
+        });
+      }
+
+      return data;
+    }
+
+    // Fit linear regression with different loss functions
+    function fitLinearRegression(data, lossType, delta, iterations = 200, learningRate = 0.03) {
+      let slope = 0;
+      let intercept = 20; // Start with reasonable baseline for basketball
+      const n = data.length;
+      const convergenceHistory = [];
+      
+      // UI feedback - show progress
+      let progressUpdateInterval = 10;
+      let finalUpdate = false;
+
+      // Instead of running all iterations at once, we'll do it in batches
+      let currentIteration = 0;
+      
+      function runBatch() {
+        if (currentIteration >= iterations) {
+          // Done, final update
+          updateFitPlot(slope, intercept);
+          return {
+            slope,
+            intercept,
+            convergenceHistory
+          };
+        }
+        
+        // Run a small batch of iterations (25 max)
+        const batchSize = 25;
+        const endIteration = Math.min(currentIteration + batchSize, iterations);
+        
+        for (let iter = currentIteration; iter < endIteration; iter++) {
+          let slopeGrad = 0;
+          let interceptGrad = 0;
+          let totalLoss = 0;
+
+          // Calculate gradients and loss
+          for (let i = 0; i < n; i++) {
+            const { x, y } = data[i];
+            // Simplified model: intercept + slope * (game / 10)
+            const pred = intercept + slope * ((x - 1) / 10);
+            const error = y - pred;
+
+            let grad;
+            if (lossType === 'l2') {
+              grad = l2Gradient(error);
+              totalLoss += l2Loss(error);
+            } else if (lossType === 'l1') {
+              grad = l1Gradient(error);
+              totalLoss += l1Loss(error);
+            } else { // huber
+              grad = huberGradient(error, delta);
+              totalLoss += huberLoss(error, delta);
+            }
+
+            slopeGrad += grad * ((x - 1) / 10);
+            interceptGrad += grad;
+          }
+
+          // Update parameters
+          slope += learningRate * slopeGrad / n;
+          intercept += learningRate * interceptGrad / n;
+          
+          // Only update UI occasionally to avoid performance issues
+          if (iter % progressUpdateInterval === 0 || iter === iterations - 1) {
+            // Store loss for convergence plot
+            convergenceHistory.push({
+              iteration: iter,
+              loss: totalLoss / n,
+              slope: slope,
+              bias: intercept
+            });
+          }
+          
+          currentIteration++;
+        }
+        
+        // Update UI after batch
+        updateFitPlot(slope, intercept);
+        
+        // Continue with next batch
+        setTimeout(runBatch, 0);
+      }
+      
+      // Start the first batch
+      runBatch();
+      
+      // Return initial values - they'll be updated as the algorithm progresses
+      return {
+        slope,
+        intercept,
+        convergenceHistory
+      };
+    }
+
+    // Calculate model metrics
+    function calculateMetrics(data, slope, intercept, delta) {
+      const n = data.length;
+      let mse = 0;
+      let mae = 0;
+      let huberLossSum = 0;
+
+      for (let i = 0; i < n; i++) {
+        const {
+          x,
+          y
+        } = data[i];
+        const pred = intercept + slope * ((x - 1) / 10);
+        const error = y - pred;
+
+        mse += error * error;
+        mae += Math.abs(error);
+        huberLossSum += huberLoss(error, delta);
+      }
+
+      return {
+        mse: mse / n,
+        rmse: Math.sqrt(mse / n),
+        mae: mae / n,
+        huber: huberLossSum / n
+      };
+    }
+
+    function updateFitPlot(slope, intercept) {
+      //const {
+        //slope,
+        //intercept
+      //} = model;
+
+      // Calculate regression line
+      const xLine = [1, 82];
+      const yLine = xLine.map(x => intercept + slope * ((x - 1) / 10));
+
+      // Split points into regular and outliers for different styling
+      const regularPoints = window.dataPoints.filter(point => !point.isOutlier && point.gameType !== "Back-to-Back");
+      const outlierPoints = window.dataPoints.filter(point => point.isOutlier);
+      const backToBackPoints = window.dataPoints.filter(point => !point.isOutlier && point.gameType === "Back-to-Back");
+
+      const regularPointsTrace = {
+        x: regularPoints.map(p => p.x),
+        y: regularPoints.map(p => p.y),
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Regular Games',
+        marker: {
+          color: '#006BB6',
+          size: 8
+        }
+      };
+
+      const outlierPointsTrace = {
+        x: outlierPoints.map(p => p.x),
+        y: outlierPoints.map(p => p.y),
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Career/Cold Nights',
+        marker: {
+          color: '#ED174C',
+          size: 10,
+          symbol: 'star'
+        }
+      };
+
+      const backToBackTrace = {
+        x: backToBackPoints.map(p => p.x),
+        y: backToBackPoints.map(p => p.y),
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Back-to-Back Games',
+        marker: {
+          color: '#FDB927',
+          size: 8,
+          symbol: 'triangle-down'
+        }
+      };
+
+      const lineTrace = {
+        x: xLine,
+        y: yLine,
+        mode: 'lines',
+        type: 'scatter',
+        name: 'Projected PPG',
+        line: {
+          color: window.currentLossType === 'huber' ? '#007A33' : window.currentLossType === 'l2' ? '#552583' : '#CE1141',
+          width: 3
+        }
+      };
+
+      // True ability line for reference (the baseline we started with)
+      const trueBaseLine = 20;
+      const trueSlope = 0.5;
+
+      const trueLine = {
+        x: xLine,
+        y: xLine.map(x => trueBaseLine + trueSlope * ((x - 1) / 10)),
+        mode: 'lines',
+        type: 'scatter',
+        name: 'True Skill Level',
+        line: {
+          color: '#000000',
+          width: 2,
+          dash: 'dot'
+        }
+      };
+
+      try {
+        Plotly.newPlot('fit-plot', [regularPointsTrace, outlierPointsTrace, backToBackTrace, lineTrace,
+        trueLine], {
+          title: `Points Per Game Analysis with ${window.currentLossType === 'huber' ? 'Advanced Analytics' :
+                 window.currentLossType === 'l2' ? 'Eye Test' : 'Box Score'} Method`,
+          xaxis: {
+            title: 'Game Number',
+            range: [0, 83],
+            dtick: 10
+          },
+          yaxis: {
+            title: 'Points Per Game',
+            range: [0, 40],
+            dtick: 5
+          },
+          legend: {
+            orientation: 'h',
+            y: -0.2,
+            xanchor: 'center',
+            x: 0.5
+          }
+        });
+      } catch (error) {
+        console.error("Error plotting fit-plot:", error);
+      }
+    }
+    
+    // Main application
+    document.addEventListener('DOMContentLoaded', function () {
+      // Set initial data
+      let data = generateData(82, 0.5, 20, 0.5, 5);
+      let model = {
+        slope: 0,
+        intercept: 20,
+        convergenceHistory: []
+      };
+      // Make variables globally accessible
+      window.currentLossType = 'huber';
+      let initialData = JSON.parse(JSON.stringify(data)); // Deep copy for reset
+      window.dataPoints = data;
+
+      // Initialize plots
+      setTimeout(() => {
+        updateFitPlot(model.slope, model.intercept);
+        updateLossPlot();
+      }, 100);
+
+      // Event listeners for sliders
+      document.getElementById('delta-slider').addEventListener('input', e => {
+        document.getElementById('delta-value').textContent = e.target.value;
+        updateLossPlot();
+      });
+
+      document.getElementById('outlier-slider').addEventListener('input', e => {
+        document.getElementById('outlier-value').textContent = e.target.value;
+      });
+
+      document.getElementById('noise-slider').addEventListener('input', e => {
+        document.getElementById('noise-value').textContent = e.target.value;
+      });
+
+      // Event listeners for radio buttons
+      document.querySelectorAll('input[name="loss-type"]').forEach(radio => {
+        radio.addEventListener('change', e => {
+          window.currentLossType = e.target.value;
+          updateLossPlot();
+        });
+      });
+
+      // Event listeners for buttons
+      document.getElementById('generate-btn').addEventListener('click', () => {
+        // Disable button during data generation
+        const generateBtn = document.getElementById('generate-btn');
+        generateBtn.disabled = true;
+        generateBtn.textContent = "Generating...";
+        
+        setTimeout(() => {
+          const outlierStrength = parseFloat(document.getElementById('outlier-slider').value);
+          const noise = parseFloat(document.getElementById('noise-slider').value);
+          window.dataPoints = generateData(82, 0.5, 20, noise, outlierStrength);
+          initialData = JSON.parse(JSON.stringify(window.dataPoints));
+          model = {
+            slope: 0,
+            intercept: 20,
+            convergenceHistory: []
+          };
+          updateFitPlot(model.slope, model.intercept);
+          
+          // Re-enable the button
+          generateBtn.disabled = false;
+          generateBtn.textContent = "Generate 82-Game Season";
+        }, 50);
+      });
+
+      document.getElementById('fit-btn').addEventListener('click', () => {
+        // Disable the button during calculation to prevent multiple clicks
+        const fitBtn = document.getElementById('fit-btn');
+        fitBtn.disabled = true;
+        fitBtn.textContent = "Calculating...";
+        
+        const delta = parseFloat(document.getElementById('delta-slider').value);
+        window.currentLossType = document.querySelector('input[name="loss-type"]:checked').value;
+        
+        // Use setTimeout to allow the UI to update before starting calculation
+        setTimeout(() => {
+          model = fitLinearRegression(window.dataPoints, currentLossType, delta);
+          
+          // Re-enable the button when done
+          setTimeout(() => {
+            fitBtn.disabled = false;
+            fitBtn.textContent = "Calculate Player Projection";
+          }, 500);
+        }, 50);
+      });
+
+      document.getElementById('reset-btn').addEventListener('click', () => {
+        window.dataPoints = JSON.parse(JSON.stringify(initialData));
+        model = {
+          slope: 0,
+          intercept: 20,
+          convergenceHistory: []
+        };
+
+        // Reset sliders to default values
+        document.getElementById('delta-slider').value = 1.0;
+        document.getElementById('delta-value').textContent = 1.0;
+
+        document.getElementById('outlier-slider').value = 5.0;
+        document.getElementById('outlier-value').textContent = 5.0;
+
+        document.getElementById('noise-slider').value = 0.5;
+        document.getElementById('noise-value').textContent = 0.5;
+
+        // Reset radio to Huber
+        document.querySelector('input[name="loss-type"][value="huber"]').checked = true;
+        window.currentLossType = 'huber';
+
+        updateFitPlot(model.slope, model.intercept);
+        updateLossPlot();
+      });
+
+      // The updateFitPlot function is already defined above, so we don't need to duplicate it here
+
+      // Update loss function plot
+      function updateLossPlot() {
+        const delta = parseFloat(document.getElementById('delta-slider').value);
+
+        // Generate error values for x-axis
+        const errors = Array.from({
+          length: 401
+        }, (_, i) => -20 + (40 * i / 400));
+
+        // Calculate losses
+        const l2Losses = errors.map(e => l2Loss(e));
+        const l1Losses = errors.map(e => l1Loss(e));
+        const huberLosses = errors.map(e => huberLoss(e, delta));
+
+        const l2Trace = {
+          x: errors,
+          y: l2Losses,
+          mode: 'lines',
+          type: 'scatter',
+          name: 'Eye Test (MSE)',
+          line: {
+            color: '#552583',
+            width: 2
+          }
+        };
+
+        const l1Trace = {
+          x: errors,
+          y: l1Losses,
+          mode: 'lines',
+          type: 'scatter',
+          name: 'Box Score (MAE)',
+          line: {
+            color: '#CE1141',
+            width: 2
+          }
+        };
+
+        const huberTrace = {
+          x: errors,
+          y: huberLosses,
+          mode: 'lines',
+          type: 'scatter',
+          name: 'Advanced Analytics (Huber)',
+          line: {
+            color: '#007A33',
+            width: 3
+          }
+        };
+
+        // Highlight transition points
+        const transitionPoints = [{
+            x: -delta,
+            y: huberLoss(-delta, delta)
+          },
+          {
+            x: delta,
+            y: huberLoss(delta, delta)
+          }
+        ];
+
+        const transitionTrace = {
+          x: transitionPoints.map(p => p.x),
+          y: transitionPoints.map(p => p.y),
+          mode: 'markers',
+          type: 'scatter',
+          name: 'Hot Hand Threshold (δ)',
+          marker: {
+            color: '#ED174C',
+            size: 8,
+            symbol: 'circle'
+          }
+        };
+
+        try {
+          Plotly.newPlot('loss-plot', [l2Trace, l1Trace, huberTrace, transitionTrace], {
+            title: 'Scouting Method Comparison',
+            xaxis: {
+              title: 'PPG Deviation from Expected',
+              range: [-20, 20]
+            },
+            yaxis: {
+              title: 'Evaluation Impact',
+              range: [0, 100]
+            },
+            annotations: [{
+                x: -delta - 6,
+                y: huberLoss(-delta, delta) + 10,
+                text: 'Slump Zone',
+                showarrow: true,
+                arrowhead: 2,
+                ax: -20,
+                ay: -30
+              },
+              {
+                x: delta + 6,
+                y: huberLoss(delta, delta) + 10,
+                text: 'Hot Hand Zone',
+                showarrow: true,
+                arrowhead: 2,
+                ax: 20,
+                ay: -30
+              },
+              {
+                x: 0,
+                y: huberLoss(0, delta) + 10,
+                text: 'Normal Variance',
+                showarrow: true,
+                arrowhead: 2,
+                ax: 0,
+                ay: -30
+              }
+            ],
+            // Increase margin to prevent legend overlap
+            margin: {
+              l: 60,
+              r: 30,
+              b: 80, // Increased bottom margin for legend
+              t: 50,
+              pad: 4
+            },
+            legend: {
+              orientation: 'h',
+              y: -0.2,
+              xanchor: 'center',
+              x: 0.5
+            }
+          });
+        } catch (error) {
+          console.error("Error plotting loss-plot:", error);
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
