@@ -374,9 +374,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 10
-          solutions: todo
+          solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
           code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
-          problems: todo
+          problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
 
 - week: 9
   title: "Week 9 - Probability & Independence<br>
@@ -394,12 +394,9 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
           recording: https://youtu.be/rTKUm3SmZyY
-        - label: HOPS
-          type: hops
-          solutions: todo
-          code: todo
-          problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
-          title: Hands-On Problem Solving 11
+        - label: DEMO
+          type: demo
+          title: Demo 4
 
     - date: "2025-03-05"
       in_class: true
@@ -419,9 +416,7 @@
           recording: https://youtu.be/yLzXxFM1sII
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 12
-          solutions: todo
-          code: todo
+          title: Hands-On Problem Solving 11
           problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
 
 - week: 10
@@ -437,9 +432,11 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
           recording: https://youtu.be/mh7ye1P5h0Y
-        - label: DEMO
-          type: demo
-          title: Demo 4
+        - label: HOPS
+          type: hops
+          problems: https://drive.google.com/file/d/151yy2kH2kzkwnYrR-DRY75Jm3zCmM8r0/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1MpDM9E0PjdEwNspuVOc93RF_ELrztoxe/view?usp=sharing
+          title: Hands-On Problem Solving 12
 
     - date: "2025-03-12"
       in_class: true
