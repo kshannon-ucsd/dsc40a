@@ -218,6 +218,7 @@
           problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
           template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
           submission: https://www.gradescope.com/courses/934714/assignments/5504779/ 
+          solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
         - label: LEC 9
           type: lecture
           title: Multiple Linear Regression
@@ -307,7 +308,8 @@
           problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
           code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing 
           template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
-          submission: 
+          solutions: https://drive.google.com/file/d/1yxP9D7nR1SxwmgEyRHNf_oZGF1QnurTT/view?usp=sharing
+          code_solutions: https://drive.google.com/file/d/1OmpTV7caicGosi3R5K0s1EH7F3zjAaOg/view?usp=drive_link
 
     - date: "2025-02-19"
       in_class: true
@@ -361,6 +363,7 @@
           title: Groupwork 4 (Discussion Section)
           problems: https://drive.google.com/file/d/1VvOrwcYd0dK22MzYn-RzGiqRy-FQ0EIq/view?usp=sharing
           slides: https://docs.google.com/presentation/d/1goa-TOn4EtLerb1BUQr57-D5Ucyeenh8aOJcj3kipRE/edit?usp=sharing
+          solutions: https://drive.google.com/file/d/1ZHmf1pO9-TyV3rbNC5QqJJYxC6vbwXoe/view?usp=sharing
 
     - date: "2025-02-27"
       in_class: true
@@ -394,9 +397,12 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
           recording: https://youtu.be/rTKUm3SmZyY
-        - label: DEMO
-          type: demo
-          title: Demo 4
+        - label: HOPS
+          type: hops
+          solutions: todo
+          code: todo
+          problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
+          title: Hands-On Problem Solving 11
 
     - date: "2025-03-05"
       in_class: true
@@ -416,7 +422,9 @@
           recording: https://youtu.be/yLzXxFM1sII
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 11
+          title: Hands-On Problem Solving 12
+          solutions: todo
+          code: todo
           problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
 
 - week: 10
@@ -432,11 +440,9 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
           recording: https://youtu.be/mh7ye1P5h0Y
-        - label: HOPS
-          type: hops
-          problems: https://drive.google.com/file/d/151yy2kH2kzkwnYrR-DRY75Jm3zCmM8r0/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1MpDM9E0PjdEwNspuVOc93RF_ELrztoxe/view?usp=sharing
-          title: Hands-On Problem Solving 12
+        - label: DEMO
+          type: demo
+          title: Demo 4
 
     - date: "2025-03-12"
       in_class: true
