@@ -81,9 +81,15 @@ Only one member of each group should submit the worksheet, and they should indic
 
 ### Homework
 
-This class will have bi-weekly homework assignments (weekly during summer sessions).
+This class will have several homework assignments. Please read the following instructions for homeork carefully:
 
-Homework should be written or typed (using LaTeX) up and turned in by each student individually. If you want to type up your answers, we recommend using markdown with LaTeX or overleaf.com
+- Homework 1 is required to be typed (using LaTeX), but we recommend all of your HW be typed up in latex...
+- Remaining Homework can be handwritten/written on ipad etc, but you must follow these guidelines:
+  - (i.) Place 1 question on a single page (this makes it easier for us to grade)
+  - (ii.) When turning HW into gradescope, ensure that each question is tagged/assigned correcrly to the answer (this makes it easier for us to grade)
+  - (iii.) Make sure your handwritting is clear and legible, we reserve the right to refuse grading a questions that we cannot read (this makes it easier for us to grade)
+  - (iv.) If these things are not done, you may correct them after the due date, but at a regrade penalty (~25%).
+  - (v.) We will provide Latex templates for you to get started on each HW.
 
 You may talk to other students in the class about the problems and discuss solution strategies, but you should not share any written communication. You can tell someone how to do a homework problem, but you cannot show them how to do it. One way to tell if you are respecting this boundary is to ask yourself whether your collaboration could take place over the phone. Additionally, the content of your verbal communication should involve the problem-solving strategy and approach, and you should not directly compare answers with classmates.
 
@@ -139,9 +145,9 @@ Here's how we will compute your grade.
 
 ### Late Policy, Slip Days, and Drops
 
-Each student has **four slip days** (**two in the summer sessions**) to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most one slip day on any single homework assignment. **Slip days can only be used for homework assignments.**
+Each student has **four slip days** (**two in the summer sessions**) to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most two slip days on any single homework assignment. **Slip days can only be used for homework assignments.**
 
-Slip days are applied automatically at the end of the quarter, and you don't need to ask in order to use one. It's your responsibility to keep track of how many you have left. If you run out of slip days and submit a homework late, it may still be graded so that you'll see what questions you missed, but the grade will be changed to a zero at the end of the quarter. If you use more than four slip days, we will count the first four late assignments, and any late assignments after that will get zero scores.
+Slip days are applied automatically at the end of the quarter, and you don't need to ask in order to use one. It's your responsibility to keep track of how many you have left. If you run out of slip days and submit a homework late, it may still be graded so that you'll see what questions you missed, but the grade will be changed to a zero at the end of the quarter.
 
 Slip days are designed to be a transparent and predictable source of leniency in deadlines. You can use a slip day if you are too busy to complete a homework on its original due date. But slip days are also meant for things like the internet going down at 11:58 PM just as you go to submit your homework.
 

@@ -34,4 +34,4 @@
 - title: Huber Loss
   url: demos/7_huber_loss
   photo: /assets/images/demos/huber.png
-  description: Demo on huber loss!
+  description: This interactive demo showcases how the Huber loss improves regression robustness in the presence of outliers. By adjusting polynomial degree, noise, and the Huber threshold (δ), users can see how the loss function shifts from squared error for small deviations to absolute error for larger ones. The demo compares traditional least-squares with Huber regression—illustrating model fit, error distributions, and learning curves—to highlight the balance between sensitivity to noise and outlier resistance, ultimately yielding more generalizable models.
