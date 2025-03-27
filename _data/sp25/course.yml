@@ -1,0 +1,33 @@
+# Welcome section
+quarter: Spring 2025
+building: SOLIS 104
+timings: TUE & THUR 5:00PM - 6:20PM
+edstem_link: https://edstem.org/us/join/dtzKre
+gradescope_link: https://www.gradescope.com/courses/1001291
+gradescope_entry_code: 
+
+office_hours:
+  - name: Kyle Shannon
+    day: THUR
+    time: 9AM - 10AM
+    location: Zoom
+    zoom_link: https://ucsd.zoom.us/j/4288626123?pwd=TWpyQW5nZkpUTWJvU0YzejQyY25Sdz09
+    zoom_pw: 725814
+
+announcement:
+  color: green
+  text: Hit the ground running ASAP. This will be a very challenging course with a lot of content we will be covering! Good Luck to you all :)
+
+discussion_sections:
+  - section: A01
+    day: MON
+    time: 2:00PM - 2:50PM
+    location: CENTER 216
+    ta: TBD
+    tutor: TBD
+ 
+final_exam:
+  - section: A00
+    day: Thur
+    time: 7:00PM - 9:59PM
+    location: SOLIS 104
