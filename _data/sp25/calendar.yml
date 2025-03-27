@@ -54,7 +54,7 @@
 
         - label: HW
           type: hw
-          title: <b>Homework 1 Released (due Apr 13, 11:59 pm)</b>
+          title: <b>Homework 1 Released (due Apr 10, 11:59 pm)</b>
           # problems: https://drive.google.com/file/d/1SQt9YmYixAif46hVS9pqm4jRMQDECuR3/view?usp=sharing
           # template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
           # submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
@@ -106,6 +106,13 @@
           # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_problems.ipynb
           # solutions: https://drive.google.com/file/d/1Aryf4FjP6Xpas_J6cEM67Y0bRIjIj88r/view?usp=sharing
           data: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_loan_data.csv
+        - label: HW
+          type: hw
+          title: <b>Homework 2 Released (due Apr 17, 11:59 pm)</b>
+          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
+          # template: https://www.overleaf.com/read/zbhgqqpcbfdh#0699bb
+          # solutions: https://www.overleaf.com/read/qdhcnmkcstxj#d30706
+          # submission:
 
 - week: 3
   title: "Week 3 - Linear Algebra & Regression<br>
@@ -129,13 +136,12 @@
         - label: DEMO
           type: demo
           title: Demo 1
-        - label: HW
-          type: hw
-          title: <b>Homework 2 Released (due Apr 27, 11:59 pm)</b>
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
-          # template: https://www.overleaf.com/read/zbhgqqpcbfdh#0699bb
-          # solutions: https://www.overleaf.com/read/qdhcnmkcstxj#d30706
-          # submission: 
+        - label: LEC 5
+          type: lecture
+          title: Simple Linear Regression, Continued
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05_annotated.pdf
+          recording: https://youtu.be/C1pEDBo-YSc
         - label: LEC 5
           type: lecture
           title: Simple Linear Regression, Continued
@@ -155,6 +161,13 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
           recording: https://youtu.be/JZKZmPRl7tg
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released (due Apr 29, 11:59 pm)</b>
+          # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
+          # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
+          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
+          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
 
 
 - week: 4
@@ -221,10 +234,10 @@
           # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
         - label: HW
           type: hw
-          title: <b>Homework 3 Released (due May 21, 11:59 pm)</b>
+          title: <b>Homework 4 Released (due May 13, 11:59 pm)</b>
           # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
           # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/ 
+          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
           # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
         - label: LEC 9
           type: lecture
@@ -311,9 +324,9 @@
           recording: https://youtu.be/g9TTmIVY7sE
         - label: HW
           type: hw
-          title: <b>Homework 4 Released (due Jun 1, 11:59 pm)</b>
+          title: <b>Homework 5 Released (due May 22, 11:59 pm)</b>
           # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
-          # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing 
+          # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing
           # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
           # solutions: https://drive.google.com/file/d/1yxP9D7nR1SxwmgEyRHNf_oZGF1QnurTT/view?usp=sharing
           # code_solutions: https://drive.google.com/file/d/1OmpTV7caicGosi3R5K0s1EH7F3zjAaOg/view?usp=drive_link
@@ -380,6 +393,11 @@
           # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
           # code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
           # problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
+        - label: HW
+          type: hw
+          title: <b>Homework 6 Released (due May 29, 11:59 pm)</b>
+          # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
+          # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
 
 - week: 9
   title: "Week 9 - Probability & Independence<br>
