@@ -36,17 +36,8 @@
   askabout: Cooking, books
   food: Piacere Mio, Flavors of East Africa, Lanzhou Noodlelicious
 
-- name: Guoxuan (Jason) Xu
-  email: g7xu@ucsd.edu
-  role: Tutor
-  website: https://g7xu.github.io/
-  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/guoxuan.jpeg
-  description: 3rd year data science major
-  hometown: Shanghai, China -> Walnut, California -> La Jolla, San Diego
-  askabout: Cooking 🍳, LEGO, Working Out 🏋️, Work 🤔 
-  food: Ajisen Ramen 🍜, Mongolian Hot Pot 🍲, Pho La Jolla 🍜
 
-- name: Ansh Bhatnagar
+- name: Ansh Bhatnagar (Hand of the King 👑)
   email: abhatnagar@ucsd.edu
   role: Tutor
   website: https://anshu-b.github.io/ansh/
@@ -83,14 +74,14 @@
   askabout: Formula 1, Chess, Coffee
   food: Charminar, Regents Pizza, District 6
 
-- name: Pallavi Prabhu
-  email: pprabhu@ucsd.edu 
+- name: Vedant Vardhaan
+  email: 	vvardhaan@ucsd.edu 
   role: Tutor
-  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/pallavi.jpeg
-  description: 4th year Data Science Major; Cognitive Science & General Biology minors
-  hometown: Cypress, CA
-  askabout: Painting 🎨, Crafting 🧵, Cooking 🍳
-  food: SomiSomi, The Taco Stand, 85°C Bakery Cafe
+  photo: 
+  description: 
+  hometown: 
+  askabout: 
+  food: 
 
 - name: Maryam Almahasnah
   email: malmahasnah@ucsd.edu
