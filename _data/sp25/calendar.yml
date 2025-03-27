@@ -468,7 +468,7 @@
           recording: https://youtu.be/k881dKkl2vk
         - label: HOPS 12
           type: hops
-          title: Bayes
+          title: Naïve Bayes
           # solutions: todo
           # code: todo
           # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
