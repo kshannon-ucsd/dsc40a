@@ -40,10 +40,10 @@ Please don't email staff members (and don't message them on social media); just 
 
 We will be using several websites this quarter. Here's what they're all used for:
 
-- [Course Website](https://dsc40a.com): Where all content will be posted.
-- [Ed](https://edstem.org/us/): Discussion forum for announcements and communication.
-- [Gradescope](https://www.gradescope.com): Platform for submitting assignments and viewing grades. You should be automatically added to Gradescope.
-- [Google Colab](https://colab.research.google.com/): Google's shareable live Jupyter notebook web application for any coding demos or projects.
+- Course Website: Where all content will be posted.
+- Campuswire: Discussion forum for announcements and communication.
+- Gradescope: Platform for submitting assignments and viewing grades. You should be automatically added to Gradescope.
+- Google Colaege: Google's shareable live Jupyter notebook web application for any coding demos or projects.
 
 **Note that we WILL NOT be using Canvas at all. I only have Canvas as a way to auto-enroll you in Gradescope and to submit your grades to UCSD's lovely egrades system.**
 
@@ -51,7 +51,13 @@ We will be using several websites this quarter. Here's what they're all used for
 
 ## Course Structure 🍎
 
-This course will include pre-recorded lectures, live demos, live worked problems, group work *(discussion)* sessions sections, plenty of office hours, and bi-weekly homework assignments. Oh Joy!
+This course will include pre-recorded lectures, live demos, live worked problems, group work *(discussion)* sessions sections, plenty of office hours, and homework assignments. Oh Joy!
+
+## Extra Credit Policy
+Through out the quarter, you will be given extra credit opportunities, many in fact! In class when you answer questions, correct or not, go to office hours (not just swing by but stay for a while), or are very proactive on the online discussion form, e.g. campuswire, we will give you raffel tix. These tix can be traded in at the end of the quarter for extracredit on your final grade. E.g. 10 tickets could be worth 1% boost to your grade after any curving. There will also be a small raffel on the last day of class for some really great prizes, e.g. bonus points on your final part 1 to help your chances of redemption for the midterm (see redemption policy below), there are also some awesome grand prizes :D
+
+So there is ample opportunity for everyone to gain bonus points by participating, even coming to office hours will yield positive results. 
+
 
 ### Lecture
 
@@ -61,7 +67,7 @@ Lectures are pre-recorded. Podcasting is not perfect, and with pre-recorded lect
 
 #### Lecture Class Time
 
-We have found that students like to have as many example problems worked out for them in this class. So, I have turned the scheduled lecture time into an interactive problem-solving session. We will work on practice problems, that are more difficult than exam problems, step-by-step together. We will also work through several code demos to provide context and examples of the theory.
+We have found that students like to have as many example problems worked out for them in this class. So, I have turned the scheduled lecture time into an interactive problem-solving session. We will work on practice problems, that are more difficult than exam problems, step-by-step together. 
 
 **Lecture is not required, but highly recommended and incentivized with extra credit opportunities**
 
@@ -85,8 +91,8 @@ This class will have several homework assignments. Please read the following ins
 
 - Homework 1 is required to be typed (using LaTeX), but we recommend all of your HW be typed up in latex...
 - Remaining Homework can be handwritten/written on ipad etc, but you must follow these guidelines:
-  - (i.) Place 1 question on a single page (this makes it easier for us to grade)
-  - (ii.) When turning HW into gradescope, ensure that each question is tagged/assigned correcrly to the answer (this makes it easier for us to grade)
+  - **(i.) Place 1 question on a single page (this makes it easier for us to grade)**
+  - (ii.) When turning HW into gradescope, ensure that **each question is tagged/assigned correcrly** to the answer (this makes it easier for us to grade)
   - (iii.) Make sure your handwritting is clear and legible, we reserve the right to refuse grading a questions that we cannot read (this makes it easier for us to grade)
   - (iv.) If these things are not done, you may correct them after the due date, but at a regrade penalty (~25%).
   - (v.) We will provide Latex templates for you to get started on each HW.
@@ -120,11 +126,11 @@ There will be one Midterm Exam and one Final Exam, both held in person.
 
 The Midterm Exam will be worth 20% of your overall course grade. The Final Exam will be worth 30% of your overall course grade and will be cumulative.
 
-To prepare for exams, you should plan to spend a considerable amount of time working through past exam problems. We're building a bank of old exam problems, with detailed explanations, at [practice.dsc40a.com](https://practice.dsc40a.com).
+You must take the final exam to plass the class.
 
 ### Redemption Policy
 
-The Final Exam will consist of two parts: a "Midterm" section and a "post-Midterm" section. If you do better on the "Midterm" section of the Final Exam than you did on the original Midterm Exam, your score on the "Midterm" section will replace your original Midterm Exam score. This lowers the stakes of the Midterm Exam and gives you two opportunities to demonstrate your understanding of the content from the first half of the course. This also means that you can miss the Midterm Exam for any reason and have the score be replaced by your score on the "Midterm" section of the Final Exam (though we do not recommend this).
+The Final Exam will consist of two parts: a "Midterm" section and a "post-Midterm" section. If you do better (we consider better using z-scores, not just straight points) on the "Midterm" section of the Final Exam than you did on the original Midterm Exam, your score on the "Midterm" section will replace your original Midterm Exam score. This lowers the stakes of the Midterm Exam and gives you two opportunities to demonstrate your understanding of the content from the first half of the course. This also means that you can miss the Midterm Exam for any reason and have the score be replaced by your score on the "Midterm" section of the Final Exam (though we do not recommend this).
 
 **You must take the Final Exam to pass the course.**
 
