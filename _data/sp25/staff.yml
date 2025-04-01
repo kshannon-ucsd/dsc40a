@@ -11,11 +11,11 @@
 - name: Zimo Wang - TA
   email: ziw119@ucsd.edu
   role: TA
-  photo:
-  description:
-  hometown:
-  askabout:
-  food:
+  photo: https://drive.google.com/file/d/1fU76mF5prUfsqb6V1qkniWafONv1gVlU/view?usp=drivesdk
+  description: Data Science PhD Student, focusing on Computer Graphics
+  hometown: Zhejiang, China
+  askabout: Table tennis 🏓, Karaoke 🎤. 
+  food: Ramen, BBQ, Sushi
 
 - name: Vignesh (Viggy) Palaniapan - TA
   email: vpalaniappan@ucsd.edu
