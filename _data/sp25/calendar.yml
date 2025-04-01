@@ -178,7 +178,7 @@
     - date: "2025-04-22"
       in_class: true
       events:
-        - label: HOPS 4
+        - label: HOPS 5
           type: hops
           title: Regression & Linear Algebra
           # solutions: https://drive.google.com/file/d/1mW8mpBI1241N6-YGUEin83LSWEUdUuLk/view?usp=sharing
