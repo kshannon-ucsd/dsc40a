@@ -84,11 +84,12 @@
 - name: Maryam Almahasnah
   email: malmahasnah@ucsd.edu
   role: Tutor
-  photo:
-  description:
-  hometown:
-  askabout:
-  food:
+  website: https://malmahasnah.github.io/
+  photo: 
+  description: 4th year Data Science major
+  hometown: Eastern Province, Saudi Arabia 
+  askabout: Baking 🧑‍🍳, reading 📚, Art 🎨
+  food: Blue Water, Allegro, il giardino di lilli
 
 - name: Terran Wai Chow
   email: t6chow@ucsd.edu
