@@ -196,7 +196,7 @@
     - date: "2025-04-24"
       in_class: true
       events:
-        - label: HOPS
+        - label: HOPS 6
           type: hops
           title: Regression in the Real World
           # solutions: https://drive.google.com/file/d/1qxIZAi9fsCYvgPiunPg4xPmsHx_bNZT_/view?usp=sharing
@@ -223,7 +223,7 @@
     - date: "2025-04-29"
       in_class: true
       events:
-        - label: HOPS 6
+        - label: HOPS 7
           type: hops
           title: Feature Engineering + Normal Equations
           # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
@@ -274,7 +274,7 @@
     - date: "2025-05-06"
       in_class: true
       events:
-        - label: HOPS 7
+        - label: HOPS 8
           type: hops
           title: Gradient Descent
           # solutions: https://drive.google.com/file/d/1qIQbjjbxslBaeZrtb835_PU7dUrGd7IE/view?usp=sharing
@@ -313,7 +313,7 @@
     - date: "2025-05-13"
       in_class: true
       events:
-        - label: HOPS 8
+        - label: HOPS 9
           type: hops
           title: Gradient Descent Again
           # problems: https://drive.google.com/file/d/1rk7PNzk7_z7mkhXN71WCYuaffiaqLImg/view?usp=sharing
@@ -368,7 +368,7 @@
     - date: "2025-05-20"
       in_class: true
       events:
-        - label: HOPS 9
+        - label: HOPS 10
           type: hops
           title: Approaching Probability Problems
           # solutions: todo
@@ -390,7 +390,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
           recording: https://youtu.be/rTKUm3SmZyY
-        - label: HOPS 10
+        - label: HOPS 11
           type: hops
           title: Combinatoric Problems
           # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
@@ -425,7 +425,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
           recording: https://youtu.be/yLzXxFM1sII
-        - label: HOPS 11
+        - label: HOPS 12
           type: hops
           # solutions: todo
           # code: todo
@@ -466,7 +466,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
           recording: https://youtu.be/k881dKkl2vk
-        - label: HOPS 12
+        - label: HOPS 13
           type: hops
           title: Naïve Bayes
           # solutions: todo
