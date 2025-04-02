@@ -83,7 +83,7 @@ exclude:
 # Aux link for the upper right navigation
 aux_links:
   # "Template Repository": "https://www.github.com/kshannon/ucsd-dsc40a"
-  "🙋 Ed": "https://edstem.org"
+  "🙋 Campuswire": "https://campuswire.com"
   "💯 Gradescope": "https://www.gradescope.com"
   "💪 Practice": "https://practice.dsc40a.com"
 
