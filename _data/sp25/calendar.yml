@@ -48,6 +48,7 @@
         - label: HOPS 1
           type: hops
           title: How to Prove it!
+          problems: https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_1_solutions.pdf
           # code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/hops_1_demo.ipynb
           # problems: todo
@@ -55,7 +56,7 @@
         - label: HW
           type: hw
           title: <b>Homework 1 Released (due Apr 10, 11:59 pm)</b>
-          # problems: https://drive.google.com/file/d/1SQt9YmYixAif46hVS9pqm4jRMQDECuR3/view?usp=sharing
+          problems: https://drive.google.com/file/d/1aBayEh-xQDNrC3oaJUh7rlOP5DC8lJgN/view?usp=sharing
           # template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
           # submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
           # solutions: https://drive.google.com/file/d/18wSg_HKPf9KeYA_wfTi2ElCdThW4nSlx/view?usp=sharing
