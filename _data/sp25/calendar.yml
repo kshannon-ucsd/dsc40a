@@ -57,9 +57,9 @@
           type: hw
           title: <b>Homework 1 Released (due Apr 10, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1aBayEh-xQDNrC3oaJUh7rlOP5DC8lJgN/view?usp=sharing
-          # template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
-          # solutions: https://drive.google.com/file/d/18wSg_HKPf9KeYA_wfTi2ElCdThW4nSlx/view?usp=sharing
+          template: https://drive.google.com/file/d/1MaNFbTRRV-xuRZoFR7a71GiVuU0lNS3i/view?usp=sharing
+          # submission: 
+          # solutions: 
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
@@ -74,8 +74,8 @@
         - label: DISC
           type: disc
           title: Groupwork 1 + Proofs
-          # problems: https://drive.google.com/file/d/1V0TnzLEUuPUmSC1zpVpD-jGT0dPzSVRl/view?usp=sharing
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw1_dsc40a_su24_solutions_ythzw.pdf
+          # problems: 
+          # solutions: 
 
     - date: "2025-04-08"
       in_class: true
@@ -89,8 +89,8 @@
         - label: HOPS 2
           type: hops
           title: Loss Functions & Risk
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_problems.pdf
-          # solutions: https://drive.google.com/file/d/1ox0Q8F4euvIuxcIvwy2LMg_ObOsQVXEr/view?usp=sharing
+          # problems: 
+          # solutions: 
 
     - date: "2025-04-10"
       in_class: true
