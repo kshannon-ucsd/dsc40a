@@ -49,13 +49,13 @@
           type: hops
           title: How to Prove it!
           problems: https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_1_solutions.pdf
+          solutions: https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing
           # code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/hops_1_demo.ipynb
           # problems: todo
 
         - label: HW
           type: hw
-          title: <b>Homework 1 Released (due Apr 10, 11:59 pm)</b>
+          title: <b>Homework 1 Released (due Apr 13, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1aBayEh-xQDNrC3oaJUh7rlOP5DC8lJgN/view?usp=sharing
           template: https://drive.google.com/file/d/1MaNFbTRRV-xuRZoFR7a71GiVuU0lNS3i/view?usp=sharing
           # submission: 
