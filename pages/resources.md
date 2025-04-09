@@ -58,6 +58,7 @@ In the table below, you can find lecture videos created by Janine Tiefenbruck, w
 
 These resources were created by tutors as part of their Final Project for DSC 95, the first-time tutor training course.
 
+- Maryam's [tutorial on using LaTeX](https://www.youtube.com/watch?v=_nBsdQpsEiE)
 - Alan Wang's [video showing the equivalence of the various regression formulas](https://youtu.be/h2qMB1g9zSQ?si=55ziwlomsIFkC9d7).
 - Brighten Hayama and Yosen Lin's [linear regression overview](https://drive.google.com/file/d/1ayBd1EdM5O4jmPgi0DtM2eWKNp5262nD/view?usp=sharing).
 - Pallavi Prabhu's [permutations and combinations guide](https://drive.google.com/file/d/1v5AFjUSzeleVQBe2m2Wd27ViSUC00sY6/view?usp=sharing).
