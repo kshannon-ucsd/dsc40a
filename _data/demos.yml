@@ -1,6 +1,6 @@
 - title: 1. Parameter and Feature Space
   url: demos/1_parameter_feature_space
-  photo: /assets/images/demos/huber.png
+  photo: /assets/images/demos/feature_param_space.png
   description: This interactive demo explores the relationship between feature and parameter spaces in regression models. By manipulating model parameters, you can visualize how changes affect both the model fit in feature space and the corresponding position in parameter space, gaining intuition about why squared error creates nicely behaved optimization surfaces with global minima.
 
 - title: 2. Linear Regression
