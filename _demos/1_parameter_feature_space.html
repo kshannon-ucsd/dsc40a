@@ -1,0 +1,701 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Regression Visualization</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .controls {
+      margin-top: 20px;
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .plot-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .plot-wrapper {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    button {
+      background: hsl(250, 41%, 35%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    label {
+      display: inline-block;
+      margin: 0.5rem 0 0.25rem;
+      font-weight: 500;
+    }
+    .slider-span {
+      margin-left: 8px;
+      font-weight: 600;
+    }
+    .error-box {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f8f8f8;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+    .error-box h4 {
+      margin-top: 0;
+    }
+    .error-metric {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    .math-container {
+      margin: 20px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <a href="/pages/demos.html" style="text-decoration: none; margin-bottom: 20px; display: inline-block;">
+    <button style="margin-bottom: 20px;">← Back to Demos</button>
+  </a>
+  <h1>Feature vs. Parameter Spaces</h1>
+  <h3>A Match Made in Heaven?</h3>
+  <p>
+    This interactive demo helps you understand why we use mean squared error (or other averages) rather than
+    simple sums of errors in regression problems. More importantly, it illustrates how feature space and parameter space are 
+    intrinsically connected through the concept of loss functions. You can interactively adjust model parameters and see how
+    they affect both the model fit and the optimization landscape.
+  </p>
+
+  <!-- Model Type Selection -->
+  <div class="controls">
+    <div style="margin-bottom: 1rem;">
+      <label>Model Type:</label>
+      <label style="margin-right: 1.5rem;"><input type="radio" name="model-select" value="constant" checked> Constant Model</label>
+      <label><input type="radio" name="model-select" value="linear"> Linear Model</label>
+    </div>
+
+    <!-- Param Controls for Constant Model -->
+    <div id="constant-controls">
+      <div>
+        <label for="constant-c-slider">Constant Value (c):</label><br>
+        <input type="range" id="constant-c-slider" min="-10" max="10" step="0.1" value="0">
+        <span id="constant-c-value" class="slider-span">0.00</span>
+      </div>
+    </div>
+
+    <!-- Param Controls for Linear Model -->
+    <div id="linear-controls" style="display: none;">
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <label for="linear-m-slider">Slope (m):</label><br>
+          <input type="range" id="linear-m-slider" min="-2" max="2" step="0.05" value="0">
+          <span id="linear-m-value" class="slider-span">0.00</span>
+        </div>
+        <div>
+          <label for="linear-b-slider">Y-Intercept (b):</label><br>
+          <input type="range" id="linear-b-slider" min="-10" max="10" step="0.1" value="0">
+          <span id="linear-b-value" class="slider-span">0.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Type Selection -->
+    <div style="margin-top: 1rem;">
+      <label>Error Metric:</label>
+      <label style="margin-right: 1.0rem;"><input type="radio" name="error-select" value="squared" checked> Squared Error</label>
+      <label style="margin-right: 1.0rem;"><input type="radio" name="error-select" value="absolute"> Absolute Error</label>
+      <label><input type="radio" name="error-select" value="raw"> Raw Error</label>
+    </div>
+
+    <!-- Data Gen Controls -->
+    <div style="margin-top: 1rem;">
+      <button id="generate-btn">Generate New Data</button>
+      <span style="margin-left: 15px;">
+        <label for="noise-slider">Noise Level:</label>
+        <input type="range" id="noise-slider" min="0" max="5" step="0.1" value="1">
+        <span id="noise-value" class="slider-span">1.0</span>
+      </span>
+      <span style="margin-left: 15px;">
+        <label for="data-slider">Data Points:</label>
+        <input type="range" id="data-slider" min="5" max="50" step="1" value="20">
+        <span id="data-value" class="slider-span">20</span>
+      </span>
+    </div>
+
+    <!-- Error Summ -->
+    <div class="error-box">
+      <h4>Error Metrics:</h4>
+      <div>
+        <span class="error-metric">Sum of Errors: <span id="sum-error">0.00</span></span>
+        <span class="error-metric">Mean Error: <span id="mean-error">0.00</span></span>
+        <span class="error-metric">Sum of Squared Errors: <span id="sse">0.00</span></span>
+        <span class="error-metric">Mean Squared Error: <span id="mse">0.00</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Place Feature Space and Parameter Space side by side -->
+  <div class="plot-container">
+    <div class="plot-wrapper">
+      <h2>Feature Space</h2>
+      <div id="error-plot" style="width:100%; height:400px;"></div>
+    </div>
+    
+    <div class="plot-wrapper">
+      <h2>Parameter Space</h2>
+      <div id="parameter-plot" style="width:100%; height:400px;"></div>
+    </div>
+  </div>
+
+  <div class="plot-container">
+    <div class="plot-wrapper">
+      <h3>Why Do We Use Average Errors Instead of Summing?</h3>
+      
+      <p>
+        When evaluating regression models, we typically use <strong>averaged error metrics</strong> 
+        (like Mean Squared Error) rather than simple sums of errors. Here's why:
+      </p>
+      
+      <div class="math-container">
+        <h4>Sum of Raw Errors Problem:</h4>
+        <p>
+          For raw errors (predicted - actual), positive and negative errors cancel each other out:
+          
+          $$\sum_{i=1}^n (\hat{y}_i - y_i)$$
+          
+          A model could make huge errors in both directions, but still have a near-zero sum!
+        </p>
+        
+        <h4>Squared or Absolute Errors:</h4>
+        <p>
+          We often use squared errors or absolute errors to make all errors positive:
+          
+          $$\text{Squared Error: } \sum_{i=1}^n (\hat{y}_i - y_i)^2 \quad \text{or} \quad
+          \text{Absolute Error: } \sum_{i=1}^n |\hat{y}_i - y_i|$$
+        </p>
+        
+        <h4>Why Average (Mean) Instead of Sum?</h4>
+        <p>
+          <ol>
+            <li><strong>Scale Invariance:</strong> The error sum grows with dataset size, making it difficult to compare models across different-sized datasets.</li>
+            <li><strong>Interpretation:</strong> Means are easier to interpret - they represent the typical error per data point.</li>
+            <li><strong>Mathematical Properties:</strong> For gradient-based optimization, using means introduces a constant factor (1/n) that doesn't change the optimization landscape's shape.</li>
+          </ol>
+        </p>
+      </div>
+      
+      <div class="math-container">
+        <h4>Parameter Space vs. Feature Space</h4>
+        <p>
+          In machine learning, we work in two complementary spaces that are connected through our loss function:
+        </p>
+        
+        <p>
+          <strong>Feature Space:</strong> This is where your data lives and where you visualize your model's predictions. 
+          For regression, this typically shows input features (x-axis) and output values (y-axis). Each point represents 
+          an observation, and the line/curve shows your model's predictions across the input domain.
+        </p>
+        
+        <p>
+          <strong>Parameter Space:</strong> This is the space of all possible parameter values for your model.
+          <ul>
+            <li>For a constant model: 1-dimensional space (just the constant c)</li>
+            <li>For a linear model: 2-dimensional space (slope m and intercept b)</li>
+            <li>For more complex models: Higher dimensional spaces</li>
+          </ul>
+        </p>
+        
+        <p>
+          The error surface in parameter space shows how the error changes as you vary the model parameters. 
+          Each point in parameter space corresponds to a specific model configuration in feature space.
+          The key insight is that certain loss functions (like squared error) create nice, convex error surfaces 
+          with a single global minimum, making optimization straightforward.
+        </p>
+      </div>
+      
+      <div class="math-container">
+        <h4>Special Case: Raw Error Loss Landscapes</h4>
+        <p>
+          When you select "Raw Error" as your error metric, you'll observe some interesting behavior:
+        </p>
+        
+        <p>
+          <strong>For the constant model:</strong> The parameter space shows a straight line rather than a curve.
+          This happens because the raw error function for a constant model is:
+          
+          $$\frac{1}{n}\sum_{i=1}^n (c - y_i) = c - \frac{1}{n}\sum_{i=1}^n y_i$$
+          
+          This is a linear function of the parameter c, creating a straight line in parameter space. The line
+          crosses zero at c = mean(y), which is why the minimum raw error occurs at the mean of y values.
+        </p>
+        
+        <p>
+          <strong>For the linear model:</strong> The parameter space shows a flat plane with a line where the error is zero.
+          This happens because the raw error function for a linear model is:
+          
+          $$\frac{1}{n}\sum_{i=1}^n (mx_i + b - y_i) = m\cdot\text{mean}(x) + b - \text{mean}(y)$$
+          
+          This creates a flat plane in the (m,b) space. Any combination of m and b that satisfies
+          m·mean(x) + b = mean(y) will have zero raw error! This is why raw error is problematic for
+          optimization - it doesn't provide a unique solution for the model parameters.
+        </p>
+      </div>
+      
+      <p>
+        <strong>Try it yourself:</strong> Experiment with the sliders to see how changing parameters affects
+        both spaces simultaneously. Notice how squared error creates a bowl-shaped (paraboloid) surface in parameter space,
+        while absolute error creates a more angular surface, and raw error can create complex surfaces with no clear minimum.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    let currentModel = "constant"; // "constant" or "linear"
+    let currentErrorType = "squared"; // "squared", "absolute", or "raw"
+    let dataPoints = [];
+    let parameterSurfaceData = null;
+    let constantC = 0
+    let linearM = 0;
+    let linearB = 0;
+    
+    // Generate random data points with underlying linear relationship plus noise
+    function generateData() {
+      const numPoints = parseInt(document.getElementById("data-value").textContent);
+      const noise = parseFloat(document.getElementById("noise-value").textContent);
+      
+      dataPoints = [];
+      
+      // Generate x values between -10 and 10
+      for (let i = 0; i < numPoints; i++) {
+        const x = -10 + (20 * i) / (numPoints - 1);
+        
+        // Underlying relationship: y = 0.5x + 2 + noise
+        const trueY = 0.5 * x + 2;
+        const y = trueY + (Math.random() - 0.5) * 2 * noise;
+        
+        dataPoints.push({ x, y });
+      }
+      
+      updateParameterSpace();
+      updateErrorPlot();
+      updateParameterPlot();
+      updateErrorMetrics();
+    }
+    
+    // Calculate model predictions based on current model and params
+    function getModelPredictions() {
+      return dataPoints.map(point => {
+        let yPred;
+        
+        if (currentModel === "constant") {
+          yPred = constantC;
+        } else { // linear
+          yPred = linearM * point.x + linearB;
+        }
+        
+        return {
+          x: point.x,
+          yActual: point.y,
+          yPred: yPred,
+          error: yPred - point.y
+        };
+      });
+    }
+    
+    function calculateErrors() {
+      const predictions = getModelPredictions();
+      
+      let sumError = 0;
+      let sumSquaredError = 0;
+      let sumAbsoluteError = 0;
+      
+      predictions.forEach(pred => {
+        sumError += pred.error;
+        sumSquaredError += pred.error * pred.error;
+        sumAbsoluteError += Math.abs(pred.error);
+      });
+      
+      const n = predictions.length;
+      const meanError = sumError / n;
+      const mse = sumSquaredError / n;
+      const mae = sumAbsoluteError / n;
+      
+      return {
+        sumError,
+        meanError,
+        sumSquaredError,
+        mse,
+        sumAbsoluteError,
+        mae,
+        n
+      };
+    }
+    
+    // Update error metrics display
+    function updateErrorMetrics() {
+      const errors = calculateErrors();
+      
+      document.getElementById("sum-error").textContent = errors.sumError.toFixed(2);
+      document.getElementById("mean-error").textContent = errors.meanError.toFixed(2);
+      document.getElementById("sse").textContent = errors.sumSquaredError.toFixed(2);
+      document.getElementById("mse").textContent = errors.mse.toFixed(2);
+    }
+    
+    // Generate parameter space data for visualization
+    function updateParameterSpace() {
+      if (currentModel === "constant") {
+        // For constant model, we just need 1D range of c values
+        const cValues = [];
+        const errorValues = [];
+        
+        // Generate points for parameter space visualization
+        for (let c = -10; c <= 10; c += 0.5) {
+          cValues.push(c);
+          
+          // Calculate error for this c value
+          let totalError = 0;
+          
+          dataPoints.forEach(point => {
+            const error = c - point.y;
+            
+            if (currentErrorType === "squared") {
+              totalError += error * error;
+            } else if (currentErrorType === "absolute") {
+              totalError += Math.abs(error);
+            } else { // raw
+              totalError += error;
+            }
+          });
+          
+          // Use mean error
+          errorValues.push(totalError / dataPoints.length);
+        }
+        
+        parameterSurfaceData = {
+          cValues,
+          errorValues
+        };
+      } else { // linear
+        // For linear model, we need 2D grid of m and b values
+        const mValues = [];
+        const bValues = [];
+        const errorSurface = [];
+        
+        // Generate grid for parameter space visualization
+        for (let m = -2; m <= 2; m += 0.1) {
+          mValues.push(m);
+        }
+        
+        for (let b = -10; b <= 10; b += 0.5) {
+          bValues.push(b);
+        }
+        
+        // Calculate error surface
+        for (let j = 0; j < bValues.length; j++) {
+          const errorRow = [];
+          
+          for (let i = 0; i < mValues.length; i++) {
+            const m = mValues[i];
+            const b = bValues[j];
+            
+            let totalError = 0;
+            
+            dataPoints.forEach(point => {
+              const yPred = m * point.x + b;
+              const error = yPred - point.y;
+              
+              if (currentErrorType === "squared") {
+                totalError += error * error;
+              } else if (currentErrorType === "absolute") {
+                totalError += Math.abs(error);
+              } else { // raw
+                totalError += error;
+              }
+            });
+            
+            // Use mean error
+            errorRow.push(totalError / dataPoints.length);
+          }
+          
+          errorSurface.push(errorRow);
+        }
+        
+        parameterSurfaceData = {
+          mValues,
+          bValues,
+          errorSurface
+        };
+      }
+    }
+    
+    // Plot the feature space with data, model and errors
+    function updateErrorPlot() {
+      const predictions = getModelPredictions();
+      
+      // Sort predictions by x-value for consistent visualization
+      predictions.sort((a, b) => a.x - b.x);
+      
+      // Data points
+      const dataTrace = {
+        x: predictions.map(p => p.x),
+        y: predictions.map(p => p.yActual),
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Data Points',
+        marker: {
+          color: 'blue',
+          size: 8
+        }
+      };
+      
+      // Model predictions
+      const modelTrace = {
+        x: predictions.map(p => p.x),
+        y: predictions.map(p => p.yPred),
+        mode: 'line',
+        type: 'scatter',
+        name: 'Model Predictions',
+        line: {
+          color: 'red',
+          width: 2
+        }
+      };
+      
+      // Error visualization as vertical lines
+      const errorLines = [];
+      
+      predictions.forEach(p => {
+        errorLines.push({
+          x: [p.x, p.x],
+          y: [p.yActual, p.yPred],
+          mode: 'lines',
+          type: 'scatter',
+          name: 'Error',
+          line: {
+            color: 'gray',
+            width: 1,
+            dash: 'dot'
+          },
+          showlegend: false
+        });
+      });
+      
+      Plotly.react('error-plot', [dataTrace, modelTrace, ...errorLines], {
+        title: 'Data and Model Visualization',
+        xaxis: { title: 'X' },
+        yaxis: { title: 'Y' }
+      });
+    }
+    
+    // Plot the parameter space and error surface
+    function updateParameterPlot() {
+      let traces = [];
+      
+      if (currentModel === "constant") {
+        // 1D parameter space for constant model
+        traces.push({
+          x: parameterSurfaceData.cValues,
+          y: parameterSurfaceData.errorValues,
+          mode: 'lines',
+          type: 'scatter',
+          name: 'Error Surface',
+          line: {
+            color: 'purple',
+            width: 2
+          }
+        });
+        
+        // Current parameter point
+        traces.push({
+          x: [constantC],
+          y: [calculateErrors().mse], // Use MSE for viz
+          mode: 'markers',
+          type: 'scatter',
+          name: 'Current Parameters',
+          marker: {
+            color: 'red',
+            size: 10,
+            symbol: 'x'
+          }
+        });
+        
+        Plotly.react('parameter-plot', traces, {
+          title: 'Parameter Space (Constant Model)',
+          xaxis: { title: 'Constant Value (c)' },
+          yaxis: { title: 'Error' }
+        });
+      } else { // linear
+        // 3D surface for linear model parameter space
+        traces.push({
+          x: parameterSurfaceData.mValues,
+          y: parameterSurfaceData.bValues,
+          z: parameterSurfaceData.errorSurface,
+          type: 'surface',
+          colorscale: 'Viridis',
+          name: 'Error Surface'
+        });
+        
+        // Current parameter point
+        traces.push({
+          x: [linearM],
+          y: [linearB],
+          z: [calculateErrors().mse], // Use MSE for viz
+          mode: 'markers',
+          type: 'scatter3d',
+          name: 'Current Parameters',
+          marker: {
+            color: 'red',
+            size: 6,
+            symbol: 'x'
+          }
+        });
+        
+        Plotly.react('parameter-plot', traces, {
+          title: 'Parameter Space (Linear Model)',
+          scene: {
+            xaxis: { title: 'Slope (m)' },
+            yaxis: { title: 'Intercept (b)' },
+            zaxis: { title: 'Error' }
+          }
+        });
+      }
+    }
+    
+    // Initialize the demo
+    function initDemo() {
+      // Generate initial data
+      generateData();
+      
+      // Set up event listeners for controls
+      setupEventListeners();
+    }
+    
+    // Set up event listeners
+    function setupEventListeners() {
+      // Model type radio buttons
+      document.querySelectorAll('input[name="model-select"]').forEach(elem => {
+        elem.addEventListener('change', e => {
+          currentModel = e.target.value;
+          
+          // Show/hide appropriate controls
+          if (currentModel === "constant") {
+            document.getElementById('constant-controls').style.display = 'block';
+            document.getElementById('linear-controls').style.display = 'none';
+          } else { // linear
+            document.getElementById('constant-controls').style.display = 'none';
+            document.getElementById('linear-controls').style.display = 'block';
+          }
+          
+          // Update parameter space
+          updateParameterSpace();
+          
+          // Update plots
+          updateErrorPlot();
+          updateParameterPlot();
+          updateErrorMetrics();
+        });
+      });
+      
+      // Error type radio buttons
+      document.querySelectorAll('input[name="error-select"]').forEach(elem => {
+        elem.addEventListener('change', e => {
+          currentErrorType = e.target.value;
+          
+          // Update parameter space
+          updateParameterSpace();
+          
+          // Update plots
+          updateParameterPlot();
+          updateErrorMetrics();
+        });
+      });
+      
+      // Constant model parameter slider
+      const constantSlider = document.getElementById('constant-c-slider');
+      constantSlider.addEventListener('input', () => {
+        constantC = parseFloat(constantSlider.value);
+        document.getElementById('constant-c-value').textContent = constantC.toFixed(2);
+        
+        // Update plots
+        updateErrorPlot();
+        updateParameterPlot();
+        updateErrorMetrics();
+      });
+      
+      // Linear model parameter sliders
+      const mSlider = document.getElementById('linear-m-slider');
+      mSlider.addEventListener('input', () => {
+        linearM = parseFloat(mSlider.value);
+        document.getElementById('linear-m-value').textContent = linearM.toFixed(2);
+        
+        // Update plots
+        updateErrorPlot();
+        updateParameterPlot();
+        updateErrorMetrics();
+      });
+      
+      const bSlider = document.getElementById('linear-b-slider');
+      bSlider.addEventListener('input', () => {
+        linearB = parseFloat(bSlider.value);
+        document.getElementById('linear-b-value').textContent = linearB.toFixed(2);
+        
+        // Update plots
+        updateErrorPlot();
+        updateParameterPlot();
+        updateErrorMetrics();
+      });
+      
+      // Data generation controls
+      const noiseSlider = document.getElementById('noise-slider');
+      noiseSlider.addEventListener('input', () => {
+        const noise = parseFloat(noiseSlider.value);
+        document.getElementById('noise-value').textContent = noise.toFixed(1);
+      });
+      
+      const dataSlider = document.getElementById('data-slider');
+      dataSlider.addEventListener('input', () => {
+        const points = parseInt(dataSlider.value);
+        document.getElementById('data-value').textContent = points;
+      });
+      
+      document.getElementById('generate-btn').addEventListener('click', generateData);
+      
+      // Initialize sliders
+      constantSlider.dispatchEvent(new Event('input'));
+      mSlider.dispatchEvent(new Event('input'));
+      bSlider.dispatchEvent(new Event('input'));
+      noiseSlider.dispatchEvent(new Event('input'));
+      dataSlider.dispatchEvent(new Event('input'));
+    }
+    
+    // Initialize when DOM is loaded
+    window.addEventListener('DOMContentLoaded', initDemo);
+  </script>
+</body>
+</html>
