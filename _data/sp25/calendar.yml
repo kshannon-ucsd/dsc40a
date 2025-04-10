@@ -106,7 +106,6 @@
           title: MSE vs MAE vs Huber
           problems: https://drive.google.com/file/d/1QfaCCnxwJbTLAS4UctZWCOTN4H-FK-Ia/view?usp=sharing
           # solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
-          data: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_loan_data.csv
         - label: HW
           type: hw
           title: <b>Homework 2 Released (due Apr 17, 11:59 pm)</b>
