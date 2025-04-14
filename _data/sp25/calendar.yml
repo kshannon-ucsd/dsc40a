@@ -75,7 +75,7 @@
           type: disc
           title: Groupwork 1 + Proofs
           problems: https://drive.google.com/file/d/1bFoz12dTIo1oBSlHK3_hy1_mvuGTjCWv/view?usp=sharing
-          # solutions: 
+          solutions: https://drive.google.com/file/d/1HPHKTmmDajgNBOL8VSPfCW4NqHOeszJ0/view?usp=sharing
 
     - date: "2025-04-08"
       in_class: true
@@ -105,7 +105,7 @@
           type: hops
           title: MSE vs MAE vs Huber
           problems: https://drive.google.com/file/d/1QfaCCnxwJbTLAS4UctZWCOTN4H-FK-Ia/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
+          solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
         - label: HW
           type: hw
           title: <b>Homework 2 Released (check Gradescope for due date)</b>
