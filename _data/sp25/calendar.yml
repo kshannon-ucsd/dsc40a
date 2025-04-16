@@ -109,10 +109,8 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released (check Gradescope for due date)</b>
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
-          # template: https://www.overleaf.com/read/zbhgqqpcbfdh#0699bb
-          # solutions: https://www.overleaf.com/read/qdhcnmkcstxj#d30706
-          # submission:
+          problems: https://drive.google.com/file/d/1TLk6cCxJtXBbyQJz4Ug7TnE8fhae2VT5/view?usp=sharing
+          code: https://colab.research.google.com/drive/1KtpxT2QMo06jDCxVSArObOx99uA1WSrj?usp=sharing
 
 - week: 3
   title: "Week 3 - Linear Algebra & Regression<br>
