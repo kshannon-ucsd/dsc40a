@@ -17,7 +17,7 @@
       events:
         - label: MISC
           type: survey
-          title: <a href='https://campuswire.com/p/GE6841F89'>Sign Up for Campuswire (discussion board) - Code 8155</a>
+          title: <a href='https://campuswire.com/p/GE6841F89'>Sign Up for Campuswire - Code 8155</a>
         - label: SUR
           type: survey
           title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'> <b>Welcome Survey</b> </a>
@@ -126,6 +126,7 @@
         - label: DISC
           type: disc
           title: Groupwork 1 Review + MSE vs MAE
+          walkthrough: https://drive.google.com/file/d/1k9y8-o-0kxRhqf7GzxGjSksPhEMzAVsJ/view?usp=sharing
           # problems: https://drive.google.com/file/d/1YxFBiHGFGXrmlD3GJsBxdjPd2HpkBEef/view
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
