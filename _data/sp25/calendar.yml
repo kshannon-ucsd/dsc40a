@@ -150,7 +150,7 @@
           type: hops
           title: Simple OLS Regression
           problems: https://drive.google.com/file/d/1JPWMV70yQJKTglgaG1kVIHmLaVOhpJdf/view?usp=sharing
-          #solutions: https://drive.google.com/file/d/1RROFyj8nHABHT9yUyYXKqc9X1UFtScoI/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1RROFyj8nHABHT9yUyYXKqc9X1UFtScoI/view?usp=sharing
         - label: LEC 6
           type: lecture
           title: Dot Products and Projections
@@ -159,7 +159,7 @@
           recording: https://youtu.be/JZKZmPRl7tg
         - label: HW
           type: hw
-          title: <b>Homework 3 Released (check Gradescope for due date)</b>
+          # title: <b>Homework 3 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
           # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
           # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
@@ -192,9 +192,6 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07_annotated.pdf
           recording: https://youtu.be/Q0bJtqN9W3M
-        - label: DEMO
-          type: demo
-          title: Demo 2 - Interaction Terms
 
     - date: "2025-04-24"
       in_class: true
@@ -206,6 +203,9 @@
           # code_solutions: https://drive.google.com/file/d/1I2CkSDiwK8xVXpCZzUST2c2vgU9hnsQ-/view?usp=sharing
           # code: https://drive.google.com/file/d/1Ie9kZ22FNYuMv21_h2BfOE3vhymvvHar/view?usp=sharing
           # problems: https://drive.google.com/file/d/1CUM2n3QMJONBEp9oZJ5o4LDVZDPQbxul/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Demo 2 - Interaction Terms
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
