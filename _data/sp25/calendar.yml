@@ -186,7 +186,7 @@
         - label: HOPS 5
           type: hops
           title: Regression & Linear Algebra
-          problems: https://drive.google.com/file/d/1YacN3z52sVEK5PyBIZ3MO8PS5aIg3Ngj/view?usp=sharing
+          # problems: https://drive.google.com/file/d/1YacN3z52sVEK5PyBIZ3MO8PS5aIg3Ngj/view?usp=sharing
           # solutions: https://drive.google.com/file/d/1mW8mpBI1241N6-YGUEin83LSWEUdUuLk/view?usp=sharing
           # problems: https://drive.google.com/file/d/1CZ0q7mrcXTAFt884erBQr2y9AbSJpKoJ/view?usp=sharing
         - label: LEC 7
