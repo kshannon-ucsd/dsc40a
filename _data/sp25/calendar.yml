@@ -221,7 +221,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 2 Review
+          title: Groupwork 3
 
     - date: "2025-04-29"
       in_class: true
@@ -417,7 +417,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 4 Review + Bayes
+          title: Groupwork 5 + Bayes
 
     - date: "2025-05-27"
       in_class: true
