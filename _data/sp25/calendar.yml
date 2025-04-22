@@ -157,8 +157,8 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
           recording: https://youtu.be/JZKZmPRl7tg
-        - label: HW
-          type: hw
+        #- label: HW
+          #type: hw
           # title: <b>Homework 3 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
           # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
@@ -176,6 +176,8 @@
           type: disc
           title: Groupwork 2
           problems: https://drive.google.com/file/d/1aomJtfDPs7PRqzksU-RCVga_BXz4UDld/view?usp=sharing
+          solutions: https://drive.google.com/file/d/12BmkmGBZsOrKYh8AW9b6ZM3iWmKW3RY3/view?usp=sharing
+          filled: https://drive.google.com/file/d/1c7Cf7zb6-QEGv6vQvEZWvZG-dtCHUqS1/view?usp=sharing
           # problems: https://drive.google.com/file/d/1yV_82thIFn0SJIUhaUPmD28ut7dqgmLQ/view?usp=sharing
 
     - date: "2025-04-22"
@@ -184,6 +186,7 @@
         - label: HOPS 5
           type: hops
           title: Regression & Linear Algebra
+          problems: https://drive.google.com/file/d/1YacN3z52sVEK5PyBIZ3MO8PS5aIg3Ngj/view?usp=sharing
           # solutions: https://drive.google.com/file/d/1mW8mpBI1241N6-YGUEin83LSWEUdUuLk/view?usp=sharing
           # problems: https://drive.google.com/file/d/1CZ0q7mrcXTAFt884erBQr2y9AbSJpKoJ/view?usp=sharing
         - label: LEC 7
@@ -232,9 +235,9 @@
           # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
           code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
           # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
-        - label: HW
-          type: hw
-          title: <b>Homework 4 Released (check Gradescope for due date)</b>
+        #- label: HW
+          #type: hw
+          #title: <b>Homework 4 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
           # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
           # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
@@ -329,9 +332,9 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
           recording: https://youtu.be/g9TTmIVY7sE
-        - label: HW
-          type: hw
-          title: <b>Homework 5 Released (check Gradescope for due date)</b>
+        #- label: HW
+          #type: hw
+          #title: <b>Homework 5 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
           # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing
           # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
@@ -399,9 +402,9 @@
           # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
           # code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
           # problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
-        - label: HW
-          type: hw
-          title: <b>Homework 6 Released (check Gradescope for due date)</b>
+        #- label: HW
+          #type: hw
+          #title: <b>Homework 6 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
           # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
 
