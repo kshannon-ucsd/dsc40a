@@ -189,10 +189,10 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 5
-          solutions: https://drive.google.com/file/d/1qxIZAi9fsCYvgPiunPg4xPmsHx_bNZT_/view?usp=sharing
-          code_solutions: https://drive.google.com/file/d/1I2CkSDiwK8xVXpCZzUST2c2vgU9hnsQ-/view?usp=sharing
+          # solutions: 
+          # code_solutions: https://drive.google.com/file/d/1I2CkSDiwK8xVXpCZzUST2c2vgU9hnsQ-/view?usp=sharing
           code: https://drive.google.com/file/d/1Ie9kZ22FNYuMv21_h2BfOE3vhymvvHar/view?usp=sharing
-          problems: https://drive.google.com/file/d/1CUM2n3QMJONBEp9oZJ5o4LDVZDPQbxul/view?usp=sharing
+          problems: https://drive.google.com/file/d/1nlsuu_4js9jEDgAGeJH_TBCph1M6Teyx/view?usp=sharing
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
