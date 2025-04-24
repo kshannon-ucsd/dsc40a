@@ -201,10 +201,8 @@
         - label: HOPS 6
           type: hops
           title: Regression in the Real World
-          # solutions: https://drive.google.com/file/d/1qxIZAi9fsCYvgPiunPg4xPmsHx_bNZT_/view?usp=sharing
-          # code_solutions: https://drive.google.com/file/d/1I2CkSDiwK8xVXpCZzUST2c2vgU9hnsQ-/view?usp=sharing
-          # code: https://drive.google.com/file/d/1Ie9kZ22FNYuMv21_h2BfOE3vhymvvHar/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1CUM2n3QMJONBEp9oZJ5o4LDVZDPQbxul/view?usp=sharing
+          problems: https://drive.google.com/file/d/1qJhdYkbE6MoQpaKugP9VD1BILGjPHybt/view?usp=sharing
+          code: https://colab.research.google.com/drive/1Qg0xLwmwrnB2ZS1DvwaXk3ZjLW86qgM7?usp=sharing
         - label: DEMO
           type: demo
           title: Demo 2 - Interaction Terms
