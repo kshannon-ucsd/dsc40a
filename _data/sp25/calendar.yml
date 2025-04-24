@@ -109,8 +109,8 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1TLk6cCxJtXBbyQJz4Ug7TnE8fhae2VT5/view?usp=sharing
-          template: https://drive.google.com/file/d/1MnkJjifZvNhAedxtdDyqEFp7vLBoGg7H/view?usp=sharing
+          problems: https://drive.google.com/file/d/1TGI9i3_O1497XtYjl97cY3UUmMd7c75-/view?usp=drive_link
+          template: https://drive.google.com/file/d/1rpIpD8f-HZCOMxo8Jxq-WD1pHbmp8VHP/view?usp=sharing
           code: https://colab.research.google.com/drive/1KtpxT2QMo06jDCxVSArObOx99uA1WSrj?usp=sharing
 
 - week: 3
