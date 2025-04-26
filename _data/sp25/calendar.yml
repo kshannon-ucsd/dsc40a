@@ -125,7 +125,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 1 Review + MSE vs MAE
+          title: Groupwork 1 Review
           walkthrough: https://drive.google.com/file/d/1k9y8-o-0kxRhqf7GzxGjSksPhEMzAVsJ/view?usp=sharing
           # problems: https://drive.google.com/file/d/1YxFBiHGFGXrmlD3GJsBxdjPd2HpkBEef/view
           # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
@@ -174,7 +174,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 2
+          title: Groupwork 2A
           problems: https://drive.google.com/file/d/1aomJtfDPs7PRqzksU-RCVga_BXz4UDld/view?usp=sharing
           solutions: https://drive.google.com/file/d/12BmkmGBZsOrKYh8AW9b6ZM3iWmKW3RY3/view?usp=sharing
           filled: https://drive.google.com/file/d/1c7Cf7zb6-QEGv6vQvEZWvZG-dtCHUqS1/view?usp=sharing
@@ -221,7 +221,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 3
+          title: Groupwork 2B
 
     - date: "2025-04-29"
       in_class: true
@@ -363,7 +363,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 4 + Basics of Probability
+          title: Groupwork 3
           # problems: https://drive.google.com/file/d/1VvOrwcYd0dK22MzYn-RzGiqRy-FQ0EIq/view?usp=sharing
           slides: https://docs.google.com/presentation/d/1goa-TOn4EtLerb1BUQr57-D5Ucyeenh8aOJcj3kipRE/edit?usp=sharing
           # solutions: https://drive.google.com/file/d/1ZHmf1pO9-TyV3rbNC5QqJJYxC6vbwXoe/view?usp=sharing
@@ -417,7 +417,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 5 + Bayes
+          title: Groupwork 4
 
     - date: "2025-05-27"
       in_class: true
