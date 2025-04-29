@@ -250,15 +250,15 @@
     - date: "2025-05-01"
       in_class: true
       events:
+        - label: DISC
+          type: disc
+          title: Midterm Review (last quarter's midterm)
         - label: LEC 10
           type: lecture
           title: Feature Engineering, Gradient Descent
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10_annotated.pdf
           recording: https://youtu.be/Gm1DQ3vWwY4
-        - label: DEMO
-          type: demo
-          title: Loss Surface Navigation + Regularization
 
 - week: 6
   title: "Week 6 - Gradient Descent<br>
@@ -283,6 +283,9 @@
           title: Gradient Descent
           # solutions: https://drive.google.com/file/d/1qIQbjjbxslBaeZrtb835_PU7dUrGd7IE/view?usp=sharing
           # problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Loss Surface Navigation + Regularization
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
