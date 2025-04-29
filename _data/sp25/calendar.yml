@@ -230,8 +230,9 @@
         - label: HOPS 7
           type: hops
           title: Feature Engineering + Normal Equations
+          code: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
           # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
-          code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
+          # code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
           # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
         #- label: HW
           #type: hw
