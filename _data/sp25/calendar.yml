@@ -157,14 +157,6 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
           recording: https://youtu.be/JZKZmPRl7tg
-        #- label: HW
-          #type: hw
-          # title: <b>Homework 3 Released (check Gradescope for due date)</b>
-          # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
-          # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
-          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
-
 
 - week: 4
   title: "Week 4 - Linear Algebra & Regression"
@@ -248,6 +240,14 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
           recording: https://youtu.be/5bNAEE2Oa8Q
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released (check Gradescope for due date)</b>
+          problems: https://drive.google.com/file/d/1n8cV6JUC-ASmOqEP-WUPIeuPVcZTUF6u/view?usp=sharing
+          # template: 
+          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
+          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
+
 
     - date: "2025-05-01"
       in_class: true
