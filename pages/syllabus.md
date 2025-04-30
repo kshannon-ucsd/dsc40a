@@ -126,7 +126,7 @@ There will be one Midterm Exam and one Final Exam, both held in person.
 
 The Midterm Exam will be worth 20% of your overall course grade. The Final Exam will be worth 30% of your overall course grade and will be cumulative.
 
-You must take the final exam to plass the class.
+You must take the final exam to pass the class.
 
 ### Redemption Policy
 
