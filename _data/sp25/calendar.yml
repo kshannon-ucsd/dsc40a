@@ -109,8 +109,8 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1TLk6cCxJtXBbyQJz4Ug7TnE8fhae2VT5/view?usp=sharing
-          template: https://drive.google.com/file/d/1MnkJjifZvNhAedxtdDyqEFp7vLBoGg7H/view?usp=sharing
+          problems: https://drive.google.com/file/d/1TGI9i3_O1497XtYjl97cY3UUmMd7c75-/view?usp=drive_link
+          template: https://drive.google.com/file/d/1rpIpD8f-HZCOMxo8Jxq-WD1pHbmp8VHP/view?usp=sharing
           code: https://colab.research.google.com/drive/1KtpxT2QMo06jDCxVSArObOx99uA1WSrj?usp=sharing
 
 - week: 3
@@ -157,14 +157,6 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
           recording: https://youtu.be/JZKZmPRl7tg
-        #- label: HW
-          #type: hw
-          # title: <b>Homework 3 Released (check Gradescope for due date)</b>
-          # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
-          # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
-          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
-
 
 - week: 4
   title: "Week 4 - Linear Algebra & Regression"
@@ -222,6 +214,7 @@
         - label: DISC
           type: disc
           title: Groupwork 2B
+          problems: https://drive.google.com/file/d/1obVs4V3sId34U3BS7B9Go523ALl4JTXd/view?usp=sharing
 
     - date: "2025-04-29"
       in_class: true
@@ -229,8 +222,10 @@
         - label: HOPS 7
           type: hops
           title: Feature Engineering + Normal Equations
+          code: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
+          data: https://drive.google.com/file/d/1dYzMFzMPTpIN1-veytcG-JJ3aDMJh8FX/view?usp=drive_link
           # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
-          code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
+          # code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
           # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
         #- label: HW
           #type: hw
@@ -245,19 +240,27 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
           recording: https://youtu.be/5bNAEE2Oa8Q
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released (check Gradescope for due date)</b>
+          problems: https://drive.google.com/file/d/1n8cV6JUC-ASmOqEP-WUPIeuPVcZTUF6u/view?usp=sharing
+          # template: 
+          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
+          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
+
 
     - date: "2025-05-01"
       in_class: true
       events:
+        - label: HOPS
+          type: hops
+          title: Midterm Review (last quarter's midterm)
         - label: LEC 10
           type: lecture
           title: Feature Engineering, Gradient Descent
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10_annotated.pdf
           recording: https://youtu.be/Gm1DQ3vWwY4
-        - label: DEMO
-          type: demo
-          title: Loss Surface Navigation + Regularization
 
 - week: 6
   title: "Week 6 - Gradient Descent<br>
@@ -282,6 +285,9 @@
           title: Gradient Descent
           # solutions: https://drive.google.com/file/d/1qIQbjjbxslBaeZrtb835_PU7dUrGd7IE/view?usp=sharing
           # problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Loss Surface Navigation + Regularization
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
