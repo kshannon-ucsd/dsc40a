@@ -252,8 +252,8 @@
     - date: "2025-05-01"
       in_class: true
       events:
-        - label: DISC
-          type: disc
+        - label: HOPS
+          type: hops
           title: Midterm Review (last quarter's midterm)
         - label: LEC 10
           type: lecture
