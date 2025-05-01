@@ -126,7 +126,7 @@ There will be one Midterm Exam and one Final Exam, both held in person.
 
 The Midterm Exam will be worth 20% of your overall course grade. The Final Exam will be worth 30% of your overall course grade and will be cumulative.
 
-You must take the final exam to plass the class.
+You must take the final exam to pass the class.
 
 ### Redemption Policy
 
@@ -151,7 +151,7 @@ Here's how we will compute your grade.
 
 ### Late Policy, Slip Days, and Drops
 
-Each student has **four slip days** (**two in the summer sessions**) to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most two slip days on any single homework assignment. **Slip days can only be used for homework assignments.**
+Each student has **four slip days** (**two in the summer sessions**) to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most one slip day on any single homework assignment. **Slip days can only be used for homework assignments.**
 
 Slip days are applied automatically at the end of the quarter, and you don't need to ask in order to use one. It's your responsibility to keep track of how many you have left. If you run out of slip days and submit a homework late, it may still be graded so that you'll see what questions you missed, but the grade will be changed to a zero at the end of the quarter.
 

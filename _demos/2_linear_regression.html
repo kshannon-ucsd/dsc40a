@@ -3,435 +3,1500 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Linear Regression with Animation</title>
+    <title>Interactive Linear Regression</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
         }
-        .controls {
-            margin-top: 20px;
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
+        h1, h2, h3 {
+            color: #333;
+            margin-top: 0.8em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
         }
-        label {
-            margin-right: 10px;
-            font-weight: 500;
-        }
-        .plot-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .plot-wrapper {
-            flex: 1;
-            min-width: 300px;
+        .section {
             background: white;
             padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .main-plot-container {
+            height: 550px;
+            width: 100%;
+            margin: 15px 0 10px 0;
+        }
+        .plot-container {
+            height: 400px;
+            width: 100%;
+            margin: 15px 0 10px 0;
+        }
+        .half-plot-container {
+            height: 280px;
+            width: 100%;
+            margin: 10px 0 5px 0;
+        }
+        .half-width {
+            width: 48%;
+        }
+        .control-panel {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0 10px 0;
+        }
+        .slider-container {
+            margin: 12px 0;
+        }
+        label {
+            font-weight: 500;
+            display: inline-block;
+            width: 140px;
+        }
+        input[type="range"] {
+            width: 260px;
+            vertical-align: middle;
         }
         .value-display {
             display: inline-block;
-            min-width: 40px;
-            text-align: right;
+            width: 50px;
+            text-align: center;
+            font-weight: bold;
+            margin-left: 10px;
+            color: #333;
         }
         button {
-            background: hsl(250, 41%, 35%);
+            background: #6649a8;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
-            margin: 10px 0;
+            font-size: 14px;
+            margin: 5px 5px 5px 0;
+            transition: background 0.2s;
         }
         button:hover {
-            background: #45a049;
+            background: #523b8a;
         }
-        button:disabled {
-            background: #cccccc;
-            cursor: not-allowed;
+        .checkbox-container {
+            margin: 12px 0;
+        }
+        .checkbox-container label {
+            width: auto;
+            margin-left: 8px;
+        }
+        .equation-display {
+            font-size: 16px;
+            margin: 15px 0;
+            padding: 8px 15px;
+            background: #f8f8f8;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: 500;
+        }
+        .mse-equation {
+            border-left: 4px solid #4b9fdb;
+        }
+        .mae-equation {
+            border-left: 4px solid #4caf50;
+        }
+        .user-equation {
+            font-size: 18px;
+            border-left: 4px solid #e91e63;
+        }
+        .loss-display {
+            font-size: 16px;
+            margin: 12px 0;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .mse-value {
+            background: rgba(75, 159, 219, 0.1);
+            border-left: 3px solid #4b9fdb;
+        }
+        .mae-value {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 3px solid #4caf50;
+        }
+        .loss-value {
+            font-weight: bold;
+            margin-left: 10px;
+            min-width: 60px;
+            text-align: right;
+            color: #333;
+        }
+        .explanation {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0 10px 0;
+            line-height: 1.6;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+        }
+        .flex-item {
+            flex: 1;
+            min-width: 45%;
+        }
+        .mse-color {
+            color: #4b9fdb;
+        }
+        .mae-color {
+            color: #4caf50;
+        }
+        .example-dataset {
+            display: inline-block;
+            margin: 5px;
+            padding: 6px 12px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            transition: all 0.2s ease;
+        }
+        .example-dataset:hover {
+            background: #e8e8e8;
+            transform: translateY(-2px);
+        }
+        .dataset-container {
+            margin: 12px 0 8px 0;
+        }
+        .dataset-title {
+            font-weight: 600;
+            margin-right: 10px;
+            color: #333;
+        }
+        .parameter-container {
+            padding: 12px;
+            border-radius: 6px;
+            margin: 8px 0;
+        }
+        .mse-container {
+            background-color: rgba(75, 159, 219, 0.1);
+        }
+        .mae-container {
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        .parameter-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .panel-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .section-title {
+            font-size: 18px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            margin-top: 5px;
+        }
+        .note {
+            font-style: italic;
+            color: #666;
+            margin: 8px 0;
+        }
+        .compact-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .compact-control-item {
+            flex: 1;
+            min-width: 300px;
+        }
+        .back-button {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .summary-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-top: 3px solid #ccc;
+        }
+        .math-formula {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-size: 16px;
+        }
+        .slider-group {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+        .compact-equation-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 12px 0 8px 0;
+        }
+        .compact-equation {
+            flex: 1;
+            min-width: 250px;
+        }
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0 5px 0;
         }
     </style>
 </head>
 <body>
-    <a href="/pages/demos.html" style="text-decoration: none; margin-bottom: 20px; display: inline-block;">
-        <button style="margin-bottom: 20px;">← Back to Demos</button>
+    <a href="/pages/demos.html" class="back-button">
+        <button>← Back to Demos</button>
     </a>
-    <h1>Interactive Linear Regression</h1>
     
-    <!-- Manual Control Plots -->
-    <h2>Manual Parameter Control</h2>
-    <div class="plot-container">
-        <div class="plot-wrapper">
-            <div id="regression-plot"></div>
+    <h1>Linear Regression: MSE vs MAE Comparison</h1>
+    
+    <div class="explanation">
+        <p>This interactive demo helps you understand how linear regression works with different loss functions. Adjust the sliders to modify the regression line and observe how it affects both MSE (Mean Squared Error) and MAE (Mean Absolute Error) in real-time.</p>
+        <h3>Interactive Elements in This Demo</h3>
+        <ul>
+            <li>Adjust the slope and intercept sliders to see how your regression line changes</li>
+            <li>Generate random data with different sizes and noise levels</li>
+            <li>Add outliers to see how they affect each loss function differently</li>
+            <li>Try different example datasets to explore various data patterns</li>
+            <li>Click directly on the plot to add points; double-click to remove them</li>
+        </ul>
+    </div>
+    
+    <!-- Section 1: Main Interactive Plot with Controls -->
+    <div class="section">
+        <h2 class="section-title">Interactive Regression Model</h2>
+        
+        <div class="flex-container">
+            <div class="flex-item compact-control-item">
+                <div class="control-panel">
+                    <div class="panel-title">Line Parameters</div>
+                    
+                    <div class="slider-container">
+                        <label for="slope-slider">Slope (w₁):</label>
+                        <input type="range" id="slope-slider" min="-5" max="5" step="0.1" value="1">
+                        <span id="slope-value" class="value-display">1.0</span>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <label for="intercept-slider">Intercept (w₀):</label>
+                        <input type="range" id="intercept-slider" min="-5" max="5" step="0.1" value="0">
+                        <span id="intercept-value" class="value-display">0.0</span>
+                    </div>
+                    
+                    <div class="equation-display user-equation">
+                        Your Line: <span id="user-equation">ŷ = 0.0 + 1.0x</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-item compact-control-item">
+                <div class="control-panel">
+                    <div class="panel-title">Data Controls</div>
+                    
+                    <div class="slider-container">
+                        <label for="num-points-slider">Data Points:</label>
+                        <input type="range" id="num-points-slider" min="5" max="50" step="1" value="15">
+                        <span id="num-points-value" class="value-display">15</span>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <label for="noise-slider">Noise Level:</label>
+                        <input type="range" id="noise-slider" min="0" max="5" step="0.1" value="1">
+                        <span id="noise-value" class="value-display">1.0</span>
+                    </div>
+                    
+                    <div class="button-row">
+                        <button id="generate-data-btn">Generate Data</button>
+                        <button id="add-outlier-btn">Add Outlier</button>
+                        <button id="add-extreme-outlier-btn">Add Extreme Outlier</button>
+                        <button id="reset-all-btn">Reset All</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="plot-wrapper">
-            <div id="loss-plot"></div>
+        
+        <div class="dataset-container">
+            <span class="dataset-title">Example Datasets:</span>
+            <div class="example-dataset" id="example-linear">Linear Trend</div>
+            <div class="example-dataset" id="example-outliers">With Outliers</div>
+            <div class="example-dataset" id="example-clustered">Clustered Data</div>
+            
+            <div class="checkbox-container" style="display: inline-block; margin-left: 20px;">
+                <input type="checkbox" id="show-optimal-lines" checked>
+                <label for="show-optimal-lines">Show Optimal Lines</label>
+            </div>
+        </div>
+        
+        <div id="main-plot" class="main-plot-container"></div>
+        
+        <div class="compact-equation-group">
+            <div class="compact-equation">
+                <div class="equation-display mse-equation">
+                    <span class="mse-color">MSE Best Fit:</span> <span id="mse-equation">ŷ = 0.0 + 0.0x</span>
+                </div>
+                <div class="loss-display mse-value">
+                    <span>MSE Value:</span>
+                    <span id="mse-value" class="loss-value">0.00</span>
+                </div>
+            </div>
+            
+            <div class="compact-equation">
+                <div class="equation-display mae-equation">
+                    <span class="mae-color">MAE Best Fit:</span> <span id="mae-equation">ŷ = 0.0 + 0.0x</span>
+                </div>
+                <div class="loss-display mae-value">
+                    <span>MAE Value:</span>
+                    <span id="mae-value" class="loss-value">0.00</span>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="controls" style="margin-bottom: 2rem;">
-        <label for="loss-function">Loss Function:</label>
-        <select id="loss-function">
-            <option value="mse" selected>Mean Squared Error (MSE)</option>
-            <option value="rmse">Root Mean Squared Error (RMSE)</option>
-            <option value="mae">Mean Absolute Error (MAE)</option>
-        </select>
-        <br>
-        <label for="slope">Slope (m):</label>
-        <input type="range" id="slope" min="-5" max="5" step="0.1" value="1">
-        <span id="slope-value" class="value-display">1.0</span>
-        <br>
-        <label for="intercept">Intercept (b):</label>
-        <input type="range" id="intercept" min="-5" max="5" step="0.1" value="0">
-        <span id="intercept-value" class="value-display">0.0</span>
-    </div>
-
-    <!-- Gradient Descent Simulation -->
-    <h2>Gradient Descent Simulation</h2>
-    <div class="plot-container">
-        <div class="plot-wrapper">
-            <div id="simulation-plot"></div>
-        </div>
-        <div class="plot-wrapper">
-            <div id="simulation-loss-plot"></div>
+    
+    <!-- Section 2: Loss Function Comparison -->
+    <div class="section">
+        <h2 class="section-title">Loss Functions Comparison</h2>
+        
+        <div class="flex-container">
+            <div class="flex-item">
+                <div id="mse-loss-plot" class="half-plot-container"></div>
+                <div class="parameter-container mse-container">
+                    <strong class="mse-color">MSE Loss:</strong> Quadratic, smooth curve that heavily penalizes large errors
+                </div>
+            </div>
+            
+            <div class="flex-item">
+                <div id="mae-loss-plot" class="half-plot-container"></div>
+                <div class="parameter-container mae-container">
+                    <strong class="mae-color">MAE Loss:</strong> V-shaped, linear penalty that treats all error sizes equally
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="controls">
-        <label for="learning-rate">Learning Rate:</label>
-        <input type="range" id="learning-rate" min="-5" max="0" step="0.1" value="-2">
-        <span id="learning-rate-value" class="value-display">0.01</span>
-        <br>
-        <button id="start-simulation">Start Simulation</button>
-        <button id="stop-simulation">Stop Simulation</button>
-        <button id="reset-simulation">Reset Simulation</button>
-        <span id="iteration-display" style="margin-left: 20px;"></span>
-        <span id="loss-display" style="margin-left: 20px;"></span>
+    
+    <!-- Section 3: Geometric Interpretation -->
+    <div class="section">
+        <h2 class="section-title">Geometric Interpretation of Residuals</h2>
+        
+        <div class="flex-container">
+            <div class="flex-item">
+                <div id="mse-residuals-plot" class="plot-container"></div>
+            </div>
+            
+            <div class="flex-item">
+                <div id="mae-residuals-plot" class="plot-container"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Section 4: Parameter Space -->
+    <div class="section">
+        <h2 class="section-title">Parameter Space Comparison</h2>
+        
+        <div class="flex-container">
+            <div class="flex-item">
+                <div id="mse-parameter-plot" class="plot-container"></div>
+            </div>
+            
+            <div class="flex-item">
+                <div id="mae-parameter-plot" class="plot-container"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Summary Section -->
+    <div class="summary-section">
+        <h2>Connection to Parameter Space</h2>
+        <p>As seen in Demo 1, every point in parameter space (w₀, w₁) corresponds to a line in feature space. The optimal parameters are found at the lowest point of the loss surface.</p>
+        
+        <p>Each point on the parameter space surfaces represents a possible model with specific slope and intercept values. The height of the surface shows the loss value for that model. The MSE surface is smooth and bowl-shaped with a unique minimum, while the MAE surface has sharper edges and can have multiple optimal solutions along a line.</p>
+        
+        <h2>Summary and Explanations</h2>
+        
+        <h3>Linear Regression Model</h3>
+        <p>Linear regression finds a linear relationship between variables: \( \hat{y} = w_0 + w_1 x \), where \(w_0\) is the intercept and \(w_1\) is the slope.</p>
+        
+        <h3>Loss Functions</h3>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h4 class="mse-color">Mean Squared Error (MSE)</h4>
+                <div class="math-formula">
+                    \[ \text{MSE} = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \]
+                </div>
+                <p>MSE squares the errors, giving more weight to large errors. It produces a smooth, bowl-shaped loss surface with a unique global minimum.</p>
+                <p>The analytical solution for minimizing MSE is:</p>
+                <div class="math-formula">
+                    \[ w_1 = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2} = \frac{Cov(x, y)}{Var(x)} \]
+                    \[ w_0 = \bar{y} - w_1\bar{x} \]
+                </div>
+            </div>
+            
+            <div class="flex-item">
+                <h4 class="mae-color">Mean Absolute Error (MAE)</h4>
+                <div class="math-formula">
+                    \[ \text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i| \]
+                </div>
+                <p>MAE uses the absolute value of errors, treating all error magnitudes more uniformly. It produces a more angular loss surface and is more robust to outliers.</p>
+                <p>The solution for minimizing MAE often involves:</p>
+                <div class="math-formula">
+                    \[ w_1 = \text{median of pairwise slopes} \]
+                    \[ w_0 = \text{median of } (y_i - w_1 x_i) \]
+                </div>
+            </div>
+        </div>
+        
+        <h3>Visual Interpretations</h3>
+        <ul>
+            <li><strong>Residuals Plot:</strong> Shows how each loss function measures error. MSE creates areas (squares) while MAE uses lengths (line segments).</li>
+            <li><strong>Loss Curves:</strong> Demonstrate how the loss changes as you adjust the slope parameter. Notice the smooth parabola for MSE versus the V-shape for MAE.</li>
+            <li><strong>Parameter Space:</strong> 3D visualizations of the loss surface over all possible combinations of slope and intercept. MSE creates a smooth bowl, while MAE creates a more angular surface.</li>
+        </ul>
+        
+        <h3>Key Differences</h3>
+        <table border="1" style="border-collapse: collapse; width: 100%; margin: 20px 0;">
+            <tr style="background-color: #f5f5f5;">
+                <th style="padding: 10px; text-align: left;">Aspect</th>
+                <th style="padding: 10px; text-align: left; color: #4b9fdb;">MSE</th>
+                <th style="padding: 10px; text-align: left; color: #4caf50;">MAE</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Sensitivity to Outliers</td>
+                <td style="padding: 10px;">High (squares errors)</td>
+                <td style="padding: 10px;">Low (linear penalty)</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Loss Surface</td>
+                <td style="padding: 10px;">Smooth, differentiable everywhere</td>
+                <td style="padding: 10px;">Angular, not differentiable at zero error</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Computational Complexity</td>
+                <td style="padding: 10px;">Simple closed-form solution</td>
+                <td style="padding: 10px;">Requires median calculations</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Optimal Solution</td>
+                <td style="padding: 10px;">Mean-centered</td>
+                <td style="padding: 10px;">Median-centered</td>
+            </tr>
+        </table>
+        
     </div>
 
     <script>
-        // Wait for Plotly to be fully loaded
-        window.addEventListener('load', function() {
-            // Common data for manual control
-            const xData = Array.from({ length: 30 }, (_, i) => i - 15);
-            const yDataTrue = xData.map(x => 2 * x + 1 + (Math.random() * 4 - 2));
-
-            // Simulation data (more points)
-            const xSimData = Array.from({ length: 100 }, () => Math.random() * 20 - 10);
-            const trueSlope = 2;
-            const trueIntercept = -1;
-            const ySimData = xSimData.map(x => trueSlope * x + trueIntercept + (Math.random() * 3 - 1.5));
-
-            // Initial parameters
-            let slope = 1;
-            let intercept = 0;
-            let currentCamera = null;
-            let lossFunction = "mse";
-            let isSimulationRunning = false;
-
-            // Loss functions
-            const lossFunctions = {
-                mse: (yTrue, yPred) => yTrue.reduce((sum, y, i) => sum + Math.pow(y - yPred[i], 2), 0) / yTrue.length,
-                rmse: (yTrue, yPred) => Math.sqrt(yTrue.reduce((sum, y, i) => sum + Math.pow(y - yPred[i], 2), 0) / yTrue.length),
-                mae: (yTrue, yPred) => yTrue.reduce((sum, y, i) => sum + Math.abs(y - yPred[i]), 0) / yTrue.length
-            };
-
-            // Gradient functions for MSE loss
-            function computeGradients(x, yTrue, slope, intercept) {
-                const m = x.length;
-                let dSlope = 0;
-                let dIntercept = 0;
+        // Main code here
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Global variables ---
+            let dataPoints = [];
+            let slope = 1.0;
+            let intercept = 0.0;
+            let numPoints = 15;
+            let noiseLevel = 1.0;
+            let showOptimalLines = true;
+            let mseCameraPosition = null;
+            let maeCameraPosition = null;
+            let isCalculating = false;
+            
+            // --- Utility functions ---
+            
+            // Generate random normally distributed number
+            function normalRandom() {
+                let u = 0, v = 0;
+                while (u === 0) u = Math.random();
+                while (v === 0) v = Math.random();
+                return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+            }
+            
+            // Calculate mean
+            function calculateMean(values) {
+                if (values.length === 0) return 0;
+                return values.reduce((sum, val) => sum + val, 0) / values.length;
+            }
+            
+            // Calculate variance
+            function calculateVariance(values, mean) {
+                if (values.length === 0) return 0;
+                return values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
+            }
+            
+            // Calculate standard deviation
+            function calculateStandardDeviation(values) {
+                if (values.length === 0) return 0;
+                const mean = calculateMean(values);
+                return Math.sqrt(calculateVariance(values, mean));
+            }
+            
+            // Calculate covariance
+            function calculateCovariance(xValues, yValues, xMean, yMean) {
+                if (xValues.length === 0) return 0;
+                let cov = 0;
+                for (let i = 0; i < xValues.length; i++) {
+                    cov += (xValues[i] - xMean) * (yValues[i] - yMean);
+                }
+                return cov / xValues.length;
+            }
+            
+            // Calculate median
+            function calculateMedian(values) {
+                if (values.length === 0) return 0;
                 
-                for(let i = 0; i < m; i++) {
-                    const pred = slope * x[i] + intercept;
-                    const error = pred - yTrue[i];
-                    dSlope += error * x[i];
-                    dIntercept += error;
+                const sortedValues = [...values].sort((a, b) => a - b);
+                const mid = Math.floor(sortedValues.length / 2);
+                
+                if (sortedValues.length % 2 === 0) {
+                    return (sortedValues[mid - 1] + sortedValues[mid]) / 2;
+                } else {
+                    return sortedValues[mid];
+                }
+            }
+            
+            // --- Loss functions ---
+            
+            // MSE
+            function calculateMSE(yTrue, yPred) {
+                if (yTrue.length === 0) return 0;
+                let sum = 0;
+                for (let i = 0; i < yTrue.length; i++) {
+                    sum += Math.pow(yTrue[i] - yPred[i], 2);
+                }
+                return sum / yTrue.length;
+            }
+            
+            // MAE
+            function calculateMAE(yTrue, yPred) {
+                if (yTrue.length === 0) return 0;
+                let sum = 0;
+                for (let i = 0; i < yTrue.length; i++) {
+                    sum += Math.abs(yTrue[i] - yPred[i]);
+                }
+                return sum / yTrue.length;
+            }
+            
+            // --- Analytical solution functions ---
+            
+            // Calculate MSE parameters analytically
+            function calculateMSEParameters(data) {
+                if (data.length < 2) return { slope: 0, intercept: 0 };
+                
+                const xValues = data.map(point => point.x);
+                const yValues = data.map(point => point.y);
+                
+                const xMean = calculateMean(xValues);
+                const yMean = calculateMean(yValues);
+                
+                const covariance = calculateCovariance(xValues, yValues, xMean, yMean);
+                const variance = calculateVariance(xValues, xMean);
+                
+                // Avoid division by zero
+                if (Math.abs(variance) < 1e-10) return { slope: 0, intercept: yMean };
+                
+                const slope = covariance / variance;
+                const intercept = yMean - slope * xMean;
+                
+                return { slope, intercept };
+            }
+            
+            // Calculate MAE parameters (using median-based approach)
+            function calculateMAEParameters(data) {
+                if (data.length < 2) return { slope: 0, intercept: 0 };
+                
+                // 1. Calculate all pairwise slopes
+                const pairwiseSlopes = [];
+                for (let i = 0; i < data.length; i++) {
+                    for (let j = i + 1; j < data.length; j++) {
+                        const dx = data[j].x - data[i].x;
+                        if (Math.abs(dx) > 1e-10) {  // Avoid division by near-zero
+                            const slope = (data[j].y - data[i].y) / dx;
+                            pairwiseSlopes.push(slope);
+                        }
+                    }
                 }
                 
-                return {
-                    dSlope: (2/m) * dSlope,
-                    dIntercept: (2/m) * dIntercept
-                };
+                if (pairwiseSlopes.length === 0) return { slope: 0, intercept: calculateMedian(data.map(p => p.y)) };
+                
+                // 2. Get the median slope
+                pairwiseSlopes.sort((a, b) => a - b);
+                const slope = pairwiseSlopes[Math.floor(pairwiseSlopes.length / 2)];
+                
+                // 3. Calculate residuals with this slope
+                const residuals = data.map(point => point.y - slope * point.x);
+                
+                // 4. Set intercept as the median of residuals
+                const intercept = calculateMedian(residuals);
+                
+                return { slope, intercept };
             }
-
-            // Manual control plots
-            function updateRegressionPlot() {
-                const yPred = xData.map(x => slope * x + intercept);
-
-                const data = [
-                    {
-                        x: xData,
-                        y: yDataTrue,
-                        mode: "markers",
-                        type: "scatter",
-                        name: "Data Points",
-                        marker: { color: '#1f77b4', size: 8, opacity: 0.7 }
-                    },
-                    {
-                        x: xData,
-                        y: yPred,
-                        mode: "lines",
-                        type: "scatter",
-                        name: "Regression Line",
-                        line: { color: "red", width: 2 }
-                    }
-                ];
-
-                const layout = {
-                    title: "Linear Regression",
-                    xaxis: { title: "X" },
-                    yaxis: { title: "Y" },
-                    hovermode: 'closest'
-                };
-
-                Plotly.react("regression-plot", data, layout);
+            
+            // --- Data generation functions ---
+            
+            // Generate random data with trend
+            function generateTrendData(n, slope, intercept, noise) {
+                const points = [];
+                for (let i = 0; i < n; i++) {
+                    const x = Math.random() * 14 - 7; // Range: -7 to 7
+                    const trueY = slope * x + intercept;
+                    const noiseAmount = normalRandom() * noise;
+                    points.push({x: x, y: trueY + noiseAmount});
+                }
+                return points;
             }
-
-            function updateLossPlot() {
-                const yPred = xData.map(x => slope * x + intercept);
-                const currentLoss = lossFunctions[lossFunction](yDataTrue, yPred);
-
-                const slopeRange = Array.from({ length: 40 }, (_, i) => -5 + i * 0.25);
-                const interceptRange = Array.from({ length: 40 }, (_, i) => -5 + i * 0.25);
-
-                const zValues = interceptRange.map(b => 
-                    slopeRange.map(m => 
-                        lossFunctions[lossFunction](
-                            yDataTrue,
-                            xData.map(x => m * x + b)
-                        )
-                    )
-                );
-
-                const data = [
-                    {
-                        x: slopeRange,
-                        y: interceptRange,
-                        z: zValues,
-                        type: "surface",
-                        colorscale: "Viridis",
-                        showscale: true
-                    },
-                    {
-                        x: [slope],
-                        y: [intercept],
-                        z: [currentLoss],
-                        mode: "markers",
-                        type: 'scatter3d',
-                        marker: { size: 8, color: "red" },
-                        name: "Current Parameters"
+            
+            // Generate data with outliers
+            function generateOutliersData(n, slope, intercept, noise) {
+                const points = [];
+                for (let i = 0; i < n; i++) {
+                    const x = Math.random() * 14 - 7; // Range: -7 to 7
+                    const trueY = slope * x + intercept;
+                    
+                    // Add occasional outliers
+                    let noiseAmount;
+                    if (Math.random() < 0.2) {  // 20% chance of outlier
+                        noiseAmount = (Math.random() > 0.5 ? 1 : -1) * (noise * 2 + Math.random() * noise * 2);
+                    } else {
+                        noiseAmount = normalRandom() * noise * 0.5;
                     }
-                ];
-
+                    
+                    points.push({x: x, y: trueY + noiseAmount});
+                }
+                return points;
+            }
+            
+            // Generate clustered data
+            function generateClusteredData(n, noise) {
+                const points = [];
+                
+                // Cluster 1: Lower left
+                const numInCluster1 = Math.floor(n * 0.4);
+                for (let i = 0; i < numInCluster1; i++) {
+                    const x = -5 + Math.random() * 3;
+                    const y = -3 + Math.random() * 3 + normalRandom() * noise;
+                    points.push({x, y});
+                }
+                
+                // Cluster 2: Upper right
+                const numInCluster2 = Math.floor(n * 0.4);
+                for (let i = 0; i < numInCluster2; i++) {
+                    const x = 2 + Math.random() * 3;
+                    const y = 2 + Math.random() * 3 + normalRandom() * noise;
+                    points.push({x, y});
+                }
+                
+                // Remaining points scattered
+                const remaining = n - numInCluster1 - numInCluster2;
+                for (let i = 0; i < remaining; i++) {
+                    const x = Math.random() * 14 - 7;
+                    const y = Math.random() * 10 - 5 + normalRandom() * noise;
+                    points.push({x, y});
+                }
+                
+                return points;
+            }
+            
+            // Add outlier to current data
+            function addOutlier() {
+                if (dataPoints.length === 0) return;
+                
+                // Calculate the current trend
+                const { slope, intercept } = calculateMSEParameters(dataPoints);
+                
+                // Add a point that's significantly off the trend line
+                const x = Math.random() * 14 - 7;
+                const trendY = slope * x + intercept;
+                const offset = (3 + Math.random() * 2) * noiseLevel * (Math.random() > 0.5 ? 1 : -1); 
+                dataPoints.push({x: x, y: trendY + offset});
+                
+                updateAllPlots();
+            }
+            
+            // Add extreme outlier
+            function addExtremeOutlier() {
+                if (dataPoints.length < 2) return;
+                
+                // Calculate the current trend and standard deviation
+                const { slope, intercept } = calculateMSEParameters(dataPoints);
+                
+                // Calculate residuals and their standard deviation
+                const residuals = dataPoints.map(p => p.y - (slope * p.x + intercept));
+                const stdDev = calculateStandardDeviation(residuals);
+                
+                // Add an extreme outlier (3-5 standard deviations away)
+                const x = Math.random() * 14 - 7;
+                const trendY = slope * x + intercept;
+                const extremeFactor = 3 + Math.random() * 2; // 3-5 SD
+                const direction = Math.random() > 0.5 ? 1 : -1;
+                const offset = extremeFactor * stdDev * direction;
+                
+                dataPoints.push({x: x, y: trendY + offset});
+                
+                updateAllPlots();
+            }
+            
+            // Generate random data
+            function generateRandomData() {
+                dataPoints = generateTrendData(numPoints, 2, -1, noiseLevel);
+                updateAllPlots();
+            }
+            
+            // Reset everything
+            function resetEverything() {
+                // Reset sliders and values
+                slope = 1.0;
+                intercept = 0.0;
+                numPoints = 15;
+                noiseLevel = 1.0;
+                
+                // Update UI controls
+                document.getElementById('slope-slider').value = slope;
+                document.getElementById('slope-value').textContent = slope.toFixed(1);
+                
+                document.getElementById('intercept-slider').value = intercept;
+                document.getElementById('intercept-value').textContent = intercept.toFixed(1);
+                
+                document.getElementById('num-points-slider').value = numPoints;
+                document.getElementById('num-points-value').textContent = numPoints;
+                
+                document.getElementById('noise-slider').value = noiseLevel;
+                document.getElementById('noise-value').textContent = noiseLevel.toFixed(1);
+                
+                // Generate new data
+                generateRandomData();
+                
+                // Update all visualizations
+                updateUserEquation();
+                updateAllPlots();
+            }
+            
+            // --- Plot update functions ---
+            
+            // Update all plots
+            function updateAllPlots() {
+                updateMainPlot();
+                updateLossPlots();
+                updateResidualsPlots();
+                updateParameterPlots();
+                updateLossValues();
+                updateBestFitEquations();
+            }
+            
+            // Update main plot
+            function updateMainPlot() {
+                if (isCalculating) return;
+                
+                const traces = [];
+                
+                // Data points trace
+                traces.push({
+                    x: dataPoints.map(p => p.x),
+                    y: dataPoints.map(p => p.y),
+                    mode: 'markers',
+                    type: 'scatter',
+                    name: 'Data Points',
+                    marker: { color: '#1f77b4', size: 10, opacity: 0.8 }
+                });
+                
+                if (showOptimalLines && dataPoints.length >= 2) {
+                    // Add MSE best fit line (first, so it's behind user line)
+                    const mseParams = calculateMSEParameters(dataPoints);
+                    const xRange = [-10, 10];
+                    traces.push({
+                        x: xRange,
+                        y: xRange.map(x => mseParams.slope * x + mseParams.intercept),
+                        mode: 'lines',
+                        type: 'scatter',
+                        name: 'MSE Best Fit',
+                        line: { color: '#4b9fdb', width: 2, dash: 'dash' }
+                    });
+                    
+                    // Add MAE best fit line
+                    const maeParams = calculateMAEParameters(dataPoints);
+                    traces.push({
+                        x: xRange,
+                        y: xRange.map(x => maeParams.slope * x + maeParams.intercept),
+                        mode: 'lines',
+                        type: 'scatter',
+                        name: 'MAE Best Fit',
+                        line: { color: '#4caf50', width: 2, dash: 'dash' }
+                    });
+                }
+                
+                // User-defined regression line (last, so it's on top)
+                const xRange = [-10, 10];
+                traces.push({
+                    x: xRange,
+                    y: xRange.map(x => slope * x + intercept),
+                    mode: 'lines',
+                    type: 'scatter',
+                    name: 'Your Line',
+                    line: { color: '#e91e63', width: 3.5 }
+                });
+                
                 const layout = {
-                    title: `Loss Surface (${lossFunction.toUpperCase()})`,
-                    scene: {
-                        xaxis: { title: "Slope (m)" },
-                        yaxis: { title: "Intercept (b)" },
-                        zaxis: { title: "Loss" },
-                        camera: currentCamera || {
-                            eye: { x: 1.5, y: 1.5, z: 1.5 }
+                    title: 'Regression Model',
+                    xaxis: { 
+                        title: 'X',
+                        range: [-10, 10],
+                        zeroline: true,
+                        zerolinecolor: '#aaa',
+                        gridcolor: '#eee'
+                    },
+                    yaxis: { 
+                        title: 'Y',
+                        range: [-10, 10],
+                        zeroline: true,
+                        zerolinecolor: '#aaa',
+                        gridcolor: '#eee'
+                    },
+                    hovermode: 'closest',
+                    legend: { orientation: 'h', y: -0.1 }
+                };
+                
+                Plotly.newPlot('main-plot', traces, layout, { responsive: true });
+                
+                // Add click event for adding points
+                document.getElementById('main-plot').on('plotly_click', function(data) {
+                    if (data.points && data.points.length > 0) {
+                        const point = data.points[0];
+                        // Only add point if we clicked on the background (not an existing point)
+                        if (point.curveNumber !== 0) {
+                            dataPoints.push({x: point.x, y: point.y});
+                            updateAllPlots();
                         }
-                    },
-                    margin: { l: 0, r: 0, b: 0, t: 30 }
-                };
-
-                Plotly.react("loss-plot", data, layout);
-
-                const plot = document.getElementById("loss-plot");
-                plot.on('plotly_relayout', function(eventData) {
-                    if (eventData['scene.camera']) {
-                        currentCamera = eventData['scene.camera'];
+                    }
+                });
+                
+                // Add double-click event for removing points
+                document.getElementById('main-plot').on('plotly_doubleclick', function(data) {
+                    if (data.points && data.points.length > 0 && data.points[0].curveNumber === 0) {
+                        const pointIndex = data.points[0].pointNumber;
+                        dataPoints.splice(pointIndex, 1);
+                        updateAllPlots();
                     }
                 });
             }
-
-            // Simulation plots
-            let simSlope = -5.0;  // Start with a high slope
-            let simIntercept = 3.5; // Start with a high intercept
-            let learningRate = 0.02;
-            let iteration = 0;
             
-            function updateSimulationPlot() {
-                const yPred = xSimData.map(x => simSlope * x + simIntercept);
-
-                const data = [
-                    {
-                        x: xSimData,
-                        y: ySimData,
-                        mode: "markers",
-                        type: "scatter",
-                        name: "Training Data",
-                        marker: { color: '#1f77b4', size: 6, opacity: 0.5 }
-                    },
-                    {
-                        x: [Math.min(...xSimData), Math.max(...xSimData)],
-                        y: [
-                            simSlope * Math.min(...xSimData) + simIntercept,
-                            simSlope * Math.max(...xSimData) + simIntercept
-                        ],
-                        mode: "lines",
-                        type: "scatter",
-                        name: "Current Model",
-                        line: { color: "red", width: 2 }
-                    }
-                ];
-
-                const layout = {
-                    title: "Gradient Descent Progress",
-                    xaxis: { title: "X" },
-                    yaxis: { title: "Y" }
-                };
-
-                Plotly.react("simulation-plot", data, layout);
-            }
-
-            function updateSimulationLossPlot() {
-                const yPred = xSimData.map(x => simSlope * x + simIntercept);
-                const currentLoss = lossFunctions.mse(ySimData, yPred);
-
-                // Create a denser grid for smoother visualization
-                const slopeRange = Array.from({ length: 50 }, (_, i) => -5 + i * 0.2);
-                const interceptRange = Array.from({ length: 50 }, (_, i) => -5 + i * 0.2);
-
-                const zValues = interceptRange.map(b => 
-                    slopeRange.map(m => {
-                        const loss = lossFunctions.mse(
-                            ySimData,
-                            xSimData.map(x => m * x + b)
-                        );
-                        // Apply log scaling to better visualize the parabolic nature
-                        return Math.log(loss + 1);
-                    })
-                );
-
-                const data = [
-                    {
-                        x: slopeRange,
-                        y: interceptRange,
-                        z: zValues,
-                        type: "surface",
-                        colorscale: "Viridis",
-                        showscale: true,
-                        name: "Log-scaled Loss Surface"
-                    },
-                    {
-                        x: [simSlope],
-                        y: [simIntercept],
-                        z: [Math.log(lossFunctions.mse(ySimData, xSimData.map(x => simSlope * x + simIntercept)) + 1)],
-                        mode: "markers",
-                        type: 'scatter3d',
-                        marker: { size: 8, color: "red" },
-                        name: "Current Parameters"
-                    }
-                ];
-
-                const layout = {
-                    title: "Loss Surface During Training",
-                    scene: {
-                        xaxis: { title: "Slope (m)" },
-                        yaxis: { title: "Intercept (b)" },
-                        zaxis: { title: "MSE Loss" }
-                    },
-                    margin: { l: 0, r: 0, b: 0, t: 30 }
-                };
-
-                Plotly.react("simulation-loss-plot", data, layout);
-            }
-
-            function resetSimulation() {
-                simSlope = -5.0;
-                simIntercept = 3.5;
-                iteration = 0;
-                document.getElementById('iteration-display').textContent = `Iteration: ${iteration}`;
-                document.getElementById('loss-display').textContent = '';
-                updateSimulationPlot();
-                updateSimulationLossPlot();
-                document.getElementById('start-simulation').disabled = false;
-                document.getElementById('reset-simulation').disabled = false;
-            }
-
-            async function runSimulation() {
-                if (isSimulationRunning) return;
+            // Update loss plots (MSE and MAE curves)
+            function updateLossPlots() {
+                if (dataPoints.length < 2 || isCalculating) return;
                 
-                isSimulationRunning = true;
-                document.getElementById('start-simulation').disabled = true;
-                document.getElementById('reset-simulation').disabled = true;
+                const xValues = dataPoints.map(p => p.x);
+                const yValues = dataPoints.map(p => p.y);
                 
-                simSlope = 0;
-                simIntercept = 0;
-                iteration = 0;
+                // Calculate optimal parameters
+                const mseParams = calculateMSEParameters(dataPoints);
+                const maeParams = calculateMAEParameters(dataPoints);
                 
-                while (iteration < 500 && isSimulationRunning) {
-                    const gradients = computeGradients(xSimData, ySimData, simSlope, simIntercept);
-                    
-                    simSlope -= learningRate * gradients.dSlope;
-                    simIntercept -= learningRate * gradients.dIntercept;
-                    
-                    updateSimulationPlot();
-                    updateSimulationLossPlot();
-                    const currentLoss = lossFunctions.mse(ySimData, xSimData.map(x => simSlope * x + simIntercept));
-                    document.getElementById('iteration-display').textContent = `Iteration: ${iteration}`;
-                    document.getElementById('loss-display').textContent = `Loss: ${currentLoss.toFixed(4)}`;
-                    
-                    iteration++;
-                    await new Promise(resolve => setTimeout(resolve, 100));
+                // Calculate current loss
+                const currentPredictions = xValues.map(x => slope * x + intercept);
+                const currentMSE = calculateMSE(yValues, currentPredictions);
+                const currentMAE = calculateMAE(yValues, currentPredictions);
+                
+                // Create slope range for loss curves (50 points)
+                const slopeValues = Array.from({ length: 101 }, (_, i) => -5 + i * 0.1);
+                
+                // Calculate MSE and MAE for each slope (with current intercept)
+                const mseValues = [];
+                const maeValues = [];
+                
+                for (const s of slopeValues) {
+                    const predictions = xValues.map(x => s * x + intercept);
+                    mseValues.push(calculateMSE(yValues, predictions));
+                    maeValues.push(calculateMAE(yValues, predictions));
                 }
                 
-                isSimulationRunning = false;
-                document.getElementById('start-simulation').disabled = false;
+                // Create traces for MSE loss plot
+                const mseTraces = [
+                    {
+                        x: slopeValues,
+                        y: mseValues,
+                        mode: 'lines',
+                        type: 'scatter',
+                        name: 'MSE Loss',
+                        line: { color: '#4b9fdb', width: 2 }
+                    },
+                    {
+                        x: [slope],
+                        y: [currentMSE],
+                        mode: 'markers',
+                        type: 'scatter',
+                        name: 'Current Slope',
+                        marker: { color: '#e91e63', size: 10 }
+                    },
+                    {
+                        x: [mseParams.slope],
+                        y: [calculateMSE(yValues, xValues.map(x => mseParams.slope * x + mseParams.intercept))],
+                        mode: 'markers',
+                        type: 'scatter',
+                        name: 'Optimal Slope (MSE)',
+                        marker: { color: '#4b9fdb', size: 10, symbol: 'diamond' }
+                    }
+                ];
+                
+                // Create traces for MAE loss plot
+                const maeTraces = [
+                    {
+                        x: slopeValues,
+                        y: maeValues,
+                        mode: 'lines',
+                        type: 'scatter',
+                        name: 'MAE Loss',
+                        line: { color: '#4caf50', width: 2 }
+                    },
+                    {
+                        x: [slope],
+                        y: [currentMAE],
+                        mode: 'markers',
+                        type: 'scatter',
+                        name: 'Current Slope',
+                        marker: { color: '#e91e63', size: 10 }
+                    },
+                    {
+                        x: [maeParams.slope],
+                        y: [calculateMAE(yValues, xValues.map(x => maeParams.slope * x + maeParams.intercept))],
+                        mode: 'markers',
+                        type: 'scatter',
+                        name: 'Optimal Slope (MAE)',
+                        marker: { color: '#4caf50', size: 10, symbol: 'diamond' }
+                    }
+                ];
+                
+                // Define layouts
+                const mseLayout = {
+                    title: '<span class="mse-color">MSE Loss Curve</span>',
+                    xaxis: { 
+                        title: 'Slope (w₁)',
+                        range: [-5, 5],
+                        zeroline: true,
+                        zerolinecolor: '#aaa'
+                    },
+                    yaxis: { 
+                        title: 'MSE Loss',
+                        zeroline: true,
+                        zerolinecolor: '#aaa'
+                    },
+                    hovermode: 'closest',
+                    showlegend: false,
+                    margin: { t: 30, b: 40, l: 60, r: 10 }
+                };
+                
+                const maeLayout = {
+                    title: '<span class="mae-color">MAE Loss Curve</span>',
+                    xaxis: { 
+                        title: 'Slope (w₁)',
+                        range: [-5, 5],
+                        zeroline: true,
+                        zerolinecolor: '#aaa'
+                    },
+                    yaxis: { 
+                        title: 'MAE Loss',
+                        zeroline: true,
+                        zerolinecolor: '#aaa'
+                    },
+                    hovermode: 'closest',
+                    showlegend: false,
+                    margin: { t: 30, b: 40, l: 60, r: 10 }
+                };
+                
+                // Plot the loss curves
+                Plotly.newPlot('mse-loss-plot', mseTraces, mseLayout, { responsive: true });
+                Plotly.newPlot('mae-loss-plot', maeTraces, maeLayout, { responsive: true });
             }
-
-            // Event listeners
-            document.getElementById("slope").addEventListener("input", function(event) {
-                slope = parseFloat(event.target.value);
-                document.getElementById("slope-value").textContent = slope.toFixed(1);
-                updateRegressionPlot();
-                updateLossPlot();
+            
+            // Update residuals plots
+            function updateResidualsPlots() {
+                if (dataPoints.length < 2 || isCalculating) return;
+                
+                // MSE Residuals Plot
+                const mseTraces = createResidualsPlot(true);
+                const mseLayout = {
+                    title: '<span class="mse-color">Squared Residuals (MSE)</span>',
+                    xaxis: { 
+                        title: 'X',
+                        range: [-10, 10],
+                        zeroline: true,
+                        zerolinecolor: '#aaa',
+                        gridcolor: '#eee'
+                    },
+                    yaxis: { 
+                        title: 'Y',
+                        range: [-10, 10],
+                        zeroline: true,
+                        zerolinecolor: '#aaa',
+                        gridcolor: '#eee'
+                    },
+                    hovermode: 'closest',
+                    showlegend: false,
+                    margin: { t: 30, b: 40, l: 60, r: 10 }
+                };
+                
+                // MAE Residuals Plot
+                const maeTraces = createResidualsPlot(false);
+                const maeLayout = {
+                    title: '<span class="mae-color">Absolute Residuals (MAE)</span>',
+                    xaxis: { 
+                        title: 'X',
+                        range: [-10, 10],
+                        zeroline: true,
+                        zerolinecolor: '#aaa',
+                        gridcolor: '#eee'
+                    },
+                    yaxis: { 
+                        title: 'Y',
+                        range: [-10, 10],
+                        zeroline: true,
+                        zerolinecolor: '#aaa',
+                        gridcolor: '#eee'
+                    },
+                    hovermode: 'closest',
+                    showlegend: false,
+                    margin: { t: 30, b: 40, l: 60, r: 10 }
+                };
+                
+                Plotly.newPlot('mse-residuals-plot', mseTraces, mseLayout, { responsive: true });
+                Plotly.newPlot('mae-residuals-plot', maeTraces, maeLayout, { responsive: true });
+            }
+            
+            // Helper function to create residuals visualization
+            function createResidualsPlot(isSquared) {
+                const traces = [];
+                
+                // Data points trace
+                traces.push({
+                    x: dataPoints.map(p => p.x),
+                    y: dataPoints.map(p => p.y),
+                    mode: 'markers',
+                    type: 'scatter',
+                    name: 'Data Points',
+                    marker: { color: '#1f77b4', size: 10, opacity: 0.8 }
+                });
+                
+                // Current regression line
+                const xRange = [-10, 10];
+                traces.push({
+                    x: xRange,
+                    y: xRange.map(x => slope * x + intercept),
+                    mode: 'lines',
+                    type: 'scatter',
+                    name: 'Your Line',
+                    line: { color: '#e91e63', width: 3 }
+                });
+                
+                // Add residual visualization
+                for (const point of dataPoints) {
+                    const predicted = slope * point.x + intercept;
+                    const residual = point.y - predicted;
+                    
+                    // Residual line
+                    traces.push({
+                        x: [point.x, point.x],
+                        y: [point.y, predicted],
+                        mode: 'lines',
+                        type: 'scatter',
+                        name: 'Residual',
+                        line: { 
+                            color: isSquared ? 'rgba(75, 159, 219, 0.6)' : 'rgba(76, 175, 80, 0.6)', 
+                            width: 2 
+                        },
+                        showlegend: false
+                    });
+                    
+                    if (isSquared) {
+                        // Create squares to represent squared error
+                        const squareSize = Math.abs(residual);
+                        const squareX = [point.x, point.x + squareSize, point.x + squareSize, point.x, point.x];
+                        const direction = residual >= 0 ? 1 : -1;
+                        const squareY = [
+                            predicted,
+                            predicted,
+                            predicted + squareSize * direction,
+                            predicted + squareSize * direction,
+                            predicted
+                        ];
+                        
+                        traces.push({
+                            x: squareX,
+                            y: squareY,
+                            mode: 'lines',
+                            fill: 'toself',
+                            type: 'scatter',
+                            name: 'Squared Error',
+                            fillcolor: 'rgba(75, 159, 219, 0.2)',
+                            line: { color: 'rgba(75, 159, 219, 0.5)' },
+                            showlegend: false
+                        });
+                    } else {
+                        // For MAE, highlight the residual line with a different color
+                        traces.push({
+                            x: [point.x - 0.2, point.x + 0.2],
+                            y: [predicted, predicted],
+                            mode: 'lines',
+                            type: 'scatter',
+                            line: { color: 'rgba(76, 175, 80, 0.8)', width: 4 },
+                            showlegend: false
+                        });
+                        
+                        traces.push({
+                            x: [point.x - 0.2, point.x + 0.2],
+                            y: [point.y, point.y],
+                            mode: 'lines',
+                            type: 'scatter',
+                            line: { color: 'rgba(76, 175, 80, 0.8)', width: 4 },
+                            showlegend: false
+                        });
+                        
+                        // Add |e| text near the residual line
+                        traces.push({
+                            x: [point.x + 0.3],
+                            y: [(point.y + predicted) / 2],
+                            mode: 'text',
+                            type: 'scatter',
+                            text: [`|e|=${Math.abs(residual).toFixed(1)}`],
+                            textfont: {
+                                color: 'rgba(76, 175, 80, 1)',
+                                size: 10
+                            },
+                            showlegend: false
+                        });
+                    }
+                }
+                
+                return traces;
+            }
+            
+            // Update parameter plots (MSE and MAE surfaces)
+            function updateParameterPlots() {
+                if (dataPoints.length < 2 || isCalculating) return;
+                
+                // Set the isCalculating flag to avoid re-entrant calls
+                isCalculating = true;
+                
+                // Show loading indicators
+                // document.getElementById('mse-parameter-plot').innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100%;"><div class="loading-spinner"></div> Computing MSE surface...</div>';
+                // document.getElementById('mae-parameter-plot').innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100%;"><div class="loading-spinner"></div> Computing MAE surface...</div>';
+                
+                // Use setTimeout to prevent blocking the UI
+                setTimeout(() => {
+                    try {
+                        const xValues = dataPoints.map(p => p.x);
+                        const yValues = dataPoints.map(p => p.y);
+                        
+                        // Calculate optimal parameters
+                        const mseParams = calculateMSEParameters(dataPoints);
+                        const maeParams = calculateMAEParameters(dataPoints);
+                        
+                        // Create grid for parameter space
+                        const slopeRange = Array.from({ length: 25 }, (_, i) => -3 + i * 0.25);
+                        const interceptRange = Array.from({ length: 25 }, (_, i) => -3 + i * 0.25);
+                        
+                        // Calculate MSE and MAE for each parameter combination
+                        const mseValues = interceptRange.map(b => 
+                            slopeRange.map(m => {
+                                const predictions = xValues.map(x => m * x + b);
+                                return calculateMSE(yValues, predictions);
+                            })
+                        );
+                        
+                        const maeValues = interceptRange.map(b => 
+                            slopeRange.map(m => {
+                                const predictions = xValues.map(x => m * x + b);
+                                return calculateMAE(yValues, predictions);
+                            })
+                        );
+                        
+                        // Surface traces
+                        const mseSurfaceTrace = {
+                            x: slopeRange,
+                            y: interceptRange,
+                            z: mseValues,
+                            type: 'surface',
+                            colorscale: 'Blues',
+                            showscale: false
+                        };
+                        
+                        const maeSurfaceTrace = {
+                            x: slopeRange,
+                            y: interceptRange,
+                            z: maeValues,
+                            type: 'surface',
+                            colorscale: 'Greens',
+                            showscale: false
+                        };
+                        
+                        // Current parameters point
+                        const currentMSE = calculateMSE(yValues, xValues.map(x => slope * x + intercept));
+                        const currentMAE = calculateMAE(yValues, xValues.map(x => slope * x + intercept));
+                        
+                        const mseCurrentPointTrace = {
+                            x: [slope],
+                            y: [intercept],
+                            z: [currentMSE],
+                            mode: 'markers',
+                            type: 'scatter3d',
+                            marker: { size: 8, color: '#e91e63' },
+                            name: 'Current Parameters'
+                        };
+                        
+                        const maeCurrentPointTrace = {
+                            x: [slope],
+                            y: [intercept],
+                            z: [currentMAE],
+                            mode: 'markers',
+                            type: 'scatter3d',
+                            marker: { size: 8, color: '#e91e63' },
+                            name: 'Current Parameters'
+                        };
+                        
+                        // Optimal parameters points
+                        const mseOptimalPointTrace = {
+                            x: [mseParams.slope],
+                            y: [mseParams.intercept],
+                            z: [calculateMSE(yValues, xValues.map(x => mseParams.slope * x + mseParams.intercept))],
+                            mode: 'markers',
+                            type: 'scatter3d',
+                            marker: { size: 8, color: '#4b9fdb' },
+                            name: 'MSE Optimum'
+                        };
+                        
+                        const maeOptimalPointTrace = {
+                            x: [maeParams.slope],
+                            y: [maeParams.intercept],
+                            z: [calculateMAE(yValues, xValues.map(x => maeParams.slope * x + maeParams.intercept))],
+                            mode: 'markers',
+                            type: 'scatter3d',
+                            marker: { size: 8, color: '#4caf50' },
+                            name: 'MAE Optimum'
+                        };
+                        
+                        // Define layouts
+                        const mseLayout = {
+                            title: '<span class="mse-color">MSE Parameter Space</span>',
+                            scene: {
+                                xaxis: { title: 'Slope (w₁)', range: [-3, 3] },
+                                yaxis: { title: 'Intercept (w₀)', range: [-3, 3] },
+                                zaxis: { title: 'MSE Loss' },
+                                camera: mseCameraPosition || {
+                                    eye: { x: 1.5, y: 1.5, z: 1.2 }
+                                }
+                            },
+                            margin: { l: 0, r: 0, b: 0, t: 30 }
+                        };
+                        
+                        const maeLayout = {
+                            title: '<span class="mae-color">MAE Parameter Space</span>',
+                            scene: {
+                                xaxis: { title: 'Slope (w₁)', range: [-3, 3] },
+                                yaxis: { title: 'Intercept (w₀)', range: [-3, 3] },
+                                zaxis: { title: 'MAE Loss' },
+                                camera: maeCameraPosition || {
+                                    eye: { x: 1.5, y: 1.5, z: 1.2 }
+                                }
+                            },
+                            margin: { l: 0, r: 0, b: 0, t: 30 }
+                        };
+                        
+                        // Plot the surfaces
+                        Plotly.newPlot('mse-parameter-plot', 
+                            [mseSurfaceTrace, mseCurrentPointTrace, mseOptimalPointTrace], 
+                            mseLayout, 
+                            { responsive: true }
+                        );
+                        
+                        Plotly.newPlot('mae-parameter-plot', 
+                            [maeSurfaceTrace, maeCurrentPointTrace, maeOptimalPointTrace], 
+                            maeLayout, 
+                            { responsive: true }
+                        );
+                        
+                        // Save camera positions when changed
+                        document.getElementById('mse-parameter-plot').on('plotly_relayout', function(eventData) {
+                            if (eventData['scene.camera']) {
+                                mseCameraPosition = eventData['scene.camera'];
+                            }
+                        });
+                        
+                        document.getElementById('mae-parameter-plot').on('plotly_relayout', function(eventData) {
+                            if (eventData['scene.camera']) {
+                                maeCameraPosition = eventData['scene.camera'];
+                            }
+                        });
+                    } finally {
+                        // Clear the calculating flag when done
+                        isCalculating = false;
+                    }
+                }, 50);  // Short delay to allow the UI to update
+            }
+            
+            // Update loss values
+            function updateLossValues() {
+                if (dataPoints.length < 2) {
+                    document.getElementById('mse-value').textContent = "N/A";
+                    document.getElementById('mae-value').textContent = "N/A";
+                    return;
+                }
+                
+                const xValues = dataPoints.map(p => p.x);
+                const yValues = dataPoints.map(p => p.y);
+                const predictions = xValues.map(x => slope * x + intercept);
+                
+                const mse = calculateMSE(yValues, predictions);
+                const mae = calculateMAE(yValues, predictions);
+                
+                document.getElementById('mse-value').textContent = mse.toFixed(4);
+                document.getElementById('mae-value').textContent = mae.toFixed(4);
+            }
+            
+            // Update user equation display
+            function updateUserEquation() {
+                const slopeFormatted = slope.toFixed(1);
+                const interceptFormatted = Math.abs(intercept).toFixed(1);
+                const sign = intercept >= 0 ? '+ ' : '- ';
+                document.getElementById('user-equation').textContent = 
+                    `ŷ = ${sign}${interceptFormatted} + ${slopeFormatted}x`;
+            }
+            
+            // Update best fit equations
+            function updateBestFitEquations() {
+                if (dataPoints.length < 2) {
+                    document.getElementById('mse-equation').textContent = "Need at least 2 data points";
+                    document.getElementById('mae-equation').textContent = "Need at least 2 data points";
+                    return;
+                }
+                
+                const mseParams = calculateMSEParameters(dataPoints);
+                const maeParams = calculateMAEParameters(dataPoints);
+                
+                const mseSlope = mseParams.slope.toFixed(2);
+                const mseIntercept = Math.abs(mseParams.intercept).toFixed(2);
+                const mseSign = mseParams.intercept >= 0 ? '+ ' : '- ';
+                
+                const maeSlope = maeParams.slope.toFixed(2);
+                const maeIntercept = Math.abs(maeParams.intercept).toFixed(2);
+                const maeSign = maeParams.intercept >= 0 ? '+ ' : '- ';
+                
+                document.getElementById('mse-equation').textContent = 
+                    `ŷ = ${mseSign}${mseIntercept} + ${mseSlope}x`;
+                
+                document.getElementById('mae-equation').textContent = 
+                    `ŷ = ${maeSign}${maeIntercept} + ${maeSlope}x`;
+            }
+            
+            // --- Event handlers ---
+            
+            // Slope slider
+            document.getElementById('slope-slider').addEventListener('input', function(e) {
+                slope = parseFloat(e.target.value);
+                document.getElementById('slope-value').textContent = slope.toFixed(1);
+                updateUserEquation();
+                updateMainPlot();
+                updateResidualsPlots();
+                updateLossPlots();
+                updateLossValues();
+                
+                // Don't update parameter plots on every slider movement - too computationally intensive
+                // We'll update them when the slider is released
             });
-
-            document.getElementById("intercept").addEventListener("input", function(event) {
-                intercept = parseFloat(event.target.value);
-                document.getElementById("intercept-value").textContent = intercept.toFixed(1);
-                updateRegressionPlot();
-                updateLossPlot();
+            
+            document.getElementById('slope-slider').addEventListener('change', function() {
+                updateParameterPlots();
             });
-
-            document.getElementById("loss-function").addEventListener("change", function(event) {
-                lossFunction = event.target.value;
-                updateRegressionPlot();
-                updateLossPlot();
+            
+            // Intercept slider
+            document.getElementById('intercept-slider').addEventListener('input', function(e) {
+                intercept = parseFloat(e.target.value);
+                document.getElementById('intercept-value').textContent = intercept.toFixed(1);
+                updateUserEquation();
+                updateMainPlot();
+                updateResidualsPlots();
+                updateLossPlots();
+                updateLossValues();
             });
-
-            document.getElementById("start-simulation").addEventListener("click", runSimulation);
-            document.getElementById("stop-simulation").addEventListener("click", () => {
-                isSimulationRunning = false;
-                document.getElementById('start-simulation').disabled = false;
-                document.getElementById('reset-simulation').disabled = false;
+            
+            document.getElementById('intercept-slider').addEventListener('change', function() {
+                updateParameterPlots();
             });
-            document.getElementById("reset-simulation").addEventListener("click", resetSimulation);
-
-            // Learning rate slider
-            document.getElementById("learning-rate").addEventListener("input", function(event) {
-                // Convert from log scale to actual learning rate
-                learningRate = Math.pow(10, parseFloat(event.target.value));
-                document.getElementById("learning-rate-value").textContent = learningRate.toExponential(2);
+            
+            // Number of points slider
+            document.getElementById('num-points-slider').addEventListener('input', function(e) {
+                numPoints = parseInt(e.target.value);
+                document.getElementById('num-points-value').textContent = numPoints;
             });
-
-            // Initialize all plots
-            updateRegressionPlot();
-            updateLossPlot();
-            updateSimulationPlot();
-            updateSimulationLossPlot();
+            
+            // Noise level slider
+            document.getElementById('noise-slider').addEventListener('input', function(e) {
+                noiseLevel = parseFloat(e.target.value);
+                document.getElementById('noise-value').textContent = noiseLevel.toFixed(1);
+            });
+            
+            // Generate random data button
+            document.getElementById('generate-data-btn').addEventListener('click', function() {
+                generateRandomData();
+            });
+            
+            // Add outlier button
+            document.getElementById('add-outlier-btn').addEventListener('click', function() {
+                addOutlier();
+            });
+            
+            // Add extreme outlier button
+            document.getElementById('add-extreme-outlier-btn').addEventListener('click', function() {
+                addExtremeOutlier();
+            });
+            
+            // Reset button
+            document.getElementById('reset-all-btn').addEventListener('click', function() {
+                resetEverything();
+            });
+            
+            // Show optimal lines checkbox
+            document.getElementById('show-optimal-lines').addEventListener('change', function(e) {
+                showOptimalLines = e.target.checked;
+                updateMainPlot();
+            });
+            
+            // Example datasets
+            document.getElementById('example-linear').addEventListener('click', function() {
+                dataPoints = generateTrendData(15, 2, -1, 0.5);
+                updateAllPlots();
+            });
+            
+            document.getElementById('example-outliers').addEventListener('click', function() {
+                dataPoints = generateOutliersData(15, 2, -1, 3);
+                updateAllPlots();
+            });
+            
+            document.getElementById('example-clustered').addEventListener('click', function() {
+                dataPoints = generateClusteredData(15, 1);
+                updateAllPlots();
+            });
+            
+            // Initialize with random data
+            generateRandomData();
+            updateUserEquation();
         });
     </script>
 </body>

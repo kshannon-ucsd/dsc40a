@@ -38,11 +38,12 @@
             <small>
               {% if event.guide %}<br><span style="margin-left: 10ch;"><a href="{{ event.guide }}">study guide</a></span>{% endif %}
               {% if event.problems %}<br><span style="margin-left: 10ch;"><a href="{{ event.problems }}">problems</a></span>{% endif %}
+              {% if event.filled %}<span style="margin-left: 0.5ch;"><a href="{{ event.filled }}">filled</a></span>{% endif %}
               {% if event.template %}<span style="margin-left: 0.5ch;"><a href="{{ event.template }}">template</a></span>{% endif %}
               {% if event.code %}<span style="margin-left: 0.5ch;"><a href="{{ event.code }}">code</a></span>{% endif %}
               {% if event.code_solutions %}<span style="margin-left: 0.5ch;"><a href="{{ event.code_solutions }}">code solutions</a></span>{% endif %}
               {% if event.data %}<span style="margin-left: 0.5ch;"><a href="{{ event.data }}">data</a></span>{% endif %}
-              {% if event.walkthrough %}<span style="margin-left: 0.5ch;"></span><a href="{{ event.walkthrough }}">walkthrough</a></span>{% endif %}
+              {% if event.walkthrough %}<br> <span style="margin-left: 10ch;"><a href="{{ event.walkthrough }}">walkthrough</a></span>{% endif %}
               {% if event.solutions %}<span style="margin-left: 0.5ch;"><a href="{{ event.solutions }}">solutions</a></span>{% endif %}
               {% if event.slides %}<span style="margin-left: 0.5ch;"><a href="{{ event.slides }}">slides</a></span>{% endif %}
               {% if event.submission %}<span style="margin-left: 0.5ch;"><a href="{{ event.submission }}">submission</a></span>{% endif %}
