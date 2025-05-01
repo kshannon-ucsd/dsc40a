@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa
+      - uses: ruby/setup-ruby@f41e084df884422b269f4c01c3748a9df4431a75
         with:
           bundler-cache: true
           cache-version: 0
