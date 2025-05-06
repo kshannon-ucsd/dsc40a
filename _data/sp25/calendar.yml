@@ -195,6 +195,7 @@
           title: Regression in the Real World
           problems: https://drive.google.com/file/d/1qJhdYkbE6MoQpaKugP9VD1BILGjPHybt/view?usp=sharing
           code: https://colab.research.google.com/drive/1Qg0xLwmwrnB2ZS1DvwaXk3ZjLW86qgM7?usp=sharing
+          solutions: https://drive.google.com/file/d/1V3MxqbKIB5I6NNZq-1ov__FCmygBGXBC/view?usp=sharing
         - label: DEMO
           type: demo
           title: Demo 2 - Interaction Terms
@@ -224,6 +225,7 @@
           title: Feature Engineering + Normal Equations
           code: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
           data: https://drive.google.com/file/d/1dYzMFzMPTpIN1-veytcG-JJ3aDMJh8FX/view?usp=drive_link
+          solutions: https://colab.research.google.com/drive/1E1TUqG5X0DKJnvhclPMEUP4Bt0q71cns?usp=sharing
           # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
           # code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
           # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
