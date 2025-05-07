@@ -223,7 +223,7 @@
         - label: HOPS 7
           type: hops
           title: Feature Engineering + Normal Equations
-          code: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
+          problems: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
           data: https://drive.google.com/file/d/1dYzMFzMPTpIN1-veytcG-JJ3aDMJh8FX/view?usp=drive_link
           solutions: https://colab.research.google.com/drive/1E1TUqG5X0DKJnvhclPMEUP4Bt0q71cns?usp=sharing
           # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
@@ -286,8 +286,8 @@
         - label: HOPS 8
           type: hops
           title: Gradient Descent
-          # solutions: https://drive.google.com/file/d/1qIQbjjbxslBaeZrtb835_PU7dUrGd7IE/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
+          problems: https://drive.google.com/file/d/1sTUf2lFfcrudkfmb0_9FWUkeb14OCv6b/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1QmoBRNyA8PoVz5_Bj0CG982D5YLGJqRh/view?usp=sharing
         - label: DEMO
           type: demo
           title: Loss Surface Navigation + Regularization
