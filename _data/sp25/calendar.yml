@@ -157,6 +157,13 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
           recording: https://youtu.be/JZKZmPRl7tg
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released (check Gradescope for due date)</b>
+          problems: https://drive.google.com/file/d/1n8cV6JUC-ASmOqEP-WUPIeuPVcZTUF6u/view?usp=sharing
+          template: https://drive.google.com/file/d/1EKXDeuAe8PUhabh-xqLx2jmoCcm664BF/view?usp=sharing
+          submission: https://www.gradescope.com/courses/934714/assignments/5504779/
+          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
 
 - week: 4
   title: "Week 4 - Linear Algebra & Regression"
@@ -338,7 +345,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
           recording: https://youtu.be/g9TTmIVY7sE
-        #- label: HW
+          #- label: HW
           #type: hw
           #title: <b>Homework 5 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
@@ -408,7 +415,7 @@
           # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
           # code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
           # problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
-        #- label: HW
+          #- label: HW
           #type: hw
           #title: <b>Homework 6 Released (check Gradescope for due date)</b>
           # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
