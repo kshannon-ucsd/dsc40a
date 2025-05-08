@@ -40,3 +40,8 @@
   url: demos/8_kmeans_clustering
   photo: /assets/images/demos/kmeans.png
   description: This interactive K-means clustering demo illustrates the iterative process of partitioning data points by assigning each to the nearest centroid based on squared Euclidean distance, then updating centroids to minimize the overall Sum of Squared Errors (SSE). It further employs the elbow method to pinpoint the optimal number of clusters by identifying the stage where adding extra clusters yields diminishing improvements in error reduction.
+
+- title: 9. Combinatorics
+  url: demos/9_combinatorics
+  photo: /assets/images/demos/construction.png
+  description: This interactive demo explores key concepts in combinatorics, including permutations, combinations, and other fundamental counting principles.
