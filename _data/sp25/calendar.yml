@@ -338,12 +338,12 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
           recording: https://youtu.be/g9TTmIVY7sE
-        #- label: HW
-          #type: hw
-          #title: <b>Homework 5 Released (check Gradescope for due date)</b>
-          # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
+        - label: HW
+          type: hw
+          title: <b>Homework 4 Released (check Gradescope for due date)</b>
+          problems: https://drive.google.com/file/d/1YFJPwfIkVQqWcYktk90KniBp-bcW3W_-/view?usp=sharing
           # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing
-          # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
+          template: https://drive.google.com/file/d/1pTYzKQlTEZnN866i7zPUJ5KK8scwYoFa/view?usp=sharing
           # solutions: https://drive.google.com/file/d/1yxP9D7nR1SxwmgEyRHNf_oZGF1QnurTT/view?usp=sharing
           # code_solutions: https://drive.google.com/file/d/1OmpTV7caicGosi3R5K0s1EH7F3zjAaOg/view?usp=drive_link
 
