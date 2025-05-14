@@ -328,9 +328,11 @@
         - label: HOPS 9
           type: hops
           title: Gradient Descent Again
+          problems: https://drive.google.com/file/d/1ucueIjquyzPxxDog-SZo9mL1D_gK7nQ3/view?usp=sharing
+          code: https://colab.research.google.com/drive/1394Tg8PCbcWg9UeERKGcCz2ZFsouXVd8?usp=sharing
           # problems: https://drive.google.com/file/d/1rk7PNzk7_z7mkhXN71WCYuaffiaqLImg/view?usp=sharing
           # code: https://drive.google.com/file/d/1bzSZAuz6XhZzLJp49bVvYAsHF2l0xzuB/view?usp=sharing
-          data: https://drive.google.com/file/d/1S8GWAOvhK5JFR2L8CGcFSl1W8gH4vA15/view?usp=sharing
+          #data: https://drive.google.com/file/d/1S8GWAOvhK5JFR2L8CGcFSl1W8gH4vA15/view?usp=sharing
           # solutions: https://drive.google.com/file/d/1xGDLDx3HOtlmFYfLBp4LTWB1Tb_YSWx8/view?usp=drive_link
         - label: LEC 12
           type: lecture
