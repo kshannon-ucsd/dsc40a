@@ -50,16 +50,12 @@
           title: How to Prove it!
           problems: https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing
           solutions: https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing
-          # code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/hops_1_demo.ipynb
-          # problems: todo
 
         - label: HW
           type: hw
           title: <b>Homework 1 Released (check Gradescope for due date)</b>
           problems: https://drive.google.com/file/d/1aBayEh-xQDNrC3oaJUh7rlOP5DC8lJgN/view?usp=sharing
           template: https://drive.google.com/file/d/1MaNFbTRRV-xuRZoFR7a71GiVuU0lNS3i/view?usp=sharing
-          # submission: 
-          # solutions: 
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
@@ -127,8 +123,6 @@
           type: disc
           title: Groupwork 1 Review
           walkthrough: https://drive.google.com/file/d/1k9y8-o-0kxRhqf7GzxGjSksPhEMzAVsJ/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1YxFBiHGFGXrmlD3GJsBxdjPd2HpkBEef/view
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/groupwork/gw2_dsc40a_su24_solutions_ebvrfe.pdf
 
     - date: "2025-04-15"
       in_class: true
@@ -170,7 +164,6 @@
           problems: https://drive.google.com/file/d/1aomJtfDPs7PRqzksU-RCVga_BXz4UDld/view?usp=sharing
           solutions: https://drive.google.com/file/d/12BmkmGBZsOrKYh8AW9b6ZM3iWmKW3RY3/view?usp=sharing
           filled: https://drive.google.com/file/d/1c7Cf7zb6-QEGv6vQvEZWvZG-dtCHUqS1/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1yV_82thIFn0SJIUhaUPmD28ut7dqgmLQ/view?usp=sharing
 
     - date: "2025-04-22"
       in_class: true
@@ -226,16 +219,7 @@
           problems: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
           data: https://drive.google.com/file/d/1dYzMFzMPTpIN1-veytcG-JJ3aDMJh8FX/view?usp=drive_link
           solutions: https://colab.research.google.com/drive/1E1TUqG5X0DKJnvhclPMEUP4Bt0q71cns?usp=sharing
-          # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
-          # code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
-        #- label: HW
-          #type: hw
-          #title: <b>Homework 4 Released (check Gradescope for due date)</b>
-          # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
-          # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
-          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
+          
         - label: LEC 9
           type: lecture
           title: Multiple Linear Regression
@@ -247,9 +231,6 @@
           title: <b>Homework 3 Released (check Gradescope for due date)</b>
           problems: https://drive.google.com/file/d/1n8cV6JUC-ASmOqEP-WUPIeuPVcZTUF6u/view?usp=sharing
           template: https://drive.google.com/file/d/17csmKU4q_vMM4aJSNH5GOJhu3xZhdi79/view?usp=sharing
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
-          # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
-
 
     - date: "2025-05-01"
       in_class: true
@@ -275,8 +256,6 @@
         - label: DISC
           type: disc
           title: Midterm Review 
-          # problems: https://drive.google.com/file/d/1O8CrdZaeiRfOKZZkulQFMHSfNWlwU0T2/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/10ALk2xPX5EBVyISXgRpK_mejKzZID-Zv/view?usp=sharing
           slides: https://drive.google.com/file/d/1ZyMwAgTroKuDOM7XEhc2g1Qu2aVT4Mve/view?usp=sharing
 
 
@@ -330,10 +309,7 @@
           title: Gradient Descent Again
           problems: https://drive.google.com/file/d/1ucueIjquyzPxxDog-SZo9mL1D_gK7nQ3/view?usp=sharing
           code: https://colab.research.google.com/drive/1394Tg8PCbcWg9UeERKGcCz2ZFsouXVd8?usp=sharing
-          # problems: https://drive.google.com/file/d/1rk7PNzk7_z7mkhXN71WCYuaffiaqLImg/view?usp=sharing
-          # code: https://drive.google.com/file/d/1bzSZAuz6XhZzLJp49bVvYAsHF2l0xzuB/view?usp=sharing
-          #data: https://drive.google.com/file/d/1S8GWAOvhK5JFR2L8CGcFSl1W8gH4vA15/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1xGDLDx3HOtlmFYfLBp4LTWB1Tb_YSWx8/view?usp=drive_link
+          solutions: https://drive.google.com/file/d/1yxWUjtjkx4gEf8pkl_Tg-qiyT0YnTQA9/view?usp=sharing
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
@@ -358,6 +334,9 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13_annotated.pdf
           recording: https://youtu.be/HC0HEO3k7MU
+        - label: HOPS 10
+          type: hops
+          title: Conditional Probability
         - label: DEMO
           type: demo
           title: Probability + Real World DS Practices
@@ -382,7 +361,7 @@
     - date: "2025-05-20"
       in_class: true
       events:
-        - label: HOPS 10
+        - label: HOPS 11
           type: hops
           title: Approaching Probability Problems
           # solutions: todo
@@ -404,7 +383,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
           recording: https://youtu.be/rTKUm3SmZyY
-        - label: HOPS 11
+        - label: HOPS 12
           type: hops
           title: Combinatoric Problems
           # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
@@ -439,7 +418,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
           recording: https://youtu.be/yLzXxFM1sII
-        - label: HOPS 12
+        - label: HOPS 13
           type: hops
           # solutions: todo
           # code: todo
@@ -480,7 +459,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
           recording: https://youtu.be/k881dKkl2vk
-        - label: HOPS 13
+        - label: HOPS 14
           type: hops
           title: Naïve Bayes
           # solutions: todo
