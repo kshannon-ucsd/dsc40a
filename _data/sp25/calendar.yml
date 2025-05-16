@@ -337,6 +337,8 @@
         - label: HOPS 10
           type: hops
           title: Conditional Probability
+          problems: https://drive.google.com/file/d/1hvuL6piXge9DK6_xyUN8Y-dVDbSkFNlL/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1fYFV-gsvs63L5TxYwnVIBur1qqHfaY0-/view?usp=sharing
         - label: DEMO
           type: demo
           title: Probability + Real World DS Practices
