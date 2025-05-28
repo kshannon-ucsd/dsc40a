@@ -392,6 +392,7 @@
         - label: HOPS 12
           type: hops
           title: Combinatoric Problems
+          problems: https://drive.google.com/file/d/13NkVvMizqRLCL64nQJc03BZqkPrrKsuy/view?usp=sharing
           # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
           # code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
           # problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
@@ -433,9 +434,8 @@
           recording: https://youtu.be/yLzXxFM1sII
         - label: HOPS 13
           type: hops
+          problems: https://drive.google.com/file/d/1Fo9INoGZF1zRCI42ZaLCef18pMTN-tnR/view?usp=sharing
           # solutions: todo
-          # code: todo
-          # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
           title: Bayes Theorm vs Frequentist
 
     - date: "2025-05-29"
