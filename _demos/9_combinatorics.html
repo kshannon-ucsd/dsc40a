@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Combinatorics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.1/plotly.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin-top: 0.8em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+        .section {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .main-plot-container {
+            height: 550px;
+            width: 100%;
+            margin: 15px 0 10px 0;
+        }
+        .plot-container {
+            height: 400px;
+            width: 100%;
+            margin: 15px 0 10px 0;
+        }
+        .half-plot-container {
+            height: 280px;
+            width: 100%;
+            margin: 10px 0 5px 0;
+        }
+        .half-width {
+            width: 48%;
+        }
+        .control-panel {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0 10px 0;
+        }
+        .slider-container {
+            margin: 12px 0;
+        }
+        label {
+            font-weight: 500;
+            display: inline-block;
+            width: 140px;
+        }
+        input[type="range"] {
+            width: 260px;
+            vertical-align: middle;
+        }
+        .value-display {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+            font-weight: bold;
+            margin-left: 10px;
+            color: #333;
+        }
+        button {
+            background: #6649a8;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 5px 5px 0;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #523b8a;
+        }
+        .checkbox-container {
+            margin: 12px 0;
+        }
+        .checkbox-container label {
+            width: auto;
+            margin-left: 8px;
+        }
+        .radio-group {
+            margin: 15px 0;
+        }
+        .radio-option {
+            margin: 8px 0;
+        }
+        .radio-option label {
+            margin-left: 8px;
+            width: auto;
+        }
+        .word-problem {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 18px;
+            line-height: 1.6;
+            border-left: 4px solid #6649a8;
+        }
+        .equation-display {
+            font-size: 18px;
+            margin: 15px 0;
+            padding: 12px 20px;
+            background: #f8f8f8;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 500;
+            line-height: 1.5;
+            border-left: 4px solid #6649a8;
+        }
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+            background-color: rgba(233, 30, 99, 0.1);
+            padding: 0 4px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        .explanation {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0 10px 0;
+            line-height: 1.6;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+        }
+        .flex-item {
+            flex: 1;
+            min-width: 45%;
+        }
+        .back-button {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .summary-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-top: 3px solid #ccc;
+        }
+        .math-formula {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-size: 16px;
+        }
+        .section-title {
+            font-size: 18px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            margin-top: 5px;
+        }
+        .result-box {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #4b9fdb;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <a href="/pages/demos.html" class="back-button">
+        <button>← Back to Demos</button>
+    </a>
+    
+    <h1>Interactive Combinatorics</h1>
+    
+    <div class="explanation">
+        <p>This interactive demo helps you understand key concepts in combinatorics including permutations, combinations, and fundamental counting principles.</p>
+    </div>
+    
+    <!-- Interactive Word Prob -->
+    <div class="section">
+        <h2 class="section-title">Interactive Word Problem</h2>
+        
+        <div class="flex-container">
+            <div class="flex-item">
+                <div class="control-panel">
+                    <h3>Problem Parameters</h3>
+                    <div class="slider-container">
+                        <label for="n-slider">Total objects (n):</label>
+                        <input type="range" id="n-slider" min="2" max="20" step="1" value="10">
+                        <span id="n-value" class="value-display">10</span>
+                    </div>
+                    <div class="slider-container">
+                        <label for="k-slider">Objects to select (k):</label>
+                        <input type="range" id="k-slider" min="1" max="10" step="1" value="3">
+                        <span id="k-value" class="value-display">3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-item">
+                <div class="control-panel">
+                    <h3>Selection Type</h3>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="order-matters" name="order" value="permutation" checked>
+                            <label for="order-matters">Order matters (Permutation)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="order-doesnt-matter" name="order" value="combination">
+                            <label for="order-doesnt-matter">Order doesn't matter (Combination)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="with-replacement" name="replacement" value="with">
+                            <label for="with-replacement">With replacement</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="without-replacement" name="replacement" value="without" checked>
+                            <label for="without-replacement">Without replacement</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="word-problem" id="problem-statement">
+            From a set of 10 distinct objects, we need to select 3 objects without replacement, where the order matters.
+        </div>
+        
+        <div class="equation-display" id="formula-display">
+            Formula: P(10,3) = 10!/(10-3)! = 10!/7! = 720
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get input elements
+            const nSlider = document.getElementById('n-slider');
+            const kSlider = document.getElementById('k-slider');
+            const nValue = document.getElementById('n-value');
+            const kValue = document.getElementById('k-value');
+            
+            const orderMatters = document.getElementById('order-matters');
+            const orderDoesntMatter = document.getElementById('order-doesnt-matter');
+            const withReplacement = document.getElementById('with-replacement');
+            const withoutReplacement = document.getElementById('without-replacement');
+            
+            const problemStatement = document.getElementById('problem-statement');
+            const formulaDisplay = document.getElementById('formula-display');
+            
+            function factorial(n) {
+                if (n === 0 || n === 1) return 1;
+                let result = 1;
+                for (let i = 2; i <= n; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+            
+            function updateProblem() {
+                const n = parseInt(nSlider.value);
+                const k = parseInt(kSlider.value);
+                
+                if (withoutReplacement.checked && k > n) {
+                    kSlider.value = n;
+                    kValue.textContent = n;
+                    return updateProblem(); // w/ updated values
+                }
+                
+                const isPermutation = orderMatters.checked;
+                const isWithReplacement = withReplacement.checked;
+                
+                // Generate text descriptions
+                const orderText = isPermutation ? "where the <span class='highlight'>order matters</span>" : "where the <span class='highlight'>order doesn't matter</span>";
+                const replacementText = isWithReplacement ? "<span class='highlight'>with replacement</span>" : "<span class='highlight'>without replacement</span>";
+                
+                // Update problem statement
+                problemStatement.innerHTML = `From a set of <span class='highlight'>${n}</span> distinct objects, we need to select <span class='highlight'>${k}</span> objects ${replacementText}, ${orderText}.`;
+                
+                let result, formula;
+                
+                if (isPermutation) {
+                    if (isWithReplacement) {
+                        result = Math.pow(n, k);
+                        formula = `P(${n},${k}) = ${n}<sup>${k}</sup> = ${result}`;
+                    } else {
+                        result = factorial(n) / factorial(n - k);
+                        formula = `P(${n},${k}) = ${n}!/(${n}-${k})! = ${result}`;
+                    }
+                } else {
+                    if (isWithReplacement) {
+                        result = factorial(n + k - 1) / (factorial(k) * factorial(n - 1));
+                        formula = `C(${n},${k}) = (${n}+${k}-1)!/(${k}!(${n}-1)!) = ${result}`;
+                    } else {
+                        result = factorial(n) / (factorial(k) * factorial(n - k));
+                        formula = `C(${n},${k}) = ${n}!/(${k}!(${n}-${k})!) = ${result}`;
+                    }
+                }
+                
+                formulaDisplay.innerHTML = `Formula: ${formula}`;
+                
+                if (typeof MathJax !== 'undefined') {
+                    MathJax.typeset();
+                }
+            }
+            
+            nSlider.addEventListener('input', function() {
+                nValue.textContent = this.value;
+                updateProblem();
+            });
+            
+            kSlider.addEventListener('input', function() {
+                kValue.textContent = this.value;
+                updateProblem();
+            });
+            
+            orderMatters.addEventListener('change', updateProblem);
+            orderDoesntMatter.addEventListener('change', updateProblem);
+            withReplacement.addEventListener('change', updateProblem);
+            withoutReplacement.addEventListener('change', updateProblem);
+            
+            updateProblem();
+        });
+    </script>
+</body>
+</html>
