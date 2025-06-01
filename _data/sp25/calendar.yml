@@ -259,7 +259,7 @@
         - label: DISC
           type: disc
           title: Midterm Review 
-          slides: https://drive.google.com/file/d/1ZyMwAgTroKuDOM7XEhc2g1Qu2aVT4Mve/view?usp=sharing
+          problems: https://drive.google.com/file/d/1ZyMwAgTroKuDOM7XEhc2g1Qu2aVT4Mve/view?usp=sharing
 
 
     - date: "2025-05-06"
@@ -360,7 +360,7 @@
           type: disc
           title: Groupwork 3
           problems: https://drive.google.com/file/d/1MxxUVxIKkd_Uqup0Z4BkQNRVzzSH7CdL/view?usp=sharing
-          walkthrough: https://drive.google.com/file/d/114RDDENB_Nirh-yboCaVPpO5hthkL7lD/view?usp=sharing
+          filled: https://drive.google.com/file/d/114RDDENB_Nirh-yboCaVPpO5hthkL7lD/view?usp=sharing
           # old slides: https://docs.google.com/presentation/d/1goa-TOn4EtLerb1BUQr57-D5Ucyeenh8aOJcj3kipRE/edit?usp=sharing
           # solutions: https://drive.google.com/file/d/1ZHmf1pO9-TyV3rbNC5QqJJYxC6vbwXoe/view?usp=sharing
 
@@ -370,9 +370,8 @@
         - label: HOPS 11
           type: hops
           title: Approaching Probability Problems
-          # solutions: todo
-          # code: todo
           problems: https://drive.google.com/file/d/1M5ZeXRL62EHb6IvkkdJTUBd0HtwZRPSP/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1qpdpKDoxhe1vHMB6bbazGKZK489zYIlr/view?usp=sharing
         - label: LEC 14
           type: lecture
           title: More Combinatorics Examples
@@ -393,14 +392,7 @@
           type: hops
           title: Combinatoric Problems
           problems: https://drive.google.com/file/d/13NkVvMizqRLCL64nQJc03BZqkPrrKsuy/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
-          # code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
-        #- label: HW
-          #type: hw
-          #title: <b>Homework 6 Released (check Gradescope for due date)</b>
-          # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
-          # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
+          solutions: https://drive.google.com/file/d/1ifQVp6rfFMsy17jJlorSwCdIOhbAqeMm/view?usp=sharing
 
 - week: 9
   title: "Week 9 - Probability & Independence<br>
@@ -435,7 +427,7 @@
         - label: HOPS 13
           type: hops
           problems: https://drive.google.com/file/d/1Fo9INoGZF1zRCI42ZaLCef18pMTN-tnR/view?usp=sharing
-          # solutions: todo
+          solutions: https://drive.google.com/file/d/1zWCMdPUtTHUA6vwlFdUdNsoFfsCKjXTw/view?usp=sharing
           title: Bayes Theorm vs Frequentist
 
     - date: "2025-05-29"
