@@ -452,7 +452,8 @@
       events:
         - label: DISC
           type: disc
-          title: Final Review (Discussion Section)
+          title: Groupwork 4 (OPTIONAL)
+          problems: https://drive.google.com/file/d/1UTmThsBnNuDDc475-MzkGSkpO9Wp-pT5/view?usp=sharing
         - label: HW
           type: hw
           title: <b>Homework 6 Released (check Gradescope for due date)</b>
