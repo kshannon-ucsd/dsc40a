@@ -472,6 +472,7 @@
         - label: HOPS 14
           type: hops
           title: Naïve Bayes
+          problems: https://drive.google.com/file/d/1AGHI3wm8weKrYHdS9vca-QZABi_TFJal/view?usp=sharing
           # solutions: todo
           # code: todo
           # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
