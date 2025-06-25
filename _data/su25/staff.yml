@@ -1,0 +1,164 @@
+- name: Kyle Shannon (Data Soothsayer)
+  email: kshannon@ucsd.edu
+  role: Instructor
+  website: https://www.kmshannon.com/about/
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/kshannon_5.jpeg
+  description: Neuroscience → Data Science @ UCSD x2 (recursive pain)
+  hometown: San Diego, Cali
+  askabout: Coffee, Likely to be found on a tennis court 🎾
+  food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai, Callie
+
+- name: Zimo Wang - TA
+  email: ziw119@ucsd.edu
+  role: TA
+  photo: https://drive.google.com/file/d/1fU76mF5prUfsqb6V1qkniWafONv1gVlU/view?usp=drivesdk
+  description: Data Science PhD Student, focusing on Computer Graphics
+  hometown: Zhejiang, China
+  askabout: Table tennis 🏓, Karaoke 🎤. 
+  food: Ramen, BBQ, Sushi
+
+- name: Vignesh (Viggy) Palaniapan - TA
+  email: vpalaniappan@ucsd.edu
+  role: TA
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/viggy.png
+  description: Aerospace Eng. (Imperial College London), Data Science (UCSD)
+  hometown: London, UK 
+  askabout: Many sports (Tennis, Badminton, Frisbee currently), Foreign lang. Netflix
+  food: Thai (Lanna Thai), Mexican (La Puerta), Ice Cream (SaltnStraw)
+
+- name: Owen Miller
+  email: omiller@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/owen.png
+  description: 3rd year data science + probability & stats major
+  hometown: Moss Beach -> Salt Lake City -> Barcelona -> San Diego
+  askabout: Cooking, books
+  food: Piacere Mio, Flavors of East Africa, Lanzhou Noodlelicious
+
+- name: Ansh Bhatnagar (Hand of the King 👑)
+  email: abhatnagar@ucsd.edu
+  role: Tutor
+  website: https://anshu-b.github.io/ansh/
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/ansh.png
+  description: 2nd year Data Science major; Math, CogSci, & Supply Chain MGT minors
+  hometown: Fremont, California
+  askabout: Basketball (Warriors) 🏀, Football (Seahawks) 🏈, & Plants 🪴 
+  food: Ramen Nagi, Taco Bell, 55 Thai, Madras Cafe
+
+- name: Eric (Juicy 🍋 Lemons) Song
+  email: e7song@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/eric.jpeg
+  description: 4th Year Cognitive Science (Machine Learning and Neural Computation)
+  hometown: Pleasanton, California
+  askabout: Tetris, Books, Walking
+  food: Pho Hanoi, Boba Bliss, and 85C
+
+- name: Varun (The Left ← 📚 🌎 Side of History) Pabreja
+  email: vpabreja@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/varun.jpeg
+  description: 3rd year Data Science major; CogSci, & BusEcon minors
+  hometown: Dubai, UAE
+  askabout: Poker ♠, Bojack Horseman 🐴, Cricket 🏏
+  food: The Taco Stand, Bobboi Gelato, Charminar
+
+- name: Utkarsh Lohia
+  email: ulohia@ucsd.edu
+  role: Tutor
+  photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/utkarsh.png
+  description: 3rd year, Data Science major
+  hometown: Kolkata, India
+  askabout: Formula 1, Chess, Coffee
+  food: Charminar, Regents Pizza, District 6
+
+- name: Vedant Vardhaan
+  email: vvardhaan@ucsd.edu 
+  role: Tutor
+  photo: 
+  description: 2nd Year, Data Science Major
+  hometown: New Delhi, India
+  askabout: Cricket 🏏, Travelling 🌍, Math Geek ♾️
+  food: Queenstown , Pista House (life changing chicken biryani fr)
+
+- name: Maryam Almahasnah
+  email: malmahasnah@ucsd.edu
+  role: Tutor
+  website: https://malmahasnah.github.io/
+  photo: 
+  description: 4th year Data Science major
+  hometown: Eastern Province, Saudi Arabia 
+  askabout: Baking 🧑‍🍳, reading 📚, Art 🎨
+  food: Blue Water, Allegro, il giardino di lilli
+
+- name: Terran Chow
+  email: t6chow@ucsd.edu
+  role: Tutor
+  photo:
+  description: 2nd Year, Data Science Major
+  hometown: Pennington, NJ ❤️
+  askabout: Outdoors 🏕️, Running 👟, Music 🔉 (90s Hip-Hop and Soul as of recent)
+  food: Home-cooked meals 😍, taco bell, give me recs pls
+
+- name: Neil Dandekar
+  email: nmdandekar@ucsd.edu
+  role: Tutor
+  photo:
+  description:
+  hometown:
+  askabout:
+  food:
+
+- name: Jack Owen Determan
+  email: jodeterman@ucsd.edu
+  role: Tutor
+  photo:
+  description: 3rd year, Math-CS Major, Data Science Minor
+  hometown: North Andover, Massachusetts
+  askabout: Running, Chess, Piano, Manim Code
+  food: Din Tai Fung, Tacos El Gordo, Charminar
+
+- name: Noah Yang Golder
+  email: ngolder@ucsd.edu
+  role: Tutor
+  photo:
+  description: 2nd year, Data Science major; Math minor
+  hometown: Upland, California
+  askabout: Basketball (Lakers), Music (Indie, Hip-Hop), Cooking
+  food: King Taco, Marugame Udon, Ike's Love and Sandwiches
+
+- name: Mohak Akul Prakash
+  email: mprakash@ucsd.edu
+  role: Tutor
+  photo:
+  description: 2nd year, Data Science major; CogSci (Neurosci) minor
+  hometown: Gurgaon, India
+  askabout: Music, Formula 1, Sneakers
+  food: Pista House, Chipotle, Scuderie Italia 
+
+- name: Owen Shi
+  email: a4shi@ucsd.edu
+  role: Tutor
+  photo:
+  description:
+  hometown:
+  askabout:
+  food:
+
+- name: Nicholas Patel Swetlin
+  email: nswetlin@ucsd.edu
+  role: Tutor
+  photo:
+  description: 4th Year Data Science Major; Public Speaking Fanatic.
+  hometown: Cleveland, Ohio
+  askabout: Beatboxing 🎤, Calisthenics 🏃‍♂️, FL Studio 🎹
+  food: Tacos El Gordo, Olive Garden, Zanzibar
+
+- name: Matt Tokunaga
+  email: m2tokunaga@ucsd.edu
+  role: Tutor
+  photo:
+  description: 3rd year, Data Science and Pure Math double major
+  hometown: Elk Grove (Sacramento), California
+  askabout: Baseball (Yankees/Giants), Basketball (Kings), Math
+  food: Chicago Fire Grill, 64 Degrees

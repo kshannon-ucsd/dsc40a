@@ -1,501 +1,239 @@
 - week: 1
   title: "Week 1 - Modeling, Loss Functions, & Simple Linear Regression<br>
     <small>
-      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a>.<br>
-      🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>.<br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a><br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a><br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>The Spread Notes</a><br>
+      🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>
     </small>"
   days:
-    - date: "2025-03-31"
+    - date: "2025-08-04"
       in_class: true
       events:
-        - label: DISC
-          type: disc
-          title: No Section
-
-    - date: "2025-04-01"
-      in_class: true
-      events:
+        - label: LEC 1
+          type: lecture
+          title: Introduction to Modeling + Study Groups
         - label: MISC
           type: survey
           title: <a href='https://campuswire.com/p/GE6841F89'>Sign Up for Campuswire - Code 8155</a>
         - label: SUR
           type: survey
-          title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'> <b>Welcome Survey</b> </a>
-        - label: LEC 1
-          type: lecture
-          title: Introduction to Modeling (LIVE)
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/+lecture_01.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_01_annotated.pdf
-        - label: MISC
-          type: disc
-          title: Assign study groups
+          title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'><b>Welcome Survey</b></a>
         - label: HW
           type: hw
-          title: <b>Homework 0 (not due!)</b>
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
-          template: https://www.overleaf.com/read/kpqfqhkdxcnn#317117
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
+          title: <b>Homework 0 Released (Optional)</b>
 
-    - date: "2025-04-03"
+    - date: "2025-08-05"
       in_class: true
       events:
         - label: LEC 2
           type: lecture
           title: Empirical Risk Minimization
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02_annotated.pdf
-          recording: https://youtu.be/IGu3hTTZYN4
         - label: HOPS 1
           type: hops
-          title: How to Prove it!
-          problems: https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing
+          title: How to Prove It!
 
-        - label: HW
-          type: hw
-          title: <b>Homework 1 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1aBayEh-xQDNrC3oaJUh7rlOP5DC8lJgN/view?usp=sharing
-          template: https://drive.google.com/file/d/1MaNFbTRRV-xuRZoFR7a71GiVuU0lNS3i/view?usp=sharing
-
-- week: 2
-  title: "Week 2 - Loss Functions & Simple Linear Regression<br>
-    <small>    
-      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.<br>
-      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
-    </small>"
-  days:
-    - date: "2025-04-07"
-      in_class: true
-      events:
-        - label: DISC
-          type: disc
-          title: Groupwork 1 + Proofs
-          problems: https://drive.google.com/file/d/1bFoz12dTIo1oBSlHK3_hy1_mvuGTjCWv/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1HPHKTmmDajgNBOL8VSPfCW4NqHOeszJ0/view?usp=sharing
-
-    - date: "2025-04-08"
+    - date: "2025-08-06"
       in_class: true
       events:
         - label: LEC 3
           type: lecture
           title: Comparing Loss Functions
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03_annotated.pdf
-          recording: https://youtu.be/fSjEGEemjX4
         - label: HOPS 2
           type: hops
           title: Loss Functions & Risk
-          problems: https://drive.google.com/file/d/1uQXteRPioy_0DLSraJH7QXfml8ujkaiJ/view?usp=sharing 
-          solutions: https://drive.google.com/file/d/1wB_CCRsR2Ho8Cab48GZg64dg3Act5nz4/view?usp=sharing
 
-    - date: "2025-04-10"
+    - date: "2025-08-07"
       in_class: true
       events:
         - label: LEC 4
           type: lecture
           title: Simple Linear Regression
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04_annotated.pdf
-          recording: https://youtu.be/szNzjOhVwm4
         - label: HOPS 3
           type: hops
           title: MSE vs MAE vs Huber
-          problems: https://drive.google.com/file/d/1QfaCCnxwJbTLAS4UctZWCOTN4H-FK-Ia/view?usp=sharing
-          solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
         - label: HW
           type: hw
-          title: <b>Homework 2 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1TGI9i3_O1497XtYjl97cY3UUmMd7c75-/view?usp=drive_link
-          template: https://drive.google.com/file/d/1rpIpD8f-HZCOMxo8Jxq-WD1pHbmp8VHP/view?usp=sharing
-          code: https://colab.research.google.com/drive/1KtpxT2QMo06jDCxVSArObOx99uA1WSrj?usp=sharing
+          title: <b>Homework 1 Released</b>
 
-- week: 3
-  title: "Week 3 - Linear Algebra & Regression<br>
+- week: 2
+  title: "Week 2 - Linear Algebra for Regression<br>
     <small>
-      🍿 Watch <a href='https://drive.google.com/file/d/12FBqMv4KBqIRqZf46Bi_sQ1ARsfYpOEi/view?usp=drive_link'>Owen's Matrix Multiplication Review Pt.1</a>.<br>
-      🍿 Watch <a href='https://drive.google.com/file/d/10U72cAnVuVuLYZAmKwrKyczy89Lt4xCE/view?usp=drive_link'>Owen's Matrix Multiplication Review Pt.2</a>.<br>
+      🍿 Watch <a href='https://drive.google.com/file/d/12FBqMv4KBqIRqZf46Bi_sQ1ARsfYpOEi/view?usp=drive_link'>Matrix Multiplication Review Pt. 1</a><br>
+      🍿 Watch <a href='https://drive.google.com/file/d/10U72cAnVuVuLYZAmKwrKyczy89Lt4xCE/view?usp=drive_link'>Matrix Multiplication Review Pt. 2</a>
     </small>"
   days:
-    - date: "2025-04-14"
+    - date: "2025-08-11"
       in_class: true
       events:
-        - label: DISC
-          type: disc
-          title: Groupwork 1 Review
-          walkthrough: https://drive.google.com/file/d/1k9y8-o-0kxRhqf7GzxGjSksPhEMzAVsJ/view?usp=sharing
-
-    - date: "2025-04-15"
-      in_class: true
-      events:
-        - label: DEMO
-          type: demo
-          title: Simple Linear Regression + Huber Loss
         - label: LEC 5
           type: lecture
-          title: Simple Linear Regression, Continued
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05_annotated.pdf
-          recording: https://youtu.be/C1pEDBo-YSc
-
-    - date: "2025-04-17"
-      in_class: true
-      events:
+          title: Dot Products and Projections
         - label: HOPS 4
           type: hops
           title: Simple OLS Regression
-          problems: https://drive.google.com/file/d/1JPWMV70yQJKTglgaG1kVIHmLaVOhpJdf/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1RROFyj8nHABHT9yUyYXKqc9X1UFtScoI/view?usp=sharing
+
+    - date: "2025-08-12"
+      in_class: true
+      events:
         - label: LEC 6
           type: lecture
-          title: Dot Products and Projections
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
-          recording: https://youtu.be/JZKZmPRl7tg
-
-- week: 4
-  title: "Week 4 - Linear Algebra & Regression"
-  days:
-    - date: "2025-04-21"
-      in_class: true
-      events:
-        - label: DISC
-          type: disc
-          title: Groupwork 2A
-          problems: https://drive.google.com/file/d/1aomJtfDPs7PRqzksU-RCVga_BXz4UDld/view?usp=sharing
-          solutions: https://drive.google.com/file/d/12BmkmGBZsOrKYh8AW9b6ZM3iWmKW3RY3/view?usp=sharing
-          filled: https://drive.google.com/file/d/1c7Cf7zb6-QEGv6vQvEZWvZG-dtCHUqS1/view?usp=sharing
-
-    - date: "2025-04-22"
-      in_class: true
-      events:
+          title: Orthogonal Projections
         - label: HOPS 5
           type: hops
           title: Regression & Linear Algebra
-          problems: https://drive.google.com/file/d/1nlsuu_4js9jEDgAGeJH_TBCph1M6Teyx/view?usp=drive_link
-          solutions: https://drive.google.com/file/d/12k9WvD57eAkdxsrpPlJAkH3NHE8Ta0rF/view?usp=drive_link
+
+    - date: "2025-08-13"
+      in_class: true
+      events:
         - label: LEC 7
           type: lecture
-          title: Orthogonal Projections
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07_annotated.pdf
-          recording: https://youtu.be/Q0bJtqN9W3M
-
-    - date: "2025-04-24"
-      in_class: true
-      events:
+          title: Regression in the Real World
         - label: HOPS 6
           type: hops
-          title: Regression in the Real World
-          problems: https://drive.google.com/file/d/1qJhdYkbE6MoQpaKugP9VD1BILGjPHybt/view?usp=sharing
-          code: https://colab.research.google.com/drive/1Qg0xLwmwrnB2ZS1DvwaXk3ZjLW86qgM7?usp=sharing
-          solutions: https://drive.google.com/file/d/1V3MxqbKIB5I6NNZq-1ov__FCmygBGXBC/view?usp=sharing
-        - label: DEMO
-          type: demo
-          title: Demo 2 - Interaction Terms
+          title: Real-World Applications
+
+    - date: "2025-08-14"
+      in_class: true
+      events:
         - label: LEC 8
           type: lecture
-          title: Regression and Linear Algebra
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08_annotated.pdf
-          recording: https://youtu.be/_4MzHzJquAA
-
-- week: 5
-  title: "Week 5 - Multiple Linear Regression & Feature Engineering"
-  days:
-    - date: "2025-04-28"
-      in_class: true
-      events:
-        - label: DISC
-          type: disc
-          title: Groupwork 2B
-          problems: https://drive.google.com/file/d/1obVs4V3sId34U3BS7B9Go523ALl4JTXd/view?usp=sharing
-
-    - date: "2025-04-29"
-      in_class: true
-      events:
-        - label: HOPS 7
-          type: hops
-          title: Feature Engineering + Normal Equations
-          problems: https://colab.research.google.com/drive/1fI5z9WA-e9k09cgMSYa1ViBYhItM54I5?usp=sharing
-          data: https://drive.google.com/file/d/1dYzMFzMPTpIN1-veytcG-JJ3aDMJh8FX/view?usp=drive_link
-          solutions: https://colab.research.google.com/drive/1E1TUqG5X0DKJnvhclPMEUP4Bt0q71cns?usp=sharing
-          
-        - label: LEC 9
-          type: lecture
           title: Multiple Linear Regression
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
-          recording: https://youtu.be/5bNAEE2Oa8Q
         - label: HW
           type: hw
-          title: <b>Homework 3 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1n8cV6JUC-ASmOqEP-WUPIeuPVcZTUF6u/view?usp=sharing
-          template: https://drive.google.com/file/d/17csmKU4q_vMM4aJSNH5GOJhu3xZhdi79/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
+          title: <b>Homework 2 Released</b>
 
-
-    - date: "2025-05-01"
+- week: 3
+  title: "Week 3 - Feature Engineering & Gradient Descent<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 16–17</a><br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_convexity.pdf'>Notes on Convexity</a>
+    </small>"
+  days:
+    - date: "2025-08-18"
       in_class: true
       events:
-        - label: HOPS
+        - label: LEC 9
+          type: lecture
+          title: Feature Engineering + Normal Equations
+        - label: HOPS 7
           type: hops
-          title: Midterm Review (last quarter's midterm)
+          title: Feature Engineering
+
+    - date: "2025-08-19"
+      in_class: true
+      events:
         - label: LEC 10
           type: lecture
-          title: Feature Engineering, Gradient Descent
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10_annotated.pdf
-          recording: https://youtu.be/Gm1DQ3vWwY4
-
-- week: 6
-  title: "Week 6 - Gradient Descent<br>
-    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 16-17</a>.</small><br>
-    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_convexity.pdf'>Notes on Convexity</a>.</small><br>"
-  days:
-    - date: "2025-05-05"
-      in_class: true
-      events:
-        - label: DISC
-          type: disc
-          title: Midterm Review 
-          problems: https://drive.google.com/file/d/1ZyMwAgTroKuDOM7XEhc2g1Qu2aVT4Mve/view?usp=sharing
-
-
-    - date: "2025-05-06"
-      in_class: true
-      events:
+          title: Gradient Descent
         - label: HOPS 8
           type: hops
-          title: Gradient Descent
-          problems: https://drive.google.com/file/d/1sTUf2lFfcrudkfmb0_9FWUkeb14OCv6b/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1QmoBRNyA8PoVz5_Bj0CG982D5YLGJqRh/view?usp=sharing
-        - label: DEMO
-          type: demo
-          title: Loss Surface Navigation + Regularization
+          title: Gradient Descent Basics
+
+    - date: "2025-08-20"
+      in_class: true
+      events:
         - label: LEC 11
           type: lecture
-          title: Gradient Descent, Continued
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11_annotated.pdf
-          recording: https://youtu.be/fY_NW0hnvkA
+          title: Loss Surface Navigation + Regularization
 
-    - date: "2025-05-08"
+    - date: "2025-08-21"
       in_class: true
       events:
-        - label: EXAM
-          type: exam
-          title: Midterm Exam
-          guide: https://drive.google.com/file/d/11bIXzMjmUiVmSRxMivpcWXebURMf3ISS/view?usp=sharing
+        - label: REVIEW
+          type: demo
+          title: Midterm Review
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released</b>
 
-- week: 7
-  title: "Week 7 - Recap & Transition into Probability<br>
-    <small>📘 Read Janine's probability roadmap (in order):<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_questions.pdf'>Roadmap with Questions</a>
-        &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_answers.pdf'>Roadmap with Answers</a>
-        &nbsp;-&nbsp; <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_summary.pdf'>Summary</a>
-      </small>"
+- week: 4
+  title: "Week 4 - Probability & Combinatorics<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_questions.pdf'>Probability Roadmap</a><br>
+      📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Probability Textbook Chapters 1–2</a>
+    </small>"
   days:
-    - date: "2025-05-12"
+    - date: "2025-08-25"
       in_class: true
       events:
-        - label: DISC
-          type: disc
-          title: Midterm Post Mortem
-
-    - date: "2025-05-13"
-      in_class: true
-      events:
-        - label: HOPS 9
-          type: hops
-          title: Gradient Descent Again
-          problems: https://drive.google.com/file/d/1ucueIjquyzPxxDog-SZo9mL1D_gK7nQ3/view?usp=sharing
-          code: https://colab.research.google.com/drive/1394Tg8PCbcWg9UeERKGcCz2ZFsouXVd8?usp=sharing
-          solutions: https://drive.google.com/file/d/1yxWUjtjkx4gEf8pkl_Tg-qiyT0YnTQA9/view?usp=sharing
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
-          recording: https://youtu.be/g9TTmIVY7sE
-        - label: HW
-          type: hw
-          title: <b>Homework 4 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1YFJPwfIkVQqWcYktk90KniBp-bcW3W_-/view?usp=sharing
-          # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing
-          template: https://drive.google.com/file/d/1pTYzKQlTEZnN866i7zPUJ5KK8scwYoFa/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1yxP9D7nR1SxwmgEyRHNf_oZGF1QnurTT/view?usp=sharing
-          # code_solutions: https://drive.google.com/file/d/1OmpTV7caicGosi3R5K0s1EH7F3zjAaOg/view?usp=drive_link
+        - label: HOPS 9
+          type: hops
+          title: Gradient Descent Revisited
 
-    - date: "2025-05-15"
+    - date: "2025-08-26"
       in_class: true
       events:
         - label: LEC 13
           type: lecture
           title: Combinatorics
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13_annotated.pdf
-          recording: https://youtu.be/HC0HEO3k7MU
         - label: HOPS 10
           type: hops
           title: Conditional Probability
-          problems: https://drive.google.com/file/d/1hvuL6piXge9DK6_xyUN8Y-dVDbSkFNlL/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1fYFV-gsvs63L5TxYwnVIBur1qqHfaY0-/view?usp=sharing
-        - label: DEMO
-          type: demo
-          title: Probability + Real World DS Practices
 
-- week: 8
-  title: "Week 8 - Probability & Combinatorics<br>
-    <small>📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Chapters 1 and 2 of this online Probability Textbook</a>.</small>
-    <br>
-    <small>🍿 Watch <a href='https://www.youtube.com/playlist?list=PLDNbnocpJUhaMR08k5YBu3AXsZxTcUWsy'>Suraj's combinatoric problems</a>.</small>
-    <br>"
-  days:
-    - date: "2025-05-19"
+    - date: "2025-08-27"
       in_class: true
       events:
-        - label: DISC
-          type: disc
-          title: Groupwork 3
-          problems: https://drive.google.com/file/d/1MxxUVxIKkd_Uqup0Z4BkQNRVzzSH7CdL/view?usp=sharing
-          filled: https://drive.google.com/file/d/114RDDENB_Nirh-yboCaVPpO5hthkL7lD/view?usp=sharing
-          # old slides: https://docs.google.com/presentation/d/1goa-TOn4EtLerb1BUQr57-D5Ucyeenh8aOJcj3kipRE/edit?usp=sharing
-          # solutions: https://drive.google.com/file/d/1ZHmf1pO9-TyV3rbNC5QqJJYxC6vbwXoe/view?usp=sharing
-
-    - date: "2025-05-20"
-      in_class: true
-      events:
-        - label: HOPS 11
-          type: hops
-          title: Approaching Probability Problems
-          problems: https://drive.google.com/file/d/1M5ZeXRL62EHb6IvkkdJTUBd0HtwZRPSP/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1qpdpKDoxhe1vHMB6bbazGKZK489zYIlr/view?usp=sharing
         - label: LEC 14
           type: lecture
-          title: More Combinatorics Examples
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_14.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_14_annotated.pdf
-          recording: https://youtu.be/zj4RUJFb7zw
+          title: More Combinatorics + Bayes
+        - label: HOPS 11
+          type: hops
+          title: Bayes vs Frequentist
 
-    - date: "2025-05-22"
+    - date: "2025-08-28"
       in_class: true
       events:
         - label: LEC 15
           type: lecture
-          title: Bayes' Theorem and Independence
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
-          recording: https://youtu.be/rTKUm3SmZyY
-        - label: HOPS 12
-          type: hops
-          title: Combinatoric Problems
-          problems: https://drive.google.com/file/d/13NkVvMizqRLCL64nQJc03BZqkPrrKsuy/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1ifQVp6rfFMsy17jJlorSwCdIOhbAqeMm/view?usp=sharing
-
-- week: 9
-  title: "Week 9 - Probability & Independence<br>
-    <small>💪 Build intuition for <a href='https://seeing-theory.brown.edu/'>probability</a>.</small>
-    <br>
-    <small>💪 Build intuition for <a href='https://setosa.io/conditional/'>conditional probability</a>.</small>
-    <br>"
-  days:
-    - date: "2025-05-26"
-      in_class: true
-      events:
-        - label: DISC
-          type: disc
-          title: No Discussion (Memorial Day Holiday)
-
+          title: Independence and Conditional Independence
         - label: HW
           type: hw
-          title: <b>Homework 5 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1fTbiPZFywVZCh8GRtsbZrcayyQu8Qggi/view?usp=sharing
-          template: https://drive.google.com/file/d/1qsgCF0XQsEOjVcFU67tdgnfWK8w_i08P/view?usp=sharing
+          title: <b>Homework 4 Released</b>
 
-    - date: "2025-05-27"
+- week: 5
+  title: "Week 5 - Naïve Bayes & Final Review<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_conditional_independence.pdf'>Notes on Conditional Independence</a>
+    </small>"
+  days:
+    - date: "2025-09-01"
       in_class: true
       events:
         - label: LEC 16
           type: lecture
-          title: Independence and Conditional Independence
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
-          recording: https://youtu.be/yLzXxFM1sII
-        - label: HOPS 13
+          title: Naïve Bayes
+        - label: HOPS 12
           type: hops
-          problems: https://drive.google.com/file/d/1Fo9INoGZF1zRCI42ZaLCef18pMTN-tnR/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1zWCMdPUtTHUA6vwlFdUdNsoFfsCKjXTw/view?usp=sharing
-          title: Bayes Theorm vs Frequentist
+          title: Naïve Bayes Practice
 
-    - date: "2025-05-29"
+    - date: "2025-09-02"
       in_class: true
       events:
         - label: LEC 17
           type: lecture
-          title: Naïve Bayes
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
-          recording: https://youtu.be/mh7ye1P5h0Y
-        - label: DEMO
-          type: demo
-          title: Demo 6 - Multi-armed Bandit
+          title: More Naïve Bayes + Real World
+        - label: HOPS 13
+          type: hops
+          title: Wrap-Up Examples
 
-
-- week: 10
-  title: "Week 10 - Naïve Bayes & Course Conclusion<br>
-    <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_conditional_independence.pdf'>Notes on Conditional Independence</a>.</small><br>"
-  days:
-    - date: "2025-06-02"
-      in_class: true
-      events:
-        - label: DISC
-          type: disc
-          title: Groupwork 4 (OPTIONAL)
-          problems: https://drive.google.com/file/d/1UTmThsBnNuDDc475-MzkGSkpO9Wp-pT5/view?usp=sharing
-        - label: HW
-          type: hw
-          title: <b>Homework 6 Released (check Gradescope for due date)</b>
-          problems: https://drive.google.com/file/d/1eIBzdSZcXywgIIfz9js6auGiAkBK3eHA/view?usp=sharing
-          template: https://drive.google.com/file/d/1YC18QJ84ZBZCGocv1qq1g8IBdemInAor/view?usp=sharing
-
-    - date: "2025-06-03"
+    - date: "2025-09-03"
       in_class: true
       events:
         - label: LEC 18
           type: lecture
-          title: More Naïve Bayes, Review
-          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
-          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
-          recording: https://youtu.be/k881dKkl2vk
-        - label: HOPS 14
-          type: hops
-          title: Naïve Bayes
-          problems: https://drive.google.com/file/d/1AGHI3wm8weKrYHdS9vca-QZABi_TFJal/view?usp=sharing
-          # solutions: todo
-          # code: todo
-          # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
+          title: Review + Clustering
+        - label: HW
+          type: hw
+          title: <b>Homework 5 Released</b>
 
-    - date: "2025-06-05"
-      in_class: true
-      events:
-        - label: LEC 19
-          type: lecture
-          title: Conclusion (LIVE)
-        - label: DEMO
-          type: demo
-          title: Demo K-Means Clustering
-
-
-- week: 11
-  title: "Week 11 - Final Exam Week"
-  days:
-    - date: "2025-06-12"
+    - date: "2025-09-06"
       in_class: true
       events:
         - label: EXAM
           type: exam
           title: Final Exam
           guide: https://drive.google.com/file/d/1loM2ONlNbNnKe-8hEjaF7SX0QSHfm_75/view?usp=sharing
-        
