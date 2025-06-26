@@ -1,0 +1,214 @@
+- week: 1
+  title: "Week 1 - Modeling, Loss Functions, & Simple Linear Regression<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 1-12</a><br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a><br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>The Spread Notes</a><br>
+      🍿 Watch <a href='https://drive.google.com/file/d/1SkSOj_axASndnQb9FwKU1XzB2QGKbq9O/view?usp=sharing'>Ahmed's Calc Review</a>
+    </small>"
+  days:
+    - date: "2025-08-05"
+      in_class: true
+      events:
+        - label: LEC 1
+          type: lecture
+          title: Introduction to Modeling
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/+lecture_01.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_01_annotated.pdf
+        - label: LEC 2
+          type: lecture
+          title: Empirical Risk Minimization
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_02_annotated.pdf
+          recording: https://youtu.be/IGu3hTTZYN4
+        - label: SUR
+          type: survey
+          title: <a href='https://forms.gle/PS2MCbN8UPUxHXkV7'><b>Welcome Survey</b></a>
+        - label: HW
+          type: hw
+          title: <b>Homework 0 (Not Due!)</b>
+
+    - date: "2025-08-07"
+      in_class: true
+      events:
+        - label: LEC 3
+          type: lecture
+          title: Comparing Loss Functions
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_03_annotated.pdf
+          recording: https://youtu.be/fSjEGEemjX4
+        - label: LEC 4
+          type: lecture
+          title: Simple Linear Regression
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_04_annotated.pdf
+          recording: https://youtu.be/szNzjOhVwm4
+        - label: HW
+          type: hw
+          title: <b>Homework 1 Released</b>
+
+- week: 2
+  title: "Week 2 - Linear Algebra for Regression<br>
+    <small>
+      🍿 Watch <a href='https://drive.google.com/file/d/12FBqMv4KBqIRqZf46Bi_sQ1ARsfYpOEi/view?usp=drive_link'>Matrix Multiplication Review Pt. 1</a><br>
+      🍿 Watch <a href='https://drive.google.com/file/d/10U72cAnVuVuLYZAmKwrKyczy89Lt4xCE/view?usp=drive_link'>Matrix Multiplication Review Pt. 2</a>
+    </small>"
+  days:
+    - date: "2025-08-12"
+      in_class: true
+      events:
+        - label: LEC 5
+          type: lecture
+          title: Simple Linear Regression, Continued
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_05_annotated.pdf
+          recording: https://youtu.be/C1pEDBo-YSc
+        - label: LEC 6
+          type: lecture
+          title: Dot Products and Projections
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_06_annotated.pdf
+          recording: https://youtu.be/JZKZmPRl7tg
+
+    - date: "2025-08-14"
+      in_class: true
+      events:
+        - label: LEC 7
+          type: lecture
+          title: Orthogonal Projections
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_07_annotated.pdf
+          recording: https://youtu.be/Q0bJtqN9W3M
+        - label: LEC 8
+          type: lecture
+          title: Regression and Linear Algebra
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_08_annotated.pdf
+          recording: https://youtu.be/_4MzHzJquAA
+        - label: HW
+          type: hw
+          title: <b>Homework 2 Released</b>
+
+- week: 3
+  title: "Week 3 - Feature Engineering & Gradient Descent<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 16–17</a><br>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_convexity.pdf'>Notes on Convexity</a>
+    </small>"
+  days:
+    - date: "2025-08-19"
+      in_class: true
+      events:
+        - label: LEC 9
+          type: lecture
+          title: Multiple Linear Regression
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_09_annotated.pdf
+          recording: https://youtu.be/5bNAEE2Oa8Q
+        - label: LEC 10
+          type: lecture
+          title: Feature Engineering, Gradient Descent
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_10_annotated.pdf
+          recording: https://youtu.be/Gm1DQ3vWwY4
+
+    - date: "2025-08-21"
+      in_class: true
+      events:
+        - label: LEC 11
+          type: lecture
+          title: Gradient Descent, Continued
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_11_annotated.pdf
+          recording: https://youtu.be/fY_NW0hnvkA
+        - label: REVIEW
+          type: demo
+          title: Midterm Review
+        - label: HW
+          type: hw
+          title: <b>Homework 3 Released</b>
+
+- week: 4
+  title: "Week 4 - Probability & Combinatorics<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_prob_roadmap_questions.pdf'>Probability Roadmap</a><br>
+      📘 Read <a href='http://stat88.org/textbook/content/intro.html'>Probability Textbook Chapters 1–2</a>
+    </small>"
+  days:
+    - date: "2025-08-26"
+      in_class: true
+      events:
+        - label: LEC 12
+          type: lecture
+          title: Foundations of Probability
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
+          recording: https://youtu.be/g9TTmIVY7sE
+        - label: LEC 13
+          type: lecture
+          title: Combinatorics
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_13_annotated.pdf
+          recording: https://youtu.be/HC0HEO3k7MU
+
+    - date: "2025-08-28"
+      in_class: true
+      events:
+        - label: LEC 14
+          type: lecture
+          title: More Combinatorics Examples
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_14.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_14_annotated.pdf
+          recording: https://youtu.be/zj4RUJFb7zw
+        - label: LEC 15
+          type: lecture
+          title: Bayes' Theorem and Independence
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_15_annotated.pdf
+          recording: https://youtu.be/rTKUm3SmZyY
+        - label: HW
+          type: hw
+          title: <b>Homework 4 Released</b>
+
+- week: 5
+  title: "Week 5 - Naïve Bayes & Final Review<br>
+    <small>
+      📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_conditional_independence.pdf'>Notes on Conditional Independence</a>
+    </small>"
+  days:
+    - date: "2025-09-02"
+      in_class: true
+      events:
+        - label: LEC 16
+          type: lecture
+          title: Independence and Conditional Independence
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_16_annotated.pdf
+          recording: https://youtu.be/yLzXxFM1sII
+        - label: LEC 17
+          type: lecture
+          title: Naïve Bayes
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_17_annotated.pdf
+          recording: https://youtu.be/mh7ye1P5h0Y
+
+    - date: "2025-09-04"
+      in_class: true
+      events:
+        - label: LEC 18
+          type: lecture
+          title: More Naïve Bayes, Review
+          blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18.pdf
+          filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_18_annotated.pdf
+          recording: https://youtu.be/k881dKkl2vk
+        - label: LEC 19
+          type: lecture
+          title: Conclusion (LIVE)
+
+    - date: "2025-09-06"
+      in_class: false
+      events:
+        - label: EXAM
+          type: exam
+          title: Final Exam
+          guide: https://drive.google.com/file/d/1loM2ONlNbNnKe-8hEjaF7SX0QSHfm_75/view?usp=sharing
