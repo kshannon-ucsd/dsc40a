@@ -99,12 +99,14 @@
           title: Regression & Linear Algebra
           problems: https://drive.google.com/file/d/1nlsuu_4js9jEDgAGeJH_TBCph1M6Teyx/view?usp=drive_link
           #solutions: https://drive.google.com/file/d/12k9WvD57eAkdxsrpPlJAkH3NHE8Ta0rF/view?usp=drive_link
+        - label: DEMO
+          type: demo
+          title: Simple Linear Regression + Huber Loss
         - label: DISC
           type: disc
           title: Groupwork 1 (Submit Handwritten, Individually!)
           problems: https://drive.google.com/file/d/1bFoz12dTIo1oBSlHK3_hy1_mvuGTjCWv/view?usp=sharing
           solutions: https://drive.google.com/file/d/1HPHKTmmDajgNBOL8VSPfCW4NqHOeszJ0/view?usp=sharing
-          walkthrough: https://drive.google.com/file/d/1k9y8-o-0kxRhqf7GzxGjSksPhEMzAVsJ/view?usp=sharing
 
     - date: "2025-08-14"
       in_class: true
@@ -127,6 +129,9 @@
           problems: https://drive.google.com/file/d/1qJhdYkbE6MoQpaKugP9VD1BILGjPHybt/view?usp=sharing
           code: https://colab.research.google.com/drive/1Qg0xLwmwrnB2ZS1DvwaXk3ZjLW86qgM7?usp=sharing
           #solutions: https://drive.google.com/file/d/1V3MxqbKIB5I6NNZq-1ov__FCmygBGXBC/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Demo 2 - Interaction Terms
         - label: HW
           type: hw
           title: <b>Homework 2 Released</b>
@@ -185,6 +190,9 @@
           title: Gradient Descent (Look Over Independently)
           problems: https://drive.google.com/file/d/1sTUf2lFfcrudkfmb0_9FWUkeb14OCv6b/view?usp=sharing
           solutions: https://drive.google.com/file/d/1QmoBRNyA8PoVz5_Bj0CG982D5YLGJqRh/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Loss Surface Navigation + Regularization
         - label: HW
           type: hw
           title: <b>Homework 3 Released</b>
@@ -253,6 +261,9 @@
           title: Combinatoric Problems
           problems: https://drive.google.com/file/d/13NkVvMizqRLCL64nQJc03BZqkPrrKsuy/view?usp=sharing
           #solutions: https://drive.google.com/file/d/1ifQVp6rfFMsy17jJlorSwCdIOhbAqeMm/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Probability + Real World DS Practices
         - label: HW
           type: hw
           title: <b>Homework 4 Released</b>
@@ -287,6 +298,9 @@
           type: hops
           title: Naïve Bayes
           problems: https://drive.google.com/file/d/1AGHI3wm8weKrYHdS9vca-QZABi_TFJal/view?usp=sharing
+        - label: DEMO
+          type: demo
+          title: Demo 6 - Multi-armed Bandit
         - label: DISC
           type: disc
           title: Groupwork 4 (Submit Handwritten, Individually!)
@@ -305,6 +319,9 @@
         - label: LEC 19
           type: lecture
           title: Conclusion + Final Exam Review (LIVE)
+        - label: DEMO
+          type: demo
+          title: Demo K-Means Clustering
 
     - date: "2025-09-06"
       in_class: false
