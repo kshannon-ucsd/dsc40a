@@ -16,6 +16,51 @@ description: Course structure and policies.
 
 ---
 
+## Summer 2025 Remote Updates
+Everything in this section, superseds anything else listed below, e.g. grade % distribution for summer is different. So you can ignore the one in the section below.
+
+### Summer Logistics
+Summer Logistics (Clean Copy)
+
+This class is fully remote, but you still have several opportunities to participate live. Here’s how the “flipped-classroom” format will work during the summer session:
+	•	Recorded lectures
+	•	All core lectures are pre-recorded—watch them on schedule, because the HOPS (Hands-On Problem-Solving) activities track the lecture content closely.
+	•	Live Tuesdays
+	•	Lecture 1 (the first Tuesday) will be delivered live and recorded. It will include a Linear Algebra boot camp/review (recording pending).
+	-	Every subsequent Tuesday features a live, in-class HOPS session. Recordings of those HOPS problems will be posted afterward.
+	-	Office-Hours on Thursdays in place of live lecture sessions
+	-	The Thursday HOPS problems will be pre-recorded and posted online for you to work through at your own pace.
+	-	Discussion sections are (asynchronous)
+	-	Instead of live group-work sessions, one or two TAs will record walkthroughs of the discussion section problems.
+	-	Use these videos to study independently or with classmates so... no discussion groupwork assignments need to be submitted.
+	-	Midterm and final exams will be take-home. They won’t be easy, and the final may include an oral component. Details will be announced in Weeks 2–3.
+
+Key changes for summer
+	1.	Group-work assignments have been removed.
+	2.	Half of the HOPS sessions remain live (Tuesdays only) all HOPS content is recorded.
+	3.	Both exams are now take-home.
+
+Stay on top of the recorded material so you’re ready for the live HOPS sessions and or to do the HOPS work at home.
+
+### Communication
+All course announcements will be made on Piazza, not in person. Please do not email any of the course staff, we are checking piazza daily and you will be more likely to get a response if you use Piazza. 
+
+### Summer Grading
+Here's how we will compute your grade this summer.
+
+| Component     | Weight | Notes                                                    |
+|---------------|--------|----------------------------------------------------------|
+| Homework      | 50%    | replace lowest (iff you attempted it) with highest grade |
+| Midterm Exam  | 20%    |                                                          |
+| Final Exam    | 30%    | see redemption policy above                              |
+
+- You will have two slip days to use for your HWs. You can use two for one as well. 
+- There will be NO extra credit raffle, but perhapswe will figure something out for EC this session. 
+
+... More to come week 1 if need be. 
+
+---
+
 ## About 🧐
 
 The world is increasingly recognizing the value of data when solving complex and open-ended problems. In the past, we might have explicitly told the computer exactly how to differentiate between the letters of the alphabet, but today we instead give the computer many examples of each letter and let it learn the differences automatically. It is a fascinating time to be working with data! The next obvious question then is... "But how do we learn from data?" 
@@ -26,7 +71,7 @@ This is the central question of DSC 40A. We will see that virtually every rigoro
 
 ## Communication 💬
 
-This quarter, we'll be using [Ed](https://edstem.org/) as our course message board. You should be added to Ed automatically; if not, a link will be provided in class. Please join right away as we'll be making all course announcements through Ed.
+This quarter, we'll be using Piazza as our course message board. You should be added to Ed automatically; if not, a link will be provided in class. Please join right away as we'll be making all course announcements through Ed.
 
 If you have a question about anything to do with the course — if you're stuck on a problem, didn't understand something from lecture, want clarification on course logistics, or just have a general question about data science — please make a post on Ed. If your question is about an active HW problem, please make your post private so that others cannot see it and include your thoughts, parts of an answer (even if you are unsure if it is correct), or what steps you have tried. 
 
