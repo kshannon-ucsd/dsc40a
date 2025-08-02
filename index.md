@@ -30,7 +30,7 @@ nav_order: 1
 {% include staffer.html staff=staff nobio='true' %}
 
 {: .important }
-Please note that updates to the syllabus specific for the Summer 2025 Remote Session have been posted, check them out here! [syllabus update link](https://dsc40a.com/pages/syllabus.html#summer-2025-remote-updates)
+Please note that updates to the syllabus specific for the Summer 2025 Remote Session have been posted, check them out here! [syllabus update link](https://dsc40a.com/pages/syllabus.html#summer-2025-remote-updates). Office Hours are listed under the Calendat tab.
 
 
 <!-- **{{ course_vars.announcement.text }}** -->
