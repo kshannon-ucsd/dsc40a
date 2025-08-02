@@ -23,22 +23,22 @@ Everything in this section, superseds anything else listed below, e.g. grade % d
 Summer Logistics (Clean Copy)
 
 This class is fully remote, but you still have several opportunities to participate live. Here’s how the “flipped-classroom” format will work during the summer session:
-	•	Recorded lectures
-	•	All core lectures are pre-recorded—watch them on schedule, because the HOPS (Hands-On Problem-Solving) activities track the lecture content closely.
-	•	Live Tuesdays
-	•	Lecture 1 (the first Tuesday) will be delivered live and recorded. It will include a Linear Algebra boot camp/review (recording pending).
-	-	Every subsequent Tuesday features a live, in-class HOPS session. Recordings of those HOPS problems will be posted afterward.
-	-	Office-Hours on Thursdays in place of live lecture sessions
-	-	The Thursday HOPS problems will be pre-recorded and posted online for you to work through at your own pace.
-	-	Discussion sections are (asynchronous)
-	-	Instead of live group-work sessions, one or two TAs will record walkthroughs of the discussion section problems.
-	-	Use these videos to study independently or with classmates so... no discussion groupwork assignments need to be submitted.
-	-	Midterm and final exams will be take-home. They won’t be easy, and the final may include an oral component. Details will be announced in Weeks 2–3.
+- Recorded lectures
+- All core lectures are pre-recorded—watch them on schedule, because the HOPS (Hands-On Problem-Solving) activities track the lecture content closely.
+- Live Tuesdays
+- Lecture 1 (the first Tuesday) will be delivered live and recorded. It will include a Linear Algebra boot camp/review (recording pending).
+- Every subsequent Tuesday features a live, in-class HOPS session. Recordings of those HOPS problems will be posted afterward.
+- Office-Hours on Thursdays in place of live lecture sessions
+- The Thursday HOPS problems will be pre-recorded and posted online for you to work through at your own pace.
+-	Discussion sections are (asynchronous)
+-	Instead of live group-work sessions, one or two TAs will record walkthroughs of the discussion section problems.
+-	Use these videos to study independently or with classmates so... no discussion groupwork assignments need to be submitted.
+-	Midterm and final exams will be take-home. They won’t be easy, and the final may include an oral component. Details will be announced in Weeks 2–3.
 
 Key changes for summer
-	1.	Group-work assignments have been removed.
-	2.	Half of the HOPS sessions remain live (Tuesdays only) all HOPS content is recorded.
-	3.	Both exams are now take-home.
+1.	Group-work assignments have been removed.
+2.	Half of the HOPS sessions remain live (Tuesdays only) all HOPS content is recorded.
+3.	Both exams are now take-home.
 
 Stay on top of the recorded material so you’re ready for the live HOPS sessions and or to do the HOPS work at home.
 
