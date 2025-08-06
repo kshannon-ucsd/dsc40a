@@ -63,7 +63,7 @@
           # solutions: https://drive.google.com/file/d/1wB_CCRsR2Ho8Cab48GZg64dg3Act5nz4/view?usp=sharing
         - label: HOPS 3
           type: hops
-          title: MSE vs MAE vs Huber (Watch <b>Lecture 3</b> beforehand!)
+          title: MSE vs MAE vs Huber (Watch <b>Lecture 4</b> beforehand!)
           problems: https://drive.google.com/file/d/1QfaCCnxwJbTLAS4UctZWCOTN4H-FK-Ia/view?usp=sharing
           # solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
         - label: HW
@@ -107,7 +107,7 @@
           title: Simple Linear Regression + Huber Loss
         - label: DISC
           type: disc
-          title: Groupwork 1 (Submit Handwritten, Individually!)
+          title: Groupwork 1 (Submit Handwritten, Individually! for Extra Credit Only)
           problems: https://drive.google.com/file/d/1bFoz12dTIo1oBSlHK3_hy1_mvuGTjCWv/view?usp=sharing
           solutions: https://drive.google.com/file/d/1HPHKTmmDajgNBOL8VSPfCW4NqHOeszJ0/view?usp=sharing
 
@@ -169,10 +169,10 @@
           #solutions: https://colab.research.google.com/drive/1E1TUqG5X0DKJnvhclPMEUP4Bt0q71cns?usp=sharing
         - label: HOPS
           type: hops
-          title: Midterm Review (Online)
+          title: Midterm Review (Take Home)
         - label: DISC
           type: disc
-          title: Groupwork 2 (Submit Handwritten, Individually!)
+          title: Groupwork 2 (Submit Handwritten, Individually! for Extra Credit Only)
           problems: https://drive.google.com/file/d/19Mc-47mB1g2cS52QhYOSAclWzP20cJWu/view?usp=sharing
           solutions: https://drive.google.com/file/d/1dKkJEZL8TuaSc6nrxNXc-MUIJal74pyn/view?usp=sharing
 
@@ -235,7 +235,7 @@
           #solutions: https://drive.google.com/file/d/1fYFV-gsvs63L5TxYwnVIBur1qqHfaY0-/view?usp=sharing
         - label: DISC
           type: disc
-          title: Groupwork 3 (Submit Handwritten, Individually!)
+          title: Groupwork 3 (Submit Handwritten, Individually! for Extra Credit Only)
           problems: https://drive.google.com/file/d/1MxxUVxIKkd_Uqup0Z4BkQNRVzzSH7CdL/view?usp=sharing
           solutions: https://drive.google.com/file/d/114RDDENB_Nirh-yboCaVPpO5hthkL7lD/view?usp=sharing
 
@@ -306,7 +306,7 @@
           title: Demo 6 - Multi-armed Bandit
         - label: DISC
           type: disc
-          title: Groupwork 4 (Submit Handwritten, Individually!)
+          title: Groupwork 4 (Submit Handwritten, Individually! for Extra Credit Only)
           problems: https://drive.google.com/file/d/1UTmThsBnNuDDc475-MzkGSkpO9Wp-pT5/view?usp=sharing
           solutions: https://drive.google.com/file/d/1Ogtj6hXaclDW80qXpq02m9XsuS7xFUe4/view?usp=sharing
 
@@ -321,7 +321,7 @@
           recording: https://youtu.be/k881dKkl2vk
         - label: LEC 19
           type: lecture
-          title: Conclusion + Final Exam Review (LIVE)
+          title: Conclusion + Final Exam Review (Take Home + Oral Exam Component)
         - label: DEMO
           type: demo
           title: Demo K-Means Clustering
