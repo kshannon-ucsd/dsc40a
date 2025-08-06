@@ -15,6 +15,7 @@
           title: Introduction to Modeling (Live)
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/+lecture_01.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_01_annotated.pdf
+          recording: https://youtu.be/pGR0ReTFJFc?feature=shared
         - label: LEC 2
           type: lecture
           title: Empirical Risk Minimization
