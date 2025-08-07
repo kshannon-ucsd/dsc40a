@@ -25,8 +25,7 @@
         - label: HOPS 0
           type: hops
           title: Linear Algebra Bootcamp (For the Soul)
-          problems: 
-          solutions: 
+          problems: https://drive.google.com/file/d/1M5UGK8Uio7a9oX2kf3p-UMCwkwY8Wt0t/view?usp=sharing
         - label: HOPS 1
           type: hops
           title: How to Prove it! (Look Over Independently)
@@ -170,7 +169,7 @@
           #solutions: https://colab.research.google.com/drive/1E1TUqG5X0DKJnvhclPMEUP4Bt0q71cns?usp=sharing
         - label: HOPS
           type: hops
-          title: Midterm Review (Take Home)
+          title: Midterm Review (Zoom + Recorded)
         - label: DISC
           type: disc
           title: Groupwork 2 (Submit Handwritten, Individually! for Extra Credit Only)
@@ -182,7 +181,7 @@
       events:
         - label: Midterm
           type: exam
-          title: Midterm Exam (IN-CLASS)
+          title: Midterm Exam (Take Home)
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
