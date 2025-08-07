@@ -37,6 +37,7 @@
             {% when "hw" or "hops" or "disc" or "lab" or "demo" or "exam" %}
             <small>
               {% if event.guide %}<br><span style="margin-left: 10ch;"><a href="{{ event.guide }}">study guide</a></span>{% endif %}
+              {% if event.survey %}<br><span style="margin-left: 10ch;"><a href="{{ event.survey }}">Welcome Survey</a></span>{% endif %}
               {% if event.problems %}<br><span style="margin-left: 10ch;"><a href="{{ event.problems }}">problems</a></span>{% endif %}
               {% if event.filled %}<span style="margin-left: 0.5ch;"><a href="{{ event.filled }}">filled</a></span>{% endif %}
               {% if event.template %}<span style="margin-left: 0.5ch;"><a href="{{ event.template }}">template</a></span>{% endif %}
