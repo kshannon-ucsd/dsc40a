@@ -65,11 +65,15 @@
         - label: HOPS 3
           type: hops
           title: MSE vs MAE vs Huber (Watch <b>Lecture 4</b> beforehand!)
+          # recording:
           problems: https://drive.google.com/file/d/1QfaCCnxwJbTLAS4UctZWCOTN4H-FK-Ia/view?usp=sharing
           # solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
         - label: HW
           type: hw
           title: <b>Homework 1 Released</b>
+          problems: https://drive.google.com/file/d/1hoMwe2FznOTXLuG2ItC3Vhi9RDz9COaa/view?usp=drive_link
+          template: https://drive.google.com/file/d/1eDTUvQYlJMo7jQZJEEYZEnaZJSSIEFcx/view?usp=drive_link
+          # solutions: 
 
 - week: 2
   title: "Week 2 - Linear Algebra for Regression<br>
