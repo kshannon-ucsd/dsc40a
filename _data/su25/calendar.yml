@@ -65,9 +65,9 @@
         - label: HOPS 3
           type: hops
           title: MSE vs MAE vs Huber (Watch <b>Lecture 4</b> beforehand!)
-          # recording:
+          recording: https://youtu.be/Y-cXd9CzVcw
           problems: https://drive.google.com/file/d/1QfaCCnxwJbTLAS4UctZWCOTN4H-FK-Ia/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing #(new)
+          solutions: https://drive.google.com/file/d/16OcPuY1B70v1hA1KkCQRAkYIbys-DsOn/view?usp=sharing
         - label: HW
           type: hw
           title: <b>Homework 1 Released</b>
