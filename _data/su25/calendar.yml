@@ -102,12 +102,13 @@
           type: hops
           title: Simple OLS Regression (Watch <b>Lecture 5</b> beforehand!)
           problems: https://drive.google.com/file/d/1JPWMV70yQJKTglgaG1kVIHmLaVOhpJdf/view?usp=sharing
-          #solutions: https://drive.google.com/file/d/1RROFyj8nHABHT9yUyYXKqc9X1UFtScoI/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1RROFyj8nHABHT9yUyYXKqc9X1UFtScoI/view?usp=sharing
         - label: HOPS 5
           type: hops
           title: Regression & Linear Algebra (Watch <b>Lecture 6</b> beforehand!)
           problems: https://drive.google.com/file/d/1nlsuu_4js9jEDgAGeJH_TBCph1M6Teyx/view?usp=drive_link
-          #solutions: https://drive.google.com/file/d/12k9WvD57eAkdxsrpPlJAkH3NHE8Ta0rF/view?usp=drive_link
+          solutions: https://drive.google.com/file/d/12k9WvD57eAkdxsrpPlJAkH3NHE8Ta0rF/view?usp=drive_link
+          recording: https://www.youtube.com/watch?v=bw8G2XvTRck
         - label: DEMO
           type: demo
           title: Simple Linear Regression + Huber Loss
