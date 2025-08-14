@@ -103,6 +103,7 @@
           title: Simple OLS Regression (Watch <b>Lecture 5</b> beforehand!)
           problems: https://drive.google.com/file/d/1JPWMV70yQJKTglgaG1kVIHmLaVOhpJdf/view?usp=sharing
           solutions: https://drive.google.com/file/d/1RROFyj8nHABHT9yUyYXKqc9X1UFtScoI/view?usp=sharing
+          recording: https://youtu.be/gktdMPds_m4
         - label: HOPS 5
           type: hops
           title: Regression & Linear Algebra (Watch <b>Lecture 6</b> beforehand!)
@@ -139,7 +140,7 @@
           title: Regression in the Real World (Watch <b>Lectures 7,8</b> beforehand!)
           problems: https://drive.google.com/file/d/1qJhdYkbE6MoQpaKugP9VD1BILGjPHybt/view?usp=sharing
           code: https://colab.research.google.com/drive/1Qg0xLwmwrnB2ZS1DvwaXk3ZjLW86qgM7?usp=sharing
-          #solutions: https://drive.google.com/file/d/1V3MxqbKIB5I6NNZq-1ov__FCmygBGXBC/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1V3MxqbKIB5I6NNZq-1ov__FCmygBGXBC/view?usp=sharing
         - label: DEMO
           type: demo
           title: Demo 2 - Interaction Terms
