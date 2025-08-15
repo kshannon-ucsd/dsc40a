@@ -74,7 +74,7 @@
           problems: https://drive.google.com/file/d/1hoMwe2FznOTXLuG2ItC3Vhi9RDz9COaa/view?usp=drive_link
           template: https://drive.google.com/file/d/1eDTUvQYlJMo7jQZJEEYZEnaZJSSIEFcx/view?usp=drive_link
           survey: https://forms.gle/5EPLY8BZByqVKYPo6
-          # solutions: 
+          solutions: https://drive.google.com/file/d/1ArOIpwGhEY4HJnDsAL0ZKyE4eXHjAANP/view?usp=sharing
 
 - week: 2
   title: "Week 2 - Linear Algebra for Regression<br>
@@ -147,6 +147,11 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released</b>
+          problems: https://drive.google.com/file/d/1AC1DpSQ0Nf58AlcuKcSrmVu-weck109n/view?usp=drive_link
+          code: https://colab.research.google.com/drive/1_jk9GotkkVEi2z96lJzKYQ2X8WTAu0DR?usp=sharing
+          template: https://drive.google.com/file/d/1cfnFA46eA4THHEHftc5WKhM66pdKG2HV/view?usp=sharing
+          # solutions:
+          # code_solutions:
 
 - week: 3
   title: "Week 3 - Feature Engineering & Gradient Descent<br>
