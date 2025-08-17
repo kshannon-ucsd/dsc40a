@@ -138,9 +138,9 @@
         - label: HOPS 6
           type: hops
           title: Regression in the Real World (Watch <b>Lectures 7,8</b> beforehand!)
-          problems: https://drive.google.com/file/d/1qJhdYkbE6MoQpaKugP9VD1BILGjPHybt/view?usp=sharing
+          problems: https://drive.google.com/file/d/1_b5bTvlOt3iv_XwvPfthq9eYamYBDvZX/view?usp=sharing
           code: https://colab.research.google.com/drive/1Qg0xLwmwrnB2ZS1DvwaXk3ZjLW86qgM7?usp=sharing
-          solutions: https://drive.google.com/file/d/1V3MxqbKIB5I6NNZq-1ov__FCmygBGXBC/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1Mup3VN__OX7oJZMFCP5MjUG3__y_vTbU/view?usp=sharing
         - label: DEMO
           type: demo
           title: Demo 2 - Interaction Terms
