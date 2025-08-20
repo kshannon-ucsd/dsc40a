@@ -184,9 +184,12 @@
         - label: HOPS
           type: hops
           title: Midterm Review (Zoom + Recorded)
+          recording: https://youtu.be/2qqeqsdz5FE
+          problems: https://drive.google.com/file/d/1nr22Bx6R0LTUTqPpTYoanwC0l0BlKaav/view?usp=sharing
         - label: DISC
           type: disc
           title: Groupwork 2 (Submit Handwritten, Individually! for Extra Credit Only)
+          recording: https://youtu.be/vuZHJcoxwWY
           problems: https://drive.google.com/file/d/19Mc-47mB1g2cS52QhYOSAclWzP20cJWu/view?usp=sharing
           solutions: https://drive.google.com/file/d/1dKkJEZL8TuaSc6nrxNXc-MUIJal74pyn/view?usp=sharing
 
