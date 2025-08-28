@@ -189,10 +189,9 @@
         - label: DISC
           type: disc
           title: Groupwork 2 (Submit Handwritten, Individually! for Extra Credit Only)
-          recording: https://youtu.be/vuZHJcoxwWY
           problems: https://drive.google.com/file/d/19Mc-47mB1g2cS52QhYOSAclWzP20cJWu/view?usp=sharing
           solutions: https://drive.google.com/file/d/1dKkJEZL8TuaSc6nrxNXc-MUIJal74pyn/view?usp=sharing
-          walkthrough: https://youtu.be/KkP4JYXzdXc
+          walkthrough: https://youtu.be/vuZHJcoxwWY
 
     - date: "2025-08-21"
       in_class: true
@@ -258,6 +257,7 @@
           title: Groupwork 3 (Submit Handwritten, Individually! for Extra Credit Only)
           problems: https://drive.google.com/file/d/1MxxUVxIKkd_Uqup0Z4BkQNRVzzSH7CdL/view?usp=sharing
           solutions: https://drive.google.com/file/d/114RDDENB_Nirh-yboCaVPpO5hthkL7lD/view?usp=sharing
+          walkthrough: https://youtu.be/KkP4JYXzdXc
 
     - date: "2025-08-28"
       in_class: true
