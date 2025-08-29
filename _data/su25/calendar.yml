@@ -246,12 +246,12 @@
           title: Gradient Descent Again (Watch <b>Lecture 11</b> beforehand!)
           problems: https://drive.google.com/file/d/1ucueIjquyzPxxDog-SZo9mL1D_gK7nQ3/view?usp=sharing
           code: https://colab.research.google.com/drive/1394Tg8PCbcWg9UeERKGcCz2ZFsouXVd8?usp=sharing
-          #solutions: https://drive.google.com/file/d/1yxWUjtjkx4gEf8pkl_Tg-qiyT0YnTQA9/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1yxWUjtjkx4gEf8pkl_Tg-qiyT0YnTQA9/view?usp=sharing
         - label: HOPS 10
           type: hops
           title: Conditional Probability (Watch <b>Lecture 13</b> beforehand!)
           problems: https://drive.google.com/file/d/1hvuL6piXge9DK6_xyUN8Y-dVDbSkFNlL/view?usp=sharing
-          #solutions: https://drive.google.com/file/d/1fYFV-gsvs63L5TxYwnVIBur1qqHfaY0-/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1fYFV-gsvs63L5TxYwnVIBur1qqHfaY0-/view?usp=sharing
         - label: DISC
           type: disc
           title: Groupwork 3 (Submit Handwritten, Individually! for Extra Credit Only)
