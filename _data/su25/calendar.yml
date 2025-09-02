@@ -324,6 +324,10 @@
           type: hops
           title: Naïve Bayes (Watch <b>Lecture 17</b> beforehand!)
           problems: https://drive.google.com/file/d/1AGHI3wm8weKrYHdS9vca-QZABi_TFJal/view?usp=sharing
+        - label: HOPS
+          type: hops
+          title: Final Exam Review (Check <b>Piazza</b> For Zoom Link)
+          #problems: https://drive.google.com/file/d/1AGHI3wm8weKrYHdS9vca-QZABi_TFJal/view?usp=sharing
         - label: DEMO
           type: demo
           title: Demo 6 - Multi-armed Bandit
@@ -344,7 +348,7 @@
           recording: https://youtu.be/k881dKkl2vk
         - label: LEC 19
           type: lecture
-          title: Conclusion + Final Exam Review (Take Home + Oral Exam Component)
+          title: Conclusion + More Review (Take Home + Oral Exam Component)
         - label: DEMO
           type: demo
           title: Demo K-Means Clustering
