@@ -29,12 +29,14 @@ nav_order: 1
 
 {% include staffer.html staff=staff nobio='true' %}
 
-{: .important }
-Please note that updates to the syllabus specific for the Summer 2025 Remote Session have been posted, check them out here! [syllabus update link](https://dsc40a.com/pages/syllabus.html#summer-2025-remote-updates). Office Hours are listed under the Calendat tab.
+<!-- {: .important }
+Please note that updates to the syllabus specific for the Summer 2025 Remote Session have been posted, check them out here! [syllabus update link](https://dsc40a.com/pages/syllabus.html#summer-2025-remote-updates). Office Hours are listed under the Calendar tab. -->
 
+{: .important }
+**Read the syllabus!** Extra credit questions on the Midterm and Final will come from the syllabus. [Check it out here](https://dsc40a.com/pages/syllabus.html). Office hours are listed under the Calendar tab.
 
 {: .important }
-For Office Hours, both in person and on zoom, check the Calendar tab on the left for links, times, and locations.
+**Waitlist students:** You are expected to attend from Day 1 and keep up with all course material. I accept all qualified students (those who meet prerequisites and have departmental approval). Only HDSI and the registrar can officially enroll you.
 
 
 <!-- **{{ course_vars.announcement.text }}** -->

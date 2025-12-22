@@ -12,12 +12,14 @@ nav_order: 7
 
 Jump to:
 
-- [Week 2: Loss Functions, Center and Spread, and Simple Linear Regression](#week-2-loss-functions-center-and-spread-and-simple-linear-regression)
-- [Weeks 3-5: Regression and Linear Algebra](#weeks3-5-regression-and-linear-algebra)
+- [Loss Functions & Empirical Risk](#loss-functions--empirical-risk)
+- [Simple Linear Regression](#simple-linear-regression)
+- [Linear Algebra](#linear-algebra)
+- [Multiple Linear Regression](#multiple-linear-regression)
 
 ---
 
-## Week 2: Loss Functions, Center and Spread, and Simple Linear Regression
+## Loss Functions & Empirical Risk
 
 ### Isn't the mean affected by outliers? How is it the best prediction?
 
@@ -120,6 +122,10 @@ So while no, you won't really use the idea of "infinity loss" in practice, I hop
 
 - [Lecture 3](https://dsc40a.com/resources/lectures/lec03/lec03-filled.pdf) (Slide 19)
 
+---
+
+## Simple Linear Regression
+
 ### In Lecture 4, is the $$x_i$$ not part of the summation since it is out of the parentheses?
 
 The question was referring to a summation like this one:
@@ -172,8 +178,31 @@ So, we have to use the computer to approximate the answer. Regression with squar
 
 - N/A
 
+### Is there a more detailed version of the MSE proof shown in Lecture 5?
 
-## Weeks 3-5: Regression and Linear Algebra
+Yes. Here's a proof of the fact that $$R_\text{sq}(w_0^*, w_1^*) = \sigma_y^2 (1 - r^2)$$.
+
+First, note that since $$\sigma_x^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2$$, we have that $$\sum_{i = 1}^n (x_i - \bar{x})^2 = n \sigma_x^2$$. Then:
+
+$$R_{\text{sq}}( w_0^*, w_1^* )$$ = $$\frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y} - w_1^*(x_i - \bar{x}))^2 $$ \\
+= $$ \frac{1}{n} \sum_{i=1}^{n} \left[ (y_i - \bar{y})^2 - 2 w_1^*(x_i - \bar{x})(y_i - \bar{y}) + w_1^{*2} (x_i - \bar{x})^2 \right] $$ \\
+= $$ \frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2 - \frac{2w_1^*}{n} \sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y})) + \frac{w_1^{*2}}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2 $$ \\
+ = $$\sigma_y^2 - \frac{2w_1^*}{n} \sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y})) + w_1^{*2} \sigma_x^2 $$\\
+ = $$\sigma_y^2 - \frac{2w_1^*}{n} \frac{\sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y}))}{\sum_{i=1}^{n} (x_i - \bar{x})^2} (\sum_{i=1}^{n} (x_i - \bar{x})^2) + r^2 \sigma_y^2 $$\\
+ = $$\sigma_y^2 - 2w_1^* \frac{\sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y}))}{\sum_{i=1}^{n} (x_i - \bar{x})^2} \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n} + r^2 \sigma_y^2$$ \\
+= $$\sigma_y^2 - 2w_1^{*2} \sigma_x^2 + r^2 \sigma_y^2 $$ \\
+= $$\sigma_y^2 - 2(r^2\frac{\sigma_y^2}{\sigma_x^2}) \sigma_x^2 + r^2 \sigma_y^2 $$\\
+= $$\sigma_y^2 - 2r^2\sigma_y^2 + r^2 \sigma_y^2 $$\\
+= $$\sigma_y^2 - r^2 \sigma_y^2$$ \\
+= $$\sigma_y^2 (1 - r^2)$$
+
+#### Lecture(s) to Review:
+
+- [Lecture 5](https://dsc40a.com/resources/lectures/lec05/lec05-filled.pdf) (Slide 25)
+
+---
+
+## Linear Algebra
 
 ### Can you recap the proof of the formula for $$w_1^*$$ that includes $$r$$?
 
@@ -492,6 +521,60 @@ In higher dimensions, the same principle applies. For example, in $$\mathbb{R}^3
 
 - [Lecture 6](https://dsc40a.com/resources/lectures/lec06/lec06-filled.pdf) (Slide 26)
 
+---
+
+## Multiple Linear Regression
+
+### What's the relationship between spans, projections, and multiple linear regression?
+
+#### Spans
+
+The **span** of a set of vectors $$\{\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_d\}$$ is the set of all possible linear combinations of these vectors. In other words, the span defines a subspace in $$\mathbb{R}^n$$ that contains all possible combinations of the independent variables.
+
+$$
+\text{Span}\{\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_d\} = \{w_1 \vec{x}_1 + w_2 \vec{x}_2 + \ldots + w_d \vec{x}_d\}.
+$$
+
+In the context of multiple linear regression, the span of the feature vectors represents all possible values that can be predicted using a linear combination of the feature vectors.
+
+#### Projections
+
+A **projection** of the observation vector $$\vec{y}$$ onto the span of the feature vectors $$\{\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_p\}$$ is any vector $$\vec{h}$$ that lies in this span.
+
+The distance between the observations and the projection of $$\vec{y}$$ into the span of the feature vectors represents the error of a prediction. That is, each projection of $$\vec{y}$$ into the span of the feature vectors is defined by scaling each of the feature vectors by a certain amount ($$w_1$$, $$w_2$$, etc.) and summing them; the distance from this linear combination of the feature vectors to the actual observed values of $$\vec{y}$$ is the error of a certain prediction.
+
+This error is written as
+
+$$
+\vec{e} = \vec{y} - X\vec{w}
+$$,
+
+where $$X$$ represents the design matrix made up of the feature vectors, and $$\vec{w}$$ represents the coefficients that you are scaling the feature vectors by to obtain some projection of $$\vec{y}$$ into the span of $$X$$.
+
+The **orthogonal projection** of $$\vec{y}$$ into $$X$$ is the one that minimizes the error vector (Or the distance between the predicted values of $$\vec{y}$$ and the actual values of $$\vec{y}$$).
+
+#### Multiple Linear Regression
+
+Tying this all together, one can frame multiple linear regression as a projection problem; Given some set of feature vectors $$\vec{x}_1, \vec{x}_2, ... , \vec{x}_d$$, and an observation vector $$\vec{y}$$, what are the scalars $$ w_1, w_2, ... , w_p $$ that give a vector in the span of the feature vectors that is the closest to $$\vec{y}$$?
+
+In other words, how close can we get to the observed values of $$\vec{y}$$, while in the span of our feature vectors?
+
+This framing of multiple linear regression also leads us to the **normal equations**
+
+$$
+\vec{w}^* = (X^\mathrm{T}X)^{-1}X^\mathrm{T}\vec{y}.
+$$
+
+For more visual intuition of this idea, check out this tutor-made animation!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dJcbJKpYywk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Lecture(s) to Review:
+
+- [Lecture 7](https://dsc40a.com/resources/lectures/lec07/lec07-filled.pdf)
+
+- [Lecture 8](https://dsc40a.com/resources/lectures/lec08/lec08-filled.pdf)
+
 ### When $$X^TX$$ isn't invertible, how do we solve the normal equations?
 
 When $$X^TX$$, we cannot solve the normal equations using traditional methods. That is, if we cannot invert $$X^TX$$, we cannot solve $$w = (X^\mathrm{T}X)^{-1}X^\mathrm{T}y$$. 
@@ -563,31 +646,8 @@ For more visual intuition of this idea, check out the first 35 seconds of this v
 #### Lecture(s) to Review:
 
 - [Lecture 6](https://dsc40a.com/resources/lectures/lec06/lec06-filled.pdf) (Slide 23)
-  
+
 - [Lecture 8](https://dsc40a.com/resources/lectures/lec08/lec08-filled.pdf) (Slide 30)
-
-
-### Is there a more detailed version of the MSE proof shown in Lecture 5?
-
-Yes. Here's a proof of the fact that $$R_\text{sq}(w_0^*, w_1^*) = \sigma_y^2 (1 - r^2)$$.
-
-First, note that since $$\sigma_x^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2$$, we have that $$\sum_{i = 1}^n (x_i - \bar{x})^2 = n \sigma_x^2$$. Then:
-
-$$R_{\text{sq}}( w_0^*, w_1^* )$$ = $$\frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y} - w_1^*(x_i - \bar{x}))^2 $$ \\
-= $$ \frac{1}{n} \sum_{i=1}^{n} \left[ (y_i - \bar{y})^2 - 2 w_1^*(x_i - \bar{x})(y_i - \bar{y}) + w_1^{*2} (x_i - \bar{x})^2 \right] $$ \\
-= $$ \frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2 - \frac{2w_1^*}{n} \sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y})) + \frac{w_1^{*2}}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2 $$ \\
- = $$\sigma_y^2 - \frac{2w_1^*}{n} \sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y})) + w_1^{*2} \sigma_x^2 $$\\
- = $$\sigma_y^2 - \frac{2w_1^*}{n} \frac{\sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y}))}{\sum_{i=1}^{n} (x_i - \bar{x})^2} (\sum_{i=1}^{n} (x_i - \bar{x})^2) + r^2 \sigma_y^2 $$\\
- = $$\sigma_y^2 - 2w_1^* \frac{\sum_{i=1}^{n} ((x_i - \bar{x})(y_i - \bar{y}))}{\sum_{i=1}^{n} (x_i - \bar{x})^2} \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n} + r^2 \sigma_y^2$$ \\
-= $$\sigma_y^2 - 2w_1^{*2} \sigma_x^2 + r^2 \sigma_y^2 $$ \\
-= $$\sigma_y^2 - 2(r^2\frac{\sigma_y^2}{\sigma_x^2}) \sigma_x^2 + r^2 \sigma_y^2 $$\\
-= $$\sigma_y^2 - 2r^2\sigma_y^2 + r^2 \sigma_y^2 $$\\
-= $$\sigma_y^2 - r^2 \sigma_y^2$$ \\
-= $$\sigma_y^2 (1 - r^2)$$
-
-#### Lecture(s) to Review:
-
-- [Lecture 5](https://dsc40a.com/resources/lectures/lec05/lec05-filled.pdf) (Slide 25)
 
 ---
 
