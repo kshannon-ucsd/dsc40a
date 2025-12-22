@@ -8,19 +8,12 @@ nav_order: 5
 ---
 
 # 📚 Resources
-{:.no_toc}
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ---
 
 ## Past Lecture Videos (by Janine Tiefenbruck)
 
-In the table below, you can find lecture videos created by Janine Tiefenbruck, who created this course and taught it many times. The lecture videos linked below will generally be pretty similar in content coverage to our lectures, but there are indeed differences in notation and order. You are responsible for everything covered in OUR lectures, even if something doesn’t appear in the videos below. When in doubt, refer to the main lecture slides & videos posted in Home and ask questions on Ed.
+In the table below, you can find lecture videos created by Janine Tiefenbruck, who created this course and taught it many times. The lecture videos linked below will generally be pretty similar in content coverage to our lectures, but there are indeed differences in notation and order. You are responsible for everything covered in OUR lectures, even if something doesn't appear in the videos below. When in doubt, refer to the main lecture slides & videos posted in Home and ask questions on Piazza.
 
 | **Video** | **Topics** |
 | --- | --- |
@@ -58,17 +51,22 @@ In the table below, you can find lecture videos created by Janine Tiefenbruck, w
 
 These resources were created by tutors as part of their Final Project for DSC 95, the first-time tutor training course.
 
+### Getting Started
 - Maryam's [tutorial on using LaTeX](https://www.youtube.com/watch?v=_nBsdQpsEiE)
-- Alan Wang's [video showing the equivalence of the various regression formulas](https://youtu.be/h2qMB1g9zSQ?si=55ziwlomsIFkC9d7).
-- Brighten Hayama and Yosen Lin's [linear regression overview](https://drive.google.com/file/d/1ayBd1EdM5O4jmPgi0DtM2eWKNp5262nD/view?usp=sharing).
-- Pallavi Prabhu's [permutations and combinations guide](https://drive.google.com/file/d/1v5AFjUSzeleVQBe2m2Wd27ViSUC00sY6/view?usp=sharing).
-- Pranav Rebala's [conditional probability presentation](https://docs.google.com/presentation/d/1s-W4NTHwfBKBFdB1fjqDXmWPk69G0K0nse7ukfRQ2bw/edit?usp=sharing).
-- Benjamin Xue's [visualizing independence guide](https://docs.google.com/document/d/e/2PACX-1vTV_h_3yrVwY5JAZ2ZIyKQ6J84t3jsHtaoEMDpduumvtWu5idmf1timb9SfrEpqMdqqkYPvpjqned8Z/pub).
-- Javier Ponce's [probability guide](https://docs.google.com/presentation/d/1INFkQA6H06NEicGpzEMornQWaAwYb1zUVRPOF9nGSDw/edit?usp=sharing).
-- Charlie Sun's [example midterm notes sheet](https://drive.google.com/file/d/1XRW26AeMzdvOu-LNks-4sso6e1xXcH4b/view?usp=sharing).
+- Charlie Sun's [example midterm notes sheet](https://drive.google.com/file/d/1XRW26AeMzdvOu-LNks-4sso6e1xXcH4b/view?usp=sharing)
 - Candus Shi's [slides](https://docs.google.com/presentation/d/1_SvEkGPlfel_NfSg4w-M5HvEa8UdO24l9FW4VokmuaQ/edit?usp=sharing) and [video on the importance of math as a data scientist](https://drive.google.com/file/d/1dMej66xoUzj5g10XvOn4i4fq5Ri1-HQ3/view?usp=sharing)
-- Varun Pabreja’s [video on solving combinatorics problems](https://www.youtube.com/watch?v=8PndRAcRC1Q), including a fun application.
-- Utkarsh Lohia’s [video on the Naïve Bayes classifier](https://www.youtube.com/watch?v=3yCu_l2uBAw).
+
+### Regression & Linear Algebra
+- Alan Wang's [video showing the equivalence of the various regression formulas](https://youtu.be/h2qMB1g9zSQ?si=55ziwlomsIFkC9d7)
+- Brighten Hayama and Yosen Lin's [linear regression overview](https://drive.google.com/file/d/1ayBd1EdM5O4jmPgi0DtM2eWKNp5262nD/view?usp=sharing)
+
+### Probability & Combinatorics
+- Pallavi Prabhu's [permutations and combinations guide](https://drive.google.com/file/d/1v5AFjUSzeleVQBe2m2Wd27ViSUC00sY6/view?usp=sharing)
+- Varun Pabreja's [video on solving combinatorics problems](https://www.youtube.com/watch?v=8PndRAcRC1Q), including a fun application
+- Pranav Rebala's [conditional probability presentation](https://docs.google.com/presentation/d/1s-W4NTHwfBKBFdB1fjqDXmWPk69G0K0nse7ukfRQ2bw/edit?usp=sharing)
+- Benjamin Xue's [visualizing independence guide](https://docs.google.com/document/d/e/2PACX-1vTV_h_3yrVwY5JAZ2ZIyKQ6J84t3jsHtaoEMDpduumvtWu5idmf1timb9SfrEpqMdqqkYPvpjqned8Z/pub)
+- Javier Ponce's [probability guide](https://docs.google.com/presentation/d/1INFkQA6H06NEicGpzEMornQWaAwYb1zUVRPOF9nGSDw/edit?usp=sharing)
+- Utkarsh Lohia's [video on the Naïve Bayes classifier](https://www.youtube.com/watch?v=3yCu_l2uBAw)
 
 
 ---

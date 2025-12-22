@@ -1,0 +1,33 @@
+# Welcome section
+quarter: Winter 2026
+building: PCYNH 106
+timings: TUE & THUR 5:00PM - 6:20PM
+piazza_link: https://piazza.com/tbd
+gradescope_link: https://www.gradescope.com/courses/tbd
+gradescope_entry_code:
+
+office_hours:
+  - name: Kyle Shannon
+    day: TUE
+    time: 7PM - 8PM
+    location: Zoom
+    zoom_link: https://ucsd.zoom.us/j/4288626123?pwd=TWpyQW5nZkpUTWJvU0YzejQyY25Sdz09
+    zoom_pw: 725814
+
+announcement:
+  color: green
+  text: Hit the ground running ASAP. This will be a very challenging course with a lot of content we will be covering! Good Luck to you all :)
+
+discussion_sections:
+  - section: A01
+    day: FRI
+    time: 5:00PM - 5:50PM
+    location: CENTR 115
+    ta: TBD
+    tutor: TBD
+
+final_exam:
+  - section: A00
+    day: Thu
+    time: 7:00PM - 9:59PM
+    location: PCYNH 106

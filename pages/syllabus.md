@@ -16,152 +16,68 @@ description: Course structure and policies.
 
 ---
 
-## Summer 2025 Remote Updates
-Everything in this section, superseds anything else listed below, e.g. grade % distribution for summer is different. So you can ignore the one in the section below.
-
-### Summer Logistics
-Summer Logistics (Clean Copy)
-
-This class is fully remote, but you still have several opportunities to participate live. Here’s how the “flipped-classroom” format will work during the summer session:
-- Recorded lectures
-- All core lectures are pre-recorded—watch them on schedule, because the HOPS (Hands-On Problem-Solving) activities track the lecture content closely.
-- Live Tuesdays
-- Lecture 1 (the first Tuesday) will be delivered live and recorded. It will include a Linear Algebra boot camp/review (recording pending).
-- Every subsequent Tuesday features a live, in-class HOPS session. Recordings of those HOPS problems will be posted afterward.
-- Office-Hours on Thursdays in place of live lecture sessions
-- The Thursday HOPS problems will be pre-recorded and posted online for you to work through at your own pace.
--	Discussion sections are (asynchronous)
--	Instead of live group-work sessions, one or two TAs will record walkthroughs of the discussion section problems.
--	Use these videos to study independently or with classmates so... no discussion groupwork assignments need to be submitted.
--	Midterm and final exams will be take-home. They won’t be easy, and the final may include an oral component. Details will be announced in Weeks 2–3.
-
-Key changes for summer
-1.	Group-work assignments have been removed.
-2.	Half of the HOPS sessions remain live (Tuesdays only) all HOPS content is recorded.
-3.	Both exams are now take-home.
-
-Stay on top of the recorded material so you’re ready for the live HOPS sessions and or to do the HOPS work at home.
-
-### Communication
-All course announcements will be made on Piazza, not in person. Please do not email any of the course staff, we are checking piazza daily and you will be more likely to get a response if you use Piazza. 
-
-### Summer Grading
-Here's how we will compute your grade this summer.
-
-| Component     | Weight | Notes                                                    |
-|---------------|--------|----------------------------------------------------------|
-| Homework      | 50%    | replace lowest (iff you attempted it) with highest grade |
-| Midterm Exam  | 20%    |                                                          |
-| Final Exam    | 30%    | see redemption policy above                              |
-
-- You will have two slip days to use for your HWs. You can use two for one as well. 
-- There will be NO extra credit raffle, but perhapswe will figure something out for EC this session. 
-
-... More to come week 1 if need be. 
+{: .important }
+**Students on the waitlist or joining late:** You are expected to keep up with all work and submit assignments by the deadlines from the start of the quarter.
 
 ---
 
 ## About 🧐
 
-The world is increasingly recognizing the value of data when solving complex and open-ended problems. In the past, we might have explicitly told the computer exactly how to differentiate between the letters of the alphabet, but today we instead give the computer many examples of each letter and let it learn the differences automatically. It is a fascinating time to be working with data! The next obvious question then is... "But how do we learn from data?" 
-
-This is the central question of DSC 40A. We will see that virtually every rigorous learning method involves two steps: i. turning the abstract problem of learning into a concrete math problem; and ii. solving that math problem. This quarter, we will see how to apply this fundamental approach in a variety of contexts. After this class, you will understand the basic theoretical principles underlying almost every machine learning and data science method — from simple linear regression to deep neural networks. You'll also be better prepared to tackle the math you'll see in your upper-division courses, like vector calculus, linear algebra, and probability. 
+DSC 40A answers the question: "How do we learn from data?" We will see that virtually every rigorous learning method involves two steps: turning the abstract problem of learning into a concrete math problem, and then solving that math problem. After this class, you will understand the basic theoretical principles underlying almost every machine learning and data science method, from simple linear regression to deep neural networks. 
 
 ---
 
 ## Communication 💬
 
-This quarter, we'll be using Piazza as our course message board. You should be added to Ed automatically; if not, a link will be provided in class. Please join right away as we'll be making all course announcements through Ed.
+All course announcements and communication will happen on **Piazza**. You should be added automatically. If you have questions about course content, homework, or logistics, post on Piazza. Make posts private if they include any part of your homework solution.
 
-If you have a question about anything to do with the course — if you're stuck on a problem, didn't understand something from lecture, want clarification on course logistics, or just have a general question about data science — please make a post on Ed. If your question is about an active HW problem, please make your post private so that others cannot see it and include your thoughts, parts of an answer (even if you are unsure if it is correct), or what steps you have tried. 
-
-Course staff will regularly check Ed to answer questions. You're also encouraged to answer questions asked by other students. Explaining something is a great way to solidify your understanding of it!
-
-Please don't email staff members (and don't message them on social media); just make a private or public Ed post instead! I will not answer emails regarding course material/logistics, etc.
+**I will not respond to emails.** All questions must go through Piazza so the entire course staff can help and other students can benefit from the discussion.
 
 ---
 
 ## Technology 💻
 
-We will be using several websites this quarter. Here's what they're all used for:
+- **Course Website**: All content posted here
+- **Piazza**: Announcements and communication (auto-enrolled)
+- **Gradescope**: Submit assignments and view grades (auto-enrolled)
+- **Google Colab**: HW requiring a coding component
 
-- Course Website: Where all content will be posted.
-- Campuswire: Discussion forum for announcements and communication.
-- Gradescope: Platform for submitting assignments and viewing grades. You should be automatically added to Gradescope.
-- Google Colaege: Google's shareable live Jupyter notebook web application for any coding demos or projects.
-
-**Note that we WILL NOT be using Canvas at all. I only have Canvas as a way to auto-enroll you in Gradescope and to submit your grades to UCSD's lovely egrades system.**
+**We will not use Canvas** (except for auto-enrollment in Gradescope and UCSD egrades).
 
 ---
 
 ## Course Structure 🍎
 
-This course will include pre-recorded lectures, live demos, live worked problems, group work *(discussion)* sessions sections, plenty of office hours, and homework assignments. Oh Joy!
+**Lectures**: Pre-recorded lectures cover theory (suggest watching at 1.2-1.5x speed). In-class time is for live problem-solving sessions (HOPS - Hands-On Problem Solving). We work through practice problems together step-by-step. Attendance is not required but highly recommended. If you do come to HOPS, make sure you have watched the corresponding (preceding) lecture. 
 
-## Extra Credit Policy
-Through out the quarter, you will be given extra credit opportunities, many in fact! In class when you answer questions, correct or not, go to office hours (not just swing by but stay for a while), or are very proactive on the online discussion form, e.g. campuswire, we will give you raffel tix. These tix can be traded in at the end of the quarter for extracredit on your final grade. E.g. 10 tickets could be worth 1% boost to your grade after any curving. There will also be a small raffel on the last day of class for some really great prizes, e.g. bonus points on your final part 1 to help your chances of redemption for the midterm (see redemption policy below), there are also some awesome grand prizes :D
+**Discussion**: Work on problems in groups of 2-4 students. We will not grade these assignments, however if your team does turn them in a good faith effort to Gradescope by the end of the discussion day, we will use them as extra credit points for those students. The following discussion section will be dedicated to working through the answers as a discussion section class.
 
-So there is ample opportunity for everyone to gain bonus points by participating, even coming to office hours will yield positive results. 
-
-
-### Lecture
-
-#### Pre-Recorded Lectures
-
-Lectures are pre-recorded. Podcasting is not perfect, and with pre-recorded lectures, students can view a higher quality recording at their own speed and pace. I have tried to talk slowly, so you may want to watch at 1.2x speed. Lectures will cover the theoretical aspects of the material. Any questions you have on lecture material, please post them on Ed.
-
-#### Lecture Class Time
-
-We have found that students like to have as many example problems worked out for them in this class. So, I have turned the scheduled lecture time into an interactive problem-solving session. We will work on practice problems, that are more difficult than exam problems, step-by-step together. 
-
-**Lecture is not required, but highly recommended and incentivized with extra credit opportunities**
-
-### Discussion
-
-Discussion sections will be primarily used to facilitate problem-solving in small groups with peers.
-
-We will provide a worksheet of problems, which you will complete in a group of two to four students. The group work should help reinforce concepts from the lecture and further prepare you for homework.
-
-**Attendance at discussion section is required for full credit on the group work, but if you cannot attend, you may complete the group work worksheet in a self-organized group of two to four students outside of the discussion section for 80 percent credit.**
-
-If you have specific people in your section that you want to work with, you may work together, otherwise, the tutors in discussion will pair you with other students.
-
-Only one member of each group should submit the worksheet, and they should indicate the names of all group members on Gradescope. Worksheets won’t be graded on correctness, but rather on good-faith effort. Even if you don’t solve any of the problems, you should include some explanation of what you thought about and discussed, so that you can get credit for spending time on the assignment. **In order to receive credit, you must work in a group of two to four students for at least 50 minutes. You may not do the group work alone.**
-
-**Groupworks will always be due the day that you work on them in discussion, unless otherwise specified.** For example, if Groupwork 1 was worked-on during Discussion on Jan 15, it is due by 11:59 pm on Gradescope the same day.
+**Office Hours**: The homework is challenging and most students cannot complete it from lecture alone. Come to office hours! See the Calendar tab for times and locations. Or come to chat about industry, work as a data scientist or the data science degree at UCSD. We are happy to chat about any and all of it!
 
 ### Homework
 
-This class will have several homework assignments. Please read the following instructions for homeork carefully:
+**Submission:**
+- HWs must be typed in LaTeX. We provide templates and the first discussion section will be dedicated to showing you how to do HW 0 typed up in LaTeX should you have any doubts. With modern day LLMs getting help with LaTeX formatting should not be an issue and it is an important skill to develop. The DSC Capstone 180AB also requires you to use LaTeX. 
+- This helps us to grade faster, and removes the ambiguity of handwritten math answers, of which every year we have numerous issues. 
 
-- Homework 1 is required to be typed (using LaTeX), but we recommend all of your HW be typed up in latex...
-- Remaining Homework can be handwritten/written on ipad etc, but you must follow these guidelines:
-  - **(i.) Place 1 question on a single page (this makes it easier for us to grade)**
-  - (ii.) When turning HW into gradescope, ensure that **each question is tagged/assigned correcrly** to the answer (this makes it easier for us to grade)
-  - (iii.) Make sure your handwritting is clear and legible, we reserve the right to refuse grading a questions that we cannot read (this makes it easier for us to grade)
-  - (iv.) If these things are not done, you may correct them after the due date, but at a regrade penalty (~25%).
-  - (v.) We will provide Latex templates for you to get started on each HW.
+**Due Dates:**
+- Always released at 5:59 AM, and always due at 11:59 PM. Gradescope is source of truth for due dates and release dates. Though we will try to keep the course homepage up to date.
+- Each HW and Groupwork comes with a 6-hour grace period until 5:59 AM next morning. 
+- Turning in your HW after the grace period will result in a 0.
 
-You may talk to other students in the class about the problems and discuss solution strategies, but you should not share any written communication. You can tell someone how to do a homework problem, but you cannot show them how to do it. One way to tell if you are respecting this boundary is to ask yourself whether your collaboration could take place over the phone. Additionally, the content of your verbal communication should involve the problem-solving strategy and approach, and you should not directly compare answers with classmates.
+**Grading:**
+- Correct answer + correct work = 100%
+- Correct approach + minor arithmetic or algebraic error = 50%
+- Wrong approach or no work = 0%
 
-Talking through homework problems with other students can be very valuable for many reasons:
-- You will learn about someone else’s thought process and new ways of solving problems that you may not have thought of.
-- You will get practice explaining your ideas, which is a useful life skill, and important for job interviews. 
-- You will get practice thinking critically about whether someone’s proposed solution actually works, and you will learn how to poke holes in shaky arguments.
+**Extensions:**
+If you have a valid reason for missing a deadline (illness, family emergency, etc.), contact the TAs via Piazza with documentation (e.g., doctor's note). TAs have full authority to approve extensions without checking with the instructor. If approved, you have two options: (1) submit within 48 hours of the original deadline for full credit, or (2) don't submit and receive the mean score of your other homework assignments. But you must get TAs approval, so they can mark down who you are and how we need to alter your grade. 
 
-As a result of this collaboration policy, students may have similar approaches to problems, but they should not have similarly presented solutions, such as word choice. 
+**Collaboration:**
+You can discuss solution strategies with other students, but do not share any written work. You can tell someone how to approach a problem, but you cannot show them your solution. Think of it this way: your collaboration should be able to happen over the phone. Cite the names of anyone you discussed problems with on your submission in the field on page 1.
 
-For each problem you submit, you should cite your sources by including a list of names of other students with whom you discussed the problem. Instructors do not need to be cited.
-
-We also encourage you to come to instructor and staff office hours for help on homework questions. The homework assignments for this class are quite challenging and most students are not able to successfully complete the homework from attending lecture alone. Make sure to use the resources provided on the Resources tab of the course website, actively participate in group work sessions, and plan to attend office hours at least once a week.
-
-You may post homework-related questions on Ed, though your questions (and answers) should be about approaches, not answers. If your question includes some or all of an answer (even if you're not sure it's right), you must make your post private so that others cannot see it. **We are not able to tell you whether your answer is correct.**
-
-**Tentative Homework deadlines are on the website, but are subject to change based on class performance. When in doubt, reference the due date on Gradescope!**
-
-### Office Hours
-
-To get help on assignments and concepts, course staff will be hosting several office hours per week. All office hours will be held in person. See the [Calendar](../calendar) tab of the course website for the most up-to-date schedule.
+**Getting Help:**
+Come to office hours! The homework is challenging. Use the resources on the course website. Post questions on Piazza about approaches (make posts private if they include any part of your answer). We cannot tell you if your answer is correct.
 
 ---
 
@@ -169,13 +85,10 @@ To get help on assignments and concepts, course staff will be hosting several of
 
 There will be one Midterm Exam and one Final Exam, both held in person.
 
-The Midterm Exam will be worth 20% of your overall course grade. The Final Exam will be worth 30% of your overall course grade and will be cumulative.
+**Midterm**: 20 points, covers material from the first half of the course
+**Final**: 30 points, cumulative (covers all course material)
 
-You must take the final exam to pass the class.
-
-### Redemption Policy
-
-The Final Exam will consist of two parts: a "Midterm" section and a "post-Midterm" section. If you do better (we consider better using z-scores, not just straight points) on the "Midterm" section of the Final Exam than you did on the original Midterm Exam, your score on the "Midterm" section will replace your original Midterm Exam score. This lowers the stakes of the Midterm Exam and gives you two opportunities to demonstrate your understanding of the content from the first half of the course. This also means that you can miss the Midterm Exam for any reason and have the score be replaced by your score on the "Midterm" section of the Final Exam (though we do not recommend this).
+**Redemption**: If you score higher on the Final than the Midterm, your Midterm grade will be replaced with your Final grade. This gives you a second chance to demonstrate mastery of early course material.
 
 **You must take the Final Exam to pass the course.**
 
@@ -185,66 +98,69 @@ The Final Exam will consist of two parts: a "Midterm" section and a "post-Midter
 
 ### Grading
 
-Here's how we will compute your grade.
+In an effort for full transparency, I will be providing you all with the python script (as a downloadable zip with a README) that will allow you to insert your grades and calculate a final score. This will be the same exact script I run, and thus should not incur any surprises or questions from all of you come final grades. This script will be available soon, once I finish updating it for this quarter. 
 
-| Component     | Weight | Notes                                                    |
+Your grade will be computed out of 100 points as follows:
+
+| Component     | Points | Notes                                                    |
 |---------------|--------|----------------------------------------------------------|
-| Homework      | 40%    | replace lowest (iff you attempted it) with highest grade |
-| Group work    | 10%    | replace lowest (iff you attempted it) with highest grade |
-| Midterm Exam  | 20%    |                                                          |
-| Final Exam    | 30%    | see redemption policy above                              |
+| Homework      | 50     | lowest score replaced with highest (if submitted and graded) |
+| Midterm Exam  | 20     |                                                          |
+| Final Exam    | 30     | can replace midterm grade if higher (see redemption policy) |
 
-### Late Policy, Slip Days, and Drops
+**Grading Scale (no rounding):**
 
-Each student has **four slip days** (**two in the summer sessions**) to use throughout the quarter. A slip day can be used to extend the deadline of a homework assignment by 24 hours. You can use at most one slip day on any single homework assignment. **Slip days can only be used for homework assignments.**
+These cutoffs are the strictest they will be. After the midterm, I may lower them (make them easier), but I will not raise them.
 
-Slip days are applied automatically at the end of the quarter, and you don't need to ask in order to use one. It's your responsibility to keep track of how many you have left. If you run out of slip days and submit a homework late, it may still be graded so that you'll see what questions you missed, but the grade will be changed to a zero at the end of the quarter.
+| Grade | Range    |
+|-------|----------|
+| A+    | 95-100   |
+| A     | 90-94    |
+| A-    | 85-89    |
+| B+    | 81-84    |
+| B     | 76-80    |
+| B-    | 70-75    |
+| C+    | 65-69    |
+| C     | 60-64    |
+| D     | 50-59    |
+| F     | < 50     |
 
-Slip days are designed to be a transparent and predictable source of leniency in deadlines. You can use a slip day if you are too busy to complete a homework on its original due date. But slip days are also meant for things like the internet going down at 11:58 PM just as you go to submit your homework.
+Grades will not be rounded. Extra credit opportunities are built into the midterm and final exams. You can show up LATE to an exam, but once the first person walks out, you will not be able to begin. 
 
-**If you have something going on in your life that is impeding your ability to do your classwork on time, please reach out to us as soon as possible so we can work something out.**
+### Late Policy and Drops
 
-Students on the waitlist or who join the class late are expected to keep up with the work and submit assignments by the deadlines.
+See Homework section for grace period and extension details. Lowest HW score replaced with highest (if submitted and graded). If you have extenuating circumstances, contact TAs ASAP.
 
-The stated policies will be strictly enforced out of fairness for all students.
+### Regrade Requests
 
-### Regrade Requests 
-
-You can ask for a regrade on any assignment if you believe that the grader made a mistake. Remember that clarity is a part of your score — if you had the right idea but were unable to clearly communicate it, you may still not deserve full credit. We ask that you please submit your **regrade requests within one week (48 hours in summer sessions) of the assignment grade being released**; you can submit regrade requests directly on Gradescope.
+You have 24 hours after HW grades are posted to request a regrade. This can be done via gradescope. There will be no regrade requests for the final exam. 
 
 
 ### Incomplete Grades
 
-In the unfortunate circumstance that you become sick, suffer a loss, or otherwise experience a significant setback that is outside of your control, you may be eligible for an Incomplete grade, which allows you to complete the rest of the work at a later time. If you are experiencing challenges due to circumstances outside your control, please contact me ASAP and we can discuss the best course of action. Note that an Incomplete does not allow you to re-do work that has already been completed, only to do work that hasn't been completed, so it's best to reach out right away.
+If you experience a significant setback outside your control (illness, loss, etc.), you may be eligible for an Incomplete grade. Contact the TAs, the Tutors, or myself ASAP. Note: Incompletes are for work not yet completed, not for redoing completed work and must be accepted by the department.
 
 ### Academic Integrity
 
-In this class, we expect that you will work hard, utilize allowed resources to master the course material, and act with integrity. Learning partially remotely presents new challenges for academic integrity, making it more important than ever to act honorably and make sure that the work you are submitting is reflective of your knowledge and abilities.
+Work hard, use allowed resources, and act with integrity. See [UCSD Policy on Integrity of Scholarship](https://academicintegrity.ucsd.edu/process/policy.html).
 
-The [UCSD Policy on Integrity of Scholarship](https://academicintegrity.ucsd.edu/process/policy.html) and this syllabus list some of the standards by which you are expected to complete your academic work, but your good ethical judgment is also expected. Ignorance of the rules will not excuse you from any violations.
+**Not allowed:**
+- Sharing written homework solutions
+- Looking for homework answers online or using AI tools like ChatGPT/Copilot for solutions.
+- Collaborating on exams or using unauthorized resources (not in the exam instructions) will result in a failure.
 
-For this class, the following activities, among others, are considered cheating and are not allowed:
-- Sharing written homework solutions with other students, or viewing written homework solutions from another student.
-- Looking or asking for answers to homework problems in other texts or sources, including the internet and Generative AI tools such as ChatGPT and GitHub Copilot.
-- Collaborating on exams, checking answers on exams, or communicating with any other person while taking an exam.
-- Using unauthorized resources on homeworks or exams, including solutions from past iterations of this course, and AI tools such as ChatGPT and GitHub Copilot.
+**Allowed:**
+- Discussing homework strategies with classmates
+- I highly encourage you to use AI/LLMs to help you explain and refine concepts. But know they can mislead occasionally. Especially in the probability type problems, or often have arithmetic issues.
+- Reading about concepts (but cite in the HW on page 1 if you accidentally find related material)
 
-The following activities are examples of things that are allowed in this class:
-- Discussing homework problems with classmates and the instructional staff.
-- Reading about concepts from lecture in outside texts, including the internet, without looking for answers to specific homework questions. If you accidentally find related material in another source, you must cite the source on your homework and write up your answer without consulting the source. To do otherwise is plagiarism.
-    - Note that you _can_ ask Generative AI tools, like ChatGPT, to explain ideas from class, but beware, they aren't always correct!
-
-Remember, Academic Integrity is about doing your part to act with honesty, trust, fairness, respect, responsibility and courage. If you are suspected of dishonest conduct, you will be reported to the Academic Integrity Office. Violations of the academic integrity policy will result in failing the course, and the Dean of your college may place you on academic probation or suspend or dismiss you from UCSD. Academic integrity violations are serious and the risk is not worth it!
+As always violations will be reported to the Academic Integrity Office and result in failing the course. Let's not have to go through that embarrassment or paperwork... please. 
 
 ### A note on letter grades
 
-_The following is adapted from [CSE 160](https://courses.cs.washington.edu/courses/cse160/20au/syllabus/index.html#curve) at the University of Washington._
+Grading is never penalized. If everyone masters the material, everyone can get an A+. The grading scale (95+ for A+, 89+ for A, etc.) is built in with the idea that partial credit only can count for 1/2 points, and that this is challenging material. Bonus points on exams and group work accounts for any rounding issues that you would argue for.
 
-Grading for this class is not curved in the sense that the average is set at (say) a B+ and half of the class must receive a grade lower than that. If everyone does well and shows mastery of the material, everyone can receive an A (this would be awesome!). If no one does well (this is unlikely), then everyone can receive a C.
-
-Grading for this class is curved in the sense that we do not have a pre-defined mapping from homework and exam scores to a final GPA. There is no pre-determined score (e.g., 90% of all possible points) that earns an A or a B or a C or any other grade. To determine the final grade, we will ask questions like “Did this student master the material?”. With that said, grades will not be any stricter than the standard grading scale (where an A+ is a 97+, A is 93+, A- is 90+, etc). For instance, the threshold for an "A" will never be higher than 93%.
-
-Try your best not to worry about grades, and we'll reciprocate by being fair. We're in this together 😎.
+Try your best not to worry too much about grades, and we'll reciprocate by being fair. We're in this together 😎.
 
 ---
 
@@ -252,16 +168,11 @@ Try your best not to worry about grades, and we'll reciprocate by being fair. We
 
 ### Accommodations
 
-From the [Office for Students with Disabilities (OSD)](https://osd.ucsd.edu/):
-
->_OSD works with students with documented disabilities to review documentation and determine reasonable accommodations. Disabilities can occur in these areas: psychological, psychiatric, learning, attention, chronic health, physical, vision, hearing, and acquired brain injuries, and may occur at any time during a student’s college career. We encourage you to contact the OSD as soon as you become aware of a condition that is disabling so that we can work with you._
-
-If you already have accommodations via OSD, please make sure that we receive your Authorization for Accommodation (AFA) letter by the end of Week 2 so that we can make arrangements for accommodations. Share your AFA letter with the instructor and the Data Science OSD Liaison, who can be reached at [dscstudent@ucsd.edu](mailto:dscstudent@ucsd.edu). 
+If you have accommodations through [OSD](https://osd.ucsd.edu/), share your AFA letter with the instructor and [dscstudent@ucsd.edu](mailto:dscstudent@ucsd.edu) by the end of Week 2.
 
 ### Diversity and Inclusion
 
-We are committed to creating an inclusive learning environment in which individual differences are respected and all students feel comfortable. If you have any suggestions as to how we could create a more inclusive setting, please let us know.
-We also expect that you, as a student in this course, will honor and respect your classmates, abiding by the [UCSD Principles of Community](https://ucsd.edu/about/principles.html). Please understand that others’ backgrounds, perspectives and experiences may be different than your own, and help us to build an environment where everyone is respected and able to thrive.
+We are committed to an inclusive learning environment. Honor and respect your classmates per the [UCSD Principles of Community](https://ucsd.edu/about/principles.html).
 
 ---
 
