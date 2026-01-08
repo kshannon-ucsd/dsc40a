@@ -8,29 +8,29 @@
   askabout: Coffee, Likely to be found on a tennis court 🎾
   food: Regent's Pizza, Charminar, Sochi Sushi, Turmeric Thai, Callie
 
-- name: fname lname - TA
-  email: email@ucsd.edu
+- name: Benjamin Pham - TA
+  email: bkpham@ucsd.edu
   role: TA
-  photo: assets/staff/all_purpose_filler.jpeg
-  description: My Description
-  hometown: My Hometown
-  askabout: Something interesting
-  food: My Fav Food/Resturants in SD
+  photo: assets/staff/Benjamin_Pham.jpg
+  description: 4th Year PhD Student Data Science | BE Biotech (BS) & Biostats (MS) @ UCSD
+  hometown: Anaheim Hills - > San Diego
+  askabout: Computer building ⌨️, Hiking 🥾
+  food: Phuong Trang, The Melt, Omomo Tea Shoppe
 
-- name: fname lname - TA
-  email: email@ucsd.edu
+- name: Songyao Jin - TA
+  email: soj007@ucsd.edu
   role: TA
-  photo: assets/staff/all_purpose_filler.jpeg
-  description: My Description
-  hometown: My Hometown
-  askabout: Something interesting
-  food: My Fav Food/Resturants in SD
+  photo: /assets/staff/Songyao_Jin.png
+  description: 2nd-year PhD student in Data Science
+  hometown: 🌏 China → Belgium → United Arab Emirates → San Diego
+  askabout: 🥾 Hiking, 📚 Fiction
+  food: 🔥 Fire Spot, 🌶️ Spicy House, 🧋 Bubble tea (3 Cats)
 
 - name: Owen Miller
   email: omiller@ucsd.edu
   role: Tutor
   photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/owen.png
-  description: 3rd year data science + probability & stats major
+  description: 4th year data science + probability & stats major
   hometown: Moss Beach -> Salt Lake City -> Barcelona -> San Diego
   askabout: Cooking, books
   food: Piacere Mio, Flavors of East Africa, Lanzhou Noodlelicious
@@ -40,7 +40,7 @@
   role: Tutor
   website: https://anshu-b.github.io/ansh/
   photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/ansh.png
-  description: 2nd year Data Science major; Math, CogSci, & Supply Chain MGT minors
+  description: 3rd year Data Science + Cognitive Science; DS3 President
   hometown: Fremont, California
   askabout: Basketball (Warriors) 🏀, Football (Seahawks) 🏈, & Plants 🪴 
   food: Ramen Nagi, Taco Bell, 55 Thai, Madras Cafe
@@ -49,7 +49,7 @@
   email: vpabreja@ucsd.edu
   role: Tutor
   photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/varun.jpeg
-  description: 3rd year Data Science major; CogSci, & BusEcon minors
+  description: 4th year Data Science major; CogSci, & BusEcon minors
   hometown: Dubai, UAE
   askabout: Poker ♠, Bojack Horseman 🐴, Cricket 🏏
   food: The Taco Stand, Bobboi Gelato, Charminar
@@ -58,7 +58,7 @@
   email: ulohia@ucsd.edu
   role: Tutor
   photo: https://ucsd.s3.us-west-2.amazonaws.com/staff/photos/utkarsh.png
-  description: 3rd year, Data Science major
+  description: 4th year, Data Science major
   hometown: Kolkata, India
   askabout: Formula 1, Chess, Coffee
   food: Charminar, Regents Pizza, District 6
