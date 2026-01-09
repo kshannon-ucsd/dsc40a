@@ -31,9 +31,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 1
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_1_solutions.pdf
-          # code: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/demos/hops_1_demo.ipynb
-          # problems: todo
+          problems: https://drive.google.com/file/d/1GIWgsSIzjkIyFQOa-4tZxFl1mB6_EZjy/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1oYIAHgX4YWfDI_TZZ4_b4AJ4X5-XGsrT/view?usp=sharing
 
         - label: HW
           type: hw
