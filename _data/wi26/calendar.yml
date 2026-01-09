@@ -37,10 +37,10 @@
         - label: HW
           type: hw
           title: <b>Homework 1 Released (due Jan 18, 11:59 pm)</b>
-          # problems: https://drive.google.com/file/d/1SQt9YmYixAif46hVS9pqm4jRMQDECuR3/view?usp=sharing
-          # template: https://www.overleaf.com/read/prxhqgwwmcqk#9a9539
+          problems: https://drive.google.com/file/d/1eGPQH62jzFOajC8vtXRlAIIPZrMfg1Bz/view?usp=sharing
+          template: https://drive.google.com/file/d/10JTDuqK1r-FzbINQlM6iNRjDQnDjLv88/view?usp=sharing
           # submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
-          # solutions: https://drive.google.com/file/d/18wSg_HKPf9KeYA_wfTi2ElCdThW4nSlx/view?usp=sharing
+          # solutions: https://drive.google.com/file/d/1Vg8sgEgKkAYLEX8ZTYTs7M5aABqRI6Oa/view?usp=sharing
 
     - date: "2026-01-09"
       in_class: true
