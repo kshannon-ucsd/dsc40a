@@ -48,7 +48,7 @@
         - label: DISC
           type: disc
           title: Go over HW0 and LaTeX
-          # problems:
+          template: https://drive.google.com/file/d/12LSiMU-qjLnZUL5Bjzu_mOOvOytSShv8/view?usp=sharing
           # solutions:
 
 - week: 2
