@@ -16,9 +16,8 @@
         - label: HW
           type: hw
           title: <b>Homework 0 (not due!)</b>
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
-          # template: https://www.overleaf.com/read/kpqfqhkdxcnn#317117
-          # solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
+          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
+          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
 
     - date: "2026-01-08"
       in_class: true
