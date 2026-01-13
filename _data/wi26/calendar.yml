@@ -16,8 +16,8 @@
         - label: HW
           type: hw
           title: <b>Homework 0 (not due!)</b>
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
+          problems: https://drive.google.com/file/d/1ImQgGPnydJ4aKxXj3iY2kxTqaq45cbH0/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1uhtV8dZxst3Iom5Uot32a5yzRIm_Nf28/view?usp=sharing
 
     - date: "2026-01-08"
       in_class: true
@@ -39,7 +39,6 @@
           title: <b>Homework 1 Released (due Jan 18, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1eGPQH62jzFOajC8vtXRlAIIPZrMfg1Bz/view?usp=sharing
           template: https://drive.google.com/file/d/10JTDuqK1r-FzbINQlM6iNRjDQnDjLv88/view?usp=sharing
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
           # solutions: https://drive.google.com/file/d/1Vg8sgEgKkAYLEX8ZTYTs7M5aABqRI6Oa/view?usp=sharing
 
     - date: "2026-01-09"
@@ -48,22 +47,26 @@
         - label: DISC
           type: disc
           title: Go over HW0 and LaTeX
-          template: https://drive.google.com/file/d/12LSiMU-qjLnZUL5Bjzu_mOOvOytSShv8/view?usp=sharing
-          # solutions:
+          problems: https://drive.google.com/file/d/12LSiMU-qjLnZUL5Bjzu_mOOvOytSShv8/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1FGOPMiRrqmESX0ApR9ZMA-aT7ipP_-jN/view?usp=sharing
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
-    <small>
-      📘 Read <a href='https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing'>How to Prove It! Proofing Review</a>.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       &nbsp;-&nbsp;<a href='https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing'>Solutions</a>
-       &nbsp;-&nbsp;<a href='https://youtu.be/SyMOSMQLAdc'>Recording</a>
-    </small>
     <small>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.<br>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
     </small>"
   days:
+    - date: "2026-01-12"
+      in_class: false
+      events:
+        - label: REV 1
+          type: lecture
+          title: How to Prove It! Proofing Review (Zoom)
+          blank: https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing
+          filled: https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing
+          recording: https://youtu.be/SyMOSMQLAdc
+
     - date: "2026-01-13"
       in_class: true
       events:
@@ -76,8 +79,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 2
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_problems.pdf
-          # solutions: https://drive.google.com/file/d/1ox0Q8F4euvIuxcIvwy2LMg_ObOsQVXEr/view?usp=sharing
+          problems: https://drive.google.com/file/d/1SC7l_WLAkIw2To65yQ7ydDDZoUIxKl6o/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1QKKQqNLRS-xSF3_iwTAmtK5YH8j2A2dH/view?usp=sharing
 
     - date: "2026-01-15"
       in_class: true
@@ -91,9 +94,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 3
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_problems.ipynb
-          # solutions: https://drive.google.com/file/d/1Aryf4FjP6Xpas_J6cEM67Y0bRIjIj88r/view?usp=sharing
-          # data: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_loan_data.csv
+          problems: https://drive.google.com/file/d/1tPGmEeQ5Nw6j6s_rXNJYg0EPDVJscpkW/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1KZ3rN0F0NK808NA2IrzvGPHNmxBWsMCk/view?usp=sharing
 
     - date: "2026-01-16"
       in_class: true
