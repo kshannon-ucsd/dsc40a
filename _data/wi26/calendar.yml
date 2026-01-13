@@ -76,8 +76,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 2
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_2_problems.pdf
-          # solutions: https://drive.google.com/file/d/1ox0Q8F4euvIuxcIvwy2LMg_ObOsQVXEr/view?usp=sharing
+          problems: https://drive.google.com/file/d/1SC7l_WLAkIw2To65yQ7ydDDZoUIxKl6o/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1QKKQqNLRS-xSF3_iwTAmtK5YH8j2A2dH/view?usp=sharing
 
     - date: "2026-01-15"
       in_class: true
@@ -91,9 +91,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 3
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_problems.ipynb
-          # solutions: https://drive.google.com/file/d/1Aryf4FjP6Xpas_J6cEM67Y0bRIjIj88r/view?usp=sharing
-          # data: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/hops/hops_3_loan_data.csv
+          problems: https://drive.google.com/file/d/1tPGmEeQ5Nw6j6s_rXNJYg0EPDVJscpkW/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1KZ3rN0F0NK808NA2IrzvGPHNmxBWsMCk/view?usp=sharing
 
     - date: "2026-01-16"
       in_class: true
