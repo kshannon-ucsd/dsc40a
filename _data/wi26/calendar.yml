@@ -54,16 +54,20 @@
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
     <small>
-      📘 Read <a href='https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing'>How to Prove It! Proofing Review</a>.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       &nbsp;-&nbsp;<a href='https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing'>Solutions</a>
-       &nbsp;-&nbsp;<a href='https://youtu.be/SyMOSMQLAdc'>Recording</a>
-    </small>
-    <small>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_2.pdf'>Chapter 2, Pages 1-7</a>.<br>
       📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_spread.pdf'>the spread notes</a>.<br>
     </small>"
   days:
+    - date: "2026-01-12"
+      in_class: false
+      events:
+        - label: REV 1
+          type: lecture
+          title: How to Prove It! Proofing Review (Zoom)
+          blank: https://drive.google.com/file/d/1MkqEwGx0bPlXET1T9hakiAzfN5hE-cVo/view?usp=sharing
+          filled: https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing
+          recording: https://youtu.be/SyMOSMQLAdc
+
     - date: "2026-01-13"
       in_class: true
       events:
