@@ -16,8 +16,8 @@
         - label: HW
           type: hw
           title: <b>Homework 0 (not due!)</b>
-          problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0.pdf
-          solutions: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/homework_0_solutions.pdf
+          problems: https://drive.google.com/file/d/1ImQgGPnydJ4aKxXj3iY2kxTqaq45cbH0/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1uhtV8dZxst3Iom5Uot32a5yzRIm_Nf28/view?usp=sharing
 
     - date: "2026-01-08"
       in_class: true
@@ -39,7 +39,6 @@
           title: <b>Homework 1 Released (due Jan 18, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1eGPQH62jzFOajC8vtXRlAIIPZrMfg1Bz/view?usp=sharing
           template: https://drive.google.com/file/d/10JTDuqK1r-FzbINQlM6iNRjDQnDjLv88/view?usp=sharing
-          # submission: https://www.gradescope.com/courses/934714/assignments/5504784/submissions
           # solutions: https://drive.google.com/file/d/1Vg8sgEgKkAYLEX8ZTYTs7M5aABqRI6Oa/view?usp=sharing
 
     - date: "2026-01-09"
@@ -48,8 +47,8 @@
         - label: DISC
           type: disc
           title: Go over HW0 and LaTeX
-          template: https://drive.google.com/file/d/12LSiMU-qjLnZUL5Bjzu_mOOvOytSShv8/view?usp=sharing
-          # solutions:
+          problems: https://drive.google.com/file/d/12LSiMU-qjLnZUL5Bjzu_mOOvOytSShv8/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1FGOPMiRrqmESX0ApR9ZMA-aT7ipP_-jN/view?usp=sharing
 
 - week: 2
   title: "Week 2 - Loss Functions & Simple Linear Regression<br>
