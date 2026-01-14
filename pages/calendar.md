@@ -10,7 +10,7 @@ nav_order: 3
 Most office hours are held in person in the Halıcıoğlu Data Science Institute. Office hours held remotely will have zoom links.
 
 ### Remote OHs
-- Kyle's ➡️ Tuesday 7:00 PM - 8:00 PM PST [zoom link](https://ucsd.zoom.us/j/4288626123?pwd=TWpyQW5nZkpUTWJvU0YzejQyY25Sdz09)
+- Kyle's ➡️ Friday 3:30 PM - 4:30 PM PST [zoom link](https://ucsd.zoom.us/j/4288626123?pwd=TWpyQW5nZkpUTWJvU0YzejQyY25Sdz09)
 
 
 ### In-person OHs
