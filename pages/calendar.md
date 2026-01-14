@@ -16,4 +16,6 @@ Most office hours are held in person in the Halıcıoğlu Data Science Institute
 ### In-person OHs
 - TBD (check course homepage calendar for updates)
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&title=DSC%2040a%20-%20Wi26&src=Y184OWQ0NmJmY2VkOTk4YmY3NjIzZTFhZWE4NTU4MjVmM2Q2MWE4ZTQ5ZjZlZjY4YWRiZjlkZTRiN2FmZDU3YjlhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&title=DSC%2040a%20-%20Wi26&src=Y184OWQ0NmJmY2VkOTk4YmY3NjIzZTFhZWE4NTU4MjVmM2Q2MWE4ZTQ5ZjZlZjY4YWRiZjlkZTRiN2FmZDU3YjlhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&mode=AGENDA&title=DSC%2040a%20Winter%202026&src=Y185YzdmYTg0YzE5NTVkY2I4NDI4ZmNlYTJkMDBjYTUzZTBlODgxODExOTMwMDUwYjcxNGM1Mzc2NzgyMTM5YWQzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23f6bf26" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
