@@ -120,11 +120,16 @@
           type: demo
           title: Demo 2 - Linear Regression
           link: /demos/2_linear_regression
+        - label: TALK
+          type: lecture
+          title: Applications of Linear Regression
+          blank: https://docs.google.com/presentation/d/1UmK64eWMb_tqBmTJcXrPk1wXTjHiw7sGIfhB6x7hdaI/edit?usp=sharing
         - label: HW
           type: hw
           title: <b>Homework 2 Released (due Feb 1, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1u3vjmZNtgWZP_RUdJQdrCTehZdGJWbSD/view?usp=sharing
           template: https://drive.google.com/file/d/1ApzIb8PcDr_XLeBw6VdrkQ9uzPybSGBV/view?usp=sharing
+          code: https://colab.research.google.com/drive/1KtpxT2QMo06jDCxVSArObOx99uA1WSrj?usp=sharing
           # solutions: https://www.overleaf.com/read/qdhcnmkcstxj#d30706
           # submission:
         - label: LEC 5
