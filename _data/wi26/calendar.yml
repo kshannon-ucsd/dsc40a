@@ -123,8 +123,8 @@
         - label: HW
           type: hw
           title: <b>Homework 2 Released (due Feb 1, 11:59 pm)</b>
-          # problems: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/homework/hw2_dsc40a_su24_kwuhc.pdf
-          # template: https://www.overleaf.com/read/zbhgqqpcbfdh#0699bb
+          problems: https://drive.google.com/file/d/1u3vjmZNtgWZP_RUdJQdrCTehZdGJWbSD/view?usp=sharing
+          template: https://drive.google.com/file/d/1ApzIb8PcDr_XLeBw6VdrkQ9uzPybSGBV/view?usp=sharing
           # solutions: https://www.overleaf.com/read/qdhcnmkcstxj#d30706
           # submission:
         - label: LEC 5
