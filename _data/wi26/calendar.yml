@@ -155,6 +155,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 4
+          problems: https://drive.google.com/file/d/1qwicnkb1slWJ7nRgS7Oj9jqRA62ss9VH/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1YoKNKURB_6-cszynLDUB_O-BAbEgf3Bu/view?usp=sharing
         - label: LEC 6
           type: lecture
           title: Dot Products and Projections
