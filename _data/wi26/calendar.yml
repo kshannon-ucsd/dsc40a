@@ -142,12 +142,11 @@
     - date: "2026-01-21"
       in_class: false
       events:
-        - label: REV2
+        - label: REV 2
           type: lecture
           title: Linear Algebra Review (Zoom)
           blank: https://drive.google.com/file/d/1M5UGK8Uio7a9oX2kf3p-UMCwkwY8Wt0t/view?usp=sharing
-          #filled: https://drive.google.com/file/d/1WOVaodFTBvKgdSG3OK0L-uOzRMzfmXsv/view?usp=sharing
-          #recording: https://youtu.be/SyMOSMQLAdc
+          recording: https://youtu.be/E3kmd4wDDX8
 
     - date: "2026-01-22"
       in_class: true
