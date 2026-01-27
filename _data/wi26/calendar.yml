@@ -39,7 +39,7 @@
           title: <b>Homework 1 Released (due Jan 18, 11:59 pm)</b>
           problems: https://drive.google.com/file/d/1eGPQH62jzFOajC8vtXRlAIIPZrMfg1Bz/view?usp=sharing
           template: https://drive.google.com/file/d/10JTDuqK1r-FzbINQlM6iNRjDQnDjLv88/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1Vg8sgEgKkAYLEX8ZTYTs7M5aABqRI6Oa/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1Vg8sgEgKkAYLEX8ZTYTs7M5aABqRI6Oa/view?usp=sharing
 
     - date: "2026-01-09"
       in_class: true
@@ -248,7 +248,7 @@
         - label: EXAM
           type: exam
           title: Midterm Exam
-          # guide: https://drive.google.com/file/d/11bIXzMjmUiVmSRxMivpcWXebURMf3ISS/view?usp=sharing
+          guide: https://drive.google.com/file/d/11bIXzMjmUiVmSRxMivpcWXebURMf3ISS/view?usp=sharing
 
     - date: "2026-02-06"
       in_class: true
