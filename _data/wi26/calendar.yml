@@ -199,8 +199,8 @@
           title: Hands-On Problem Solving 6
           # solutions:
           # code_solutions: https://drive.google.com/file/d/1I2CkSDiwK8xVXpCZzUST2c2vgU9hnsQ-/view?usp=sharing
-          # code: https://drive.google.com/file/d/1Ie9kZ22FNYuMv21_h2BfOE3vhymvvHar/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1nlsuu_4js9jEDgAGeJH_TBCph1M6Teyx/view?usp=sharing
+          code: https://colab.research.google.com/drive/1DRIJNMV1Yggpww4K8g21_LrPfYNzuZ3z?usp=sharing
+          problems: https://drive.google.com/file/d/1NsM_EHbyzfoUkAr-jW5hoPIQM_Y7cebL/view?usp=sharing
         - label: LEC 8
           type: lecture
           title: Regression and Linear Algebra
