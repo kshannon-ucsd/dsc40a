@@ -118,7 +118,7 @@
       events:
         - label: DEMO
           type: demo
-          title: Demo 2 - Linear Regression
+          title: Demo 1 - Linear Regression
           link: /demos/2_linear_regression
         - label: TALK
           type: lecture
@@ -169,9 +169,6 @@
         - label: DISC
           type: disc
           title: Groupwork 1 Review
-          # problems:
-          # solutions:
-
 
 - week: 4
   title: "Week 4 - Linear Algebra & Regression"
@@ -222,6 +219,10 @@
     - date: "2026-02-03"
       in_class: true
       events:
+        - label: DEMO
+            type: demo
+            title: Demo 2 - Interaction Terms
+            link: /demos/2_interaction_terms
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 7
@@ -231,8 +232,8 @@
         - label: HW
           type: hw
           title: <b>Homework 3 Released (due Feb 25, 11:59 pm)</b>
-          # problems: https://drive.google.com/file/d/1p2iJ9qJ80rF63evYMyAVaadN_ADpLIDL/view?usp=sharing
-          # template: https://www.overleaf.com/read/fnndrftysfms#c5e2f6
+          problems: https://drive.google.com/file/d/1UAvPfbGwVwDb_dyYMGe_1bzxz1H9t64h/view?usp=sharing
+          template: https://drive.google.com/file/d/1inB1UeDpySQmlffkFXkDoywI7I4DlWDx/view?usp=sharing
           # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
           # solutions: https://drive.google.com/file/d/1BEKPeC6-qtXLePeoKuV4o-ej9QGYmib4/view?usp=sharing
         - label: LEC 9
@@ -333,7 +334,7 @@
       events:
         - label: DEMO
           type: demo
-          title: Demo 5 - Interaction Terms
+          title: Demo 4 - 
           link: /demos/5_interaction_terms
 
     - date: "2026-02-20"
