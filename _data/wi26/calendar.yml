@@ -36,7 +36,7 @@
 
         - label: HW
           type: hw
-          title: <b>Homework 1 Released (due Jan 18, 11:59 pm)</b>
+          title: "<b>Homework 1 Released (due Jan 18, 11:59 pm)</b>"
           problems: https://drive.google.com/file/d/1eGPQH62jzFOajC8vtXRlAIIPZrMfg1Bz/view?usp=sharing
           template: https://drive.google.com/file/d/10JTDuqK1r-FzbINQlM6iNRjDQnDjLv88/view?usp=sharing
           solutions: https://drive.google.com/file/d/1Vg8sgEgKkAYLEX8ZTYTs7M5aABqRI6Oa/view?usp=sharing
@@ -126,7 +126,7 @@
           blank: https://docs.google.com/presentation/d/1UmK64eWMb_tqBmTJcXrPk1wXTjHiw7sGIfhB6x7hdaI/edit?usp=sharing
         - label: HW
           type: hw
-          title: <b>Homework 2 Released (due Feb 1, 11:59 pm)</b>
+          title: "<b>Homework 2 Released (due Feb 1, 11:59 pm)</b>"
           problems: https://drive.google.com/file/d/1u3vjmZNtgWZP_RUdJQdrCTehZdGJWbSD/view?usp=sharing
           template: https://drive.google.com/file/d/1ApzIb8PcDr_XLeBw6VdrkQ9uzPybSGBV/view?usp=sharing
           code: https://colab.research.google.com/drive/1KtpxT2QMo06jDCxVSArObOx99uA1WSrj?usp=sharing
@@ -220,9 +220,9 @@
       in_class: true
       events:
         - label: DEMO
-            type: demo
-            title: Demo 2 - Interaction Terms
-            link: /demos/2_interaction_terms
+          type: demo
+          title: Demo 2 - Interaction Terms
+          link: /demos/5_interaction_terms
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 7
@@ -231,7 +231,7 @@
           problems: https://drive.google.com/file/d/1GFlB7u2qWbLy0W2voP-WFHbbNdExiLeJ/view?usp=sharing
         - label: HW
           type: hw
-          title: <b>Homework 3 Released (due Feb 25, 11:59 pm)</b>
+          title: "<b>Homework 3 Released (due Feb 25, 11:59 pm)</b>"
           problems: https://drive.google.com/file/d/1UAvPfbGwVwDb_dyYMGe_1bzxz1H9t64h/view?usp=sharing
           template: https://drive.google.com/file/d/1inB1UeDpySQmlffkFXkDoywI7I4DlWDx/view?usp=sharing
           # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
@@ -322,7 +322,7 @@
           recording: https://youtu.be/g9TTmIVY7sE
         - label: HW
           type: hw
-          title: <b>Homework 4 Released (due Mar 6, 11:59 pm)</b>
+          title: "<b>Homework 4 Released (due Mar 6, 11:59 pm)</b>"
           # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
           # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing
           # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
