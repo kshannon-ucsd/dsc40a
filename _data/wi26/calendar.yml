@@ -225,9 +225,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 7
-          # code: https://drive.google.com/file/d/1dxIlBxvy9iFv0Ej35WzD2fbMNFKu_JMY/view?usp=sharing
+          code: https://colab.research.google.com/drive/1v6yBgeoGYDDHZHtEA0pmw_hImVpQAMbm?usp=sharing
           # code_addt: https://drive.google.com/file/d/1WOsrhqIXCm0izPgRZKuguOoJftSB4dVH/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1iFu-6NGV_9g7X3yqve4Z6PSjqu3Dn1Hh/view?usp=sharing
+          problems: https://drive.google.com/file/d/1GFlB7u2qWbLy0W2voP-WFHbbNdExiLeJ/view?usp=sharing
         - label: HW
           type: hw
           title: <b>Homework 3 Released (due Feb 25, 11:59 pm)</b>
