@@ -256,7 +256,9 @@
       events:
         - label: DISC
           type: disc
-          title: Go over Midterm Answers
+          title: Groupwork 2
+          # problems:
+          # solutions:
 
 - week: 6
   title: "Week 6 - Multiple Linear Regression & Feature Engineering"
@@ -295,9 +297,7 @@
       events:
         - label: DISC
           type: disc
-          title: Groupwork 2
-          # problems:
-          # solutions:
+          title: Go over Midterm Answers
 
 - week: 7
   title: "Week 7 - Gradient Descent<br>
