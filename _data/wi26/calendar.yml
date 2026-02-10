@@ -231,7 +231,7 @@
           problems: https://drive.google.com/file/d/1GFlB7u2qWbLy0W2voP-WFHbbNdExiLeJ/view?usp=sharing
         - label: HW
           type: hw
-          title: "<b>Homework 3 Released (due Feb 25, 11:59 pm)</b>"
+          title: "<b>Homework 3 Released (due Feb 15, 11:59 pm)</b>"
           problems: https://drive.google.com/file/d/1UAvPfbGwVwDb_dyYMGe_1bzxz1H9t64h/view?usp=sharing
           template: https://drive.google.com/file/d/1inB1UeDpySQmlffkFXkDoywI7I4DlWDx/view?usp=sharing
           # submission: https://www.gradescope.com/courses/934714/assignments/5504779/
@@ -304,6 +304,15 @@
     <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_chapter_1.pdf'>Chapter 1, Pages 16-17</a>.</small><br>
     <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_convexity.pdf'>Notes on Convexity</a>.</small><br>"
   days:
+    - date: "2026-02-15"
+      in_class: false
+      events:
+        - label: HW
+          type: hw
+          title: "<b>Homework 4 Released (due Feb 27, 11:59 pm)</b>"
+          # problems:
+          # template:
+          # solutions:
     - date: "2026-02-17"
       in_class: true
       events:
@@ -320,15 +329,7 @@
           blank: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12.pdf
           filled: https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/lectures/lecture_12_annotated.pdf
           recording: https://youtu.be/g9TTmIVY7sE
-        - label: HW
-          type: hw
-          title: "<b>Homework 4 Released (due Mar 6, 11:59 pm)</b>"
-          # problems: https://drive.google.com/file/d/1E0I-RhTjfI0XphMe3JVF5hs_xJSYIq3X/view?usp=sharing
-          # code: https://drive.google.com/file/d/1IGGod14DX9gsmzglZQV3tIR8mKM62L2C/view?usp=sharing
-          # template: https://www.overleaf.com/read/tptpvdgwskvj#fbd3e0
-          # solutions: https://drive.google.com/file/d/1yxP9D7nR1SxwmgEyRHNf_oZGF1QnurTT/view?usp=sharing
-          # code_solutions: https://drive.google.com/file/d/1OmpTV7caicGosi3R5K0s1EH7F3zjAaOg/view?usp=drive_link
-
+        
     - date: "2026-02-19"
       in_class: true
       events:
@@ -398,6 +399,12 @@
           title: Groupwork 3
           # problems:
           # solutions:
+        - label: HW
+          type: hw
+          title: "<b>Homework 5 Released (due Mar 9, 11:59 pm)</b>"
+          # problems:
+          # template:
+          # solutions:
 
 - week: 9
   title: "Week 9 - Probability & Independence<br>
@@ -449,6 +456,15 @@
   title: "Week 10 - Naïve Bayes & Course Conclusion<br>
     <small>📘 Read <a href='https://ucsd.s3.us-west-2.amazonaws.com/dsc40a/readings/40a_conditional_independence.pdf'>Notes on Conditional Independence</a>.</small><br>"
   days:
+    - date: "2026-03-09"
+      in_class: false
+      events:
+        - label: HW
+          type: hw
+          title: "<b>Homework 6 - Bonus Homework Released (due Mar 12, 11:59 pm)</b>"
+          # problems:
+          # solutions:
+          # template: 
     - date: "2026-03-10"
       in_class: true
       events:
