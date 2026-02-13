@@ -288,8 +288,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 9
-          # solutions: 
-          # problems:
+          # solutions: https://drive.google.com/file/d/1eMH42iL_-q1z-GhL0NrhlNKZuHjLWrro/view?usp=sharing
+          problems: https://drive.google.com/file/d/19xK5GxPXqj9vYcpL3hnKULbbrkyeUe1p/view?usp=sharing
           # code_solutions: https://colab.research.google.com/drive/1a2-KS6n-0IIFZwPwlnzH3rtfhlssmTPk?usp=sharing 
           code: https://colab.research.google.com/drive/1qA1i2s7NQmC13dMutclqhqCHdzaPpPku?usp=sharing
         - label: LEC 11
