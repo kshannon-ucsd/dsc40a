@@ -289,7 +289,8 @@
           type: hops
           title: Hands-On Problem Solving 9
           # solutions: 
-          # problems: 
+          # problems:
+          # code_solutions: https://colab.research.google.com/drive/1a2-KS6n-0IIFZwPwlnzH3rtfhlssmTPk?usp=sharing 
           code: https://colab.research.google.com/drive/1qA1i2s7NQmC13dMutclqhqCHdzaPpPku?usp=sharing
         - label: LEC 11
           type: lecture
