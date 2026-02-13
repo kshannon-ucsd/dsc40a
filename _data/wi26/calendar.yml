@@ -288,8 +288,9 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 9
-          # solutions: https://drive.google.com/file/d/1qIQbjjbxslBaeZrtb835_PU7dUrGd7IE/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1Dgv3dQxQ7y41wEZC_HvbVauF1MnqPhjb/view?usp=sharing
+          # solutions: 
+          # problems: 
+          code: https://colab.research.google.com/drive/1qA1i2s7NQmC13dMutclqhqCHdzaPpPku?usp=sharing
         - label: LEC 11
           type: lecture
           title: Gradient Descent, Continued
