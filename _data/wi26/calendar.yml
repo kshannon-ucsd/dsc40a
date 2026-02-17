@@ -326,10 +326,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 10
-          # problems: https://drive.google.com/file/d/1rk7PNzk7_z7mkhXN71WCYuaffiaqLImg/view?usp=sharing
-          # code: https://drive.google.com/file/d/1bzSZAuz6XhZzLJp49bVvYAsHF2l0xzuB/view?usp=sharing
-          # data: https://drive.google.com/file/d/1S8GWAOvhK5JFR2L8CGcFSl1W8gH4vA15/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1xGDLDx3HOtlmFYfLBp4LTWB1Tb_YSWx8/view?usp=drive_link
+          problems: https://drive.google.com/file/d/1MkRWxZj2twFlt6s3Gm6LSBgiQWvgVguM/view?usp=sharing
+          # solutions: https://drive.google.com/file/d/1-SLUX0ofhbdJTGLxyU_vhUFP6khvzEIC/view?usp=sharing
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
