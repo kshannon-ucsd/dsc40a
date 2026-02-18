@@ -317,8 +317,8 @@
         - label: HW
           type: hw
           title: "<b>Homework 4 Released (due Feb 27, 11:59 pm)</b>"
-          # problems:
-          # template:
+          problems: https://drive.google.com/file/d/17Jw_SoGpyyDAZHfygKaxM-_p8Jdf33so/view?usp=sharing
+          template: https://drive.google.com/file/d/1ek-HMnhHlHnDcDAnVvMmNnMPS3KPhPBw/view?usp=sharing
           # solutions:
     - date: "2026-02-17"
       in_class: true
