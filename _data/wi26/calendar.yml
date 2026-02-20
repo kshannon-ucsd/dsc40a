@@ -327,7 +327,7 @@
           type: hops
           title: Hands-On Problem Solving 10
           problems: https://drive.google.com/file/d/1MkRWxZj2twFlt6s3Gm6LSBgiQWvgVguM/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1-SLUX0ofhbdJTGLxyU_vhUFP6khvzEIC/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1-SLUX0ofhbdJTGLxyU_vhUFP6khvzEIC/view?usp=sharing
         - label: LEC 12
           type: lecture
           title: Foundations of Probability
@@ -342,6 +342,11 @@
           type: demo
           title: Demo 4 - 
           link: /demos/5_interaction_terms
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 10
+          problems: https://drive.google.com/file/d/15QRa4wQdrDoGs4NxUH53yRNf4z3AfSO3/view?usp=sharing
+          # solutions: https://drive.google.com/file/d/1Sb28FN82Topcwg5Aek6TibL89sEhD5w_/view?usp=sharing
 
     - date: "2026-02-20"
       in_class: true
