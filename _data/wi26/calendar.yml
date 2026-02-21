@@ -250,6 +250,7 @@
           type: exam
           title: Midterm Exam
           guide: https://drive.google.com/file/d/11bIXzMjmUiVmSRxMivpcWXebURMf3ISS/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1CBsgaihMfiOsvPuKKC4sHiYiDGK6nUOX/view?usp=sharing
 
     - date: "2026-02-06"
       in_class: true
@@ -258,7 +259,7 @@
           type: disc
           title: Groupwork 2
           problems: https://drive.google.com/file/d/19Mc-47mB1g2cS52QhYOSAclWzP20cJWu/view?usp=sharing
-          # solutions:
+          solutions: https://drive.google.com/file/d/1dKkJEZL8TuaSc6nrxNXc-MUIJal74pyn/view?usp=sharing
 
 - week: 6
   title: "Week 6 - Feature Engineering & Gradient Descent"
