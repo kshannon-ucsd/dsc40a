@@ -345,9 +345,9 @@
           link: /demos/5_interaction_terms
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 10
-          problems: https://drive.google.com/file/d/15QRa4wQdrDoGs4NxUH53yRNf4z3AfSO3/view?usp=sharing
-          # solutions: https://drive.google.com/file/d/1Sb28FN82Topcwg5Aek6TibL89sEhD5w_/view?usp=sharing
+          title: Hands-On Problem Solving 11
+          problems: https://drive.google.com/file/d/1KcPuuSL7PJQc18TkEZqKBEDvWGzixOIe/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1zHd8jbiJYFiJN6fliD57AYvwPvoBmlVV/view?usp=sharing
 
     - date: "2026-02-20"
       in_class: true
@@ -375,10 +375,9 @@
       events:
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 10
-          # solutions: todo
-          # code: todo
-          # problems: todo
+          title: Hands-On Problem Solving 12
+          # solutions: https://drive.google.com/file/d/1xx8Gm_fhzHvczCBHuqUo3StSYqov0n4u/view?usp=sharing
+          # problems: https://drive.google.com/file/d/1bosr0sTaXPpgsYdxCC5uRDqMSA8R1at8/view?usp=sharing
         - label: LEC 13
           type: lecture
           title: Combinatorics
@@ -397,10 +396,9 @@
           recording: https://youtu.be/zj4RUJFb7zw
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 11
-          # solutions: https://drive.google.com/file/d/1emTwe273wuyL3Jrcki_UD92kmLQURAvj/view?usp=sharing
-          # code: https://drive.google.com/file/d/1NxkWMnr4wk495NdnZF954eWxXAGagOEx/view?usp=sharing
-          # problems: https://drive.google.com/file/d/1WOtvsyJXb4VLWxztajP0b24Dig4CMPy8/view?usp=sharing
+          title: Hands-On Problem Solving 13
+          # solutions: https://drive.google.com/file/d/1W0xIDHNutzL3n8VxwDy41DbEHDhicw-_/view?usp=sharing
+          # problems: https://drive.google.com/file/d/1nqQYYv9zvtnkVklknKMRcx42aPEJPbFw/view?usp=sharing
 
     - date: "2026-02-27"
       in_class: true
@@ -438,7 +436,7 @@
           # solutions: todo
           # code: todo
           # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
-          title: Hands-On Problem Solving 12
+          title: Hands-On Problem Solving 14
 
     - date: "2026-03-05"
       in_class: true
@@ -451,10 +449,10 @@
           recording: https://youtu.be/yLzXxFM1sII
         - label: HOPS
           type: hops
-          title: Hands-On Problem Solving 13
+          title: Hands-On Problem Solving 15
           # solutions: todo
           # code: todo
-          # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
+          # problems: todo
 
     - date: "2026-03-06"
       in_class: true
@@ -489,6 +487,12 @@
           type: demo
           title: Demo 7 - Multi-Armed Bandit (Bayesian Updating)
           link: /demos/7_multi_armed_bandit
+        - label: HOPS
+          type: hops
+          title: Hands-On Problem Solving 16
+          # solutions: todo
+          # code: todo
+          # problems: todo
 
     - date: "2026-03-12"
       in_class: true
