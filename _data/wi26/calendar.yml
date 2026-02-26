@@ -377,7 +377,7 @@
           type: hops
           title: Hands-On Problem Solving 12
           problems: https://drive.google.com/file/d/1bosr0sTaXPpgsYdxCC5uRDqMSA8R1at8/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1xx8Gm_fhzHvczCBHuqUo3StSYqov0n4u/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1XOqi7ArHRAx2u5UAqOHE-jevLhcat3Vo/view?usp=sharing
         - label: LEC 13
           type: lecture
           title: Combinatorics
@@ -398,7 +398,7 @@
           type: hops
           title: Hands-On Problem Solving 13
           problems: https://drive.google.com/file/d/1nqQYYv9zvtnkVklknKMRcx42aPEJPbFw/view?usp=sharing
-          solutions: https://drive.google.com/file/d/1W0xIDHNutzL3n8VxwDy41DbEHDhicw-_/view?usp=sharing
+          # solutions: https://drive.google.com/file/d/10ymbbnALR-RSdr-439H5D0olxTZgFx9P/view?usp=sharing
 
     - date: "2026-02-27"
       in_class: true
