@@ -411,8 +411,8 @@
         - label: HW
           type: hw
           title: "<b>Homework 5 Released (due Mar 9, 11:59 pm)</b>"
-          # problems:
-          # template:
+          problems: https://drive.google.com/file/d/1zXyT9IZ0F_glR4R9_a7MHITjVOHnKg8A/view?usp=drive_link
+          template: https://drive.google.com/file/d/1zRtqzC3HNRvH4ZpOCWXa0wBNZMl5cFVQ/view?usp=drive_link
           # solutions:
 
 - week: 9
