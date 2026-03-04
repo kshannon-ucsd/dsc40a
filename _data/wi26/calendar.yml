@@ -433,9 +433,8 @@
           recording: https://youtu.be/rTKUm3SmZyY
         - label: HOPS
           type: hops
-          # solutions: todo
-          # code: todo
-          # problems: https://drive.google.com/file/d/1no0emGEGrVVfGTeHtW6QD7iT3j3R1EoW/view?usp=drivesdk
+          # solutions: https://drive.google.com/file/d/1bBD9Ylmdo6eabqPiP5mI4mczmltlKnCW/view?usp=sharing
+          problems: https://drive.google.com/file/d/1z4DjhEnFSvUurJfSCtsGE2KlK-v0MOga/view?usp=sharing
           title: Hands-On Problem Solving 14
 
     - date: "2026-03-05"
