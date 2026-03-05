@@ -433,7 +433,7 @@
           recording: https://youtu.be/rTKUm3SmZyY
         - label: HOPS
           type: hops
-          # solutions: https://drive.google.com/file/d/1bBD9Ylmdo6eabqPiP5mI4mczmltlKnCW/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1UXTnOvK3sXtUpj_LzlwKZu7COwzHDSve/view?usp=sharing
           problems: https://drive.google.com/file/d/1z4DjhEnFSvUurJfSCtsGE2KlK-v0MOga/view?usp=sharing
           title: Hands-On Problem Solving 14
 
@@ -449,9 +449,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 15
-          # solutions: todo
-          # code: todo
-          # problems: todo
+          # solutions: https://drive.google.com/file/d/1-T9tY3mXNiIzqlULsOHxNP-Xv8WM08kD/view?usp=sharing
+          problems: https://drive.google.com/file/d/1WmuDhw7k44mpvqaXwshkm81OPUSyZDBa/view?usp=sharing
 
     - date: "2026-03-06"
       in_class: true
@@ -489,9 +488,8 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 16
-          # solutions: todo
-          # code: todo
-          # problems: todo
+          # solutions: https://drive.google.com/file/d/1sA7RLWJIgnl7PygyBreKN89Gt5bOpHoU/view?usp=sharing
+          # problems: https://drive.google.com/file/d/1rZ4fuYkRM2PCWCr-jDgyU3Ji0M9oBdyO/view?usp=sharing
 
     - date: "2026-03-12"
       in_class: true
