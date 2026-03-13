@@ -488,7 +488,7 @@
         - label: HOPS
           type: hops
           title: Hands-On Problem Solving 16
-          # solutions: https://drive.google.com/file/d/1sA7RLWJIgnl7PygyBreKN89Gt5bOpHoU/view?usp=sharing
+          solutions: https://drive.google.com/file/d/1sA7RLWJIgnl7PygyBreKN89Gt5bOpHoU/view?usp=sharing
           problems: https://drive.google.com/file/d/1rZ4fuYkRM2PCWCr-jDgyU3Ji0M9oBdyO/view?usp=sharing
 
     - date: "2026-03-12"
