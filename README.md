@@ -7,8 +7,8 @@ Class Website for UCSD's Theoretical Foundations of Data Science I
 ## Up and Running
 ### Dev Environment initial set up
 #### If building from scratch
-1. Install chruby and ruby-install with Homebrew (install ruby 3.1.2)
-2. cd to project dir and chruby for ruby-3.1.2 #this should be default from the `.ruby-version` file going forward.
+1. Install chruby and ruby-install with Homebrew (install ruby 3.4.1)
+2. cd to project dir and chruby for ruby-3.4.1 #this should be default from the `.ruby-version` file going forward.
 3. `bundle init` to create gemfile
 4. Set up gems to be installed locally in project dir: `bundle config set --local path 'vendor/bundle'` This creates a `.bundle` file
 5. Install Jekyll 4.2: `bundle add jekyll` At this time (9/5/2022) 4.2 auto installs

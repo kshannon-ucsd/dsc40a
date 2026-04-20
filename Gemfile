@@ -3,7 +3,9 @@
 source "https://rubygems.org"
 ruby File.read(".ruby-version").strip
 
-gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 4.4"
+# Liquid 4.0.3 calls String#tainted?, removed in Ruby 3.2+. 4.0.4 fixes it.
+gem "liquid", ">= 4.0.4"
 
 # Jekyll Theme
 gem "just-the-docs", "~> 0.4.0.rc3"
@@ -28,3 +30,9 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", "~> 1.7"
+
+# Ruby 3.4 removed these from the default stdlib; Jekyll 4.3 / Liquid 4.0 still require them.
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
